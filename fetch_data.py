@@ -18,24 +18,30 @@ def clean_text(text):
     cleaned = re.sub(r'\s+', ' ', text).strip()
     return cleaned if cleaned else "-"
 
-def get_active_stadiums(today_str, headers):
-    """ 本日開催されている会場のコードだけを高速取得する """
+def get_active_stadiums(today_str, headers, retries=3):
+    """ 本日開催されている会場のコードだけをリトライ付きで高速取得する """
     index_url = f"https://www.boatrace.jp/owpc/pc/race/index?hd={today_str}"
     active_codes = []
-    try:
-        res = requests.get(index_url, headers=headers, timeout=10)
-        if res.status_code == 200:
-            soup = BeautifulSoup(res.content, "html.parser")
-            # 開催場のリンクから jcd=XX を抽出
-            links = soup.find_all("a", href=re.compile(r'jcd=\d{2}'))
-            for a in links:
-                match = re.search(r'jcd=(\d{2})', a['href'])
-                if match:
-                    code = match.group(1)
-                    if code not in active_codes:
-                        active_codes.append(code)
-    except Exception as e:
-        print(f"開催場一覧取得エラー: {e}")
+    
+    for attempt in range(retries):
+        try:
+            res = requests.get(index_url, headers=headers, timeout=15)
+            if res.status_code == 200:
+                soup = BeautifulSoup(res.content, "html.parser")
+                links = soup.find_all("a", href=re.compile(r'jcd=\d{2}'))
+                for a in links:
+                    match = re.search(r'jcd=(\d{2})', a['href'])
+                    if match:
+                        code = match.group(1)
+                        if code not in active_codes:
+                            active_codes.append(code)
+                if active_codes:
+                    break
+        except Exception as e:
+            print(f"開催場一覧取得試行 {attempt + 1}/{retries} 失敗: {e}")
+            if attempt < retries - 1:
+                time.sleep(2)
+                
     return active_codes
 
 def fetch_all_race_data():
@@ -54,7 +60,6 @@ def fetch_all_race_data():
     print(f"[{today_str}] 本日の開催場を検索中...")
     active_codes = get_active_stadiums(today_str, headers)
     
-    # コードから会場名への逆引き辞書
     code_to_name = {v: k for k, v in STADIUM_CODES.items()}
     active_names = [code_to_name[c] for c in active_codes if c in code_to_name]
     
@@ -63,7 +68,7 @@ def fetch_all_race_data():
     for stadium_name, code in STADIUM_CODES.items():
         all_data["stadiums"][stadium_name] = {}
         
-        # 本日開催していない会場はスキップ（高速化の肝）
+        # 本日開催していない会場はスキップ（高速化）
         if code not in active_codes:
             continue
 
