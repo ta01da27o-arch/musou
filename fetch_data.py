@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import json
 import datetime
 import time
+import re
 
 STADIUM_CODES = {
     "桐生": "01", "戸田": "02", "江戸川": "03", "平和島": "04", "多摩川": "05", "浜名湖": "06",
@@ -11,23 +12,34 @@ STADIUM_CODES = {
     "下関": "19", "若松": "20", "芦屋": "21", "福岡": "22", "唐津": "23", "大村": "24"
 }
 
-def fetch_page_with_retry(url, headers, retries=2):
-    """ タイムアウト対策：失敗しても指定回数リトライする関数 """
-    for attempt in range(retries):
-        try:
-            # タイムアウトを15秒に延長
-            response = requests.get(url, headers=headers, timeout=15)
-            if response.status_code == 200:
-                return response
-        except requests.exceptions.RequestException as e:
-            if attempt < retries - 1:
-                time.sleep(1) # 1秒待って再試行
-                continue
-            else:
-                raise e
-    return None
+def clean_text(text):
+    if not text:
+        return "-"
+    cleaned = re.sub(r'\s+', ' ', text).strip()
+    return cleaned if cleaned else "-"
+
+def get_active_stadiums(today_str, headers):
+    """ 本日開催されている会場のコードだけを高速取得する """
+    index_url = f"https://www.boatrace.jp/owpc/pc/race/index?hd={today_str}"
+    active_codes = []
+    try:
+        res = requests.get(index_url, headers=headers, timeout=10)
+        if res.status_code == 200:
+            soup = BeautifulSoup(res.content, "html.parser")
+            # 開催場のリンクから jcd=XX を抽出
+            links = soup.find_all("a", href=re.compile(r'jcd=\d{2}'))
+            for a in links:
+                match = re.search(r'jcd=(\d{2})', a['href'])
+                if match:
+                    code = match.group(1)
+                    if code not in active_codes:
+                        active_codes.append(code)
+    except Exception as e:
+        print(f"開催場一覧取得エラー: {e}")
+    return active_codes
 
 def fetch_all_race_data():
+    start_time = time.time()
     today_str = datetime.datetime.now().strftime("%Y%m%d")
     all_data = {
         "updated_at": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
@@ -39,37 +51,55 @@ def fetch_all_race_data():
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
 
-    print(f"[{today_str}] 全国の出走表データ取得を開始します...")
+    print(f"[{today_str}] 本日の開催場を検索中...")
+    active_codes = get_active_stadiums(today_str, headers)
+    
+    # コードから会場名への逆引き辞書
+    code_to_name = {v: k for k, v in STADIUM_CODES.items()}
+    active_names = [code_to_name[c] for c in active_codes if c in code_to_name]
+    
+    print(f"本日開催中の会場 ({len(active_names)}場): {', '.join(active_names)}")
 
     for stadium_name, code in STADIUM_CODES.items():
         all_data["stadiums"][stadium_name] = {}
         
+        # 本日開催していない会場はスキップ（高速化の肝）
+        if code not in active_codes:
+            continue
+
         for race_no in range(1, 13):
             url = f"https://www.boatrace.jp/owpc/pc/race/racelist?rno={race_no}&jcd={code}&hd={today_str}"
             
             try:
-                res = fetch_page_with_retry(url, headers)
-                if not res:
+                res = requests.get(url, headers=headers, timeout=10)
+                if res.status_code != 200:
                     continue
 
                 soup = BeautifulSoup(res.content, "html.parser")
                 tbodies = soup.find_all("tbody", class_="is-fs12")
 
                 if not tbodies:
-                    continue  # 開催がない場合はスキップ
+                    continue
 
                 racers = []
                 for tbody in tbodies:
                     name_el = tbody.find("div", class_="is-fs18")
-                    name = name_el.get_text(strip=True) if name_el else "不明"
+                    name = clean_text(name_el.get_text()) if name_el else "不明"
                     
                     rank_el = tbody.find("span", class_="is-fs11")
-                    rank = rank_el.get_text(strip=True) if rank_el else "-"
+                    rank = clean_text(rank_el.get_text()) if rank_el else "-"
 
                     tds = tbody.find_all("td")
-                    st = tds[4].get_text(strip=True) if len(tds) > 4 else "-"
-                    tilt = tds[5].get_text(strip=True) if len(tds) > 5 else "-"
-                    time_val = tds[6].get_text(strip=True) if len(tds) > 6 else "-"
+                    st, tilt, time_val = "-", "-", "-"
+
+                    for td in tds:
+                        text = clean_text(td.get_text())
+                        if re.match(r'^[-+]?\d\.\d$', text) and tilt == "-":
+                            tilt = text
+                        elif re.match(r'^6\.\d{2}$|^7\.\d{2}$', text) and time_val == "-":
+                            time_val = text
+                        elif re.match(r'^\.\d{2}$', text) and st == "-":
+                            st = text
 
                     racers.append({
                         "name": name,
@@ -83,20 +113,18 @@ def fetch_all_race_data():
                     all_data["stadiums"][stadium_name][str(race_no)] = {
                         "racers": racers
                     }
-                    print(f"成功: {stadium_name} {race_no}R ({len(racers)}名)")
 
             except Exception as e:
                 print(f"エラースキップ ({stadium_name} {race_no}R): {e}")
                 continue
             
-            # サーバー負荷軽減とブロック防止のため0.3秒待機
-            time.sleep(0.3)
+            time.sleep(0.1)
 
-    # data.json に保存
     with open("data.json", "w", encoding="utf-8") as f:
         json.dump(all_data, f, ensure_ascii=False, indent=2)
 
-    print("data.json の正常生成が完了しました！")
+    elapsed_time = round(time.time() - start_time, 1)
+    print(f"data.json の生成完了！（所要時間: {elapsed_time}秒）")
 
 if __name__ == "__main__":
     fetch_all_race_data()
