@@ -4,6 +4,7 @@ import json
 import datetime
 import time
 import re
+import os
 
 STADIUM_CODES = {
     "桐生": "01", "戸田": "02", "江戸川": "03", "平和島": "04", "多摩川": "05", "浜名湖": "06",
@@ -65,10 +66,12 @@ def fetch_all_race_data():
     
     print(f"本日開催中の会場 ({len(active_names)}場): {', '.join(active_names)}")
 
+    total_races_fetched = 0
+
     for stadium_name, code in STADIUM_CODES.items():
         all_data["stadiums"][stadium_name] = {}
         
-        # 本日開催していない会場はスキップ（高速化）
+        # 本日開催していない会場はスキップ
         if code not in active_codes:
             continue
 
@@ -118,6 +121,7 @@ def fetch_all_race_data():
                     all_data["stadiums"][stadium_name][str(race_no)] = {
                         "racers": racers
                     }
+                    total_races_fetched += 1
 
             except Exception as e:
                 print(f"エラースキップ ({stadium_name} {race_no}R): {e}")
@@ -125,11 +129,17 @@ def fetch_all_race_data():
             
             time.sleep(0.1)
 
-    with open("data.json", "w", encoding="utf-8") as f:
-        json.dump(all_data, f, ensure_ascii=False, indent=2)
+    # 【重要】データ保護機能
+    # 取得データが0件（通信エラーや非開催時）の場合は上書きせず前日データを保持する
+    if total_races_fetched == 0 and os.path.exists("data.json"):
+        print("新規データが取得できなかったため、既存の data.json を保持します。")
+    else:
+        with open("data.json", "w", encoding="utf-8") as f:
+            json.dump(all_data, f, ensure_ascii=False, indent=2)
+        print(f"data.json を更新完了！（取得レース数: {total_races_fetched}）")
 
     elapsed_time = round(time.time() - start_time, 1)
-    print(f"data.json の生成完了！（所要時間: {elapsed_time}秒）")
+    print(f"処理完了！（所要時間: {elapsed_time}秒）")
 
 if __name__ == "__main__":
     fetch_all_race_data()
