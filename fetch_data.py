@@ -21,20 +21,18 @@ def clean_text(text):
     return cleaned if cleaned else "-"
 
 def fetch_url_with_retry(url, headers, retries=3, timeout=15):
-    """ リトライ機能付きのリクエスト関数 """
     for attempt in range(retries):
         try:
             res = requests.get(url, headers=headers, timeout=timeout)
             if res.status_code == 200:
                 return res
-        except Exception as e:
+        except Exception:
             if attempt < retries - 1:
                 time.sleep(1.5)
                 continue
     return None
 
 def get_active_stadiums(today_str, headers):
-    """ 本日開催されている会場のコードだけをリトライ付きで高速取得する """
     index_url = f"https://www.boatrace.jp/owpc/pc/race/index?hd={today_str}"
     active_codes = []
     
@@ -85,71 +83,100 @@ def fetch_all_race_data():
             continue
 
         for race_no in range(1, 13):
-            url = f"https://www.boatrace.jp/owpc/pc/race/racelist?rno={race_no}&jcd={code}&hd={today_str}"
-            
-            try:
-                res = fetch_url_with_retry(url, headers)
-                if not res:
-                    print(f"取得失敗（スキップ）: {stadium_name} {race_no}R")
-                    continue
-
-                soup = BeautifulSoup(res.content, "html.parser")
-                tbodies = soup.find_all("tbody", class_="is-fs12")
-
-                if not tbodies:
-                    continue
-
-                racers = []
-                for tbody in tbodies:
-                    # 1. 選手名
-                    name_el = tbody.find("div", class_="is-fs18")
-                    name = clean_text(name_el.get_text()) if name_el else "不明"
-                    
-                    # 2. 級別 (A1, A2, B1, B2)
-                    rank = "-"
-                    rank_match = re.search(r'\b(A1|A2|B1|B2)\b', tbody.get_text())
-                    if rank_match:
-                        rank = rank_match.group(1)
-
-                    # 3. 直前展示数値等の抽出
-                    tds = tbody.find_all("td")
-                    st, tilt, time_val = "-", "-", "-"
-
-                    for td in tds:
-                        text = clean_text(td.get_text())
-                        if re.match(r'^[-+]?\d\.\d$', text) and tilt == "-":
-                            tilt = text
-                        elif re.match(r'^6\.\d{2}$|^7\.\d{2}$', text) and time_val == "-":
-                            time_val = text
-                        elif re.match(r'^\.\d{2}$', text) and st == "-":
-                            st = text
-
-                    racers.append({
-                        "name": name,
-                        "rank": rank,
-                        "st": st,
-                        "tilt": tilt,
-                        "time": time_val
-                    })
-
-                if racers:
-                    all_data["stadiums"][stadium_name][str(race_no)] = {
-                        "racers": racers
-                    }
-                    total_races_fetched += 1
-
-            except Exception as e:
-                print(f"エラースキップ ({stadium_name} {race_no}R): {e}")
+            # 1. 出走表（基本情報）の取得
+            racelist_url = f"https://www.boatrace.jp/owpc/pc/race/racelist?rno={race_no}&jcd={code}&hd={today_str}"
+            res_list = fetch_url_with_retry(racelist_url, headers)
+            if not res_list:
                 continue
+
+            soup_list = BeautifulSoup(res_list.content, "html.parser")
+            tbodies = soup_list.find_all("tbody", class_="is-fs12")
+
+            if not tbodies:
+                continue
+
+            racers = []
+            for tbody in tbodies:
+                name_el = tbody.find("div", class_="is-fs18")
+                name = clean_text(name_el.get_text()) if name_el else "不明"
+                
+                rank = "-"
+                rank_match = re.search(r'\b(A1|A2|B1|B2)\b', tbody.get_text())
+                if rank_match:
+                    rank = rank_match.group(1)
+
+                racers.append({
+                    "name": name,
+                    "rank": rank,
+                    "st": "-",
+                    "tilt": "-",
+                    "time": "-"
+                })
+
+            # 2. 直前情報（展示タイム・チルト・気象データ）の取得
+            before_url = f"https://www.boatrace.jp/owpc/pc/race/beforeinfo?rno={race_no}&jcd={code}&hd={today_str}"
+            res_before = fetch_url_with_retry(before_url, headers)
             
-            time.sleep(0.2)
+            weather_data = {"weather": "-", "wind_speed": "-", "wind_direction": "-", "wave": "-"}
+
+            if res_before:
+                soup_before = BeautifulSoup(res_before.content, "html.parser")
+                
+                # 気象情報の抽出
+                weather_box = soup_before.find("div", class_="weather1")
+                if weather_box:
+                    # 天気
+                    w_el = weather_box.find("span", class_="weather1_bodyUnitLabelData")
+                    if w_el:
+                        weather_data["weather"] = clean_text(w_el.get_text())
+                    
+                    # 風速・波高の解析
+                    box_text = weather_box.get_text()
+                    wind_m = re.search(r'風速\s*(\d+m)', box_text)
+                    if wind_m:
+                        weather_data["wind_speed"] = wind_m.group(1)
+                        
+                    wave_m = re.search(r'波高\s*(\d+cm)', box_text)
+                    if wave_m:
+                        weather_data["wave"] = wave_m.group(1)
+                        
+                    # 風向き（クラス名からの判定）
+                    wind_dir_el = weather_box.find("p", class_=re.compile(r'is-wind\d+'))
+                    if wind_dir_el:
+                        weather_data["wind_direction"] = clean_text(wind_dir_el.get_text())
+
+                # 展示数値（展示ST, チルト, 展示タイム）の抽出
+                ex_tbodies = soup_before.find_all("tbody", class_="is-fs12")
+                for idx, tbody in enumerate(ex_tbodies):
+                    if idx < len(racers):
+                        tds = tbody.find_all("td")
+                        for td in tds:
+                            text = clean_text(td.get_text())
+                            # チルト (-0.5, 0.0, 0.5 等)
+                            if re.match(r'^[-+]?\d\.\d$', text) and racers[idx]["tilt"] == "-":
+                                racers[idx]["tilt"] = text
+                            # 展示タイム (6.x～7.x)
+                            elif re.match(r'^6\.\d{2}$|^7\.\d{2}$', text) and racers[idx]["time"] == "-":
+                                racers[idx]["time"] = text
+                            # 展示ST (.15 等)
+                            elif re.match(r'^\.\d{2}$', text) and racers[idx]["st"] == "-":
+                                racers[idx]["st"] = text
+
+            if racers:
+                all_data["stadiums"][stadium_name][str(race_no)] = {
+                    "racers": racers,
+                    "weather": weather_data
+                }
+                total_races_fetched += 1
+            
+            time.sleep(0.1)
 
     if total_races_fetched == 0 and os.path.exists("data.json"):
         print("新規データが取得できなかったため、既存の data.json を保持します。")
     else:
         with open("data.json", "w", encoding="utf-8") as f:
             json.dump(all_data, f, ensure_ascii=False, indent=2)
-        print(f"data.json を本日（{today_str}）のデータで更新完了！（総取得レース数: {total_races_fetched}）")
+        print(f"data.json を本日（{today_str}）の全データ（気象・展示含む）で更新完了！（取得レース数: {total_races_fetched}）")
 
     elapsed_time = round(time.time() - start_time, 1)
     print(f"処理完了！（所要時間: {elapsed_time}秒）")
