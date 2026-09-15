@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import json
 import datetime
+import zoneinfo
 import time
 import re
 import os
@@ -47,9 +48,14 @@ def get_active_stadiums(today_str, headers, retries=3):
 
 def fetch_all_race_data():
     start_time = time.time()
-    today_str = datetime.datetime.now().strftime("%Y%m%d")
+    
+    # 【重要】日本時間（JST）を明示的に取得
+    jst_tz = zoneinfo.ZoneInfo("Asia/Tokyo")
+    now_jst = datetime.datetime.now(jst_tz)
+    today_str = now_jst.strftime("%Y%m%d")
+    
     all_data = {
-        "updated_at": datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "updated_at": now_jst.strftime("%Y-%m-%d %H:%M:%S"),
         "date": today_str,
         "stadiums": {}
     }
@@ -58,7 +64,7 @@ def fetch_all_race_data():
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
 
-    print(f"[{today_str}] 本日の開催場を検索中...")
+    print(f"[{today_str} (JST)] 本日の開催場を検索中...")
     active_codes = get_active_stadiums(today_str, headers)
     
     code_to_name = {v: k for k, v in STADIUM_CODES.items()}
@@ -71,7 +77,6 @@ def fetch_all_race_data():
     for stadium_name, code in STADIUM_CODES.items():
         all_data["stadiums"][stadium_name] = {}
         
-        # 本日開催していない会場はスキップ
         if code not in active_codes:
             continue
 
@@ -129,14 +134,13 @@ def fetch_all_race_data():
             
             time.sleep(0.1)
 
-    # 【重要】データ保護機能
-    # 取得データが0件（通信エラーや非開催時）の場合は上書きせず前日データを保持する
+    # 取得成功時のみ更新（データがない場合は既存を保持）
     if total_races_fetched == 0 and os.path.exists("data.json"):
         print("新規データが取得できなかったため、既存の data.json を保持します。")
     else:
         with open("data.json", "w", encoding="utf-8") as f:
             json.dump(all_data, f, ensure_ascii=False, indent=2)
-        print(f"data.json を更新完了！（取得レース数: {total_races_fetched}）")
+        print(f"data.json を本日（{today_str}）のデータで更新完了！（取得レース数: {total_races_fetched}）")
 
     elapsed_time = round(time.time() - start_time, 1)
     print(f"処理完了！（所要時間: {elapsed_time}秒）")
