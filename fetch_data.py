@@ -9,7 +9,7 @@ import os
 
 STADIUM_CODES = {
     "桐生": "01", "戸田": "02", "江戸川": "03", "平和島": "04", "多摩川": "05", "浜名湖": "06",
-    "蒲郡": "07", "常滑": "08", "津": "09", "三国": "10", "びわこ": "11", "住之江": "12",
+    "蒲郡": "07", "常滑": "08", "津": "09", "三国": "10", "びわco": "11", "住之江": "12",
     "尼崎": "13", "鳴門": "14", "丸亀": "15", "児島": "16", "宮島": "17", "徳山": "18",
     "下関": "19", "若松": "20", "芦屋": "21", "福岡": "22", "唐津": "23", "大村": "24"
 }
@@ -21,7 +21,6 @@ def clean_text(text):
     return cleaned if cleaned else "-"
 
 def get_active_stadiums(today_str, headers, retries=3):
-    """ 本日開催されている会場のコードだけをリトライ付きで高速取得する """
     index_url = f"https://www.boatrace.jp/owpc/pc/race/index?hd={today_str}"
     active_codes = []
     
@@ -49,7 +48,6 @@ def get_active_stadiums(today_str, headers, retries=3):
 def fetch_all_race_data():
     start_time = time.time()
     
-    # 【重要】日本時間（JST）を明示的に取得
     jst_tz = zoneinfo.ZoneInfo("Asia/Tokyo")
     now_jst = datetime.datetime.now(jst_tz)
     today_str = now_jst.strftime("%Y%m%d")
@@ -96,12 +94,17 @@ def fetch_all_race_data():
 
                 racers = []
                 for tbody in tbodies:
+                    # 1. 選手名
                     name_el = tbody.find("div", class_="is-fs18")
                     name = clean_text(name_el.get_text()) if name_el else "不明"
                     
-                    rank_el = tbody.find("span", class_="is-fs11")
-                    rank = clean_text(rank_el.get_text()) if rank_el else "-"
+                    # 2. 級別 (A1, A2, B1, B2 を確実取得)
+                    rank = "-"
+                    rank_match = re.search(r'\b(A1|A2|B1|B2)\b', tbody.get_text())
+                    if rank_match:
+                        rank = rank_match.group(1)
 
+                    # 3. 直前展示数値等の抽出
                     tds = tbody.find_all("td")
                     st, tilt, time_val = "-", "-", "-"
 
@@ -134,7 +137,6 @@ def fetch_all_race_data():
             
             time.sleep(0.1)
 
-    # 取得成功時のみ更新（データがない場合は既存を保持）
     if total_races_fetched == 0 and os.path.exists("data.json"):
         print("新規データが取得できなかったため、既存の data.json を保持します。")
     else:
