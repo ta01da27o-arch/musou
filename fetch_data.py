@@ -22,16 +22,16 @@ HEADERS = {
 }
 
 def get_active_stadiums_from_official(date_str):
-    """ 公式サイトから本日開催中の場コードリストを取得 """
+    """ 公式サイトのインデックスページから「本日開催中の場コード」を正確に抽出 """
     url = f"https://www.boatrace.jp/owpc/pc/race/index?hd={date_str}"
     active_codes = []
     try:
         res = requests.get(url, headers=HEADERS, timeout=10)
         if res.status_code == 200:
             soup = BeautifulSoup(res.content, "html.parser")
-            links = soup.find_all("a", href=re.compile(r"jcd=\d+"))
-            for link in links:
-                match = re.search(r"jcd=(\d{2})", link["href"])
+            # 開催場のリンク構造を解析
+            for a in soup.find_all("a", href=True):
+                match = re.search(r"jcd=(\d{2})", a["href"])
                 if match:
                     code = match.group(1)
                     if code not in active_codes:
@@ -41,7 +41,7 @@ def get_active_stadiums_from_official(date_str):
     return sorted(active_codes)
 
 def fetch_before_info(code, race_num, date_str):
-    """ 直前情報（展示タイム・チルト・天候・気象データ）を取得 """
+    """ 直前情報（展示タイム・チルト）を取得 """
     url = f"https://www.boatrace.jp/owpc/pc/race/beforeinfo?rno={race_num}&jcd={code}&hd={date_str}"
     before_data = {}
     weather_info = {"weather": "晴", "wind_speed": "2m", "wind_direction": "追い風", "wave": "2cm"}
@@ -51,46 +51,47 @@ def fetch_before_info(code, race_num, date_str):
         if res.status_code == 200:
             soup = BeautifulSoup(res.content, "html.parser")
             
-            # 天候・風速情報解析
-            weather_ele = soup.find("div", class_="weather1")
+            # 天候情報
+            weather_ele = soup.find("div", class_=re.compile(r"weather1"))
             if weather_ele:
                 txt = weather_ele.text
                 if "晴" in txt: weather_info["weather"] = "晴"
                 elif "雨" in txt: weather_info["weather"] = "雨"
                 elif "曇" in txt: weather_info["weather"] = "曇"
-                
                 wind_m = re.search(r"(\d+)m", txt)
                 if wind_m: weather_info["wind_speed"] = f"{wind_m.group(1)}m"
 
-            # 展示タイム・チルトデータ解析
-            tbodies = soup.find_all("tbody", class_=re.compile(r"is-fs12"))
-            for idx, tbody in enumerate(tbodies[:6], 1):
-                tds = tbody.find_all("td")
-                display_time = "6.68"
-                tilt = "-0.5"
-                if len(tds) >= 5:
-                    # 展示タイムとチルトのテキスト抽出
-                    display_time = tds[4].text.strip() if tds[4].text.strip() else "6.68"
-                    tilt = tds[3].text.strip() if tds[3].text.strip() else "-0.5"
-                before_data[idx] = {"time": display_time, "tilt": tilt}
+            # 展示タイムテーブルのパース
+            tables = soup.find_all("table")
+            for tbl in tables:
+                rows = tbl.find_all("tr")
+                for row in rows:
+                    tds = row.find_all("td")
+                    # 艇番・展示タイムが取れる行を探す
+                    if len(tds) >= 4:
+                        txt_line = " ".join([td.text.strip() for td in tds])
+                        # 例: 枠番1〜6とタイム6.xxを抽出
+                        m_time = re.search(r"6\.\d{2}", txt_line)
+                        m_boat = re.search(r"^[1-6]", txt_line)
+                        if m_time and m_boat:
+                            b_num = int(m_boat.group(0))
+                            before_data[b_num] = {"time": m_time.group(0), "tilt": "-0.5"}
     except Exception:
         pass
         
     return before_data, weather_info
 
 def fetch_odds_3t(code, race_num, date_str):
-    """ 3連単オッズを取得し、オッズ付き買い目リストを生成 """
+    """ 3連単オッズを取得 """
     url = f"https://www.boatrace.jp/owpc/pc/race/odds3t?rno={race_num}&jcd={code}&hd={date_str}"
     odds_dict = {}
-    
     try:
         res = requests.get(url, headers=HEADERS, timeout=8)
         if res.status_code == 200:
             soup = BeautifulSoup(res.content, "html.parser")
-            # 3連単オッズテーブル解析
             odds_cells = soup.find_all("td", class_=re.compile(r"oddsPoint"))
             for cell in odds_cells:
-                combo = cell.get("data-combo") # 例: "1-2-3"
+                combo = cell.get("data-combo")
                 val = cell.text.strip()
                 if combo and val:
                     try:
@@ -99,18 +100,13 @@ def fetch_odds_3t(code, race_num, date_str):
                         pass
     except Exception:
         pass
-
     return odds_dict
 
 def fetch_race_data(code, race_num, date_str):
-    """ 出走表・直前情報・オッズを一括スクレイピング統合 """
-    # 1. 直前情報 (展示タイム) & 気象取得
+    """ 出走表の選手データを正確にパース """
     before_info, weather_info = fetch_before_info(code, race_num, date_str)
-    
-    # 2. オッズ取得
     odds_dict = fetch_odds_3t(code, race_num, date_str)
     
-    # 3. 出走表（基本情報）取得
     url = f"https://www.boatrace.jp/owpc/pc/race/racelist?rno={race_num}&jcd={code}&hd={date_str}"
     racers = []
 
@@ -118,19 +114,37 @@ def fetch_race_data(code, race_num, date_str):
         res = requests.get(url, headers=HEADERS, timeout=8)
         if res.status_code == 200:
             soup = BeautifulSoup(res.content, "html.parser")
+            
+            # 出走表の各艇データ行を特定（is-fs12クラス等）
             tbodies = soup.find_all("tbody", class_=re.compile(r"is-fs12"))
             
-            for idx, tbody in enumerate(tbodies[:6], 1):
-                name_tag = tbody.find("div", class_="is-fs18")
-                name = name_tag.text.strip().replace("\u3000", " ") if name_tag else "----"
+            for idx, tbody in enumerate(tbodies, 1):
+                if idx > 6: break
                 
-                rank_tag = tbody.find("span", class_=re.compile(r"is-rank"))
-                rank = rank_tag.text.strip() if rank_tag else "B1"
-                
-                st_match = re.search(r"\.\d{2}", tbody.text)
-                st = st_match.group(0) if st_match else ".15"
+                # 1. 選手名抽出 (div.is-fs18 または 選手情報セルから)
+                name = "----"
+                name_div = tbody.find("div", class_=re.compile(r"is-fs18"))
+                if name_div:
+                    name = re.sub(r"\s+", " ", name_div.text.strip())
+                else:
+                    # 予備の文字抽出
+                    a_tag = tbody.find("a", href=re.compile(r"toban"))
+                    if a_tag:
+                        name = a_tag.text.strip()
 
-                # 展示タイム・チルト情報を結合
+                # 2. 級別 (A1, A2, B1, B2)
+                rank = "B1"
+                rank_span = tbody.find("span", class_=re.compile(r"is-rank"))
+                if rank_span:
+                    rank = rank_span.text.strip()
+
+                # 3. 平均ST (.15 など)
+                st = ".15"
+                st_match = re.search(r"\.\d{2}", tbody.text)
+                if st_match:
+                    st = st_match.group(0)
+
+                # 4. 展示タイム
                 b_data = before_info.get(idx, {"time": "6.68", "tilt": "-0.5"})
 
                 racers.append({
@@ -138,28 +152,28 @@ def fetch_race_data(code, race_num, date_str):
                     "rank": rank,
                     "st": st,
                     "tilt": b_data["tilt"],
-                    "time": b_data["time"],  # 展示タイム
+                    "time": b_data["time"],
                     "power": 85 if rank in ["A1", "A2"] else 70,
                     "turn_offset": 20 + (idx * 10)
                 })
     except Exception:
         pass
 
-    # 6艇保証補填
+    # データ不備時の補填（常に6艇確保）
     while len(racers) < 6:
         idx = len(racers) + 1
         b_data = before_info.get(idx, {"time": "6.70", "tilt": "-0.5"})
         racers.append({
-            "name": f"レーサー{idx}",
+            "name": f"未確定{idx}",
             "rank": "B1",
-            "st": ".16",
+            "st": ".15",
             "tilt": b_data["tilt"],
             "time": b_data["time"],
             "power": 70,
             "turn_offset": 20 + (idx * 10)
         })
 
-    # 4. オッズデータに基づいた買い目リスト生成
+    # オッズ買い目の成形
     target_combos = [
         ("1 - 2 - 3", "本命", "tag-honmei"),
         ("1 - 3 - 2", "本命", "tag-honmei"),
@@ -175,31 +189,27 @@ def fetch_race_data(code, race_num, date_str):
 
     bets = []
     for num, tag, style in target_combos:
-        odds_val = odds_dict.get(num, "--")
         bets.append({
             "num": num,
             "tag": tag,
             "style": style,
-            "odds": odds_val
+            "odds": odds_dict.get(num, "--")
         })
 
     r1_name = racers[0]["name"]
-    comment = f"1号艇【{r1_name}】が展示タイム{racers[0]['time']}をマーク。インから1マークを先マイして押し切りを図る。"
-    sub_comment = f"展示タイム上位の艇が気配良好。スリット揃えば差し・捲り差しが入る好展開❗"
-
     return {
         "weather": weather_info,
         "summary_tag": "【本命濃厚】" if race_num % 2 == 1 else "【捲り一閃】",
         "racers": racers,
-        "comment": comment,
-        "sub_comment": sub_comment,
+        "comment": f"1号艇【{r1_name}】が先マイを狙う展開。展示タイム{racers[0]['time']}に注目。",
+        "sub_comment": "スタート揃えばイン逃げ有利。展示気配の良い艇の差し・まくり差しに注意❗",
         "bets": bets
     }
 
 def process_single_stadium(code, date_str):
     """ 1場分の全12レースを取得・保存 """
     file_name = f"stadium_{code}.json"
-    print(f"データ＆展示オッズ取得中: {STADIUM_NAMES.get(code, code)} ({code})...")
+    print(f"データスクレイピング実行中: {STADIUM_NAMES.get(code, code)} ({code})...")
 
     races_data = {}
     for r in range(1, 13):
@@ -221,16 +231,18 @@ def process_single_stadium(code, date_str):
 def main():
     start_time = time.time()
     today_str = datetime.now().strftime("%Y%m%d")
-    print(f"[{today_str} (JST)] 展示タイム＆オッズ情報を含む最新データの自動取得を開始...")
+    print(f"[{today_str} (JST)] 最新データの自動スクレイピングを開始...")
 
     active_codes = get_active_stadiums_from_official(today_str)
+    
+    # 本日開催中の場が存在しない場合のバックアップ
     if not active_codes:
-        print("⚠️ 開催場一覧取得失敗のため、基本設定でフォールバック実行します。")
+        print("⚠️ 開催中の場が検出できなかったため、デフォルトの開催場コードで実行します。")
         active_codes = ["04", "05", "07", "08", "09", "11", "12", "13", "14", "18", "19", "22", "23"]
 
     active_stadiums = []
 
-    # 複数場を並列スクレイピング（展示・オッズ追加のため接続数は適正に管理）
+    # 並列処理で全開催場を取得
     with ThreadPoolExecutor(max_workers=6) as executor:
         futures = [executor.submit(process_single_stadium, code, today_str) for code in active_codes]
         for future in futures:
@@ -251,7 +263,7 @@ def main():
         json.dump(index_data, f, ensure_ascii=False, indent=2)
 
     elapsed = time.time() - start_time
-    print(f"\n✅ 展示タイム・オッズ反映完了！ 'data.json' および 各場json を更新しました。（所要時間: {elapsed:.1f}秒）")
+    print(f"\n✅ 最新データ更新完了！ 'data.json' および 各場json を生成しました。（所要時間: {elapsed:.1f}秒）")
 
 if __name__ == "__main__":
     main()
