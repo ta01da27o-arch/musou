@@ -2,46 +2,41 @@ name: Run BoatRace Data Fetcher
 
 on:
   schedule:
-    # 毎日 午前8時 (JST) に自動実行 (UTC 23:00)
     - cron: '0 23 * * *'
-  workflow_dispatch: # 手動実行ボタンを有効化
+  workflow_dispatch:
 
 jobs:
   build-and-run:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. リポジトリのチェックアウト
       - name: Check out repository
         uses: actions/checkout@v4
 
-      # 2. Python環境のセットアップ (Node 24対応、エラーの原因だったキャッシュ指定を削除)
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
-      # 3. 必要なライブラリのインストール
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          # requirements.txt があれば読み込み、無ければ必要な主要ライブラリを直接インストール
           if [ -f requirements.txt ]; then
             pip install -r requirements.txt
           else
             pip install requests beautifulsoup4
           fi
 
-      # 4. データ取得スクリプトの実行
       - name: Run fetch_data.py
         run: python fetch_data.py
 
-      # 5. 生成されたデータ (data.json / stadium_XX.json) をGitHubへ自動コミット＆Push
+      # 生成されたすべての JSON ファイルを確実にコミット＆Push
       - name: Commit and push updated data
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add data.json stadium_*.json
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto update race data [$(date +'%Y-%m-%d %H:%M:%S')]" && git push)
+          git add -A
+          git commit -m "Auto update race data [$(date +'%Y-%m-%d %H:%M:%S')]" || exit 0
+          git push
