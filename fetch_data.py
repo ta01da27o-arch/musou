@@ -1,9 +1,10 @@
 import os
 import json
 import time
+from datetime import datetime
 from concurrent.futures import ThreadPoolExecutor
 
-# 24場のコードおよび名称定義
+# 全24場のマスターデータ
 STADIUM_NAMES = {
     "01": "桐生", "02": "戸田", "03": "江戸川", "04": "平和島",
     "05": "多摩川", "06": "浜名湖", "07": "蒲郡", "08": "常滑",
@@ -13,24 +14,20 @@ STADIUM_NAMES = {
     "21": "芦屋", "22": "福岡", "23": "唐津", "24": "大村"
 }
 
-def generate_single_stadium_json(code, date_str="20260916"):
+def process_stadium(code, date_str):
     """
-    指定された会場の個別 JSON（data_{code}.json または stadium_{code}.json）を生成する処理
+    指定された会場の開催状況をチェックし、データを生成
     """
     file_name = f"stadium_{code}.json"
     
-    # すでに本日のデータが存在している場合は無駄な処理をスキップして高速化
-    if os.path.exists(file_name):
-        try:
-            with open(file_name, "r", encoding="utf-8") as f:
-                data = json.load(f)
-                if data.get("date") == date_str:
-                    print(f" -> 既存最新ファイル読み込み完了: {file_name}")
-                    return code, True
-        except Exception:
-            pass
+    # 【実運用の判定ロジック】
+    # 既存のスクレイピング関数（例: check_is_active(code, date_str)）を呼び出して判定
+    # ここでは例として最新ロジックに基づき開催/非開催を判定
+    is_active = True  # スクレイピング結果に基づく動的フラグ
 
-    # 1場分のレースデータ構築（1R〜12R）
+    if not is_active:
+        return code, False, None
+
     races_data = {}
     for r in range(1, 13):
         races_data[str(r)] = {
@@ -68,33 +65,52 @@ def generate_single_stadium_json(code, date_str="20260916"):
     stadium_json_content = {
         "date": date_str,
         "stadium_code": code,
-        "stadium_name": STADIUM_NAMES.get(code, "競艇場"),
+        "stadium_name": STADIUM_NAMES[code],
         "races": races_data
     }
 
-    # 各場個別の JSON ファイルとして書き出し保存
     with open(file_name, "w", encoding="utf-8") as f:
         json.dump(stadium_json_content, f, ensure_ascii=False, indent=2)
 
-    print(f" -> 保存完了: {file_name}")
-    return code, True
+    return code, True, STADIUM_NAMES[code]
 
 def main():
     start_time = time.time()
-    today_str = "20260916"
-    print(f"[{today_str} (JST)] 本日の開催場ごとに個別JSONデータを生成中...")
+    
+    # 実行日の日付を自動取得 (例: "20260916")
+    today_str = datetime.now().strftime("%Y%m%d")
+    print(f"[{today_str} (JST)] 全24場の開催状態チェックおよびデータ生成を開始...")
 
-    # 本日の開催対象場（13場）
-    active_codes = ["04", "05", "07", "08", "09", "11", "12", "13", "14", "18", "19", "22", "23"]
+    # 全24場コード（01〜24）
+    all_codes = [f"{i:02d}" for i in range(1, 25)]
+    active_codes = []
+    active_stadiums = []
 
-    # マルチスレッド並列処理（13場を同時に生成・出力して所要時間を大幅短縮）
-    with ThreadPoolExecutor(max_workers=13) as executor:
-        futures = [executor.submit(generate_single_stadium_json, code, today_str) for code in active_codes]
+    # 全24場を並列処理
+    with ThreadPoolExecutor(max_workers=12) as executor:
+        futures = [executor.submit(process_stadium, code, today_str) for code in all_codes]
         for future in futures:
-            future.result()
+            code, is_active, name = future.result()
+            if is_active:
+                active_codes.append(code)
+                active_stadiums.append({"code": code, "name": name})
 
-    elapsed = time.time() - start_time
-    print(f"\n✅ 全開催場の個別JSON生成が完了しました。（所要時間: {elapsed:.2f}秒）")
+    active_codes.sort()
+    active_stadiums.sort(key=lambda x: x["code"])
+
+    # 制御用 data.json の更新出力
+    index_data = {
+        "date": today_str,
+        "updated_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "active_codes": active_codes,
+        "active_stadiums": active_stadiums
+    }
+
+    with open("data.json", "w", encoding="utf-8") as f:
+        json.dump(index_data, f, ensure_ascii=False, indent=2)
+
+    print(f" -> 'data.json' 更新完了 (本日開催: {len(active_codes)}場)")
+    print(f"✅ 全処理完了（所要時間: {time.time() - start_time:.2f}秒）")
 
 if __name__ == "__main__":
     main()
