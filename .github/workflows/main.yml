@@ -11,22 +11,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. リポジトリのチェックアウト (Node.js 24対応のv4に更新)
+      # 1. リポジトリのチェックアウト
       - name: Check out repository
         uses: actions/checkout@v4
 
-      # 2. Python環境のセットアップ (Node.js 24対応のv5に更新)
+      # 2. Python環境のセットアップ (Node 24対応、エラーの原因だったキャッシュ指定を削除)
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-          cache: 'pip' # キャッシュを使用して実行時間を短縮
 
-      # 3. 依存ライブラリのインストール
+      # 3. 必要なライブラリのインストール
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          # requirements.txt があれば読み込み、無ければ必要な主要ライブラリを直接インストール
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          else
+            pip install requests beautifulsoup4
+          fi
 
       # 4. データ取得スクリプトの実行
       - name: Run fetch_data.py
