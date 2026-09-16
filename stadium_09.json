@@ -1,0 +1,1435 @@
+{
+  "date": "20260916",
+  "stadium_code": "09",
+  "stadium_name": "津",
+  "races": {
+    "1": {
+      "weather": {
+        "weather": "晴",
+        "wind_speed": "2m",
+        "wind_direction": "追い風",
+        "wave": "2cm"
+      },
+      "summary_tag": "【本命濃厚】",
+      "racers": [
+        {
+          "name": "毒島 誠",
+          "rank": "A1",
+          "st": ".12",
+          "tilt": "-0.5",
+          "time": "6.65",
+          "power": 92,
+          "turn_offset": 20
+        },
+        {
+          "name": "峰 竜太",
+          "rank": "A1",
+          "st": ".14",
+          "tilt": "-0.5",
+          "time": "6.68",
+          "power": 85,
+          "turn_offset": 35
+        },
+        {
+          "name": "茅原 悠紀",
+          "rank": "A1",
+          "st": ".15",
+          "tilt": "0.0",
+          "time": "6.70",
+          "power": 78,
+          "turn_offset": 50
+        },
+        {
+          "name": "馬場 貴也",
+          "rank": "A1",
+          "st": ".16",
+          "tilt": "-0.5",
+          "time": "6.72",
+          "power": 70,
+          "turn_offset": 65
+        },
+        {
+          "name": "池田 浩二",
+          "rank": "A1",
+          "st": ".13",
+          "tilt": "-0.5",
+          "time": "6.67",
+          "power": 88,
+          "turn_offset": 40
+        },
+        {
+          "name": "菊地 孝平",
+          "rank": "A1",
+          "st": ".17",
+          "tilt": "0.0",
+          "time": "6.74",
+          "power": 65,
+          "turn_offset": 80
+        }
+      ],
+      "comment": "1号艇が絶好のスタートから1マークを先マイして独走態勢へ。2号艇と3号艇が鋭く差し込んで2着争いを展開する。",
+      "sub_comment": "2号艇がスリット保てば、差し勝率が低いものの、1号艇・3号艇が握り合えば差し場が生まれて高配当必須❗",
+      "bets": [
+        {
+          "num": "1 - 2 - 3",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 3 - 2",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 2 - 4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 4 - 2",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 3 - 4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "2 - 1 - 3",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2 - 3 - 1",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "3 - 1 - 2",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "3 - 2 - 1",
+          "tag": "穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "4 - 1 - 2",
+          "tag": "穴",
+          "style": "tag-ana"
+        }
+      ]
+    },
+    "2": {
+      "weather": {
+        "weather": "晴",
+        "wind_speed": "2m",
+        "wind_direction": "追い風",
+        "wave": "2cm"
+      },
+      "summary_tag": "【捲り一閃】",
+      "racers": [
+        {
+          "name": "毒島 誠",
+          "rank": "A1",
+          "st": ".12",
+          "tilt": "-0.5",
+          "time": "6.65",
+          "power": 92,
+          "turn_offset": 20
+        },
+        {
+          "name": "峰 竜太",
+          "rank": "A1",
+          "st": ".14",
+          "tilt": "-0.5",
+          "time": "6.68",
+          "power": 85,
+          "turn_offset": 35
+        },
+        {
+          "name": "茅原 悠紀",
+          "rank": "A1",
+          "st": ".15",
+          "tilt": "0.0",
+          "time": "6.70",
+          "power": 78,
+          "turn_offset": 50
+        },
+        {
+          "name": "馬場 貴也",
+          "rank": "A1",
+          "st": ".16",
+          "tilt": "-0.5",
+          "time": "6.72",
+          "power": 70,
+          "turn_offset": 65
+        },
+        {
+          "name": "池田 浩二",
+          "rank": "A1",
+          "st": ".13",
+          "tilt": "-0.5",
+          "time": "6.67",
+          "power": 88,
+          "turn_offset": 40
+        },
+        {
+          "name": "菊地 孝平",
+          "rank": "A1",
+          "st": ".17",
+          "tilt": "0.0",
+          "time": "6.74",
+          "power": 65,
+          "turn_offset": 80
+        }
+      ],
+      "comment": "1号艇が絶好のスタートから1マークを先マイして独走態勢へ。2号艇と3号艇が鋭く差し込んで2着争いを展開する。",
+      "sub_comment": "2号艇がスリット保てば、差し勝率が低いものの、1号艇・3号艇が握り合えば差し場が生まれて高配当必須❗",
+      "bets": [
+        {
+          "num": "1 - 2 - 3",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 3 - 2",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 2 - 4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 4 - 2",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 3 - 4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "2 - 1 - 3",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2 - 3 - 1",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "3 - 1 - 2",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "3 - 2 - 1",
+          "tag": "穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "4 - 1 - 2",
+          "tag": "穴",
+          "style": "tag-ana"
+        }
+      ]
+    },
+    "3": {
+      "weather": {
+        "weather": "晴",
+        "wind_speed": "2m",
+        "wind_direction": "追い風",
+        "wave": "2cm"
+      },
+      "summary_tag": "【本命濃厚】",
+      "racers": [
+        {
+          "name": "毒島 誠",
+          "rank": "A1",
+          "st": ".12",
+          "tilt": "-0.5",
+          "time": "6.65",
+          "power": 92,
+          "turn_offset": 20
+        },
+        {
+          "name": "峰 竜太",
+          "rank": "A1",
+          "st": ".14",
+          "tilt": "-0.5",
+          "time": "6.68",
+          "power": 85,
+          "turn_offset": 35
+        },
+        {
+          "name": "茅原 悠紀",
+          "rank": "A1",
+          "st": ".15",
+          "tilt": "0.0",
+          "time": "6.70",
+          "power": 78,
+          "turn_offset": 50
+        },
+        {
+          "name": "馬場 貴也",
+          "rank": "A1",
+          "st": ".16",
+          "tilt": "-0.5",
+          "time": "6.72",
+          "power": 70,
+          "turn_offset": 65
+        },
+        {
+          "name": "池田 浩二",
+          "rank": "A1",
+          "st": ".13",
+          "tilt": "-0.5",
+          "time": "6.67",
+          "power": 88,
+          "turn_offset": 40
+        },
+        {
+          "name": "菊地 孝平",
+          "rank": "A1",
+          "st": ".17",
+          "tilt": "0.0",
+          "time": "6.74",
+          "power": 65,
+          "turn_offset": 80
+        }
+      ],
+      "comment": "1号艇が絶好のスタートから1マークを先マイして独走態勢へ。2号艇と3号艇が鋭く差し込んで2着争いを展開する。",
+      "sub_comment": "2号艇がスリット保てば、差し勝率が低いものの、1号艇・3号艇が握り合えば差し場が生まれて高配当必須❗",
+      "bets": [
+        {
+          "num": "1 - 2 - 3",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 3 - 2",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 2 - 4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 4 - 2",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 3 - 4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "2 - 1 - 3",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2 - 3 - 1",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "3 - 1 - 2",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "3 - 2 - 1",
+          "tag": "穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "4 - 1 - 2",
+          "tag": "穴",
+          "style": "tag-ana"
+        }
+      ]
+    },
+    "4": {
+      "weather": {
+        "weather": "晴",
+        "wind_speed": "2m",
+        "wind_direction": "追い風",
+        "wave": "2cm"
+      },
+      "summary_tag": "【捲り一閃】",
+      "racers": [
+        {
+          "name": "毒島 誠",
+          "rank": "A1",
+          "st": ".12",
+          "tilt": "-0.5",
+          "time": "6.65",
+          "power": 92,
+          "turn_offset": 20
+        },
+        {
+          "name": "峰 竜太",
+          "rank": "A1",
+          "st": ".14",
+          "tilt": "-0.5",
+          "time": "6.68",
+          "power": 85,
+          "turn_offset": 35
+        },
+        {
+          "name": "茅原 悠紀",
+          "rank": "A1",
+          "st": ".15",
+          "tilt": "0.0",
+          "time": "6.70",
+          "power": 78,
+          "turn_offset": 50
+        },
+        {
+          "name": "馬場 貴也",
+          "rank": "A1",
+          "st": ".16",
+          "tilt": "-0.5",
+          "time": "6.72",
+          "power": 70,
+          "turn_offset": 65
+        },
+        {
+          "name": "池田 浩二",
+          "rank": "A1",
+          "st": ".13",
+          "tilt": "-0.5",
+          "time": "6.67",
+          "power": 88,
+          "turn_offset": 40
+        },
+        {
+          "name": "菊地 孝平",
+          "rank": "A1",
+          "st": ".17",
+          "tilt": "0.0",
+          "time": "6.74",
+          "power": 65,
+          "turn_offset": 80
+        }
+      ],
+      "comment": "1号艇が絶好のスタートから1マークを先マイして独走態勢へ。2号艇と3号艇が鋭く差し込んで2着争いを展開する。",
+      "sub_comment": "2号艇がスリット保てば、差し勝率が低いものの、1号艇・3号艇が握り合えば差し場が生まれて高配当必須❗",
+      "bets": [
+        {
+          "num": "1 - 2 - 3",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 3 - 2",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 2 - 4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 4 - 2",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 3 - 4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "2 - 1 - 3",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2 - 3 - 1",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "3 - 1 - 2",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "3 - 2 - 1",
+          "tag": "穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "4 - 1 - 2",
+          "tag": "穴",
+          "style": "tag-ana"
+        }
+      ]
+    },
+    "5": {
+      "weather": {
+        "weather": "晴",
+        "wind_speed": "2m",
+        "wind_direction": "追い風",
+        "wave": "2cm"
+      },
+      "summary_tag": "【本命濃厚】",
+      "racers": [
+        {
+          "name": "毒島 誠",
+          "rank": "A1",
+          "st": ".12",
+          "tilt": "-0.5",
+          "time": "6.65",
+          "power": 92,
+          "turn_offset": 20
+        },
+        {
+          "name": "峰 竜太",
+          "rank": "A1",
+          "st": ".14",
+          "tilt": "-0.5",
+          "time": "6.68",
+          "power": 85,
+          "turn_offset": 35
+        },
+        {
+          "name": "茅原 悠紀",
+          "rank": "A1",
+          "st": ".15",
+          "tilt": "0.0",
+          "time": "6.70",
+          "power": 78,
+          "turn_offset": 50
+        },
+        {
+          "name": "馬場 貴也",
+          "rank": "A1",
+          "st": ".16",
+          "tilt": "-0.5",
+          "time": "6.72",
+          "power": 70,
+          "turn_offset": 65
+        },
+        {
+          "name": "池田 浩二",
+          "rank": "A1",
+          "st": ".13",
+          "tilt": "-0.5",
+          "time": "6.67",
+          "power": 88,
+          "turn_offset": 40
+        },
+        {
+          "name": "菊地 孝平",
+          "rank": "A1",
+          "st": ".17",
+          "tilt": "0.0",
+          "time": "6.74",
+          "power": 65,
+          "turn_offset": 80
+        }
+      ],
+      "comment": "1号艇が絶好のスタートから1マークを先マイして独走態勢へ。2号艇と3号艇が鋭く差し込んで2着争いを展開する。",
+      "sub_comment": "2号艇がスリット保てば、差し勝率が低いものの、1号艇・3号艇が握り合えば差し場が生まれて高配当必須❗",
+      "bets": [
+        {
+          "num": "1 - 2 - 3",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 3 - 2",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 2 - 4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 4 - 2",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 3 - 4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "2 - 1 - 3",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2 - 3 - 1",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "3 - 1 - 2",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "3 - 2 - 1",
+          "tag": "穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "4 - 1 - 2",
+          "tag": "穴",
+          "style": "tag-ana"
+        }
+      ]
+    },
+    "6": {
+      "weather": {
+        "weather": "晴",
+        "wind_speed": "2m",
+        "wind_direction": "追い風",
+        "wave": "2cm"
+      },
+      "summary_tag": "【捲り一閃】",
+      "racers": [
+        {
+          "name": "毒島 誠",
+          "rank": "A1",
+          "st": ".12",
+          "tilt": "-0.5",
+          "time": "6.65",
+          "power": 92,
+          "turn_offset": 20
+        },
+        {
+          "name": "峰 竜太",
+          "rank": "A1",
+          "st": ".14",
+          "tilt": "-0.5",
+          "time": "6.68",
+          "power": 85,
+          "turn_offset": 35
+        },
+        {
+          "name": "茅原 悠紀",
+          "rank": "A1",
+          "st": ".15",
+          "tilt": "0.0",
+          "time": "6.70",
+          "power": 78,
+          "turn_offset": 50
+        },
+        {
+          "name": "馬場 貴也",
+          "rank": "A1",
+          "st": ".16",
+          "tilt": "-0.5",
+          "time": "6.72",
+          "power": 70,
+          "turn_offset": 65
+        },
+        {
+          "name": "池田 浩二",
+          "rank": "A1",
+          "st": ".13",
+          "tilt": "-0.5",
+          "time": "6.67",
+          "power": 88,
+          "turn_offset": 40
+        },
+        {
+          "name": "菊地 孝平",
+          "rank": "A1",
+          "st": ".17",
+          "tilt": "0.0",
+          "time": "6.74",
+          "power": 65,
+          "turn_offset": 80
+        }
+      ],
+      "comment": "1号艇が絶好のスタートから1マークを先マイして独走態勢へ。2号艇と3号艇が鋭く差し込んで2着争いを展開する。",
+      "sub_comment": "2号艇がスリット保てば、差し勝率が低いものの、1号艇・3号艇が握り合えば差し場が生まれて高配当必須❗",
+      "bets": [
+        {
+          "num": "1 - 2 - 3",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 3 - 2",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 2 - 4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 4 - 2",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 3 - 4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "2 - 1 - 3",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2 - 3 - 1",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "3 - 1 - 2",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "3 - 2 - 1",
+          "tag": "穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "4 - 1 - 2",
+          "tag": "穴",
+          "style": "tag-ana"
+        }
+      ]
+    },
+    "7": {
+      "weather": {
+        "weather": "晴",
+        "wind_speed": "2m",
+        "wind_direction": "追い風",
+        "wave": "2cm"
+      },
+      "summary_tag": "【本命濃厚】",
+      "racers": [
+        {
+          "name": "毒島 誠",
+          "rank": "A1",
+          "st": ".12",
+          "tilt": "-0.5",
+          "time": "6.65",
+          "power": 92,
+          "turn_offset": 20
+        },
+        {
+          "name": "峰 竜太",
+          "rank": "A1",
+          "st": ".14",
+          "tilt": "-0.5",
+          "time": "6.68",
+          "power": 85,
+          "turn_offset": 35
+        },
+        {
+          "name": "茅原 悠紀",
+          "rank": "A1",
+          "st": ".15",
+          "tilt": "0.0",
+          "time": "6.70",
+          "power": 78,
+          "turn_offset": 50
+        },
+        {
+          "name": "馬場 貴也",
+          "rank": "A1",
+          "st": ".16",
+          "tilt": "-0.5",
+          "time": "6.72",
+          "power": 70,
+          "turn_offset": 65
+        },
+        {
+          "name": "池田 浩二",
+          "rank": "A1",
+          "st": ".13",
+          "tilt": "-0.5",
+          "time": "6.67",
+          "power": 88,
+          "turn_offset": 40
+        },
+        {
+          "name": "菊地 孝平",
+          "rank": "A1",
+          "st": ".17",
+          "tilt": "0.0",
+          "time": "6.74",
+          "power": 65,
+          "turn_offset": 80
+        }
+      ],
+      "comment": "1号艇が絶好のスタートから1マークを先マイして独走態勢へ。2号艇と3号艇が鋭く差し込んで2着争いを展開する。",
+      "sub_comment": "2号艇がスリット保てば、差し勝率が低いものの、1号艇・3号艇が握り合えば差し場が生まれて高配当必須❗",
+      "bets": [
+        {
+          "num": "1 - 2 - 3",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 3 - 2",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 2 - 4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 4 - 2",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 3 - 4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "2 - 1 - 3",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2 - 3 - 1",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "3 - 1 - 2",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "3 - 2 - 1",
+          "tag": "穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "4 - 1 - 2",
+          "tag": "穴",
+          "style": "tag-ana"
+        }
+      ]
+    },
+    "8": {
+      "weather": {
+        "weather": "晴",
+        "wind_speed": "2m",
+        "wind_direction": "追い風",
+        "wave": "2cm"
+      },
+      "summary_tag": "【捲り一閃】",
+      "racers": [
+        {
+          "name": "毒島 誠",
+          "rank": "A1",
+          "st": ".12",
+          "tilt": "-0.5",
+          "time": "6.65",
+          "power": 92,
+          "turn_offset": 20
+        },
+        {
+          "name": "峰 竜太",
+          "rank": "A1",
+          "st": ".14",
+          "tilt": "-0.5",
+          "time": "6.68",
+          "power": 85,
+          "turn_offset": 35
+        },
+        {
+          "name": "茅原 悠紀",
+          "rank": "A1",
+          "st": ".15",
+          "tilt": "0.0",
+          "time": "6.70",
+          "power": 78,
+          "turn_offset": 50
+        },
+        {
+          "name": "馬場 貴也",
+          "rank": "A1",
+          "st": ".16",
+          "tilt": "-0.5",
+          "time": "6.72",
+          "power": 70,
+          "turn_offset": 65
+        },
+        {
+          "name": "池田 浩二",
+          "rank": "A1",
+          "st": ".13",
+          "tilt": "-0.5",
+          "time": "6.67",
+          "power": 88,
+          "turn_offset": 40
+        },
+        {
+          "name": "菊地 孝平",
+          "rank": "A1",
+          "st": ".17",
+          "tilt": "0.0",
+          "time": "6.74",
+          "power": 65,
+          "turn_offset": 80
+        }
+      ],
+      "comment": "1号艇が絶好のスタートから1マークを先マイして独走態勢へ。2号艇と3号艇が鋭く差し込んで2着争いを展開する。",
+      "sub_comment": "2号艇がスリット保てば、差し勝率が低いものの、1号艇・3号艇が握り合えば差し場が生まれて高配当必須❗",
+      "bets": [
+        {
+          "num": "1 - 2 - 3",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 3 - 2",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 2 - 4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 4 - 2",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 3 - 4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "2 - 1 - 3",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2 - 3 - 1",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "3 - 1 - 2",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "3 - 2 - 1",
+          "tag": "穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "4 - 1 - 2",
+          "tag": "穴",
+          "style": "tag-ana"
+        }
+      ]
+    },
+    "9": {
+      "weather": {
+        "weather": "晴",
+        "wind_speed": "2m",
+        "wind_direction": "追い風",
+        "wave": "2cm"
+      },
+      "summary_tag": "【本命濃厚】",
+      "racers": [
+        {
+          "name": "毒島 誠",
+          "rank": "A1",
+          "st": ".12",
+          "tilt": "-0.5",
+          "time": "6.65",
+          "power": 92,
+          "turn_offset": 20
+        },
+        {
+          "name": "峰 竜太",
+          "rank": "A1",
+          "st": ".14",
+          "tilt": "-0.5",
+          "time": "6.68",
+          "power": 85,
+          "turn_offset": 35
+        },
+        {
+          "name": "茅原 悠紀",
+          "rank": "A1",
+          "st": ".15",
+          "tilt": "0.0",
+          "time": "6.70",
+          "power": 78,
+          "turn_offset": 50
+        },
+        {
+          "name": "馬場 貴也",
+          "rank": "A1",
+          "st": ".16",
+          "tilt": "-0.5",
+          "time": "6.72",
+          "power": 70,
+          "turn_offset": 65
+        },
+        {
+          "name": "池田 浩二",
+          "rank": "A1",
+          "st": ".13",
+          "tilt": "-0.5",
+          "time": "6.67",
+          "power": 88,
+          "turn_offset": 40
+        },
+        {
+          "name": "菊地 孝平",
+          "rank": "A1",
+          "st": ".17",
+          "tilt": "0.0",
+          "time": "6.74",
+          "power": 65,
+          "turn_offset": 80
+        }
+      ],
+      "comment": "1号艇が絶好のスタートから1マークを先マイして独走態勢へ。2号艇と3号艇が鋭く差し込んで2着争いを展開する。",
+      "sub_comment": "2号艇がスリット保てば、差し勝率が低いものの、1号艇・3号艇が握り合えば差し場が生まれて高配当必須❗",
+      "bets": [
+        {
+          "num": "1 - 2 - 3",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 3 - 2",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 2 - 4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 4 - 2",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 3 - 4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "2 - 1 - 3",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2 - 3 - 1",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "3 - 1 - 2",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "3 - 2 - 1",
+          "tag": "穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "4 - 1 - 2",
+          "tag": "穴",
+          "style": "tag-ana"
+        }
+      ]
+    },
+    "10": {
+      "weather": {
+        "weather": "晴",
+        "wind_speed": "2m",
+        "wind_direction": "追い風",
+        "wave": "2cm"
+      },
+      "summary_tag": "【捲り一閃】",
+      "racers": [
+        {
+          "name": "毒島 誠",
+          "rank": "A1",
+          "st": ".12",
+          "tilt": "-0.5",
+          "time": "6.65",
+          "power": 92,
+          "turn_offset": 20
+        },
+        {
+          "name": "峰 竜太",
+          "rank": "A1",
+          "st": ".14",
+          "tilt": "-0.5",
+          "time": "6.68",
+          "power": 85,
+          "turn_offset": 35
+        },
+        {
+          "name": "茅原 悠紀",
+          "rank": "A1",
+          "st": ".15",
+          "tilt": "0.0",
+          "time": "6.70",
+          "power": 78,
+          "turn_offset": 50
+        },
+        {
+          "name": "馬場 貴也",
+          "rank": "A1",
+          "st": ".16",
+          "tilt": "-0.5",
+          "time": "6.72",
+          "power": 70,
+          "turn_offset": 65
+        },
+        {
+          "name": "池田 浩二",
+          "rank": "A1",
+          "st": ".13",
+          "tilt": "-0.5",
+          "time": "6.67",
+          "power": 88,
+          "turn_offset": 40
+        },
+        {
+          "name": "菊地 孝平",
+          "rank": "A1",
+          "st": ".17",
+          "tilt": "0.0",
+          "time": "6.74",
+          "power": 65,
+          "turn_offset": 80
+        }
+      ],
+      "comment": "1号艇が絶好のスタートから1マークを先マイして独走態勢へ。2号艇と3号艇が鋭く差し込んで2着争いを展開する。",
+      "sub_comment": "2号艇がスリット保てば、差し勝率が低いものの、1号艇・3号艇が握り合えば差し場が生まれて高配当必須❗",
+      "bets": [
+        {
+          "num": "1 - 2 - 3",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 3 - 2",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 2 - 4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 4 - 2",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 3 - 4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "2 - 1 - 3",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2 - 3 - 1",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "3 - 1 - 2",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "3 - 2 - 1",
+          "tag": "穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "4 - 1 - 2",
+          "tag": "穴",
+          "style": "tag-ana"
+        }
+      ]
+    },
+    "11": {
+      "weather": {
+        "weather": "晴",
+        "wind_speed": "2m",
+        "wind_direction": "追い風",
+        "wave": "2cm"
+      },
+      "summary_tag": "【本命濃厚】",
+      "racers": [
+        {
+          "name": "毒島 誠",
+          "rank": "A1",
+          "st": ".12",
+          "tilt": "-0.5",
+          "time": "6.65",
+          "power": 92,
+          "turn_offset": 20
+        },
+        {
+          "name": "峰 竜太",
+          "rank": "A1",
+          "st": ".14",
+          "tilt": "-0.5",
+          "time": "6.68",
+          "power": 85,
+          "turn_offset": 35
+        },
+        {
+          "name": "茅原 悠紀",
+          "rank": "A1",
+          "st": ".15",
+          "tilt": "0.0",
+          "time": "6.70",
+          "power": 78,
+          "turn_offset": 50
+        },
+        {
+          "name": "馬場 貴也",
+          "rank": "A1",
+          "st": ".16",
+          "tilt": "-0.5",
+          "time": "6.72",
+          "power": 70,
+          "turn_offset": 65
+        },
+        {
+          "name": "池田 浩二",
+          "rank": "A1",
+          "st": ".13",
+          "tilt": "-0.5",
+          "time": "6.67",
+          "power": 88,
+          "turn_offset": 40
+        },
+        {
+          "name": "菊地 孝平",
+          "rank": "A1",
+          "st": ".17",
+          "tilt": "0.0",
+          "time": "6.74",
+          "power": 65,
+          "turn_offset": 80
+        }
+      ],
+      "comment": "1号艇が絶好のスタートから1マークを先マイして独走態勢へ。2号艇と3号艇が鋭く差し込んで2着争いを展開する。",
+      "sub_comment": "2号艇がスリット保てば、差し勝率が低いものの、1号艇・3号艇が握り合えば差し場が生まれて高配当必須❗",
+      "bets": [
+        {
+          "num": "1 - 2 - 3",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 3 - 2",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 2 - 4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 4 - 2",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 3 - 4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "2 - 1 - 3",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2 - 3 - 1",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "3 - 1 - 2",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "3 - 2 - 1",
+          "tag": "穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "4 - 1 - 2",
+          "tag": "穴",
+          "style": "tag-ana"
+        }
+      ]
+    },
+    "12": {
+      "weather": {
+        "weather": "晴",
+        "wind_speed": "2m",
+        "wind_direction": "追い風",
+        "wave": "2cm"
+      },
+      "summary_tag": "【捲り一閃】",
+      "racers": [
+        {
+          "name": "毒島 誠",
+          "rank": "A1",
+          "st": ".12",
+          "tilt": "-0.5",
+          "time": "6.65",
+          "power": 92,
+          "turn_offset": 20
+        },
+        {
+          "name": "峰 竜太",
+          "rank": "A1",
+          "st": ".14",
+          "tilt": "-0.5",
+          "time": "6.68",
+          "power": 85,
+          "turn_offset": 35
+        },
+        {
+          "name": "茅原 悠紀",
+          "rank": "A1",
+          "st": ".15",
+          "tilt": "0.0",
+          "time": "6.70",
+          "power": 78,
+          "turn_offset": 50
+        },
+        {
+          "name": "馬場 貴也",
+          "rank": "A1",
+          "st": ".16",
+          "tilt": "-0.5",
+          "time": "6.72",
+          "power": 70,
+          "turn_offset": 65
+        },
+        {
+          "name": "池田 浩二",
+          "rank": "A1",
+          "st": ".13",
+          "tilt": "-0.5",
+          "time": "6.67",
+          "power": 88,
+          "turn_offset": 40
+        },
+        {
+          "name": "菊地 孝平",
+          "rank": "A1",
+          "st": ".17",
+          "tilt": "0.0",
+          "time": "6.74",
+          "power": 65,
+          "turn_offset": 80
+        }
+      ],
+      "comment": "1号艇が絶好のスタートから1マークを先マイして独走態勢へ。2号艇と3号艇が鋭く差し込んで2着争いを展開する。",
+      "sub_comment": "2号艇がスリット保てば、差し勝率が低いものの、1号艇・3号艇が握り合えば差し場が生まれて高配当必須❗",
+      "bets": [
+        {
+          "num": "1 - 2 - 3",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 3 - 2",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 2 - 4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 4 - 2",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1 - 3 - 4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "2 - 1 - 3",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2 - 3 - 1",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "3 - 1 - 2",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "3 - 2 - 1",
+          "tag": "穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "4 - 1 - 2",
+          "tag": "穴",
+          "style": "tag-ana"
+        }
+      ]
+    }
+  }
+}
