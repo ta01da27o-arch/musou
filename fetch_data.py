@@ -3,9 +3,14 @@ import json
 import time
 import re
 import urllib.request
-import io
-import zlib
+import tempfile
 from datetime import datetime
+
+# LZH解凍用ライブラリ
+try:
+    import lhafile
+except ImportError:
+    lhafile = None
 
 STADIUM_NAMES = {
     "01": "桐生", "02": "戸田", "03": "江戸川", "04": "平和島",
@@ -16,49 +21,21 @@ STADIUM_NAMES = {
     "21": "芦屋", "22": "福岡", "23": "唐津", "24": "大村"
 }
 
-def decompress_lzh_or_raw(data_bytes):
+def download_and_extract_lzh(date_str):
     """
-    LZH圧縮形式(または生テキスト)からテキストを展開する
+    公式のB{YYMMDD}.lzh (または.TXT)をダウンロードし、LZH解凍してテキストを抽出する
     """
-    # 生テキストでデコードを試みる
-    try:
-        return data_bytes.decode('cp932')
-    except Exception:
-        pass
-
-    try:
-        return data_bytes.decode('euc-jp', errors='ignore')
-    except Exception:
-        pass
-
-    # LZH/LHAのバイナリ解凍（ヘッダー解析フォールバック）
-    # LHAヘッダー -lh0- (無圧縮) または -lh5-/-lh7- の判定
-    try:
-        # ヘッダー位置を検索
-        lh_idx = data_bytes.find(b"-lh")
-        if lh_idx != -1:
-            method = data_bytes[lh_idx:lh_idx+5]
-            if method == b"-lh0-":
-                # 無圧縮LZH
-                header_size = data_bytes[0]
-                compressed_data = data_bytes[header_size+2:]
-                return compressed_data.decode('cp932', errors='ignore')
-    except Exception as e:
-        print(f"LZH解凍警告: {e}")
-
-    return data_bytes.decode('cp932', errors='ignore')
-
-def download_official_program_txt(date_str):
-    """ 公式の番組表テキスト(BYYMMDD.TXT)を取得・解凍 """
     yy = date_str[-6:-4]
     mm = date_str[-4:-2]
     dd = date_str[-2:]
-    filename = f"B{yy}{mm}{dd}.TXT"
     
-    # 1. 公式ダウンロードURL (LZH / TXT)
+    # 配信ファイル名のパターン
+    filename_txt = f"B{yy}{mm}{dd}.TXT"
+    filename_lzh = f"b{yy}{mm}{dd}.lzh"
+    
     urls = [
-        f"https://www.boatrace.jp/owpc/pc/extra/data/download/{filename}",
-        f"https://www.boatrace.jp/owpc/pc/extra/data/download/b{yy}{mm}{dd}.lzh"
+        f"https://www.boatrace.jp/owpc/pc/extra/data/download/{filename_lzh}",
+        f"https://www.boatrace.jp/owpc/pc/extra/data/download/{filename_txt}"
     ]
     
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
@@ -68,20 +45,46 @@ def download_official_program_txt(date_str):
         req = urllib.request.Request(url, headers=headers)
         try:
             with urllib.request.urlopen(req, timeout=15) as response:
-                content_bytes = response.read()
-                txt_data = decompress_lzh_or_raw(content_bytes)
-                if txt_data and ("ボートレース" in txt_data or "競艇" in txt_data or "BB3#" in txt_data or "番組表" in txt_data or "組番" in txt_data):
-                    print("✅ 番組表テキストの解凍・デコードに成功しました。")
-                    return txt_data
+                data_bytes = response.read()
+
+                # 1. lhafile ライブラリによるLZH解凍
+                if lhafile:
+                    try:
+                        with tempfile.NamedTemporaryFile(delete=False) as tmp:
+                            tmp.write(data_bytes)
+                            tmp_path = tmp.name
+
+                        lf = lhafile.Lhafile(tmp_path)
+                        for info in lf.infolist():
+                            extracted_bytes = lf.read(info.filename)
+                            try:
+                                txt = extracted_bytes.decode('cp932')
+                            except UnicodeDecodeError:
+                                txt = extracted_bytes.decode('euc-jp', errors='ignore')
+                            
+                            os.remove(tmp_path)
+                            print(f"✅ LZH解凍成功: {info.filename}")
+                            return txt
+                        os.remove(tmp_path)
+                    except Exception as e:
+                        print(f"lhafile 解凍エラー: {e}")
+
+                # 2. 直接テキストの場合のフォールバック
+                try:
+                    txt = data_bytes.decode('cp932')
+                    if "BB3#" in txt or "ボートレース" in txt or "番組表" in txt:
+                        print("✅ 生テキスト取得完了")
+                        return txt
+                except Exception:
+                    pass
+
         except Exception as e:
-            print(f"取得スキップ ({url}): {e}")
+            print(f"取得失敗 ({url}): {e}")
 
     return None
 
 def parse_program_txt(txt_content):
-    """
-    テキスト内から全場・全レース・全選手情報を抽出
-    """
+    """ 番組表テキストから全開催場・全レース・全選手データを抽出 """
     stadium_data = {}
     current_jcd = None
     current_rno = None
@@ -89,7 +92,7 @@ def parse_program_txt(txt_content):
     lines = txt_content.splitlines()
 
     for line in lines:
-        # 1. 場コードの判定
+        # 場コード判定 (BB3#04 等)
         if "BB3#" in line:
             m = re.search(r"BB3#(\d{2})", line)
             if m:
@@ -98,15 +101,15 @@ def parse_program_txt(txt_content):
                     stadium_data[current_jcd] = {}
                 continue
 
-        # 場名検索（「ボートレース○○」または「第○○日」ヘッダー行）
+        # 場名ダイレクト検出（バックアップ）
         for code, name in STADIUM_NAMES.items():
-            if name in line and ("ボートレース" in line or "競艇" in line or "第" in line):
+            if f"ボートレース{name}" in line or f"［{name}］" in line or f"【{name}】" in line or (name in line and "第" in line and "日" in line):
                 current_jcd = code
                 if current_jcd not in stadium_data:
                     stadium_data[current_jcd] = {}
                 break
 
-        # 2. レース番号の判定 (1R 〜 12R)
+        # レース番号判定 (1R 〜 12R)
         r_match = re.search(r"(\d{1,2})\s*Ｒ", line) or re.search(r"(\d{1,2})R", line)
         if r_match and current_jcd:
             r_num = int(r_match.group(1))
@@ -115,10 +118,9 @@ def parse_program_txt(txt_content):
                 if current_rno not in stadium_data[current_jcd]:
                     stadium_data[current_jcd][current_rno] = []
 
-        # 3. 選手データ行の判定（艇番 1-6 + 登録番号4桁 + 選手名 + 級別）
+        # 選手情報行の抽出（艇番 1-6 + 登録番号 4桁）
         if current_jcd and current_rno:
-            p_match = re.search(r"^\s*([1-6])\s+(\d{4})\s+([^\s]+)\s+([AB][12])", line) or \
-                      re.search(r"([1-6])\s*(\d{4})\s*([^\s]+)\s*([AB][12])", line)
+            p_match = re.search(r"([1-6])\s+(\d{4})\s+([^\s]+)\s+([AB][12])", line)
             if p_match:
                 lane = int(p_match.group(1))
                 toban = p_match.group(2)
@@ -175,7 +177,7 @@ def main():
     today_str = datetime.now().strftime("%Y%m%d")
     print(f"[{today_str}] 公式データ解析開始...")
 
-    txt = download_official_program_txt(today_str)
+    txt = download_and_extract_lzh(today_str)
     
     active_codes = []
     active_stadiums = []
@@ -204,9 +206,9 @@ def main():
             with open(f"stadium_{code}.json", "w", encoding="utf-8") as f:
                 json.dump(stadium_json, f, ensure_ascii=False, indent=2)
                 
-            print(f" -> 出走表生成完了: stadium_{code}.json")
+            print(f" -> 出走表作成完了: stadium_{code}.json")
 
-    # 予備補テン処理（万が一解析対象が取れなかった場合）
+    # データが抽出できなかった場合の予備動作
     if not active_codes:
         print("⚠️ 抽出結果が0件のため、基本開催リストを生成します。")
         default_codes = ["04", "05", "07", "08", "09", "11", "12", "13", "14", "18", "19", "22", "23"]
