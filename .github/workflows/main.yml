@@ -21,7 +21,7 @@ jobs:
       - name: Install System Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y lha unar
+          sudo apt-get install -y lhasa unar
 
       - name: Install Python dependencies
         run: |
