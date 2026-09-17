@@ -3,7 +3,6 @@ import json
 import time
 import re
 import urllib.request
-import lzma
 from datetime import datetime
 
 STADIUM_NAMES = {
@@ -17,8 +16,7 @@ STADIUM_NAMES = {
 
 def download_official_program_txt(date_str):
     """
-    公式のダウンロード用テキスト番組表を取得する
-    URL形式: https://www.boatrace.jp/owpc/pc/extra/data/download/B{YYMMDD}.TXT
+    公式の番組表テキスト(BYYMMDD.TXT)を取得
     """
     yy = date_str[2:4]
     mm = date_str[4:6]
@@ -33,31 +31,35 @@ def download_official_program_txt(date_str):
     req = urllib.request.Request(url, headers=headers)
     try:
         with urllib.request.urlopen(req, timeout=15) as response:
-            # Shift_JIS(CP932) または EUC-JP でデコード
             content = response.read()
             try:
                 return content.decode('cp932')
             except UnicodeDecodeError:
                 return content.decode('euc-jp', errors='ignore')
     except Exception as e:
-        print(f"番組表テキストの取得に失敗しました: {e}")
+        print(f"番組表テキスト取得エラー: {e}")
         return None
 
-def parse_program_txt(txt_content, date_str):
+def parse_program_txt(txt_content):
     """
-    番組表テキストを解析して各競艇場・各レースの出走選手データを抽出
+    番組表テキストから開催場・レース・選手データを抽出
     """
     stadium_data = {}
-    
-    # 競艇場ごとに分割（「◆競艇場名」で区切られているパターンに対応）
-    # 例: BB3#04... 等のヘッダー解析
-    lines = txt_content.splitlines()
-    
     current_jcd = None
     current_rno = None
-    
+
+    lines = txt_content.splitlines()
+
     for line in lines:
-        # 場コード判定（行内に場名やコードが含まれるヘッダーを識別）
+        # 場コード判定（BB3# 形式ヘッダー、または場名表記）
+        bb_match = re.search(r"BB3#(\d{2})", line)
+        if bb_match:
+            current_jcd = bb_match.group(1)
+            if current_jcd in STADIUM_NAMES and current_jcd not in stadium_data:
+                stadium_data[current_jcd] = {}
+            continue
+
+        # 場名ダイレクト判定（バックアップ）
         for code, name in STADIUM_NAMES.items():
             if f"ボートレース{name}" in line or f"［{name}］" in line or f"【{name}】" in line:
                 current_jcd = code
@@ -65,24 +67,25 @@ def parse_program_txt(txt_content, date_str):
                     stadium_data[current_jcd] = {}
                 break
 
-        # レース番号判定
-        r_match = re.search(r"(\d{1,2})\s*Ｒ", line)
+        # レース番号判定 (1R 〜 12R)
+        r_match = re.search(r"^\s*(\d{1,2})\s*Ｒ", line) or re.search(r"(\d{1,2})Ｒ", line)
         if r_match and current_jcd:
-            current_rno = str(int(r_match.group(1)))
-            if current_rno not in stadium_data[current_jcd]:
-                stadium_data[current_jcd][current_rno] = []
+            r_num = int(r_match.group(1))
+            if 1 <= r_num <= 12:
+                current_rno = str(r_num)
+                if current_rno not in stadium_data[current_jcd]:
+                    stadium_data[current_jcd][current_rno] = []
 
-        # 選手情報行の抽出（登録番号 4桁数字 + 選手名 + 級別）
-        # 例: 1 4321 毒島　　誠 A1 ...
+        # 選手情報行の抽出（登録番号4桁 + 選手名 + 級別）
         if current_jcd and current_rno:
-            boat_match = re.search(r"^\s*([1-6])\s+(\d{4})\s+([^\s]+)\s+([AB][12])", line)
-            if boat_match:
-                lane = int(boat_match.group(1))
-                toban = boat_match.group(2)
-                raw_name = boat_match.group(3).replace("　", " ")
-                rank = boat_match.group(4)
-                
-                # 同一艇の二重追加防止
+            # 例: 1 4321 毒島　　誠 A1 ...
+            r_match = re.search(r"^\s*([1-6])\s+(\d{4})\s+([^\s]+)\s+([AB][12])", line)
+            if r_match:
+                lane = int(r_match.group(1))
+                toban = r_match.group(2)
+                raw_name = r_match.group(3).replace("　", " ").strip()
+                rank = r_match.group(4)
+
                 racers = stadium_data[current_jcd][current_rno]
                 if len(racers) < 6:
                     racers.append({
@@ -98,7 +101,6 @@ def parse_program_txt(txt_content, date_str):
     return stadium_data
 
 def build_race_struct(racers, race_num):
-    # 6艇揃っていない場合の補填
     while len(racers) < 6:
         idx = len(racers) + 1
         racers.append({
@@ -132,7 +134,7 @@ def build_race_struct(racers, race_num):
 def main():
     start_time = time.time()
     today_str = datetime.now().strftime("%Y%m%d")
-    print(f"[{today_str}] 公式テキストデータ取得中...")
+    print(f"[{today_str}] 公式データ解析開始...")
 
     txt = download_official_program_txt(today_str)
     
@@ -140,7 +142,7 @@ def main():
     active_stadiums = []
 
     if txt:
-        parsed_data = parse_program_txt(txt, today_str)
+        parsed_data = parse_program_txt(txt)
         active_codes = sorted(list(parsed_data.keys()))
         
         for code in active_codes:
@@ -163,11 +165,30 @@ def main():
             with open(f"stadium_{code}.json", "w", encoding="utf-8") as f:
                 json.dump(stadium_json, f, ensure_ascii=False, indent=2)
                 
-            print(f" -> 保存完了: stadium_{code}.json")
-    else:
-        print("番組表テキストのダウンロードに失敗したため、デフォルトデータで生成します。")
+            print(f" -> 生成完了: stadium_{code}.json")
 
-    # index用 data.json の出力
+    # 万が一テキスト解析で1場も取れなかった場合のフォールバック（デフォルト場設定）
+    if not active_codes:
+        print("⚠️ 解析コードに一致する開催場が見つかりませんでした。基本設定で書き出します。")
+        default_codes = ["04", "05", "07", "08", "09", "11", "12", "13", "14", "18", "19", "22", "23"]
+        for code in default_codes:
+            name = STADIUM_NAMES.get(code, "競艇場")
+            active_codes.append(code)
+            active_stadiums.append({"code": code, "name": name})
+            
+            races_dict = {str(r): build_race_struct([], r) for r in range(1, 13)}
+            stadium_json = {
+                "date": today_str,
+                "stadium_code": code,
+                "stadium_name": name,
+                "races": races_dict
+            }
+            with open(f"stadium_{code}.json", "w", encoding="utf-8") as f:
+                json.dump(stadium_json, f, ensure_ascii=False, indent=2)
+
+    active_codes.sort()
+    active_stadiums.sort(key=lambda x: x["code"])
+
     index_data = {
         "date": today_str,
         "updated_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
@@ -178,7 +199,7 @@ def main():
     with open("data.json", "w", encoding="utf-8") as f:
         json.dump(index_data, f, ensure_ascii=False, indent=2)
 
-    print(f"✅ 全データ生成完了！（所要時間: {time.time() - start_time:.2f}秒）")
+    print(f"✅ 全データ作成完了！（所要時間: {time.time() - start_time:.2f}秒）")
 
 if __name__ == "__main__":
     main()
