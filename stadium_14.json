@@ -13,62 +13,62 @@
       "summary_tag": "【本命濃厚】",
       "racers": [
         {
-          "name": "未確定1",
-          "rank": "B1",
+          "name": "古澤  光紀",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 30
         },
         {
-          "name": "未確定2",
-          "rank": "B1",
+          "name": "赤池  修平",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 40
         },
         {
-          "name": "未確定3",
+          "name": "塩田  雄一",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 50
         },
         {
-          "name": "未確定4",
+          "name": "恵良  琴美",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 60
         },
         {
-          "name": "未確定5",
+          "name": "小野  勇作",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 70
         },
         {
-          "name": "未確定6",
+          "name": "田中   結",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【未確定1】がインから先マイを狙う展開。展示タイム6.70。",
-      "sub_comment": "イン逃げ中心も展示気配の良い艇の差し・まくり差しに注意❗",
+      "comment": "1号艇【古澤  光紀】中心の組み立て。",
+      "sub_comment": "インコース安定感重視。",
       "bets": [
         {
           "num": "1 - 2 - 3",
@@ -142,7 +142,7 @@
       "summary_tag": "【捲り一閃】",
       "racers": [
         {
-          "name": "未確定1",
+          "name": "選手1",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
@@ -151,7 +151,7 @@
           "turn_offset": 30
         },
         {
-          "name": "未確定2",
+          "name": "選手2",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
@@ -160,7 +160,7 @@
           "turn_offset": 40
         },
         {
-          "name": "未確定3",
+          "name": "選手3",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
@@ -169,7 +169,7 @@
           "turn_offset": 50
         },
         {
-          "name": "未確定4",
+          "name": "選手4",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
@@ -178,7 +178,7 @@
           "turn_offset": 60
         },
         {
-          "name": "未確定5",
+          "name": "選手5",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
@@ -187,7 +187,7 @@
           "turn_offset": 70
         },
         {
-          "name": "未確定6",
+          "name": "選手6",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
@@ -196,8 +196,8 @@
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【未確定1】がインから先マイを狙う展開。展示タイム6.70。",
-      "sub_comment": "イン逃げ中心も展示気配の良い艇の差し・まくり差しに注意❗",
+      "comment": "1号艇【選手1】中心の組み立て。",
+      "sub_comment": "インコース安定感重視。",
       "bets": [
         {
           "num": "1 - 2 - 3",
@@ -271,62 +271,62 @@
       "summary_tag": "【本命濃厚】",
       "racers": [
         {
-          "name": "未確定1",
-          "rank": "B1",
+          "name": "長岡  良也",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 30
         },
         {
-          "name": "未確定2",
-          "rank": "B1",
+          "name": "石岡  将太",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 40
         },
         {
-          "name": "未確定3",
+          "name": "深川 麻奈美",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 50
         },
         {
-          "name": "未確定4",
+          "name": "稲田  浩二",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 60
         },
         {
-          "name": "未確定5",
+          "name": "日隈   茜",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 70
         },
         {
-          "name": "未確定6",
+          "name": "藤山  湧太",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【未確定1】がインから先マイを狙う展開。展示タイム6.70。",
-      "sub_comment": "イン逃げ中心も展示気配の良い艇の差し・まくり差しに注意❗",
+      "comment": "1号艇【長岡  良也】中心の組み立て。",
+      "sub_comment": "インコース安定感重視。",
       "bets": [
         {
           "num": "1 - 2 - 3",
@@ -400,62 +400,62 @@
       "summary_tag": "【捲り一閃】",
       "racers": [
         {
-          "name": "未確定1",
-          "rank": "B1",
+          "name": "渡邉  雄朗",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 30
         },
         {
-          "name": "未確定2",
-          "rank": "B1",
+          "name": "鈴木  雅希",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 40
         },
         {
-          "name": "未確定3",
+          "name": "久田   武",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 50
         },
         {
-          "name": "未確定4",
+          "name": "栗山  繁洋",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 60
         },
         {
-          "name": "未確定5",
+          "name": "村越   篤",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 70
         },
         {
-          "name": "未確定6",
+          "name": "渡邊  裕貴",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【未確定1】がインから先マイを狙う展開。展示タイム6.70。",
-      "sub_comment": "イン逃げ中心も展示気配の良い艇の差し・まくり差しに注意❗",
+      "comment": "1号艇【渡邉  雄朗】中心の組み立て。",
+      "sub_comment": "インコース安定感重視。",
       "bets": [
         {
           "num": "1 - 2 - 3",
@@ -529,62 +529,62 @@
       "summary_tag": "【本命濃厚】",
       "racers": [
         {
-          "name": "未確定1",
-          "rank": "B1",
+          "name": "谷口  佳蓮",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 30
         },
         {
-          "name": "未確定2",
-          "rank": "B1",
+          "name": "岩崎  芳美",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 40
         },
         {
-          "name": "未確定3",
+          "name": "益田  啓司",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 50
         },
         {
-          "name": "未確定4",
+          "name": "庄島  潤成",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 60
         },
         {
-          "name": "未確定5",
+          "name": "倉田  茂将",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 70
         },
         {
-          "name": "未確定6",
+          "name": "西村  秀樹",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【未確定1】がインから先マイを狙う展開。展示タイム6.70。",
-      "sub_comment": "イン逃げ中心も展示気配の良い艇の差し・まくり差しに注意❗",
+      "comment": "1号艇【谷口  佳蓮】中心の組み立て。",
+      "sub_comment": "インコース安定感重視。",
       "bets": [
         {
           "num": "1 - 2 - 3",
@@ -658,62 +658,62 @@
       "summary_tag": "【捲り一閃】",
       "racers": [
         {
-          "name": "未確定1",
-          "rank": "B1",
+          "name": "岡本 翔太郎",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 30
         },
         {
-          "name": "未確定2",
-          "rank": "B1",
+          "name": "大西  隆洋",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 40
         },
         {
-          "name": "未確定3",
+          "name": "野長瀬 正孝",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 50
         },
         {
-          "name": "未確定4",
+          "name": "登  みひ果",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 60
         },
         {
-          "name": "未確定5",
+          "name": "石塚  久也",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 70
         },
         {
-          "name": "未確定6",
+          "name": "佐口  達也",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【未確定1】がインから先マイを狙う展開。展示タイム6.70。",
-      "sub_comment": "イン逃げ中心も展示気配の良い艇の差し・まくり差しに注意❗",
+      "comment": "1号艇【岡本 翔太郎】中心の組み立て。",
+      "sub_comment": "インコース安定感重視。",
       "bets": [
         {
           "num": "1 - 2 - 3",
@@ -787,62 +787,62 @@
       "summary_tag": "【本命濃厚】",
       "racers": [
         {
-          "name": "未確定1",
-          "rank": "B1",
+          "name": "宮崎   奨",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 30
         },
         {
-          "name": "未確定2",
-          "rank": "B1",
+          "name": "岡村  慶太",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 40
         },
         {
-          "name": "未確定3",
+          "name": "小野  勇作",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 50
         },
         {
-          "name": "未確定4",
+          "name": "上田  紗奈",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 60
         },
         {
-          "name": "未確定5",
+          "name": "藤山  湧太",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 70
         },
         {
-          "name": "未確定6",
+          "name": "久富  政弘",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【未確定1】がインから先マイを狙う展開。展示タイム6.70。",
-      "sub_comment": "イン逃げ中心も展示気配の良い艇の差し・まくり差しに注意❗",
+      "comment": "1号艇【宮崎   奨】中心の組み立て。",
+      "sub_comment": "インコース安定感重視。",
       "bets": [
         {
           "num": "1 - 2 - 3",
@@ -916,7 +916,7 @@
       "summary_tag": "【捲り一閃】",
       "racers": [
         {
-          "name": "未確定1",
+          "name": "選手1",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
@@ -925,7 +925,7 @@
           "turn_offset": 30
         },
         {
-          "name": "未確定2",
+          "name": "選手2",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
@@ -934,7 +934,7 @@
           "turn_offset": 40
         },
         {
-          "name": "未確定3",
+          "name": "選手3",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
@@ -943,7 +943,7 @@
           "turn_offset": 50
         },
         {
-          "name": "未確定4",
+          "name": "選手4",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
@@ -952,7 +952,7 @@
           "turn_offset": 60
         },
         {
-          "name": "未確定5",
+          "name": "選手5",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
@@ -961,7 +961,7 @@
           "turn_offset": 70
         },
         {
-          "name": "未確定6",
+          "name": "選手6",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
@@ -970,8 +970,8 @@
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【未確定1】がインから先マイを狙う展開。展示タイム6.70。",
-      "sub_comment": "イン逃げ中心も展示気配の良い艇の差し・まくり差しに注意❗",
+      "comment": "1号艇【選手1】中心の組み立て。",
+      "sub_comment": "インコース安定感重視。",
       "bets": [
         {
           "num": "1 - 2 - 3",
@@ -1045,62 +1045,62 @@
       "summary_tag": "【本命濃厚】",
       "racers": [
         {
-          "name": "未確定1",
-          "rank": "B1",
+          "name": "中井  俊祐",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 30
         },
         {
-          "name": "未確定2",
-          "rank": "B1",
+          "name": "村越   篤",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 40
         },
         {
-          "name": "未確定3",
+          "name": "稲田  浩二",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 50
         },
         {
-          "name": "未確定4",
+          "name": "山道  諄也",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 60
         },
         {
-          "name": "未確定5",
+          "name": "田中   結",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 70
         },
         {
-          "name": "未確定6",
+          "name": "岩崎  芳美",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【未確定1】がインから先マイを狙う展開。展示タイム6.70。",
-      "sub_comment": "イン逃げ中心も展示気配の良い艇の差し・まくり差しに注意❗",
+      "comment": "1号艇【中井  俊祐】中心の組み立て。",
+      "sub_comment": "インコース安定感重視。",
       "bets": [
         {
           "num": "1 - 2 - 3",
@@ -1174,7 +1174,7 @@
       "summary_tag": "【捲り一閃】",
       "racers": [
         {
-          "name": "未確定1",
+          "name": "選手1",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
@@ -1183,7 +1183,7 @@
           "turn_offset": 30
         },
         {
-          "name": "未確定2",
+          "name": "選手2",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
@@ -1192,7 +1192,7 @@
           "turn_offset": 40
         },
         {
-          "name": "未確定3",
+          "name": "選手3",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
@@ -1201,7 +1201,7 @@
           "turn_offset": 50
         },
         {
-          "name": "未確定4",
+          "name": "選手4",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
@@ -1210,7 +1210,7 @@
           "turn_offset": 60
         },
         {
-          "name": "未確定5",
+          "name": "選手5",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
@@ -1219,7 +1219,7 @@
           "turn_offset": 70
         },
         {
-          "name": "未確定6",
+          "name": "選手6",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
@@ -1228,8 +1228,8 @@
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【未確定1】がインから先マイを狙う展開。展示タイム6.70。",
-      "sub_comment": "イン逃げ中心も展示気配の良い艇の差し・まくり差しに注意❗",
+      "comment": "1号艇【選手1】中心の組み立て。",
+      "sub_comment": "インコース安定感重視。",
       "bets": [
         {
           "num": "1 - 2 - 3",
@@ -1303,7 +1303,7 @@
       "summary_tag": "【本命濃厚】",
       "racers": [
         {
-          "name": "未確定1",
+          "name": "選手1",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
@@ -1312,7 +1312,7 @@
           "turn_offset": 30
         },
         {
-          "name": "未確定2",
+          "name": "選手2",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
@@ -1321,7 +1321,7 @@
           "turn_offset": 40
         },
         {
-          "name": "未確定3",
+          "name": "選手3",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
@@ -1330,7 +1330,7 @@
           "turn_offset": 50
         },
         {
-          "name": "未確定4",
+          "name": "選手4",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
@@ -1339,7 +1339,7 @@
           "turn_offset": 60
         },
         {
-          "name": "未確定5",
+          "name": "選手5",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
@@ -1348,7 +1348,7 @@
           "turn_offset": 70
         },
         {
-          "name": "未確定6",
+          "name": "選手6",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
@@ -1357,8 +1357,8 @@
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【未確定1】がインから先マイを狙う展開。展示タイム6.70。",
-      "sub_comment": "イン逃げ中心も展示気配の良い艇の差し・まくり差しに注意❗",
+      "comment": "1号艇【選手1】中心の組み立て。",
+      "sub_comment": "インコース安定感重視。",
       "bets": [
         {
           "num": "1 - 2 - 3",
@@ -1432,7 +1432,7 @@
       "summary_tag": "【捲り一閃】",
       "racers": [
         {
-          "name": "未確定1",
+          "name": "選手1",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
@@ -1441,7 +1441,7 @@
           "turn_offset": 30
         },
         {
-          "name": "未確定2",
+          "name": "選手2",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
@@ -1450,7 +1450,7 @@
           "turn_offset": 40
         },
         {
-          "name": "未確定3",
+          "name": "選手3",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
@@ -1459,7 +1459,7 @@
           "turn_offset": 50
         },
         {
-          "name": "未確定4",
+          "name": "選手4",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
@@ -1468,7 +1468,7 @@
           "turn_offset": 60
         },
         {
-          "name": "未確定5",
+          "name": "選手5",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
@@ -1477,7 +1477,7 @@
           "turn_offset": 70
         },
         {
-          "name": "未確定6",
+          "name": "選手6",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
@@ -1486,8 +1486,8 @@
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【未確定1】がインから先マイを狙う展開。展示タイム6.70。",
-      "sub_comment": "イン逃げ中心も展示気配の良い艇の差し・まくり差しに注意❗",
+      "comment": "1号艇【選手1】中心の組み立て。",
+      "sub_comment": "インコース安定感重視。",
       "bets": [
         {
           "num": "1 - 2 - 3",
