@@ -29,12 +29,13 @@ jobs:
       - name: Run fetch_data.py
         run: python fetch_data.py
 
+      # すべてのJSONファイルを強制追加して確実にPush
       - name: Commit and push updated data
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add -A
-          git commit -m "Auto update race data [$(date +'%Y-%m-%d %H:%M:%S')]" || exit 0
-          git push
+          git add -f *.json
+          git commit -m "Auto update race data [$(date +'%Y-%m-%d %H:%M:%S')]" || echo "No changes to commit"
+          git push origin HEAD:${{ github.ref_name }}
