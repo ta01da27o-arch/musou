@@ -5,6 +5,7 @@ import re
 import urllib.request
 from bs4 import BeautifulSoup
 from datetime import datetime
+from concurrent.futures import ThreadPoolExecutor
 
 STADIUM_NAMES = {
     "01": "桐生", "02": "戸田", "03": "江戸川", "04": "平和島",
@@ -20,19 +21,15 @@ HEADERS = {
 }
 
 def get_active_stadiums_today(date_str):
-    """
-    当日の開催レース場一覧を取得
-    """
     url = f"https://www.boatrace.jp/owpc/pc/race/index?hd={date_str}"
     req = urllib.request.Request(url, headers=HEADERS)
     active_codes = []
     
     try:
-        with urllib.request.urlopen(req, timeout=15) as response:
+        with urllib.request.urlopen(req, timeout=10) as response:
             html = response.read().decode("utf-8", errors="ignore")
             soup = BeautifulSoup(html, "html.parser")
             
-            # レース場リンクからjcdを取得
             links = soup.select('a[href*="jcd="]')
             for link in links:
                 href = link.get("href", "")
@@ -47,19 +44,15 @@ def get_active_stadiums_today(date_str):
     return sorted(active_codes)
 
 def fetch_race_racers(jcd, rno, date_str):
-    """
-    指定レース場・指定レースの出走選手情報をHTMLから取得
-    """
     url = f"https://www.boatrace.jp/owpc/pc/race/racelist?rno={rno}&jcd={jcd}&hd={date_str}"
     req = urllib.request.Request(url, headers=HEADERS)
     racers = []
     
     try:
-        with urllib.request.urlopen(req, timeout=10) as response:
+        with urllib.request.urlopen(req, timeout=5) as response:
             html = response.read().decode("utf-8", errors="ignore")
             soup = BeautifulSoup(html, "html.parser")
             
-            # 出走表テーブルの各艇（tbody）を取得
             tbodies = soup.select("table.is-w780 tbody")
             for lane_idx, tbody in enumerate(tbodies, start=1):
                 name_elem = tbody.select_one(".is-fs18")
@@ -68,7 +61,6 @@ def fetch_race_racers(jcd, rno, date_str):
                 name = name_elem.text.strip().replace("\u3000", " ") if name_elem else f"選手{lane_idx}"
                 rank_text = rank_elem.text.strip() if rank_elem else "B1"
                 
-                # 級別判定 (A1, A2, B1, B2)
                 rank = "B1"
                 for r_candidate in ["A1", "A2", "B1", "B2"]:
                     if r_candidate in rank_text:
@@ -84,7 +76,7 @@ def fetch_race_racers(jcd, rno, date_str):
                     "power": 85 if rank in ["A1", "A2"] else 70,
                     "turn_offset": 20 + (lane_idx * 10)
                 })
-    except Exception as e:
+    except Exception:
         pass
         
     return racers
@@ -120,60 +112,67 @@ def build_race_struct(racers, race_num):
         "bets": bets
     }
 
+def process_single_stadium(code, date_str):
+    name = STADIUM_NAMES.get(code, "競艇場")
+    races_dict = {}
+    
+    try:
+        for r in range(1, 13):
+            r_str = str(r)
+            racers = fetch_race_racers(code, r_str, date_str)
+            races_dict[r_str] = build_race_struct(racers, r)
+            
+        stadium_json = {
+            "date": date_str,
+            "stadium_code": code,
+            "stadium_name": name,
+            "races": races_dict
+        }
+        
+        with open(f"stadium_{code}.json", "w", encoding="utf-8") as f:
+            json.dump(stadium_json, f, ensure_ascii=False, indent=2)
+            
+        print(f" -> 出走表作成完了: stadium_{code}.json ({name})")
+    except Exception as e:
+        print(f"⚠️ stadium_{code}.json 作成中のエラー（補テンデータで続行）: {e}")
+        races_dict = {str(r): build_race_struct([], r) for r in range(1, 13)}
+        stadium_json = {
+            "date": date_str,
+            "stadium_code": code,
+            "stadium_name": name,
+            "races": races_dict
+        }
+        with open(f"stadium_{code}.json", "w", encoding="utf-8") as f:
+            json.dump(stadium_json, f, ensure_ascii=False, indent=2)
+
+    return code, name
+
 def main():
     start_time = time.time()
     today_str = datetime.now().strftime("%Y%m%d")
-    print(f"[{today_str}] 公式HTMLからデータスクレイピング開始...")
+    print(f"[{today_str}] 公式HTMLから並列スクレイピング開始...")
 
     active_codes = get_active_stadiums_today(today_str)
     active_stadiums = []
 
-    if active_codes:
-        print(f"本日開催のボートレース場: {active_codes}")
-        for code in active_codes:
-            name = STADIUM_NAMES.get(code, "競艇場")
-            active_stadiums.append({"code": code, "name": name})
-            
-            races_dict = {}
-            for r in range(1, 13):
-                r_str = str(r)
-                racers = fetch_race_racers(code, r_str, today_str)
-                races_dict[r_str] = build_race_struct(racers, r)
-                time.sleep(0.1) # サーバー負荷低減のための微小ウェイト
-                
-            stadium_json = {
-                "date": today_str,
-                "stadium_code": code,
-                "stadium_name": name,
-                "races": races_dict
-            }
-            
-            with open(f"stadium_{code}.json", "w", encoding="utf-8") as f:
-                json.dump(stadium_json, f, ensure_ascii=False, indent=2)
-                
-            print(f" -> 出走表作成完了: stadium_{code}.json ({name})")
+    if not active_codes:
+        print("⚠️ 開催場が検出されなかったため、基本開催リストを適用します。")
+        active_codes = ["04", "05", "07", "08", "09", "11", "12", "13", "14", "18", "19", "22", "23"]
 
-    else:
-        print("⚠️ 開催場が検出されなかったため、基本開催リストを生成します。")
-        default_codes = ["04", "05", "07", "08", "09", "11", "12", "13", "14", "18", "19", "22", "23"]
-        for code in default_codes:
-            name = STADIUM_NAMES.get(code, "競艇場")
-            active_codes.append(code)
-            active_stadiums.append({"code": code, "name": name})
-            
-            races_dict = {str(r): build_race_struct([], r) for r in range(1, 13)}
-            stadium_json = {
-                "date": today_str,
-                "stadium_code": code,
-                "stadium_name": name,
-                "races": races_dict
-            }
-            with open(f"stadium_{code}.json", "w", encoding="utf-8") as f:
-                json.dump(stadium_json, f, ensure_ascii=False, indent=2)
+    # 並列処理で全場を高速取得（クラッシュを防止）
+    with ThreadPoolExecutor(max_workers=5) as executor:
+        futures = [executor.submit(process_single_stadium, code, today_str) for code in active_codes]
+        for future in futures:
+            try:
+                code, name = future.result()
+                active_stadiums.append({"code": code, "name": name})
+            except Exception as e:
+                print(f"スレッド実行例外: {e}")
 
     active_codes.sort()
     active_stadiums.sort(key=lambda x: x["code"])
 
+    # data.json の確実な生成・書き出し
     index_data = {
         "date": today_str,
         "updated_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
@@ -184,7 +183,7 @@ def main():
     with open("data.json", "w", encoding="utf-8") as f:
         json.dump(index_data, f, ensure_ascii=False, indent=2)
 
-    print(f"✅ 全データ作成完了！（所要時間: {time.time() - start_time:.2f}秒）")
+    print(f"✅ 'data.json' および 各場json の保存完了！（所要時間: {time.time() - start_time:.2f}秒）")
 
 if __name__ == "__main__":
     main()
