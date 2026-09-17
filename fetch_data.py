@@ -4,7 +4,7 @@ import time
 import re
 import urllib.request
 from bs4 import BeautifulSoup
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 from concurrent.futures import ThreadPoolExecutor
 
 STADIUM_NAMES = {
@@ -17,62 +17,64 @@ STADIUM_NAMES = {
 }
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "Referer": "https://www.boatrace.jp/"
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+    "Accept-Language": "ja,en-US;q=0.9,en;q=0.8"
 }
+
+def fetch_url_with_retry(url, timeout=20, retries=3):
+    """ リトライ機能付きのHTTPリクエスト """
+    for attempt in range(retries):
+        try:
+            req = urllib.request.Request(url, headers=HEADERS)
+            with urllib.request.urlopen(req, timeout=timeout) as response:
+                return response.read().decode("utf-8", errors="ignore")
+        except Exception as e:
+            if attempt == retries - 1:
+                print(f"リクエスト失敗 ({url}): {e}")
+            time.sleep(1.5)
+    return None
 
 def get_active_stadiums_today(date_str):
     url = f"https://www.boatrace.jp/owpc/pc/race/index?hd={date_str}"
-    req = urllib.request.Request(url, headers=HEADERS)
     active_codes = []
     
-    try:
-        with urllib.request.urlopen(req, timeout=10) as response:
-            html = response.read().decode("utf-8", errors="ignore")
-            soup = BeautifulSoup(html, "html.parser")
-            
-            links = soup.select('a[href*="jcd="]')
-            for link in links:
-                href = link.get("href", "")
-                m = re.search(r"jcd=(\d{2})", href)
-                if m:
-                    jcd = m.group(1)
-                    if jcd in STADIUM_NAMES and jcd not in active_codes:
-                        active_codes.append(jcd)
-    except Exception as e:
-        print(f"開催一覧取得エラー: {e}")
-        
+    html = fetch_url_with_retry(url, timeout=25, retries=3)
+    if html:
+        soup = BeautifulSoup(html, "html.parser")
+        links = soup.select('a[href*="jcd="]')
+        for link in links:
+            href = link.get("href", "")
+            m = re.search(r"jcd=(\d{2})", href)
+            if m:
+                jcd = m.group(1)
+                if jcd in STADIUM_NAMES and jcd not in active_codes:
+                    active_codes.append(jcd)
+                    
     return sorted(active_codes)
 
 def fetch_race_racers(jcd, rno, date_str):
     url = f"https://www.boatrace.jp/owpc/pc/race/racelist?rno={rno}&jcd={jcd}&hd={date_str}"
-    req = urllib.request.Request(url, headers=HEADERS)
     racers = []
     
-    try:
-        with urllib.request.urlopen(req, timeout=8) as response:
-            html = response.read().decode("utf-8", errors="ignore")
-            soup = BeautifulSoup(html, "html.parser")
-            
-            # 登番リンクを含むアンカータグから選手名を抽出
-            name_anchors = soup.find_all("a", href=re.compile(r"toban=\d+"))
-            for a in name_anchors:
-                name = a.text.strip().replace("\u3000", " ")
-                if name and not any(r["name"] == name for r in racers):
-                    racers.append({
-                        "name": name,
-                        "rank": "A1" if len(racers) < 2 else "B1",
-                        "st": ".15",
-                        "tilt": "-0.5",
-                        "time": "6.68",
-                        "power": 80,
-                        "turn_offset": 20 + ((len(racers) + 1) * 10)
-                    })
-                if len(racers) >= 6:
-                    break
-    except Exception:
-        pass
-        
+    html = fetch_url_with_retry(url, timeout=12, retries=2)
+    if html:
+        soup = BeautifulSoup(html, "html.parser")
+        name_anchors = soup.find_all("a", href=re.compile(r"toban=\d+"))
+        for a in name_anchors:
+            name = a.text.strip().replace("\u3000", " ")
+            if name and not any(r["name"] == name for r in racers):
+                racers.append({
+                    "name": name,
+                    "rank": "A1" if len(racers) < 2 else "B1",
+                    "st": ".15",
+                    "tilt": "-0.5",
+                    "time": "6.68",
+                    "power": 80,
+                    "turn_offset": 20 + ((len(racers) + 1) * 10)
+                })
+            if len(racers) >= 6:
+                break
+                
     return racers
 
 def build_race_struct(racers, race_num):
@@ -130,18 +132,23 @@ def process_single_stadium(code, date_str):
 
 def main():
     start_time = time.time()
-    today_str = datetime.now().strftime("%Y%m%d")
-    print(f"[{today_str}] データ取得・生成開始...")
+    
+    # 日本時間 (JST: UTC+9) の取得
+    jst = timezone(timedelta(hours=9))
+    now_jst = datetime.now(jst)
+    today_str = now_jst.strftime("%Y%m%d")
+    
+    print(f"[{today_str}] (JST) 公式データ解析・スクレイピング開始...")
 
     active_codes = get_active_stadiums_today(today_str)
     
     if not active_codes:
-        print("⚠️ 本日開催データが空のため、デフォルト場を設定します。")
+        print("⚠️ 開催場一覧の取得に失敗したため、基本開催リストを適用します。")
         active_codes = ["04", "05", "07", "08", "09", "11", "12", "13", "14", "18", "19", "22", "23"]
 
     active_stadiums = []
 
-    with ThreadPoolExecutor(max_workers=5) as executor:
+    with ThreadPoolExecutor(max_workers=4) as executor:
         futures = [executor.submit(process_single_stadium, code, today_str) for code in active_codes]
         for future in futures:
             try:
@@ -155,7 +162,7 @@ def main():
 
     index_data = {
         "date": today_str,
-        "updated_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "updated_at": now_jst.strftime("%Y-%m-%d %H:%M:%S"),
         "active_codes": active_codes,
         "active_stadiums": active_stadiums
     }
