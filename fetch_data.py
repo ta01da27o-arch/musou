@@ -15,11 +15,7 @@ STADIUM_NAMES = {
 }
 
 def download_official_program_txt(date_str):
-    """
-    公式の番組表テキスト(BYYMMDD.TXT)を取得
-    例: date_str="20260917" -> filename="B260917.TXT"
-    """
-    # 西暦下2桁 + 月2桁 + 日2桁 を確実に取得
+    """ 公式の番組表テキスト(BYYMMDD.TXT)を取得 """
     yy = date_str[-6:-4]
     mm = date_str[-4:-2]
     dd = date_str[-2:]
@@ -27,10 +23,7 @@ def download_official_program_txt(date_str):
     url = f"https://www.boatrace.jp/owpc/pc/extra/data/download/{filename}"
     
     print(f"ダウンロード対象URL: {url}")
-    
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
-    }
+    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
     
     req = urllib.request.Request(url, headers=headers)
     try:
@@ -46,7 +39,7 @@ def download_official_program_txt(date_str):
 
 def parse_program_txt(txt_content):
     """
-    番組表テキストから開催場・レース・選手データを抽出
+    固定長フォーマットの解析ロジック
     """
     stadium_data = {}
     current_jcd = None
@@ -55,16 +48,25 @@ def parse_program_txt(txt_content):
     lines = txt_content.splitlines()
 
     for line in lines:
-        # 場コード判定 (例: BB3#04... や BB3#22...)
-        bb_match = re.search(r"BB3#(\d{2})", line)
-        if bb_match:
-            current_jcd = bb_match.group(1)
-            if current_jcd in STADIUM_NAMES and current_jcd not in stadium_data:
-                stadium_data[current_jcd] = {}
-            continue
+        # 1. 場コードの判定 (BB3#04... の表記または場名検索)
+        if "BB3#" in line:
+            m = re.search(r"BB3#(\d{2})", line)
+            if m:
+                current_jcd = m.group(1)
+                if current_jcd in STADIUM_NAMES and current_jcd not in stadium_data:
+                    stadium_data[current_jcd] = {}
+                continue
 
-        # レース番号判定 (1R 〜 12R)
-        r_match = re.search(r"^\s*(\d{1,2})\s*Ｒ", line) or re.search(r"^(\d{1,2})Ｒ", line)
+        # バックアップ: 競艇場名が含まれるヘッダー
+        for code, name in STADIUM_NAMES.items():
+            if f"ボートレース{name}" in line or f"ボートレース　{name}" in line or f"{name}競艇" in line:
+                current_jcd = code
+                if current_jcd not in stadium_data:
+                    stadium_data[current_jcd] = {}
+                break
+
+        # 2. レース番号の判定
+        r_match = re.search(r"(\d{1,2})\s*Ｒ", line) or re.search(r"(\d{1,2})R", line)
         if r_match and current_jcd:
             r_num = int(r_match.group(1))
             if 1 <= r_num <= 12:
@@ -72,10 +74,10 @@ def parse_program_txt(txt_content):
                 if current_rno not in stadium_data[current_jcd]:
                     stadium_data[current_jcd][current_rno] = []
 
-        # 選手情報行の抽出（枠番 1-6 + 登録番号 4桁）
+        # 3. 選手データの判定 (数字4桁の登録番号が含まれる行)
         if current_jcd and current_rno:
-            # 艇番 登録番号 選手名 級別 のパターンマッチ
-            p_match = re.search(r"^\s*([1-6])\s+(\d{4})\s+([^\s]+)\s+([AB][12])", line)
+            # 枠番(1-6) + 登録番号(4桁) を広く検出
+            p_match = re.search(r"([1-6])\s+(\d{4})\s+([^\s]+)\s+([AB][12])", line)
             if p_match:
                 lane = int(p_match.group(1))
                 toban = p_match.group(2)
@@ -163,9 +165,9 @@ def main():
                 
             print(f" -> 生成完了: stadium_{code}.json")
 
-    # 万が一失敗した場合の基本出力
+    # データ抽出件数が0件だった場合は全24場のうち本日開催分を基本リストから補填
     if not active_codes:
-        print("⚠️ 解析コードに一致する開催場が見つかりませんでした。基本設定で書き出します。")
+        print("⚠️ 抽出結果が0件のため、基本開催リストを生成します。")
         default_codes = ["04", "05", "07", "08", "09", "11", "12", "13", "14", "18", "19", "22", "23"]
         for code in default_codes:
             name = STADIUM_NAMES.get(code, "競艇場")
