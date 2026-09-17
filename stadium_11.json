@@ -1,5 +1,5 @@
 {
-  "date": "20260917",
+  "date": "20260918",
   "stadium_code": "11",
   "stadium_name": "びわこ",
   "races": {
@@ -13,61 +13,61 @@
       "summary_tag": "【本命濃厚】",
       "racers": [
         {
-          "name": "選手1",
-          "rank": "B1",
+          "name": "岡部  貴司",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 30
         },
         {
-          "name": "選手2",
-          "rank": "B1",
+          "name": "小川  時光",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 40
         },
         {
-          "name": "選手3",
+          "name": "上田  洋平",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 50
         },
         {
-          "name": "選手4",
+          "name": "橋本   明",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 60
         },
         {
-          "name": "選手5",
+          "name": "星   栄爾",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 70
         },
         {
-          "name": "選手6",
+          "name": "中川  海虹",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【選手1】中心の組み立て。",
+      "comment": "1号艇【岡部  貴司】中心の組み立て。",
       "sub_comment": "インコース安定感重視。",
       "bets": [
         {
@@ -142,61 +142,61 @@
       "summary_tag": "【捲り一閃】",
       "racers": [
         {
-          "name": "選手1",
-          "rank": "B1",
+          "name": "天野  友和",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 30
         },
         {
-          "name": "選手2",
-          "rank": "B1",
+          "name": "原村  拓也",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 40
         },
         {
-          "name": "選手3",
+          "name": "石井  孝之",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 50
         },
         {
-          "name": "選手4",
+          "name": "野村   誠",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 60
         },
         {
-          "name": "選手5",
+          "name": "川田  正人",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 70
         },
         {
-          "name": "選手6",
+          "name": "早川  理稀",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【選手1】中心の組み立て。",
+      "comment": "1号艇【天野  友和】中心の組み立て。",
       "sub_comment": "インコース安定感重視。",
       "bets": [
         {
@@ -271,61 +271,61 @@
       "summary_tag": "【本命濃厚】",
       "racers": [
         {
-          "name": "選手1",
-          "rank": "B1",
+          "name": "相原  利章",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 30
         },
         {
-          "name": "選手2",
-          "rank": "B1",
+          "name": "倉田  郁美",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 40
         },
         {
-          "name": "選手3",
+          "name": "佐藤  太亮",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 50
         },
         {
-          "name": "選手4",
+          "name": "岩井   繁",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 60
         },
         {
-          "name": "選手5",
+          "name": "鶴田  勇雄",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 70
         },
         {
-          "name": "選手6",
+          "name": "今泉   澪",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【選手1】中心の組み立て。",
+      "comment": "1号艇【相原  利章】中心の組み立て。",
       "sub_comment": "インコース安定感重視。",
       "bets": [
         {
@@ -400,61 +400,61 @@
       "summary_tag": "【捲り一閃】",
       "racers": [
         {
-          "name": "選手1",
-          "rank": "B1",
+          "name": "中村  有裕",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 30
         },
         {
-          "name": "選手2",
-          "rank": "B1",
+          "name": "間庭  菜摘",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 40
         },
         {
-          "name": "選手3",
+          "name": "竹之内  極",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 50
         },
         {
-          "name": "選手4",
+          "name": "鈴木  峻佑",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 60
         },
         {
-          "name": "選手5",
+          "name": "高橋  真吾",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 70
         },
         {
-          "name": "選手6",
+          "name": "奥田   誠",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【選手1】中心の組み立て。",
+      "comment": "1号艇【中村  有裕】中心の組み立て。",
       "sub_comment": "インコース安定感重視。",
       "bets": [
         {
@@ -529,61 +529,61 @@
       "summary_tag": "【本命濃厚】",
       "racers": [
         {
-          "name": "選手1",
-          "rank": "B1",
+          "name": "谷村  一哉",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 30
         },
         {
-          "name": "選手2",
-          "rank": "B1",
+          "name": "土屋  太朗",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 40
         },
         {
-          "name": "選手3",
+          "name": "妻鳥  晋也",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 50
         },
         {
-          "name": "選手4",
+          "name": "中野  希一",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 60
         },
         {
-          "name": "選手5",
+          "name": "井川  大作",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 70
         },
         {
-          "name": "選手6",
+          "name": "中川  海虹",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【選手1】中心の組み立て。",
+      "comment": "1号艇【谷村  一哉】中心の組み立て。",
       "sub_comment": "インコース安定感重視。",
       "bets": [
         {
@@ -658,61 +658,61 @@
       "summary_tag": "【捲り一閃】",
       "racers": [
         {
-          "name": "選手1",
-          "rank": "B1",
+          "name": "安井  瑞紀",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 30
         },
         {
-          "name": "選手2",
-          "rank": "B1",
+          "name": "星   栄爾",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 40
         },
         {
-          "name": "選手3",
+          "name": "池田  雄一",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 50
         },
         {
-          "name": "選手4",
+          "name": "宇野  弥生",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 60
         },
         {
-          "name": "選手5",
+          "name": "原村  拓也",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 70
         },
         {
-          "name": "選手6",
+          "name": "宇田川 信一",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【選手1】中心の組み立て。",
+      "comment": "1号艇【安井  瑞紀】中心の組み立て。",
       "sub_comment": "インコース安定感重視。",
       "bets": [
         {
@@ -787,61 +787,61 @@
       "summary_tag": "【本命濃厚】",
       "racers": [
         {
-          "name": "選手1",
-          "rank": "B1",
+          "name": "前田  篤哉",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 30
         },
         {
-          "name": "選手2",
-          "rank": "B1",
+          "name": "山戸  信二",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 40
         },
         {
-          "name": "選手3",
+          "name": "橋本   明",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 50
         },
         {
-          "name": "選手4",
+          "name": "石井  孝之",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 60
         },
         {
-          "name": "選手5",
+          "name": "倉田  郁美",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 70
         },
         {
-          "name": "選手6",
+          "name": "今泉   澪",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【選手1】中心の組み立て。",
+      "comment": "1号艇【前田  篤哉】中心の組み立て。",
       "sub_comment": "インコース安定感重視。",
       "bets": [
         {
@@ -916,61 +916,61 @@
       "summary_tag": "【捲り一閃】",
       "racers": [
         {
-          "name": "選手1",
-          "rank": "B1",
+          "name": "佐藤  太亮",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 30
         },
         {
-          "name": "選手2",
-          "rank": "B1",
+          "name": "岩井   繁",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 40
         },
         {
-          "name": "選手3",
+          "name": "鈴木  峻佑",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 50
         },
         {
-          "name": "選手4",
+          "name": "奥田   誠",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 60
         },
         {
-          "name": "選手5",
+          "name": "小川  時光",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 70
         },
         {
-          "name": "選手6",
+          "name": "早川  理稀",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【選手1】中心の組み立て。",
+      "comment": "1号艇【佐藤  太亮】中心の組み立て。",
       "sub_comment": "インコース安定感重視。",
       "bets": [
         {
@@ -1045,61 +1045,61 @@
       "summary_tag": "【本命濃厚】",
       "racers": [
         {
-          "name": "選手1",
-          "rank": "B1",
+          "name": "鶴田  勇雄",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 30
         },
         {
-          "name": "選手2",
-          "rank": "B1",
+          "name": "高橋  真吾",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 40
         },
         {
-          "name": "選手3",
+          "name": "川田  正人",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 50
         },
         {
-          "name": "選手4",
+          "name": "妻鳥  晋也",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 60
         },
         {
-          "name": "選手5",
+          "name": "土屋  太朗",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 70
         },
         {
-          "name": "選手6",
+          "name": "竹之内  極",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【選手1】中心の組み立て。",
+      "comment": "1号艇【鶴田  勇雄】中心の組み立て。",
       "sub_comment": "インコース安定感重視。",
       "bets": [
         {
@@ -1174,61 +1174,61 @@
       "summary_tag": "【捲り一閃】",
       "racers": [
         {
-          "name": "選手1",
-          "rank": "B1",
+          "name": "野村   誠",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 30
         },
         {
-          "name": "選手2",
-          "rank": "B1",
+          "name": "上田  洋平",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 40
         },
         {
-          "name": "選手3",
+          "name": "間庭  菜摘",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 50
         },
         {
-          "name": "選手4",
+          "name": "谷村  一哉",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 60
         },
         {
-          "name": "選手5",
+          "name": "池田  雄一",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 70
         },
         {
-          "name": "選手6",
+          "name": "相原  利章",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【選手1】中心の組み立て。",
+      "comment": "1号艇【野村   誠】中心の組み立て。",
       "sub_comment": "インコース安定感重視。",
       "bets": [
         {
@@ -1303,61 +1303,61 @@
       "summary_tag": "【本命濃厚】",
       "racers": [
         {
-          "name": "選手1",
-          "rank": "B1",
+          "name": "中野  希一",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 30
         },
         {
-          "name": "選手2",
-          "rank": "B1",
+          "name": "前田  篤哉",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 40
         },
         {
-          "name": "選手3",
+          "name": "安井  瑞紀",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 50
         },
         {
-          "name": "選手4",
+          "name": "天野  友和",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 60
         },
         {
-          "name": "選手5",
+          "name": "中村  有裕",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 70
         },
         {
-          "name": "選手6",
+          "name": "岡部  貴司",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【選手1】中心の組み立て。",
+      "comment": "1号艇【中野  希一】中心の組み立て。",
       "sub_comment": "インコース安定感重視。",
       "bets": [
         {
@@ -1432,61 +1432,61 @@
       "summary_tag": "【捲り一閃】",
       "racers": [
         {
-          "name": "選手1",
-          "rank": "B1",
+          "name": "田中  駿兵",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 30
         },
         {
-          "name": "選手2",
-          "rank": "B1",
+          "name": "深井  利寿",
+          "rank": "A1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 40
         },
         {
-          "name": "選手3",
+          "name": "吉村  正明",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 50
         },
         {
-          "name": "選手4",
+          "name": "佐藤  博亮",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 60
         },
         {
-          "name": "選手5",
+          "name": "谷口  知優",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 70
         },
         {
-          "name": "選手6",
+          "name": "寺田  千恵",
           "rank": "B1",
           "st": ".15",
           "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
+          "time": "6.68",
+          "power": 80,
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【選手1】中心の組み立て。",
+      "comment": "1号艇【田中  駿兵】中心の組み立て。",
       "sub_comment": "インコース安定感重視。",
       "bets": [
         {
