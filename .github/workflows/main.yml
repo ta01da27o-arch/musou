@@ -21,12 +21,12 @@ jobs:
       - name: Install System Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y build-essential python3-dev
+          sudo apt-get install -y lha unar
 
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests beautifulsoup4 lhafile
+          pip install requests beautifulsoup4
           if [ -f requirements.txt ]; then
             pip install -r requirements.txt
           fi
@@ -34,7 +34,6 @@ jobs:
       - name: Run fetch_data.py
         run: python fetch_data.py
 
-      # 生成されたすべての JSON ファイルを確実にコミット＆Push
       - name: Commit and push updated data
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
