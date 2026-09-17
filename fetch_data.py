@@ -3,14 +3,9 @@ import json
 import time
 import re
 import urllib.request
+import subprocess
 import tempfile
 from datetime import datetime
-
-# LZH解凍用ライブラリ
-try:
-    import lhafile
-except ImportError:
-    lhafile = None
 
 STADIUM_NAMES = {
     "01": "桐生", "02": "戸田", "03": "江戸川", "04": "平和島",
@@ -23,13 +18,12 @@ STADIUM_NAMES = {
 
 def download_and_extract_lzh(date_str):
     """
-    公式のB{YYMMDD}.lzh (または.TXT)をダウンロードし、LZH解凍してテキストを抽出する
+    OSのコマンド (lha / unar) を利用して LZH ファイルを解凍・解読する
     """
     yy = date_str[-6:-4]
     mm = date_str[-4:-2]
     dd = date_str[-2:]
     
-    # 配信ファイル名のパターン
     filename_txt = f"B{yy}{mm}{dd}.TXT"
     filename_lzh = f"b{yy}{mm}{dd}.lzh"
     
@@ -47,33 +41,37 @@ def download_and_extract_lzh(date_str):
             with urllib.request.urlopen(req, timeout=15) as response:
                 data_bytes = response.read()
 
-                # 1. lhafile ライブラリによるLZH解凍
-                if lhafile:
-                    try:
-                        with tempfile.NamedTemporaryFile(delete=False) as tmp:
-                            tmp.write(data_bytes)
-                            tmp_path = tmp.name
+                # 一時ディレクトリに保存して解凍を試みる
+                with tempfile.TemporaryDirectory() as tmp_dir:
+                    lzh_path = os.path.join(tmp_dir, "data.lzh")
+                    with open(lzh_path, "wb") as f:
+                        f.write(data_bytes)
 
-                        lf = lhafile.Lhafile(tmp_path)
-                        for info in lf.infolist():
-                            extracted_bytes = lf.read(info.filename)
-                            try:
-                                txt = extracted_bytes.decode('cp932')
-                            except UnicodeDecodeError:
-                                txt = extracted_bytes.decode('euc-jp', errors='ignore')
-                            
-                            os.remove(tmp_path)
-                            print(f"✅ LZH解凍成功: {info.filename}")
-                            return txt
-                        os.remove(tmp_path)
-                    except Exception as e:
-                        print(f"lhafile 解凍エラー: {e}")
+                    # 1. lha コマンドの実行
+                    subprocess.run(["lha", "-x", f"-w={tmp_dir}", lzh_path], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
-                # 2. 直接テキストの場合のフォールバック
+                    # 2. unar コマンドでのフォールバック
+                    if not any(f.endswith(".TXT") or f.endswith(".txt") for f in os.listdir(tmp_dir)):
+                        subprocess.run(["unar", "-o", tmp_dir, lzh_path], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+                    # 解凍されたテキストを探す
+                    for fname in os.listdir(tmp_dir):
+                        if fname.lower().endswith(".txt"):
+                            extracted_path = os.path.join(tmp_dir, fname)
+                            with open(extracted_path, "rb") as ef:
+                                raw = ef.read()
+                                try:
+                                    txt = raw.decode('cp932')
+                                except UnicodeDecodeError:
+                                    txt = raw.decode('euc-jp', errors='ignore')
+                                print(f"✅ コマンド経由で解凍成功: {fname}")
+                                return txt
+
+                # 生テキスト形式だった場合のバックアップ
                 try:
                     txt = data_bytes.decode('cp932')
-                    if "BB3#" in txt or "ボートレース" in txt or "番組表" in txt:
-                        print("✅ 生テキスト取得完了")
+                    if "BB3#" in txt or "ボートレース" in txt:
+                        print("✅ 生テキストとして読み込み成功")
                         return txt
                 except Exception:
                     pass
@@ -84,7 +82,6 @@ def download_and_extract_lzh(date_str):
     return None
 
 def parse_program_txt(txt_content):
-    """ 番組表テキストから全開催場・全レース・全選手データを抽出 """
     stadium_data = {}
     current_jcd = None
     current_rno = None
@@ -92,7 +89,6 @@ def parse_program_txt(txt_content):
     lines = txt_content.splitlines()
 
     for line in lines:
-        # 場コード判定 (BB3#04 等)
         if "BB3#" in line:
             m = re.search(r"BB3#(\d{2})", line)
             if m:
@@ -101,7 +97,6 @@ def parse_program_txt(txt_content):
                     stadium_data[current_jcd] = {}
                 continue
 
-        # 場名ダイレクト検出（バックアップ）
         for code, name in STADIUM_NAMES.items():
             if f"ボートレース{name}" in line or f"［{name}］" in line or f"【{name}】" in line or (name in line and "第" in line and "日" in line):
                 current_jcd = code
@@ -109,7 +104,6 @@ def parse_program_txt(txt_content):
                     stadium_data[current_jcd] = {}
                 break
 
-        # レース番号判定 (1R 〜 12R)
         r_match = re.search(r"(\d{1,2})\s*Ｒ", line) or re.search(r"(\d{1,2})R", line)
         if r_match and current_jcd:
             r_num = int(r_match.group(1))
@@ -118,7 +112,6 @@ def parse_program_txt(txt_content):
                 if current_rno not in stadium_data[current_jcd]:
                     stadium_data[current_jcd][current_rno] = []
 
-        # 選手情報行の抽出（艇番 1-6 + 登録番号 4桁）
         if current_jcd and current_rno:
             p_match = re.search(r"([1-6])\s+(\d{4})\s+([^\s]+)\s+([AB][12])", line)
             if p_match:
@@ -208,7 +201,6 @@ def main():
                 
             print(f" -> 出走表作成完了: stadium_{code}.json")
 
-    # データが抽出できなかった場合の予備動作
     if not active_codes:
         print("⚠️ 抽出結果が0件のため、基本開催リストを生成します。")
         default_codes = ["04", "05", "07", "08", "09", "11", "12", "13", "14", "18", "19", "22", "23"]
