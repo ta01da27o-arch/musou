@@ -3,8 +3,7 @@ import json
 import time
 import re
 import urllib.request
-import subprocess
-import tempfile
+from bs4 import BeautifulSoup
 from datetime import datetime
 
 STADIUM_NAMES = {
@@ -16,122 +15,79 @@ STADIUM_NAMES = {
     "21": "芦屋", "22": "福岡", "23": "唐津", "24": "大村"
 }
 
-def download_and_extract_lzh(date_str):
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+}
+
+def get_active_stadiums_today(date_str):
     """
-    OSのコマンド (lhasa / unar) を利用して LZH ファイルを解凍・解読する
+    当日の開催レース場一覧を取得
     """
-    yy = date_str[-6:-4]
-    mm = date_str[-4:-2]
-    dd = date_str[-2:]
+    url = f"https://www.boatrace.jp/owpc/pc/race/index?hd={date_str}"
+    req = urllib.request.Request(url, headers=HEADERS)
+    active_codes = []
     
-    filename_txt = f"B{yy}{mm}{dd}.TXT"
-    filename_lzh = f"b{yy}{mm}{dd}.lzh"
+    try:
+        with urllib.request.urlopen(req, timeout=15) as response:
+            html = response.read().decode("utf-8", errors="ignore")
+            soup = BeautifulSoup(html, "html.parser")
+            
+            # レース場リンクからjcdを取得
+            links = soup.select('a[href*="jcd="]')
+            for link in links:
+                href = link.get("href", "")
+                m = re.search(r"jcd=(\d{2})", href)
+                if m:
+                    jcd = m.group(1)
+                    if jcd in STADIUM_NAMES and jcd not in active_codes:
+                        active_codes.append(jcd)
+    except Exception as e:
+        print(f"開催一覧取得エラー: {e}")
+        
+    return sorted(active_codes)
+
+def fetch_race_racers(jcd, rno, date_str):
+    """
+    指定レース場・指定レースの出走選手情報をHTMLから取得
+    """
+    url = f"https://www.boatrace.jp/owpc/pc/race/racelist?rno={rno}&jcd={jcd}&hd={date_str}"
+    req = urllib.request.Request(url, headers=HEADERS)
+    racers = []
     
-    urls = [
-        f"https://www.boatrace.jp/owpc/pc/extra/data/download/{filename_lzh}",
-        f"https://www.boatrace.jp/owpc/pc/extra/data/download/{filename_txt}"
-    ]
-    
-    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
-
-    for url in urls:
-        print(f"ダウンロード試行: {url}")
-        req = urllib.request.Request(url, headers=headers)
-        try:
-            with urllib.request.urlopen(req, timeout=15) as response:
-                data_bytes = response.read()
-
-                with tempfile.TemporaryDirectory() as tmp_dir:
-                    lzh_path = os.path.join(tmp_dir, "data.lzh")
-                    with open(lzh_path, "wb") as f:
-                        f.write(data_bytes)
-
-                    # 1. lhasa コマンドの実行 (lhasa -x w=OUTPUT_DIR FILE)
-                    subprocess.run(["lhasa", "-x", f"-w={tmp_dir}", lzh_path], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-
-                    # 2. unar コマンドでのフォールバック
-                    if not any(f.endswith(".TXT") or f.endswith(".txt") for f in os.listdir(tmp_dir)):
-                        subprocess.run(["unar", "-o", tmp_dir, lzh_path], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-
-                    # 解凍されたテキストの検出
-                    for fname in os.listdir(tmp_dir):
-                        if fname.lower().endswith(".txt"):
-                            extracted_path = os.path.join(tmp_dir, fname)
-                            with open(extracted_path, "rb") as ef:
-                                raw = ef.read()
-                                try:
-                                    txt = raw.decode('cp932')
-                                except UnicodeDecodeError:
-                                    txt = raw.decode('euc-jp', errors='ignore')
-                                print(f"✅ 解凍成功 ({fname})")
-                                return txt
-
-                # 生テキスト形式でダウンロードできた場合の判定
-                try:
-                    txt = data_bytes.decode('cp932')
-                    if "BB3#" in txt or "ボートレース" in txt:
-                        print("✅ 生テキストとして読み込み成功")
-                        return txt
-                except Exception:
-                    pass
-
-        except Exception as e:
-            print(f"取得失敗 ({url}): {e}")
-
-    return None
-
-def parse_program_txt(txt_content):
-    stadium_data = {}
-    current_jcd = None
-    current_rno = None
-
-    lines = txt_content.splitlines()
-
-    for line in lines:
-        if "BB3#" in line:
-            m = re.search(r"BB3#(\d{2})", line)
-            if m:
-                current_jcd = m.group(1)
-                if current_jcd in STADIUM_NAMES and current_jcd not in stadium_data:
-                    stadium_data[current_jcd] = {}
-                continue
-
-        for code, name in STADIUM_NAMES.items():
-            if f"ボートレース{name}" in line or f"［{name}］" in line or f"【{name}】" in line or (name in line and "第" in line and "日" in line):
-                current_jcd = code
-                if current_jcd not in stadium_data:
-                    stadium_data[current_jcd] = {}
-                break
-
-        r_match = re.search(r"(\d{1,2})\s*Ｒ", line) or re.search(r"(\d{1,2})R", line)
-        if r_match and current_jcd:
-            r_num = int(r_match.group(1))
-            if 1 <= r_num <= 12:
-                current_rno = str(r_num)
-                if current_rno not in stadium_data[current_jcd]:
-                    stadium_data[current_jcd][current_rno] = []
-
-        if current_jcd and current_rno:
-            p_match = re.search(r"([1-6])\s+(\d{4})\s+([^\s]+)\s+([AB][12])", line)
-            if p_match:
-                lane = int(p_match.group(1))
-                toban = p_match.group(2)
-                raw_name = p_match.group(3).replace("　", " ").strip()
-                rank = p_match.group(4)
-
-                racers = stadium_data[current_jcd][current_rno]
-                if len(racers) < 6:
-                    racers.append({
-                        "name": raw_name,
-                        "rank": rank,
-                        "st": ".15",
-                        "tilt": "-0.5",
-                        "time": "6.68",
-                        "power": 85 if rank in ["A1", "A2"] else 70,
-                        "turn_offset": 20 + (lane * 10)
-                    })
-
-    return stadium_data
+    try:
+        with urllib.request.urlopen(req, timeout=10) as response:
+            html = response.read().decode("utf-8", errors="ignore")
+            soup = BeautifulSoup(html, "html.parser")
+            
+            # 出走表テーブルの各艇（tbody）を取得
+            tbodies = soup.select("table.is-w780 tbody")
+            for lane_idx, tbody in enumerate(tbodies, start=1):
+                name_elem = tbody.select_one(".is-fs18")
+                rank_elem = tbody.select_one(".is-fs11")
+                
+                name = name_elem.text.strip().replace("\u3000", " ") if name_elem else f"選手{lane_idx}"
+                rank_text = rank_elem.text.strip() if rank_elem else "B1"
+                
+                # 級別判定 (A1, A2, B1, B2)
+                rank = "B1"
+                for r_candidate in ["A1", "A2", "B1", "B2"]:
+                    if r_candidate in rank_text:
+                        rank = r_candidate
+                        break
+                
+                racers.append({
+                    "name": name,
+                    "rank": rank,
+                    "st": ".15",
+                    "tilt": "-0.5",
+                    "time": "6.68",
+                    "power": 85 if rank in ["A1", "A2"] else 70,
+                    "turn_offset": 20 + (lane_idx * 10)
+                })
+    except Exception as e:
+        pass
+        
+    return racers
 
 def build_race_struct(racers, race_num):
     while len(racers) < 6:
@@ -167,17 +123,13 @@ def build_race_struct(racers, race_num):
 def main():
     start_time = time.time()
     today_str = datetime.now().strftime("%Y%m%d")
-    print(f"[{today_str}] 公式データ解析開始...")
+    print(f"[{today_str}] 公式HTMLからデータスクレイピング開始...")
 
-    txt = download_and_extract_lzh(today_str)
-    
-    active_codes = []
+    active_codes = get_active_stadiums_today(today_str)
     active_stadiums = []
 
-    if txt:
-        parsed_data = parse_program_txt(txt)
-        active_codes = sorted(list(parsed_data.keys()))
-        
+    if active_codes:
+        print(f"本日開催のボートレース場: {active_codes}")
         for code in active_codes:
             name = STADIUM_NAMES.get(code, "競艇場")
             active_stadiums.append({"code": code, "name": name})
@@ -185,8 +137,9 @@ def main():
             races_dict = {}
             for r in range(1, 13):
                 r_str = str(r)
-                racers = parsed_data[code].get(r_str, [])
+                racers = fetch_race_racers(code, r_str, today_str)
                 races_dict[r_str] = build_race_struct(racers, r)
+                time.sleep(0.1) # サーバー負荷低減のための微小ウェイト
                 
             stadium_json = {
                 "date": today_str,
@@ -198,10 +151,10 @@ def main():
             with open(f"stadium_{code}.json", "w", encoding="utf-8") as f:
                 json.dump(stadium_json, f, ensure_ascii=False, indent=2)
                 
-            print(f" -> 出走表作成完了: stadium_{code}.json")
+            print(f" -> 出走表作成完了: stadium_{code}.json ({name})")
 
-    if not active_codes:
-        print("⚠️ 抽出結果が0件のため、基本開催リストを生成します。")
+    else:
+        print("⚠️ 開催場が検出されなかったため、基本開催リストを生成します。")
         default_codes = ["04", "05", "07", "08", "09", "11", "12", "13", "14", "18", "19", "22", "23"]
         for code in default_codes:
             name = STADIUM_NAMES.get(code, "競艇場")
