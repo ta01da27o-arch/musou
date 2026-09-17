@@ -18,7 +18,7 @@ STADIUM_NAMES = {
 
 def download_and_extract_lzh(date_str):
     """
-    OSのコマンド (lha / unar) を利用して LZH ファイルを解凍・解読する
+    OSのコマンド (lhasa / unar) を利用して LZH ファイルを解凍・解読する
     """
     yy = date_str[-6:-4]
     mm = date_str[-4:-2]
@@ -41,20 +41,19 @@ def download_and_extract_lzh(date_str):
             with urllib.request.urlopen(req, timeout=15) as response:
                 data_bytes = response.read()
 
-                # 一時ディレクトリに保存して解凍を試みる
                 with tempfile.TemporaryDirectory() as tmp_dir:
                     lzh_path = os.path.join(tmp_dir, "data.lzh")
                     with open(lzh_path, "wb") as f:
                         f.write(data_bytes)
 
-                    # 1. lha コマンドの実行
-                    subprocess.run(["lha", "-x", f"-w={tmp_dir}", lzh_path], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                    # 1. lhasa コマンドの実行 (lhasa -x w=OUTPUT_DIR FILE)
+                    subprocess.run(["lhasa", "-x", f"-w={tmp_dir}", lzh_path], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
                     # 2. unar コマンドでのフォールバック
                     if not any(f.endswith(".TXT") or f.endswith(".txt") for f in os.listdir(tmp_dir)):
                         subprocess.run(["unar", "-o", tmp_dir, lzh_path], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
-                    # 解凍されたテキストを探す
+                    # 解凍されたテキストの検出
                     for fname in os.listdir(tmp_dir):
                         if fname.lower().endswith(".txt"):
                             extracted_path = os.path.join(tmp_dir, fname)
@@ -64,10 +63,10 @@ def download_and_extract_lzh(date_str):
                                     txt = raw.decode('cp932')
                                 except UnicodeDecodeError:
                                     txt = raw.decode('euc-jp', errors='ignore')
-                                print(f"✅ コマンド経由で解凍成功: {fname}")
+                                print(f"✅ 解凍成功 ({fname})")
                                 return txt
 
-                # 生テキスト形式だった場合のバックアップ
+                # 生テキスト形式でダウンロードできた場合の判定
                 try:
                     txt = data_bytes.decode('cp932')
                     if "BB3#" in txt or "ボートレース" in txt:
