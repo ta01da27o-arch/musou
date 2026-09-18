@@ -2,10 +2,11 @@
   "date": "20260918",
   "stadium_code": "11",
   "stadium_name": "びわこ",
+  "cache_buster": "1789695248137",
   "races": {
     "1": {
       "weather": {
-        "weather": "晴",
+        "weather": "-",
         "wind_speed": "2m",
         "wind_direction": "追い風",
         "wave": "2cm"
@@ -15,60 +16,60 @@
         {
           "name": "岡部  貴司",
           "rank": "A1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 30
+          "power": 85,
+          "turn_offset": 30,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "小川  時光",
           "rank": "A1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 40
+          "power": 85,
+          "turn_offset": 40,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "上田  洋平",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 50
+          "power": 70,
+          "turn_offset": 50,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "橋本   明",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 60
+          "power": 70,
+          "turn_offset": 60,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "星   栄爾",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 70
+          "power": 70,
+          "turn_offset": 70,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "中川  海虹",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 80
+          "power": 70,
+          "turn_offset": 80,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         }
       ],
       "comment": "1号艇【岡部  貴司】中心の組み立て。",
-      "sub_comment": "インコース安定感重視。",
+      "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
           "num": "1 - 2 - 3",
@@ -134,7 +135,7 @@
     },
     "2": {
       "weather": {
-        "weather": "晴",
+        "weather": "-",
         "wind_speed": "2m",
         "wind_direction": "追い風",
         "wave": "2cm"
@@ -144,60 +145,60 @@
         {
           "name": "天野  友和",
           "rank": "A1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 30
+          "power": 85,
+          "turn_offset": 30,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "原村  拓也",
           "rank": "A1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 40
+          "power": 85,
+          "turn_offset": 40,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "石井  孝之",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 50
+          "power": 70,
+          "turn_offset": 50,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "野村   誠",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 60
+          "power": 70,
+          "turn_offset": 60,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "川田  正人",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 70
+          "power": 70,
+          "turn_offset": 70,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "早川  理稀",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 80
+          "power": 70,
+          "turn_offset": 80,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         }
       ],
       "comment": "1号艇【天野  友和】中心の組み立て。",
-      "sub_comment": "インコース安定感重視。",
+      "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
           "num": "1 - 2 - 3",
@@ -263,7 +264,7 @@
     },
     "3": {
       "weather": {
-        "weather": "晴",
+        "weather": "-",
         "wind_speed": "2m",
         "wind_direction": "追い風",
         "wave": "2cm"
@@ -273,60 +274,60 @@
         {
           "name": "相原  利章",
           "rank": "A1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 30
+          "power": 85,
+          "turn_offset": 30,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "倉田  郁美",
           "rank": "A1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 40
+          "power": 85,
+          "turn_offset": 40,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "佐藤  太亮",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 50
+          "power": 70,
+          "turn_offset": 50,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "岩井   繁",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 60
+          "power": 70,
+          "turn_offset": 60,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "鶴田  勇雄",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 70
+          "power": 70,
+          "turn_offset": 70,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "今泉   澪",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 80
+          "power": 70,
+          "turn_offset": 80,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         }
       ],
       "comment": "1号艇【相原  利章】中心の組み立て。",
-      "sub_comment": "インコース安定感重視。",
+      "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
           "num": "1 - 2 - 3",
@@ -392,7 +393,7 @@
     },
     "4": {
       "weather": {
-        "weather": "晴",
+        "weather": "-",
         "wind_speed": "2m",
         "wind_direction": "追い風",
         "wave": "2cm"
@@ -402,60 +403,60 @@
         {
           "name": "中村  有裕",
           "rank": "A1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 30
+          "power": 85,
+          "turn_offset": 30,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "間庭  菜摘",
           "rank": "A1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 40
+          "power": 85,
+          "turn_offset": 40,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "竹之内  極",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 50
+          "power": 70,
+          "turn_offset": 50,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "鈴木  峻佑",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 60
+          "power": 70,
+          "turn_offset": 60,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "高橋  真吾",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 70
+          "power": 70,
+          "turn_offset": 70,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "奥田   誠",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 80
+          "power": 70,
+          "turn_offset": 80,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         }
       ],
       "comment": "1号艇【中村  有裕】中心の組み立て。",
-      "sub_comment": "インコース安定感重視。",
+      "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
           "num": "1 - 2 - 3",
@@ -521,7 +522,7 @@
     },
     "5": {
       "weather": {
-        "weather": "晴",
+        "weather": "-",
         "wind_speed": "2m",
         "wind_direction": "追い風",
         "wave": "2cm"
@@ -531,60 +532,60 @@
         {
           "name": "谷村  一哉",
           "rank": "A1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 30
+          "power": 85,
+          "turn_offset": 30,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "土屋  太朗",
           "rank": "A1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 40
+          "power": 85,
+          "turn_offset": 40,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "妻鳥  晋也",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 50
+          "power": 70,
+          "turn_offset": 50,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "中野  希一",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 60
+          "power": 70,
+          "turn_offset": 60,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "井川  大作",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 70
+          "power": 70,
+          "turn_offset": 70,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "中川  海虹",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 80
+          "power": 70,
+          "turn_offset": 80,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         }
       ],
       "comment": "1号艇【谷村  一哉】中心の組み立て。",
-      "sub_comment": "インコース安定感重視。",
+      "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
           "num": "1 - 2 - 3",
@@ -650,7 +651,7 @@
     },
     "6": {
       "weather": {
-        "weather": "晴",
+        "weather": "-",
         "wind_speed": "2m",
         "wind_direction": "追い風",
         "wave": "2cm"
@@ -660,60 +661,60 @@
         {
           "name": "安井  瑞紀",
           "rank": "A1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 30
+          "power": 85,
+          "turn_offset": 30,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "星   栄爾",
           "rank": "A1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 40
+          "power": 85,
+          "turn_offset": 40,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "池田  雄一",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 50
+          "power": 70,
+          "turn_offset": 50,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "宇野  弥生",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 60
+          "power": 70,
+          "turn_offset": 60,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "原村  拓也",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 70
+          "power": 70,
+          "turn_offset": 70,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "宇田川 信一",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 80
+          "power": 70,
+          "turn_offset": 80,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         }
       ],
       "comment": "1号艇【安井  瑞紀】中心の組み立て。",
-      "sub_comment": "インコース安定感重視。",
+      "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
           "num": "1 - 2 - 3",
@@ -779,7 +780,7 @@
     },
     "7": {
       "weather": {
-        "weather": "晴",
+        "weather": "-",
         "wind_speed": "2m",
         "wind_direction": "追い風",
         "wave": "2cm"
@@ -789,60 +790,60 @@
         {
           "name": "前田  篤哉",
           "rank": "A1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 30
+          "power": 85,
+          "turn_offset": 30,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "山戸  信二",
           "rank": "A1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 40
+          "power": 85,
+          "turn_offset": 40,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "橋本   明",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 50
+          "power": 70,
+          "turn_offset": 50,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "石井  孝之",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 60
+          "power": 70,
+          "turn_offset": 60,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "倉田  郁美",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 70
+          "power": 70,
+          "turn_offset": 70,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "今泉   澪",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 80
+          "power": 70,
+          "turn_offset": 80,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         }
       ],
       "comment": "1号艇【前田  篤哉】中心の組み立て。",
-      "sub_comment": "インコース安定感重視。",
+      "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
           "num": "1 - 2 - 3",
@@ -908,7 +909,7 @@
     },
     "8": {
       "weather": {
-        "weather": "晴",
+        "weather": "-",
         "wind_speed": "2m",
         "wind_direction": "追い風",
         "wave": "2cm"
@@ -918,60 +919,60 @@
         {
           "name": "佐藤  太亮",
           "rank": "A1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 30
+          "power": 85,
+          "turn_offset": 30,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "岩井   繁",
           "rank": "A1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 40
+          "power": 85,
+          "turn_offset": 40,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "鈴木  峻佑",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 50
+          "power": 70,
+          "turn_offset": 50,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "奥田   誠",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 60
+          "power": 70,
+          "turn_offset": 60,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "小川  時光",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 70
+          "power": 70,
+          "turn_offset": 70,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "早川  理稀",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 80
+          "power": 70,
+          "turn_offset": 80,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         }
       ],
       "comment": "1号艇【佐藤  太亮】中心の組み立て。",
-      "sub_comment": "インコース安定感重視。",
+      "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
           "num": "1 - 2 - 3",
@@ -1037,7 +1038,7 @@
     },
     "9": {
       "weather": {
-        "weather": "晴",
+        "weather": "-",
         "wind_speed": "2m",
         "wind_direction": "追い風",
         "wave": "2cm"
@@ -1047,60 +1048,60 @@
         {
           "name": "鶴田  勇雄",
           "rank": "A1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 30
+          "power": 85,
+          "turn_offset": 30,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "高橋  真吾",
           "rank": "A1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 40
+          "power": 85,
+          "turn_offset": 40,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "川田  正人",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 50
+          "power": 70,
+          "turn_offset": 50,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "妻鳥  晋也",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 60
+          "power": 70,
+          "turn_offset": 60,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "土屋  太朗",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 70
+          "power": 70,
+          "turn_offset": 70,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "竹之内  極",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 80
+          "power": 70,
+          "turn_offset": 80,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         }
       ],
       "comment": "1号艇【鶴田  勇雄】中心の組み立て。",
-      "sub_comment": "インコース安定感重視。",
+      "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
           "num": "1 - 2 - 3",
@@ -1166,7 +1167,7 @@
     },
     "10": {
       "weather": {
-        "weather": "晴",
+        "weather": "-",
         "wind_speed": "2m",
         "wind_direction": "追い風",
         "wave": "2cm"
@@ -1176,60 +1177,60 @@
         {
           "name": "野村   誠",
           "rank": "A1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 30
+          "power": 85,
+          "turn_offset": 30,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "上田  洋平",
           "rank": "A1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 40
+          "power": 85,
+          "turn_offset": 40,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "間庭  菜摘",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 50
+          "power": 70,
+          "turn_offset": 50,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "谷村  一哉",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 60
+          "power": 70,
+          "turn_offset": 60,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "池田  雄一",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 70
+          "power": 70,
+          "turn_offset": 70,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "相原  利章",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 80
+          "power": 70,
+          "turn_offset": 80,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         }
       ],
       "comment": "1号艇【野村   誠】中心の組み立て。",
-      "sub_comment": "インコース安定感重視。",
+      "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
           "num": "1 - 2 - 3",
@@ -1295,7 +1296,7 @@
     },
     "11": {
       "weather": {
-        "weather": "晴",
+        "weather": "-",
         "wind_speed": "2m",
         "wind_direction": "追い風",
         "wave": "2cm"
@@ -1305,60 +1306,60 @@
         {
           "name": "中野  希一",
           "rank": "A1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 30
+          "power": 85,
+          "turn_offset": 30,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "前田  篤哉",
           "rank": "A1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 40
+          "power": 85,
+          "turn_offset": 40,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "安井  瑞紀",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 50
+          "power": 70,
+          "turn_offset": 50,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "天野  友和",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 60
+          "power": 70,
+          "turn_offset": 60,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "中村  有裕",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 70
+          "power": 70,
+          "turn_offset": 70,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "岡部  貴司",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 80
+          "power": 70,
+          "turn_offset": 80,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         }
       ],
       "comment": "1号艇【中野  希一】中心の組み立て。",
-      "sub_comment": "インコース安定感重視。",
+      "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
           "num": "1 - 2 - 3",
@@ -1424,7 +1425,7 @@
     },
     "12": {
       "weather": {
-        "weather": "晴",
+        "weather": "-",
         "wind_speed": "2m",
         "wind_direction": "追い風",
         "wave": "2cm"
@@ -1434,60 +1435,60 @@
         {
           "name": "田中  駿兵",
           "rank": "A1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 30
+          "power": 85,
+          "turn_offset": 30,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "深井  利寿",
           "rank": "A1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 40
+          "power": 85,
+          "turn_offset": 40,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "吉村  正明",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 50
+          "power": 70,
+          "turn_offset": 50,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "佐藤  博亮",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 60
+          "power": 70,
+          "turn_offset": 60,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "谷口  知優",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 70
+          "power": 70,
+          "turn_offset": 70,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "寺田  千恵",
           "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.68",
-          "power": 80,
-          "turn_offset": 80
+          "power": 70,
+          "turn_offset": 80,
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         }
       ],
       "comment": "1号艇【田中  駿兵】中心の組み立て。",
-      "sub_comment": "インコース安定感重視。",
+      "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
           "num": "1 - 2 - 3",
