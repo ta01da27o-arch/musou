@@ -42,7 +42,7 @@ def get_active_stadiums_today(date_str):
     return sorted(active_codes)
 
 def fetch_race_beforeinfo(jcd, rno, date_str):
-    """ 公式直前情報ページから展示ST・チルト・展示タイム・気象を正確に抽出 """
+    """ 直前展示データ取得 """
     url = f"https://www.boatrace.jp/owpc/pc/race/beforeinfo?rno={rno}&jcd={jcd}&hd={date_str}"
     html = fetch_url(url)
     
@@ -50,20 +50,18 @@ def fetch_race_beforeinfo(jcd, rno, date_str):
         "weather": {"weather": "-", "wind_speed": "-", "wind_direction": "-", "wave": "-"},
         "racers_extra": {}
     }
-    
-    if not html:
-        return before_data
+    if not html: return before_data
 
     soup = BeautifulSoup(html, "html.parser")
     
-    # 1. 気象情報
-    weather_unit = soup.select_one(".weather1")
-    if weather_unit:
-        w_text = weather_unit.text
-        m_w = re.search(r"天候\s*([^\s]+)", w_text)
-        m_wind = re.search(r"風速\s*(\d+m)", w_text)
-        m_wave = re.search(r"波高\s*(\d+cm)", w_text)
-        m_dir = re.search(r"風向\s*([^\s]+)", w_text)
+    # 気象情報
+    w_unit = soup.select_one(".weather1")
+    if w_unit:
+        txt = w_unit.text
+        m_w = re.search(r"天候\s*([^\s]+)", txt)
+        m_wind = re.search(r"風速\s*(\d+m)", txt)
+        m_wave = re.search(r"波高\s*(\d+cm)", txt)
+        m_dir = re.search(r"風向\s*([^\s]+)", txt)
         
         before_data["weather"] = {
             "weather": m_w.group(1) if m_w else "-",
@@ -72,79 +70,58 @@ def fetch_race_beforeinfo(jcd, rno, date_str):
             "wave": m_wave.group(1) if m_wave else "-"
         }
 
-    # 2. 各艇の直前情報（1〜6号艇）
+    # 各艇展示情報
     for idx in range(1, 7):
         b_str = str(idx)
         tbody = soup.find("tbody", class_=re.compile(f"is-boatColor{idx}"))
-        if not tbody:
-            continue
+        if not tbody: continue
             
-        text_list = [td.text.strip() for td in tbody.find_all(["td", "th"]) if td.text.strip()]
-        
-        ex_time = "-"
-        tilt = "-"
-        st_val = "-"
-        
-        for t in text_list:
-            if re.match(r"^6\.\d{2}$", t):
-                ex_time = t
-            elif re.match(r"^[-+]?(?:0|1|2|3)\.(?:5|0)$", t) or t == "-0.5":
-                tilt = t
-            elif re.match(r"^(?:[FL]\.)?\d{2}$", t) or re.match(r"^\.\d{2}$", t):
-                st_val = t
+        txts = [td.text.strip() for td in tbody.find_all(["td", "th"]) if td.text.strip()]
+        ex_t, tilt, st_val = "-", "-", "-"
+        for t in txts:
+            if re.match(r"^6\.\d{2}$", t): ex_t = t
+            elif re.match(r"^[-+]?(?:0|1|2|3)\.(?:5|0)$", t) or t == "-0.5": tilt = t
+            elif re.match(r"^(?:[FL]\.)?\d{2}$", t) or re.match(r"^\.\d{2}$", t): st_val = t
 
-        before_data["racers_extra"][b_str] = {
-            "st": st_val,
-            "tilt": tilt,
-            "time": ex_time
-        }
+        before_data["racers_extra"][b_str] = {"st": st_val, "tilt": tilt, "time": ex_t}
 
     return before_data
 
 def fetch_race_racers(jcd, rno, date_str):
-    """ 基本出走表データ """
+    """ 公式出走表から本物の選手名を直接取得 """
     url = f"https://www.boatrace.jp/owpc/pc/race/racelist?rno={rno}&jcd={jcd}&hd={date_str}"
     html = fetch_url(url)
     racers = []
     
     if html:
         soup = BeautifulSoup(html, "html.parser")
-        anchors = soup.find_all("a", href=re.compile(r"toban=\d+"))
-        for a in anchors:
-            name = a.text.strip().replace("\u3000", " ")
-            if name and not any(r["name"] == name for r in racers):
-                racers.append({
-                    "name": name,
-                    "rank": "A1" if len(racers) < 2 else "B1",
-                    "power": 85 if len(racers) < 2 else 70,
-                    "turn_offset": 20 + ((len(racers) + 1) * 10)
-                })
-            if len(racers) >= 6:
-                break
+        # 選手名アンカータグの解析
+        tbodies = soup.select("table.is-w780 tbody")
+        for tbody in tbodies:
+            a_tag = tbody.find("a", href=re.compile(r"toban=\d+"))
+            if a_tag:
+                raw_name = a_tag.text.strip().replace("\u3000", " ").replace(" ", "")
+                if raw_name:
+                    racers.append({
+                        "name": raw_name,
+                        "rank": "A1" if len(racers) < 2 else "B1"
+                    })
+            if len(racers) >= 6: break
 
+    # 万が一失敗した場合のみの保険
     while len(racers) < 6:
         idx = len(racers) + 1
-        racers.append({
-            "name": f"選手{idx}", "rank": "B1", "power": 70, "turn_offset": 20 + (idx * 10)
-        })
+        racers.append({"name": f"選手{idx}", "rank": "B1"})
 
     return racers
 
-def process_single_stadium(code, date_str, master_data, cache_key):
+def process_single_stadium(code, date_str, cache_key):
     name = STADIUM_NAMES.get(code, "競艇場")
     races_dict = {}
     
-    st_races = master_data.get(code, {})
-    
     for r in range(1, 13):
         r_str = str(r)
-        
-        # マスターから基本選手情報を取得、なければスクレイピング
-        if r_str in st_races:
-            racers = st_races[r_str]
-        else:
-            racers = fetch_race_racers(code, r_str, date_str)
-            
+        racers = fetch_race_racers(code, r_str, date_str)
         before_info = fetch_race_beforeinfo(code, r_str, date_str)
         
         combined_racers = []
@@ -152,12 +129,12 @@ def process_single_stadium(code, date_str, master_data, cache_key):
             extra = before_info["racers_extra"].get(str(idx), {})
             combined_racers.append({
                 "name": racer["name"],
-                "rank": racer.get("rank", "B1"),
+                "rank": racer["rank"],
                 "st": extra.get("st", "-"),
                 "tilt": extra.get("tilt", "-"),
                 "time": extra.get("time", "-"),
-                "power": racer.get("power", 70),
-                "turn_offset": racer.get("turn_offset", 30)
+                "power": 85 if idx <= 2 else 70,
+                "turn_offset": 20 + (idx * 10)
             })
 
         target_combos = [
@@ -189,7 +166,6 @@ def process_single_stadium(code, date_str, master_data, cache_key):
     with open(f"stadium_{code}.json", "w", encoding="utf-8") as f:
         json.dump(stadium_json, f, ensure_ascii=False, indent=2)
         
-    print(f" -> 統合データ生成完了: stadium_{code}.json ({name})")
     return code, name
 
 def main():
@@ -199,30 +175,19 @@ def main():
     today_str = now_jst.strftime("%Y%m%d")
     cache_key = str(int(now_jst.timestamp() * 1000))
     
-    print(f"[{today_str}] (JST) 直前情報・出走表スクレイピング開始...")
-
-    # マスターファイルがあれば読み込み、無ければ空辞書で進める
-    master_data = {}
-    if os.path.exists("racers_master.json"):
-        try:
-            with open("racers_master.json", "r", encoding="utf-8") as f:
-                master_data = json.load(f)
-        except Exception:
-            pass
-
     active_codes = get_active_stadiums_today(today_str)
     if not active_codes:
         active_codes = ["04", "05", "07", "08", "09", "11", "12", "13", "14", "18", "19", "22", "23"]
 
     active_stadiums = []
     with ThreadPoolExecutor(max_workers=5) as executor:
-        futures = [executor.submit(process_single_stadium, code, today_str, master_data, cache_key) for code in active_codes]
+        futures = [executor.submit(process_single_stadium, code, today_str, cache_key) for code in active_codes]
         for future in futures:
             try:
                 code, name = future.result()
                 active_stadiums.append({"code": code, "name": name})
             except Exception as e:
-                print(f"スレッドエラー: {e}")
+                pass
 
     active_codes.sort()
     active_stadiums.sort(key=lambda x: x["code"])
@@ -238,7 +203,7 @@ def main():
     with open("data.json", "w", encoding="utf-8") as f:
         json.dump(index_data, f, ensure_ascii=False, indent=2)
 
-    print(f"✅ 全データファイル生成完了！（所要時間: {time.time() - start_time:.2f}秒）")
+    print(f"✅ スクレイピング完了（所要時間: {time.time() - start_time:.2f}秒）")
 
 if __name__ == "__main__":
     main()
