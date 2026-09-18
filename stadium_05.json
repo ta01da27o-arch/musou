@@ -2,12 +2,12 @@
   "date": "20260918",
   "stadium_code": "05",
   "stadium_name": "多摩川",
-  "cache_buster": "1789695248137",
+  "cache_buster": "1789700849587",
   "races": {
     "1": {
       "weather": {
         "weather": "-",
-        "wind_speed": "3m",
+        "wind_speed": "2m",
         "wind_direction": "追い風",
         "wave": "2cm"
       },
@@ -18,54 +18,54 @@
           "rank": "A1",
           "power": 85,
           "turn_offset": 30,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "1",
+          "tilt": "6.71",
+          "time": "-0.5"
         },
         {
           "name": "石橋  道友",
           "rank": "A1",
           "power": 85,
           "turn_offset": 40,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "2",
+          "tilt": "6.73",
+          "time": "0.0"
         },
         {
           "name": "小池  修平",
           "rank": "B1",
           "power": 70,
           "turn_offset": 50,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "3",
+          "tilt": "6.75",
+          "time": "0.0"
         },
         {
           "name": "竹田  和哉",
           "rank": "B1",
           "power": 70,
           "turn_offset": 60,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "4",
+          "tilt": "6.80",
+          "time": "0.0"
         },
         {
           "name": "深谷  知博",
           "rank": "B1",
           "power": 70,
           "turn_offset": 70,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "5",
+          "tilt": "6.68",
+          "time": "0.0"
         },
         {
           "name": "安河内  将",
           "rank": "B1",
           "power": 70,
           "turn_offset": 80,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "6",
+          "tilt": "6.76",
+          "time": "0.0"
         }
       ],
       "comment": "1号艇【須藤  博倫】中心の組み立て。",
@@ -147,54 +147,54 @@
           "rank": "A1",
           "power": 85,
           "turn_offset": 30,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "1",
+          "tilt": "6.63",
+          "time": "0.0"
         },
         {
           "name": "坂口   周",
           "rank": "A1",
           "power": 85,
           "turn_offset": 40,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "2",
+          "tilt": "6.71",
+          "time": "-0.5"
         },
         {
           "name": "杉山  正樹",
           "rank": "B1",
           "power": 70,
           "turn_offset": 50,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "3",
+          "tilt": "6.63",
+          "time": "0.0"
         },
         {
           "name": "若林   将",
           "rank": "B1",
           "power": 70,
           "turn_offset": 60,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "4",
+          "tilt": "6.65",
+          "time": "0.0"
         },
         {
           "name": "黒野  元基",
           "rank": "B1",
           "power": 70,
           "turn_offset": 70,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "5",
+          "tilt": "6.70",
+          "time": "0.0"
         },
         {
           "name": "中澤  和志",
           "rank": "B1",
           "power": 70,
           "turn_offset": 80,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "6",
+          "tilt": "6.72",
+          "time": "0.0"
         }
       ],
       "comment": "1号艇【上田  龍星】中心の組み立て。",
@@ -276,54 +276,54 @@
           "rank": "A1",
           "power": 85,
           "turn_offset": 30,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "1",
+          "tilt": "6.72",
+          "time": "-0.5"
         },
         {
           "name": "濱野谷 憲吾",
           "rank": "A1",
           "power": 85,
           "turn_offset": 40,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "2",
+          "tilt": "6.71",
+          "time": "-0.5"
         },
         {
           "name": "長尾  章平",
           "rank": "B1",
           "power": 70,
           "turn_offset": 50,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "3",
+          "tilt": "6.71",
+          "time": "-0.5"
         },
         {
           "name": "毒島   誠",
           "rank": "B1",
           "power": 70,
           "turn_offset": 60,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "4",
+          "tilt": "6.75",
+          "time": "0.0"
         },
         {
           "name": "岩瀬  裕亮",
           "rank": "B1",
           "power": 70,
           "turn_offset": 70,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "5",
+          "tilt": "6.63",
+          "time": "0.0"
         },
         {
           "name": "椎名   豊",
           "rank": "B1",
           "power": 70,
           "turn_offset": 80,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "6",
+          "tilt": "6.67",
+          "time": "0.0"
         }
       ],
       "comment": "1号艇【松山  将吾】中心の組み立て。",
@@ -394,7 +394,7 @@
     "4": {
       "weather": {
         "weather": "-",
-        "wind_speed": "3m",
+        "wind_speed": "2m",
         "wind_direction": "追い風",
         "wave": "2cm"
       },
@@ -405,54 +405,54 @@
           "rank": "A1",
           "power": 85,
           "turn_offset": 30,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "1",
+          "tilt": "6.66",
+          "time": "0.0"
         },
         {
           "name": "山田  康二",
           "rank": "A1",
           "power": 85,
           "turn_offset": 40,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "2",
+          "tilt": "6.65",
+          "time": "0.0"
         },
         {
           "name": "松田 大志郎",
           "rank": "B1",
           "power": 70,
           "turn_offset": 50,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "3",
+          "tilt": "6.62",
+          "time": "-0.5"
         },
         {
           "name": "河野   大",
           "rank": "B1",
           "power": 70,
           "turn_offset": 60,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "4",
+          "tilt": "6.70",
+          "time": "0.0"
         },
         {
           "name": "馬場  貴也",
           "rank": "B1",
           "power": 70,
           "turn_offset": 70,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "5",
+          "tilt": "6.65",
+          "time": "-0.5"
         },
         {
           "name": "村上   遼",
           "rank": "B1",
           "power": 70,
           "turn_offset": 80,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "6",
+          "tilt": "6.72",
+          "time": "0.0"
         }
       ],
       "comment": "1号艇【前田  将太】中心の組み立て。",
@@ -523,7 +523,7 @@
     "5": {
       "weather": {
         "weather": "-",
-        "wind_speed": "3m",
+        "wind_speed": "2m",
         "wind_direction": "追い風",
         "wave": "2cm"
       },
@@ -535,8 +535,8 @@
           "power": 85,
           "turn_offset": 30,
           "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "tilt": "1",
+          "time": "-0.5"
         },
         {
           "name": "安河内  健",
@@ -544,8 +544,8 @@
           "power": 85,
           "turn_offset": 40,
           "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "tilt": "2",
+          "time": "0.0"
         },
         {
           "name": "吉田  拡郎",
@@ -553,8 +553,8 @@
           "power": 70,
           "turn_offset": 50,
           "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "tilt": "3",
+          "time": "0.0"
         },
         {
           "name": "中山   将",
@@ -562,8 +562,8 @@
           "power": 70,
           "turn_offset": 60,
           "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "tilt": "4",
+          "time": "0.0"
         },
         {
           "name": "佐藤   翼",
@@ -571,8 +571,8 @@
           "power": 70,
           "turn_offset": 70,
           "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "tilt": "5",
+          "time": "0.0"
         },
         {
           "name": "中野  次郎",
@@ -580,8 +580,8 @@
           "power": 70,
           "turn_offset": 80,
           "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "tilt": "6",
+          "time": "0.0"
         }
       ],
       "comment": "1号艇【長田  頼宗】中心の組み立て。",
@@ -652,7 +652,7 @@
     "6": {
       "weather": {
         "weather": "-",
-        "wind_speed": "3m",
+        "wind_speed": "2m",
         "wind_direction": "追い風",
         "wave": "2cm"
       },
@@ -781,7 +781,7 @@
     "7": {
       "weather": {
         "weather": "-",
-        "wind_speed": "3m",
+        "wind_speed": "2m",
         "wind_direction": "追い風",
         "wave": "2cm"
       },
@@ -802,8 +802,8 @@
           "power": 85,
           "turn_offset": 40,
           "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "tilt": "2",
+          "time": "2"
         },
         {
           "name": "山田  哲也",
@@ -820,8 +820,8 @@
           "power": 70,
           "turn_offset": 60,
           "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "tilt": "4",
+          "time": "1"
         },
         {
           "name": "西山  貴浩",
@@ -910,7 +910,7 @@
     "8": {
       "weather": {
         "weather": "-",
-        "wind_speed": "3m",
+        "wind_speed": "2m",
         "wind_direction": "追い風",
         "wave": "2cm"
       },
@@ -940,8 +940,8 @@
           "power": 70,
           "turn_offset": 50,
           "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "tilt": "3",
+          "time": "2"
         },
         {
           "name": "濱野谷 憲吾",
@@ -949,8 +949,8 @@
           "power": 70,
           "turn_offset": 60,
           "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "tilt": "4",
+          "time": "3"
         },
         {
           "name": "竹田  和哉",
@@ -958,8 +958,8 @@
           "power": 70,
           "turn_offset": 70,
           "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "tilt": "5",
+          "time": "1"
         },
         {
           "name": "瓜生  正義",
@@ -1039,7 +1039,7 @@
     "9": {
       "weather": {
         "weather": "-",
-        "wind_speed": "3m",
+        "wind_speed": "2m",
         "wind_direction": "追い風",
         "wave": "2cm"
       },
@@ -1060,8 +1060,8 @@
           "power": 85,
           "turn_offset": 40,
           "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "tilt": "2",
+          "time": "3"
         },
         {
           "name": "馬場  貴也",
@@ -1078,8 +1078,8 @@
           "power": 70,
           "turn_offset": 60,
           "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "tilt": "4",
+          "time": "2"
         },
         {
           "name": "久田  敏之",
@@ -1168,7 +1168,7 @@
     "10": {
       "weather": {
         "weather": "-",
-        "wind_speed": "3m",
+        "wind_speed": "2m",
         "wind_direction": "追い風",
         "wave": "2cm"
       },
@@ -1198,8 +1198,8 @@
           "power": 70,
           "turn_offset": 50,
           "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "tilt": "3",
+          "time": "3"
         },
         {
           "name": "松田 大志郎",
@@ -1216,8 +1216,8 @@
           "power": 70,
           "turn_offset": 70,
           "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "tilt": "5",
+          "time": "2"
         },
         {
           "name": "小池  修平",
@@ -1225,8 +1225,8 @@
           "power": 70,
           "turn_offset": 80,
           "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "tilt": "6",
+          "time": "1"
         }
       ],
       "comment": "1号艇【石渡  鉄兵】中心の組み立て。",
@@ -1297,7 +1297,7 @@
     "11": {
       "weather": {
         "weather": "-",
-        "wind_speed": "3m",
+        "wind_speed": "2m",
         "wind_direction": "追い風",
         "wave": "2cm"
       },
@@ -1318,8 +1318,8 @@
           "power": 85,
           "turn_offset": 40,
           "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "tilt": "2",
+          "time": "3"
         },
         {
           "name": "黒野  元基",
@@ -1327,8 +1327,8 @@
           "power": 70,
           "turn_offset": 50,
           "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "tilt": "3",
+          "time": "2"
         },
         {
           "name": "森高  一真",
@@ -1345,8 +1345,8 @@
           "power": 70,
           "turn_offset": 70,
           "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "tilt": "5",
+          "time": "1"
         },
         {
           "name": "丸野  一樹",
@@ -1426,7 +1426,7 @@
     "12": {
       "weather": {
         "weather": "-",
-        "wind_speed": "3m",
+        "wind_speed": "2m",
         "wind_direction": "追い風",
         "wave": "2cm"
       },
@@ -1447,8 +1447,8 @@
           "power": 85,
           "turn_offset": 40,
           "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "tilt": "2",
+          "time": "2"
         },
         {
           "name": "佐藤   翼",
@@ -1465,8 +1465,8 @@
           "power": 70,
           "turn_offset": 60,
           "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "tilt": "4",
+          "time": "3"
         },
         {
           "name": "福来   剛",

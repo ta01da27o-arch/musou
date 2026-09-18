@@ -2,14 +2,14 @@
   "date": "20260918",
   "stadium_code": "22",
   "stadium_name": "福岡",
-  "cache_buster": "1789695248137",
+  "cache_buster": "1789700849587",
   "races": {
     "1": {
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "3cm"
       },
       "summary_tag": "【本命濃厚】",
       "racers": [
@@ -18,54 +18,54 @@
           "rank": "A1",
           "power": 85,
           "turn_offset": 30,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "1",
+          "tilt": "6.86",
+          "time": "-0.5"
         },
         {
           "name": "日高 龍之介",
           "rank": "A1",
           "power": 85,
           "turn_offset": 40,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "2",
+          "tilt": "6.86",
+          "time": "0.0"
         },
         {
           "name": "白井  友晴",
           "rank": "B1",
           "power": 70,
           "turn_offset": 50,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "3",
+          "tilt": "6.82",
+          "time": "0.0"
         },
         {
           "name": "海老澤 泰行",
           "rank": "B1",
           "power": 70,
           "turn_offset": 60,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "4",
+          "tilt": "6.92",
+          "time": "0.0"
         },
         {
           "name": "宮内  直哉",
           "rank": "B1",
           "power": 70,
           "turn_offset": 70,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "5",
+          "tilt": "6.85",
+          "time": "-0.5"
         },
         {
           "name": "山下  奈緒",
           "rank": "B1",
           "power": 70,
           "turn_offset": 80,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "6",
+          "tilt": "6.89",
+          "time": "-0.5"
         }
       ],
       "comment": "1号艇【仲口  博崇】中心の組み立て。",
@@ -136,9 +136,9 @@
     "2": {
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "3cm"
       },
       "summary_tag": "【捲り一閃】",
       "racers": [
@@ -147,54 +147,54 @@
           "rank": "A1",
           "power": 85,
           "turn_offset": 30,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "1",
+          "tilt": "6.86",
+          "time": "0.5"
         },
         {
           "name": "末永  祐輝",
           "rank": "A1",
           "power": 85,
           "turn_offset": 40,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "2",
+          "tilt": "6.83",
+          "time": "-0.5"
         },
         {
           "name": "岡部   哲",
           "rank": "B1",
           "power": 70,
           "turn_offset": 50,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "3",
+          "tilt": "6.92",
+          "time": "-0.5"
         },
         {
           "name": "岡本   大",
           "rank": "B1",
           "power": 70,
           "turn_offset": 60,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "4",
+          "tilt": "6.88",
+          "time": "0.0"
         },
         {
           "name": "山田  竜一",
           "rank": "B1",
           "power": 70,
           "turn_offset": 70,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "5",
+          "tilt": "6.81",
+          "time": "0.0"
         },
         {
           "name": "高井  雄基",
           "rank": "B1",
           "power": 70,
           "turn_offset": 80,
-          "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "st": "6",
+          "tilt": "6.88",
+          "time": "0.0"
         }
       ],
       "comment": "1号艇【西村 美智子】中心の組み立て。",
@@ -265,9 +265,9 @@
     "3": {
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "3cm"
       },
       "summary_tag": "【本命濃厚】",
       "racers": [
@@ -277,8 +277,8 @@
           "power": 85,
           "turn_offset": 30,
           "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "tilt": "1",
+          "time": "0.0"
         },
         {
           "name": "淺香  文武",
@@ -286,8 +286,8 @@
           "power": 85,
           "turn_offset": 40,
           "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "tilt": "2",
+          "time": "0.0"
         },
         {
           "name": "坪口  竜也",
@@ -295,8 +295,8 @@
           "power": 70,
           "turn_offset": 50,
           "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "tilt": "3",
+          "time": "0.0"
         },
         {
           "name": "谷   勝幸",
@@ -304,8 +304,8 @@
           "power": 70,
           "turn_offset": 60,
           "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "tilt": "4",
+          "time": "0.0"
         },
         {
           "name": "木場  悠介",
@@ -313,8 +313,8 @@
           "power": 70,
           "turn_offset": 70,
           "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "tilt": "5",
+          "time": "0.5"
         },
         {
           "name": "古園井 綾南",
@@ -322,8 +322,8 @@
           "power": 70,
           "turn_offset": 80,
           "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "tilt": "6",
+          "time": "0.0"
         }
       ],
       "comment": "1号艇【藤丸  光一】中心の組み立て。",
@@ -394,9 +394,9 @@
     "4": {
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "3cm"
       },
       "summary_tag": "【捲り一閃】",
       "racers": [
@@ -523,9 +523,9 @@
     "5": {
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "3cm"
       },
       "summary_tag": "【本命濃厚】",
       "racers": [
@@ -652,9 +652,9 @@
     "6": {
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "3cm"
       },
       "summary_tag": "【捲り一閃】",
       "racers": [
@@ -682,8 +682,8 @@
           "power": 70,
           "turn_offset": 50,
           "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "tilt": "3",
+          "time": "1"
         },
         {
           "name": "中村  守成",
@@ -781,9 +781,9 @@
     "7": {
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "3cm"
       },
       "summary_tag": "【本命濃厚】",
       "racers": [
@@ -802,8 +802,8 @@
           "power": 85,
           "turn_offset": 40,
           "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "tilt": "2",
+          "time": "1"
         },
         {
           "name": "岡本   大",
@@ -910,9 +910,9 @@
     "8": {
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "3cm"
       },
       "summary_tag": "【捲り一閃】",
       "racers": [
@@ -967,8 +967,8 @@
           "power": 70,
           "turn_offset": 80,
           "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "tilt": "6",
+          "time": "1"
         }
       ],
       "comment": "1号艇【山田  竜一】中心の組み立て。",
@@ -1039,9 +1039,9 @@
     "9": {
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "3cm"
       },
       "summary_tag": "【本命濃厚】",
       "racers": [
@@ -1051,8 +1051,8 @@
           "power": 85,
           "turn_offset": 30,
           "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "tilt": "1",
+          "time": "1"
         },
         {
           "name": "高井  雄基",
@@ -1168,9 +1168,9 @@
     "10": {
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "3cm"
       },
       "summary_tag": "【捲り一閃】",
       "racers": [
@@ -1189,8 +1189,8 @@
           "power": 85,
           "turn_offset": 40,
           "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "tilt": "2",
+          "time": "1"
         },
         {
           "name": "佐々木 和伸",
@@ -1297,9 +1297,9 @@
     "11": {
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "3cm"
       },
       "summary_tag": "【本命濃厚】",
       "racers": [
@@ -1336,8 +1336,8 @@
           "power": 70,
           "turn_offset": 60,
           "st": "-",
-          "tilt": "-",
-          "time": "-"
+          "tilt": "4",
+          "time": "1"
         },
         {
           "name": "森   悠稀",
@@ -1426,9 +1426,9 @@
     "12": {
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "3cm"
       },
       "summary_tag": "【捲り一閃】",
       "racers": [
