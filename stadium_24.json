@@ -2,12 +2,12 @@
   "date": "20260918",
   "stadium_code": "24",
   "stadium_name": "大村",
-  "cache_buster": "1789733674499",
+  "cache_buster": "1789742404360",
   "races": {
     "1": {
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "1m",
         "wind_direction": "追い風",
         "wave": "1cm"
       },
@@ -1168,7 +1168,7 @@
     "10": {
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "1m",
         "wind_direction": "追い風",
         "wave": "1cm"
       },
@@ -1297,7 +1297,7 @@
     "11": {
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "1m",
         "wind_direction": "追い風",
         "wave": "1cm"
       },
@@ -1426,7 +1426,7 @@
     "12": {
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "0m",
         "wind_direction": "追い風",
         "wave": "1cm"
       },
