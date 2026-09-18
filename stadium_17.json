@@ -2,12 +2,12 @@
   "date": "20260918",
   "stadium_code": "17",
   "stadium_name": "宮島",
-  "cache_buster": "1789700849587",
+  "cache_buster": "1789702165585",
   "races": {
     "1": {
       "weather": {
         "weather": "-",
-        "wind_speed": "1m",
+        "wind_speed": "2m",
         "wind_direction": "追い風",
         "wave": "2cm"
       },
@@ -18,54 +18,54 @@
           "rank": "A1",
           "power": 85,
           "turn_offset": 30,
-          "st": "1",
-          "tilt": "6.71",
-          "time": "-0.5"
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "岩崎  麗子",
           "rank": "A1",
           "power": 85,
           "turn_offset": 40,
-          "st": "2",
-          "tilt": "6.72",
-          "time": "-0.5"
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "小林  愛実",
           "rank": "B1",
           "power": 70,
           "turn_offset": 50,
-          "st": "3",
-          "tilt": "6.66",
-          "time": "0.0"
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "植竹  玲奈",
           "rank": "B1",
           "power": 70,
           "turn_offset": 60,
-          "st": "4",
-          "tilt": "6.77",
-          "time": "-0.5"
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "滝沢  織寧",
           "rank": "B1",
           "power": 70,
           "turn_offset": 70,
-          "st": "5",
-          "tilt": "6.67",
-          "time": "-0.5"
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "池田  美優",
           "rank": "B1",
           "power": 70,
           "turn_offset": 80,
-          "st": "6",
-          "tilt": "6.71",
-          "time": "0.5"
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         }
       ],
       "comment": "1号艇【原田  佑実】中心の組み立て。",
@@ -147,54 +147,54 @@
           "rank": "A1",
           "power": 85,
           "turn_offset": 30,
-          "st": "1",
-          "tilt": "6.74",
-          "time": "0.0"
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "高田 ひかる",
           "rank": "A1",
           "power": 85,
           "turn_offset": 40,
-          "st": "2",
-          "tilt": "6.66",
-          "time": "0.0"
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "橋谷田 佳織",
           "rank": "B1",
           "power": 70,
           "turn_offset": 50,
-          "st": "3",
-          "tilt": "6.77",
-          "time": "-0.5"
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "堀之内紀代子",
           "rank": "B1",
           "power": 70,
           "turn_offset": 60,
-          "st": "4",
-          "tilt": "6.73",
-          "time": "0.0"
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "三嶌 さらら",
           "rank": "B1",
           "power": 70,
           "turn_offset": 70,
-          "st": "5",
-          "tilt": "6.69",
-          "time": "-0.5"
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "高木  茉白",
           "rank": "B1",
           "power": 70,
           "turn_offset": 80,
-          "st": "6",
-          "tilt": "6.74",
-          "time": "-0.5"
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         }
       ],
       "comment": "1号艇【樫葉  新心】中心の組み立て。",
@@ -276,54 +276,54 @@
           "rank": "A1",
           "power": 85,
           "turn_offset": 30,
-          "st": "1",
-          "tilt": "6.72",
-          "time": "-0.5"
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "笠野 友紀恵",
           "rank": "A1",
           "power": 85,
           "turn_offset": 40,
-          "st": "2",
-          "tilt": "6.71",
-          "time": "-0.5"
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "藤原  早菜",
           "rank": "B1",
           "power": 70,
           "turn_offset": 50,
-          "st": "3",
-          "tilt": "6.67",
-          "time": "0.0"
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "平山  智加",
           "rank": "B1",
           "power": 70,
           "turn_offset": 60,
-          "st": "4",
-          "tilt": "6.79",
-          "time": "-0.5"
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "菅野 はやか",
           "rank": "B1",
           "power": 70,
           "turn_offset": 70,
-          "st": "5",
-          "tilt": "6.75",
-          "time": "-0.5"
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "戸田 海咲音",
           "rank": "B1",
           "power": 70,
           "turn_offset": 80,
-          "st": "6",
-          "tilt": "6.74",
-          "time": "-0.5"
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         }
       ],
       "comment": "1号艇【黒澤 めぐみ】中心の組み立て。",
@@ -405,54 +405,54 @@
           "rank": "A1",
           "power": 85,
           "turn_offset": 30,
-          "st": "1",
-          "tilt": "6.71",
-          "time": "0.0"
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "今井  美亜",
           "rank": "A1",
           "power": 85,
           "turn_offset": 40,
-          "st": "2",
-          "tilt": "6.72",
-          "time": "0.0"
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "向井田 真紀",
           "rank": "B1",
           "power": 70,
           "turn_offset": 50,
-          "st": "3",
-          "tilt": "6.78",
-          "time": "0.0"
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "永井  聖美",
           "rank": "B1",
           "power": 70,
           "turn_offset": 60,
-          "st": "4",
-          "tilt": "6.75",
-          "time": "-0.5"
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "中谷  朋子",
           "rank": "B1",
           "power": 70,
           "turn_offset": 70,
-          "st": "5",
-          "tilt": "6.71",
-          "time": "-0.5"
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "長野  未来",
           "rank": "B1",
           "power": 70,
           "turn_offset": 80,
-          "st": "6",
-          "tilt": "6.73",
-          "time": "-0.5"
+          "st": "-",
+          "tilt": "-",
+          "time": "-"
         }
       ],
       "comment": "1号艇【冨名腰 桃奈】中心の組み立て。",
@@ -523,7 +523,7 @@
     "5": {
       "weather": {
         "weather": "-",
-        "wind_speed": "1m",
+        "wind_speed": "2m",
         "wind_direction": "追い風",
         "wave": "2cm"
       },
@@ -535,8 +535,8 @@
           "power": 85,
           "turn_offset": 30,
           "st": "-",
-          "tilt": "1",
-          "time": "-0.5"
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "西岡  育未",
@@ -544,8 +544,8 @@
           "power": 85,
           "turn_offset": 40,
           "st": "-",
-          "tilt": "2",
-          "time": "-0.5"
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "池   千夏",
@@ -553,8 +553,8 @@
           "power": 70,
           "turn_offset": 50,
           "st": "-",
-          "tilt": "3",
-          "time": "-0.5"
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "守屋  美穂",
@@ -562,8 +562,8 @@
           "power": 70,
           "turn_offset": 60,
           "st": "-",
-          "tilt": "4",
-          "time": "-0.5"
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "豊田   結",
@@ -571,8 +571,8 @@
           "power": 70,
           "turn_offset": 70,
           "st": "-",
-          "tilt": "5",
-          "time": "-0.5"
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "水野  望美",
@@ -580,8 +580,8 @@
           "power": 70,
           "turn_offset": 80,
           "st": "-",
-          "tilt": "6",
-          "time": "-0.5"
+          "tilt": "-",
+          "time": "-"
         }
       ],
       "comment": "1号艇【後藤  美翼】中心の組み立て。",
@@ -652,7 +652,7 @@
     "6": {
       "weather": {
         "weather": "-",
-        "wind_speed": "1m",
+        "wind_speed": "2m",
         "wind_direction": "追い風",
         "wave": "2cm"
       },
@@ -700,8 +700,8 @@
           "power": 70,
           "turn_offset": 70,
           "st": "-",
-          "tilt": "5",
-          "time": "1"
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "角  ひとみ",
@@ -781,7 +781,7 @@
     "7": {
       "weather": {
         "weather": "-",
-        "wind_speed": "1m",
+        "wind_speed": "2m",
         "wind_direction": "追い風",
         "wave": "2cm"
       },
@@ -802,8 +802,8 @@
           "power": 85,
           "turn_offset": 40,
           "st": "-",
-          "tilt": "2",
-          "time": "1"
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "白石  有美",
@@ -820,8 +820,8 @@
           "power": 70,
           "turn_offset": 60,
           "st": "-",
-          "tilt": "4",
-          "time": "2"
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "山崎 小葉音",
@@ -910,7 +910,7 @@
     "8": {
       "weather": {
         "weather": "-",
-        "wind_speed": "1m",
+        "wind_speed": "2m",
         "wind_direction": "追い風",
         "wave": "2cm"
       },
@@ -940,8 +940,8 @@
           "power": 70,
           "turn_offset": 50,
           "st": "-",
-          "tilt": "3",
-          "time": "3"
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "野田  亜湖",
@@ -958,8 +958,8 @@
           "power": 70,
           "turn_offset": 70,
           "st": "-",
-          "tilt": "5",
-          "time": "1"
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "橋谷田 佳織",
@@ -967,8 +967,8 @@
           "power": 70,
           "turn_offset": 80,
           "st": "-",
-          "tilt": "6",
-          "time": "2"
+          "tilt": "-",
+          "time": "-"
         }
       ],
       "comment": "1号艇【村上  奈穂】中心の組み立て。",
@@ -1039,7 +1039,7 @@
     "9": {
       "weather": {
         "weather": "-",
-        "wind_speed": "1m",
+        "wind_speed": "2m",
         "wind_direction": "追い風",
         "wave": "2cm"
       },
@@ -1069,8 +1069,8 @@
           "power": 70,
           "turn_offset": 50,
           "st": "-",
-          "tilt": "3",
-          "time": "2"
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "喜井 つかさ",
@@ -1087,8 +1087,8 @@
           "power": 70,
           "turn_offset": 70,
           "st": "-",
-          "tilt": "5",
-          "time": "3"
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "植竹  玲奈",
@@ -1096,8 +1096,8 @@
           "power": 70,
           "turn_offset": 80,
           "st": "-",
-          "tilt": "6",
-          "time": "1"
+          "tilt": "-",
+          "time": "-"
         }
       ],
       "comment": "1号艇【落合  直子】中心の組み立て。",
@@ -1168,7 +1168,7 @@
     "10": {
       "weather": {
         "weather": "-",
-        "wind_speed": "1m",
+        "wind_speed": "2m",
         "wind_direction": "追い風",
         "wave": "2cm"
       },
@@ -1207,8 +1207,8 @@
           "power": 70,
           "turn_offset": 60,
           "st": "-",
-          "tilt": "4",
-          "time": "3"
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "小林  愛実",
@@ -1216,8 +1216,8 @@
           "power": 70,
           "turn_offset": 70,
           "st": "-",
-          "tilt": "5",
-          "time": "1"
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "高木  茉白",
@@ -1225,8 +1225,8 @@
           "power": 70,
           "turn_offset": 80,
           "st": "-",
-          "tilt": "6",
-          "time": "2"
+          "tilt": "-",
+          "time": "-"
         }
       ],
       "comment": "1号艇【豊田   結】中心の組み立て。",
@@ -1297,7 +1297,7 @@
     "11": {
       "weather": {
         "weather": "-",
-        "wind_speed": "1m",
+        "wind_speed": "2m",
         "wind_direction": "追い風",
         "wave": "2cm"
       },
@@ -1309,8 +1309,8 @@
           "power": 85,
           "turn_offset": 30,
           "st": "-",
-          "tilt": "1",
-          "time": "2"
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "角  ひとみ",
@@ -1327,8 +1327,8 @@
           "power": 70,
           "turn_offset": 50,
           "st": "-",
-          "tilt": "3",
-          "time": "1"
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "冨名腰 桃奈",
@@ -1354,8 +1354,8 @@
           "power": 70,
           "turn_offset": 80,
           "st": "-",
-          "tilt": "6",
-          "time": "3"
+          "tilt": "-",
+          "time": "-"
         }
       ],
       "comment": "1号艇【堀之内紀代子】中心の組み立て。",
@@ -1426,7 +1426,7 @@
     "12": {
       "weather": {
         "weather": "-",
-        "wind_speed": "1m",
+        "wind_speed": "2m",
         "wind_direction": "追い風",
         "wave": "2cm"
       },
@@ -1456,8 +1456,8 @@
           "power": 70,
           "turn_offset": 50,
           "st": "-",
-          "tilt": "3",
-          "time": "3"
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "高田 ひかる",
@@ -1465,8 +1465,8 @@
           "power": 70,
           "turn_offset": 60,
           "st": "-",
-          "tilt": "4",
-          "time": "2"
+          "tilt": "-",
+          "time": "-"
         },
         {
           "name": "今井  美亜",
