@@ -87,7 +87,7 @@
     .sub-comment-box { margin-top: 12px; padding-top: 10px; border-top: 1px dashed #ffd59e; font-size: 12px; line-height: 1.6; color: #7c4a03; }
     .sub-comment-title { font-weight: bold; color: #d90429; font-size: 12px; display: inline-block; margin-right: 4px; }
 
-    /* スリット隊形（2部構成） */
+    /* スリット隊形 */
     .slit-two-section { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
     .slit-block { background: #eef6fc; border: 1px solid #bbe3f7; padding: 10px; border-radius: 8px; }
     .slit-block-title { text-align: center; font-size: 11px; font-weight: bold; color: #005580; margin-bottom: 6px; padding-bottom: 4px; border-bottom: 1px solid #cce7f8; }
@@ -286,7 +286,6 @@
       await loadIndexData();
     }
 
-    // data.json（開催情報）を取得してダッシュボードを自動更新
     async function loadIndexData() {
       try {
         const res = await fetch(`./data.json?t=${Date.now()}`, { cache: 'no-store' });
@@ -312,7 +311,7 @@
     function navigateToRaceView(code) {
       currentCode = code;
       currentRace = "1";
-      cachedStadiumData = {}; // キャッシュリセット
+      cachedStadiumData = {};
       
       document.getElementById('dashboardView').classList.remove('active');
       document.getElementById('raceView').classList.add('active');
@@ -363,9 +362,8 @@
       }
     }
 
-    // 該当場の stadium_XX.json を直接取得
     async function loadStadiumData(code, race) {
-      document.getElementById('aiComment').innerText = "最新出走表・解析データを取得中...";
+      document.getElementById('aiComment').innerText = "最新出走表・直前解析データを取得中...";
       try {
         const res = await fetch(`./stadium_${code}.json?t=${Date.now()}`, { cache: 'no-store' });
         if (!res.ok) throw new Error("場別データ取得エラー");
@@ -385,14 +383,14 @@
         return;
       }
 
-      // 気象情報
+      // 水面気象
       const weather = data.weather || {};
       document.getElementById('wWeather').innerText = weather.weather || "-";
       document.getElementById('wWind').innerText = weather.wind_speed || "-";
       document.getElementById('wDir').innerText = weather.wind_direction || "-";
       document.getElementById('wWave').innerText = weather.wave || "-";
 
-      // 出走表
+      // 出走表（直前データ未発表時はハイフン表示）
       const tbody = document.getElementById('racerTableBody');
       tbody.innerHTML = '';
       (data.racers || []).forEach((r, idx) => {
@@ -401,9 +399,9 @@
           <td><strong style="padding:2px 6px; border-radius:3px;" class="${boatClasses[idx]}">${idx+1}</strong></td>
           <td>${r.name}</td>
           <td>${r.rank}</td>
-          <td>${r.st}</td>
-          <td>${r.tilt}</td>
-          <td>${r.time}</td>
+          <td>${r.st || "-"}</td>
+          <td>${r.tilt || "-"}</td>
+          <td>${r.time || "-"}</td>
         `;
         tbody.appendChild(tr);
       });
@@ -413,7 +411,7 @@
       document.getElementById('aiComment').innerHTML = data.comment || "";
       document.getElementById('aiSubComment').innerHTML = data.sub_comment || "";
 
-      // スリット隊形
+      // スリット隊形（ST未確定の場は初期位置に自動補正）
       const trackStart = document.getElementById('slitTrackStart');
       const trackTurn = document.getElementById('slitTrackTurn');
       trackStart.innerHTML = '<div class="slit-line-label">STライン</div><div class="slit-line"></div>';
@@ -423,8 +421,10 @@
         const bStart = document.createElement('div');
         bStart.className = `boat-slit ${boatClasses[idx]}`;
         bStart.style.top = `${idx * 22 + 4}px`;
-        const stVal = Math.abs(parseFloat(r.st) * 350) || (25 + idx*8);
-        bStart.style.right = `${Math.min(Math.max(stVal, 20), 80)}px`;
+        
+        const parsedSt = parseFloat(r.st);
+        const stVal = !isNaN(parsedSt) ? Math.abs(parsedSt * 300) : 40;
+        bStart.style.right = `${Math.min(Math.max(stVal, 15), 85)}px`;
         bStart.innerHTML = `${idx+1}`;
         trackStart.appendChild(bStart);
 
@@ -441,7 +441,7 @@
       const gaugeContainer = document.getElementById('powerGaugeContainer');
       gaugeContainer.innerHTML = '';
       (data.racers || []).forEach((r, idx) => {
-        const pVal = r.power || (90 - idx*4);
+        const pVal = r.power || 70;
         const item = document.createElement('div');
         item.className = 'gauge-item';
         item.innerHTML = `
@@ -452,7 +452,7 @@
         gaugeContainer.appendChild(item);
       });
 
-      // 買い目
+      // 買い目（10点表示）
       const betContainer = document.getElementById('betContainer');
       betContainer.innerHTML = '';
       (data.bets || []).slice(0, 10).forEach(b => {
