@@ -2,7 +2,8 @@ name: Run BoatRace Data Fetcher
 
 on:
   schedule:
-    - cron: '0 23 * * *'
+    # 日本時間 8:00 〜 21:00 の間、10分おきに自動実行 (UTC 23:00 〜 12:00)
+    - cron: '*/10 23,0-12 * * *'
   workflow_dispatch:
 
 jobs:
@@ -22,14 +23,10 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install requests beautifulsoup4
-          if [ -f requirements.txt ]; then
-            pip install -r requirements.txt
-          fi
 
       - name: Run fetch_data.py
         run: python fetch_data.py
 
-      # すべてのJSONファイルを強制追加して確実にPush
       - name: Commit and push updated data
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -37,5 +34,5 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add -f *.json
-          git commit -m "Auto update race data [$(date +'%Y-%m-%d %H:%M:%S')]" || echo "No changes to commit"
+          git commit -m "Auto update race & before info [$(date +'%Y-%m-%d %H:%M:%S')]" || echo "No changes to commit"
           git push origin HEAD:${{ github.ref_name }}
