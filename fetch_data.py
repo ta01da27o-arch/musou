@@ -42,7 +42,7 @@ def get_active_stadiums_today(date_str):
     return sorted(active_codes)
 
 def fetch_race_beforeinfo(jcd, rno, date_str):
-    """ 公式直前情報ページから展示ST・チルト・展示タイム・気象を強力抽出 """
+    """ 公式直前情報ページから展示ST・チルト・展示タイム・気象を厳密抽出 """
     url = f"https://www.boatrace.jp/owpc/pc/race/beforeinfo?rno={rno}&jcd={jcd}&hd={date_str}"
     html = fetch_url(url)
     
@@ -63,67 +63,45 @@ def fetch_race_beforeinfo(jcd, rno, date_str):
         m_w = re.search(r"天候\s*([^\s]+)", w_text)
         m_wind = re.search(r"風速\s*(\d+m)", w_text)
         m_wave = re.search(r"波高\s*(\d+cm)", w_text)
-        
-        # 風向の取得
         m_dir = re.search(r"風向\s*([^\s]+)", w_text)
-        dir_text = m_dir.group(1) if m_dir else "追い風"
         
         before_data["weather"] = {
             "weather": m_w.group(1) if m_w else "-",
             "wind_speed": m_wind.group(1) if m_wind else "-",
-            "wind_direction": dir_text,
+            "wind_direction": m_dir.group(1) if m_dir else "追い風",
             "wave": m_wave.group(1) if m_wave else "-"
         }
 
-    # 2. 直前展示データ（1〜6号艇）の取得
-    # 展示タイム・チルトテーブル解析
-    rows = soup.select("table tbody tr")
-    for row in rows:
-        tds = row.select("td")
-        if len(tds) >= 4:
-            # 艇番のチェック
-            boat_num = None
-            for td in tds:
-                text = td.text.strip()
-                if text in ["1", "2", "3", "4", "5", "6"] and boat_num is None:
-                    boat_num = text
-                    break
+    # 2. 各艇の直前情報（1〜6号艇）の判定抽出
+    for idx in range(1, 7):
+        b_str = str(idx)
+        # 該当艇のテーブルボディ（is-boatColor1等）を取得
+        tbody = soup.find("tbody", class_=re.compile(f"is-boatColor{idx}"))
+        if not tbody:
+            continue
             
-            if boat_num:
-                # 数値らしき文字列（.15, -0.5, 6.68等）をセルから全抽出
-                numbers = []
-                for td in tds:
-                    t = td.text.strip()
-                    if re.match(r"^[-+]?\d*\.?\d+$", t):
-                        numbers.append(t)
-                
-                # パターンに応じて割り当て
-                if len(numbers) >= 2:
-                    before_data["racers_extra"][boat_num] = {
-                        "st": numbers[0] if len(numbers) >= 3 else "-",
-                        "tilt": numbers[-2] if len(numbers) >= 2 else "-",
-                        "time": numbers[-1] if len(numbers) >= 1 else "-"
-                    }
+        text_list = [td.text.strip() for td in tbody.find_all(["td", "th"]) if td.text.strip()]
+        
+        ex_time = "-"
+        tilt = "-"
+        st_val = "-"
+        
+        for t in text_list:
+            # 展示タイム（例: 6.65, 6.72）の判定: 6秒台の少数点2桁
+            if re.match(r"^6\.\d{2}$", t):
+                ex_time = t
+            # チルト（例: -0.5, 0.0, 0.5, 1.0, 1.5, 2.0, 3.0）の判定
+            elif re.match(r"^[-+]?(?:0|1|2|3)\.(?:5|0)$", t) or t == "-0.5":
+                tilt = t
+            # 展示ST（例: .15, F.02, L.00）の判定
+            elif re.match(r"^(?:[FL]\.)?\d{2}$", t) or re.match(r"^\.\d{2}$", t):
+                st_val = t
 
-    # 別パターン構造（is-w780 テーブル）の二重バックアップ解析
-    if not before_data["racers_extra"]:
-        for idx in range(1, 7):
-            b_str = str(idx)
-            # 艇ごとのクラス指定などで検索
-            r_box = soup.find("tbody", class_=re.compile(f"is-boatColor{idx}"))
-            if r_box:
-                tds = r_box.find_all("td")
-                txts = [td.text.strip() for td in tds if td.text.strip()]
-                # 展示タイム（例: 6.65）が含まれているか判定
-                times = [t for t in txts if re.match(r"^\d\.\d{2}$", t)]
-                tilts = [t for t in txts if re.match(r"^[-+]?\d\.\d$", t)]
-                sts = [t for t in txts if re.match(r"^\.\d{2}$", t) or re.match(r"^F\.\d{2}$", t) or re.match(r"^L\.\d{2}$", t)]
-                
-                before_data["racers_extra"][b_str] = {
-                    "st": sts[0] if sts else "-",
-                    "tilt": tilts[0] if tilts else "-",
-                    "time": times[0] if times else "-"
-                }
+        before_data["racers_extra"][b_str] = {
+            "st": st_val,
+            "tilt": tilt,
+            "time": ex_time
+        }
 
     return before_data
 
