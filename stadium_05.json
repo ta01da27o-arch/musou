@@ -2,7 +2,7 @@
   "date": "20260918",
   "stadium_code": "05",
   "stadium_name": "多摩川",
-  "cache_buster": "1789729460649",
+  "cache_buster": "1789733674499",
   "races": {
     "1": {
       "weather": {
@@ -14,8 +14,8 @@
       "summary_tag": "【本命濃厚】",
       "racers": [
         {
-          "name": "選手1",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -23,8 +23,8 @@
           "turn_offset": 30
         },
         {
-          "name": "選手2",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -32,8 +32,8 @@
           "turn_offset": 40
         },
         {
-          "name": "選手3",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -41,8 +41,8 @@
           "turn_offset": 50
         },
         {
-          "name": "選手4",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -50,8 +50,8 @@
           "turn_offset": 60
         },
         {
-          "name": "選手5",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -59,8 +59,8 @@
           "turn_offset": 70
         },
         {
-          "name": "選手6",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -68,7 +68,7 @@
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【選手1】中心の組み立て。",
+      "comment": "1号艇【-】中心の組み立て。",
       "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
@@ -143,8 +143,8 @@
       "summary_tag": "【捲り一閃】",
       "racers": [
         {
-          "name": "選手1",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -152,8 +152,8 @@
           "turn_offset": 30
         },
         {
-          "name": "選手2",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -161,8 +161,8 @@
           "turn_offset": 40
         },
         {
-          "name": "選手3",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -170,8 +170,8 @@
           "turn_offset": 50
         },
         {
-          "name": "選手4",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -179,8 +179,8 @@
           "turn_offset": 60
         },
         {
-          "name": "選手5",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -188,8 +188,8 @@
           "turn_offset": 70
         },
         {
-          "name": "選手6",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -197,7 +197,7 @@
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【選手1】中心の組み立て。",
+      "comment": "1号艇【-】中心の組み立て。",
       "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
@@ -272,8 +272,8 @@
       "summary_tag": "【本命濃厚】",
       "racers": [
         {
-          "name": "選手1",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -281,8 +281,8 @@
           "turn_offset": 30
         },
         {
-          "name": "選手2",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -290,8 +290,8 @@
           "turn_offset": 40
         },
         {
-          "name": "選手3",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -299,8 +299,8 @@
           "turn_offset": 50
         },
         {
-          "name": "選手4",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -308,8 +308,8 @@
           "turn_offset": 60
         },
         {
-          "name": "選手5",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -317,8 +317,8 @@
           "turn_offset": 70
         },
         {
-          "name": "選手6",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -326,7 +326,7 @@
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【選手1】中心の組み立て。",
+      "comment": "1号艇【-】中心の組み立て。",
       "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
@@ -401,8 +401,8 @@
       "summary_tag": "【捲り一閃】",
       "racers": [
         {
-          "name": "選手1",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -410,8 +410,8 @@
           "turn_offset": 30
         },
         {
-          "name": "選手2",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -419,8 +419,8 @@
           "turn_offset": 40
         },
         {
-          "name": "選手3",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -428,8 +428,8 @@
           "turn_offset": 50
         },
         {
-          "name": "選手4",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -437,8 +437,8 @@
           "turn_offset": 60
         },
         {
-          "name": "選手5",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -446,8 +446,8 @@
           "turn_offset": 70
         },
         {
-          "name": "選手6",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -455,7 +455,7 @@
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【選手1】中心の組み立て。",
+      "comment": "1号艇【-】中心の組み立て。",
       "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
@@ -530,8 +530,8 @@
       "summary_tag": "【本命濃厚】",
       "racers": [
         {
-          "name": "選手1",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -539,8 +539,8 @@
           "turn_offset": 30
         },
         {
-          "name": "選手2",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -548,8 +548,8 @@
           "turn_offset": 40
         },
         {
-          "name": "選手3",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -557,8 +557,8 @@
           "turn_offset": 50
         },
         {
-          "name": "選手4",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -566,8 +566,8 @@
           "turn_offset": 60
         },
         {
-          "name": "選手5",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -575,8 +575,8 @@
           "turn_offset": 70
         },
         {
-          "name": "選手6",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -584,7 +584,7 @@
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【選手1】中心の組み立て。",
+      "comment": "1号艇【-】中心の組み立て。",
       "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
@@ -659,8 +659,8 @@
       "summary_tag": "【捲り一閃】",
       "racers": [
         {
-          "name": "選手1",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -668,8 +668,8 @@
           "turn_offset": 30
         },
         {
-          "name": "選手2",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -677,8 +677,8 @@
           "turn_offset": 40
         },
         {
-          "name": "選手3",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -686,8 +686,8 @@
           "turn_offset": 50
         },
         {
-          "name": "選手4",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -695,8 +695,8 @@
           "turn_offset": 60
         },
         {
-          "name": "選手5",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -704,8 +704,8 @@
           "turn_offset": 70
         },
         {
-          "name": "選手6",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -713,7 +713,7 @@
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【選手1】中心の組み立て。",
+      "comment": "1号艇【-】中心の組み立て。",
       "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
@@ -788,8 +788,8 @@
       "summary_tag": "【本命濃厚】",
       "racers": [
         {
-          "name": "選手1",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -797,8 +797,8 @@
           "turn_offset": 30
         },
         {
-          "name": "選手2",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -806,8 +806,8 @@
           "turn_offset": 40
         },
         {
-          "name": "選手3",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -815,8 +815,8 @@
           "turn_offset": 50
         },
         {
-          "name": "選手4",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -824,8 +824,8 @@
           "turn_offset": 60
         },
         {
-          "name": "選手5",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -833,8 +833,8 @@
           "turn_offset": 70
         },
         {
-          "name": "選手6",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -842,7 +842,7 @@
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【選手1】中心の組み立て。",
+      "comment": "1号艇【-】中心の組み立て。",
       "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
@@ -917,8 +917,8 @@
       "summary_tag": "【捲り一閃】",
       "racers": [
         {
-          "name": "選手1",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -926,8 +926,8 @@
           "turn_offset": 30
         },
         {
-          "name": "選手2",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -935,8 +935,8 @@
           "turn_offset": 40
         },
         {
-          "name": "選手3",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -944,8 +944,8 @@
           "turn_offset": 50
         },
         {
-          "name": "選手4",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -953,8 +953,8 @@
           "turn_offset": 60
         },
         {
-          "name": "選手5",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -962,8 +962,8 @@
           "turn_offset": 70
         },
         {
-          "name": "選手6",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -971,7 +971,7 @@
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【選手1】中心の組み立て。",
+      "comment": "1号艇【-】中心の組み立て。",
       "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
@@ -1046,8 +1046,8 @@
       "summary_tag": "【本命濃厚】",
       "racers": [
         {
-          "name": "選手1",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -1055,8 +1055,8 @@
           "turn_offset": 30
         },
         {
-          "name": "選手2",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -1064,8 +1064,8 @@
           "turn_offset": 40
         },
         {
-          "name": "選手3",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -1073,8 +1073,8 @@
           "turn_offset": 50
         },
         {
-          "name": "選手4",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -1082,8 +1082,8 @@
           "turn_offset": 60
         },
         {
-          "name": "選手5",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -1091,8 +1091,8 @@
           "turn_offset": 70
         },
         {
-          "name": "選手6",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -1100,7 +1100,7 @@
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【選手1】中心の組み立て。",
+      "comment": "1号艇【-】中心の組み立て。",
       "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
@@ -1175,8 +1175,8 @@
       "summary_tag": "【捲り一閃】",
       "racers": [
         {
-          "name": "選手1",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -1184,8 +1184,8 @@
           "turn_offset": 30
         },
         {
-          "name": "選手2",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -1193,8 +1193,8 @@
           "turn_offset": 40
         },
         {
-          "name": "選手3",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -1202,8 +1202,8 @@
           "turn_offset": 50
         },
         {
-          "name": "選手4",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -1211,8 +1211,8 @@
           "turn_offset": 60
         },
         {
-          "name": "選手5",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -1220,8 +1220,8 @@
           "turn_offset": 70
         },
         {
-          "name": "選手6",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -1229,7 +1229,7 @@
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【選手1】中心の組み立て。",
+      "comment": "1号艇【-】中心の組み立て。",
       "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
@@ -1304,8 +1304,8 @@
       "summary_tag": "【本命濃厚】",
       "racers": [
         {
-          "name": "選手1",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -1313,8 +1313,8 @@
           "turn_offset": 30
         },
         {
-          "name": "選手2",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -1322,8 +1322,8 @@
           "turn_offset": 40
         },
         {
-          "name": "選手3",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -1331,8 +1331,8 @@
           "turn_offset": 50
         },
         {
-          "name": "選手4",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -1340,8 +1340,8 @@
           "turn_offset": 60
         },
         {
-          "name": "選手5",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -1349,8 +1349,8 @@
           "turn_offset": 70
         },
         {
-          "name": "選手6",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -1358,7 +1358,7 @@
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【選手1】中心の組み立て。",
+      "comment": "1号艇【-】中心の組み立て。",
       "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
@@ -1433,8 +1433,8 @@
       "summary_tag": "【捲り一閃】",
       "racers": [
         {
-          "name": "選手1",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -1442,8 +1442,8 @@
           "turn_offset": 30
         },
         {
-          "name": "選手2",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -1451,8 +1451,8 @@
           "turn_offset": 40
         },
         {
-          "name": "選手3",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -1460,8 +1460,8 @@
           "turn_offset": 50
         },
         {
-          "name": "選手4",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -1469,8 +1469,8 @@
           "turn_offset": 60
         },
         {
-          "name": "選手5",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -1478,8 +1478,8 @@
           "turn_offset": 70
         },
         {
-          "name": "選手6",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
           "tilt": "-",
           "time": "-",
@@ -1487,7 +1487,7 @@
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【選手1】中心の組み立て。",
+      "comment": "1号艇【-】中心の組み立て。",
       "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
