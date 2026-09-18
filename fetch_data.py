@@ -17,16 +17,18 @@ STADIUM_NAMES = {
 }
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
-    "Accept-Language": "ja,en-US;q=0.9,en;q=0.8"
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+    "Accept-Language": "ja,en-US;q=0.7,en;q=0.3"
 }
 
-def fetch_url(url, timeout=12):
+def fetch_url(url, timeout=15):
     try:
         req = urllib.request.Request(url, headers=HEADERS)
         with urllib.request.urlopen(req, timeout=timeout) as resp:
             return resp.read().decode("utf-8", errors="ignore")
-    except Exception:
+    except Exception as e:
+        print(f"Fetch Error ({url}): {e}")
         return None
 
 def get_active_stadiums_today(date_str):
@@ -42,7 +44,7 @@ def get_active_stadiums_today(date_str):
     return sorted(active_codes)
 
 def fetch_race_beforeinfo(jcd, rno, date_str):
-    """ 直前展示データ取得 """
+    """ 公式直前情報ページ解析 """
     url = f"https://www.boatrace.jp/owpc/pc/race/beforeinfo?rno={rno}&jcd={jcd}&hd={date_str}"
     html = fetch_url(url)
     
@@ -54,7 +56,7 @@ def fetch_race_beforeinfo(jcd, rno, date_str):
 
     soup = BeautifulSoup(html, "html.parser")
     
-    # 気象情報
+    # 1. 気象情報
     w_unit = soup.select_one(".weather1")
     if w_unit:
         txt = w_unit.text
@@ -70,7 +72,7 @@ def fetch_race_beforeinfo(jcd, rno, date_str):
             "wave": m_wave.group(1) if m_wave else "-"
         }
 
-    # 各艇展示情報
+    # 2. 各艇展示情報
     for idx in range(1, 7):
         b_str = str(idx)
         tbody = soup.find("tbody", class_=re.compile(f"is-boatColor{idx}"))
@@ -88,30 +90,36 @@ def fetch_race_beforeinfo(jcd, rno, date_str):
     return before_data
 
 def fetch_race_racers(jcd, rno, date_str):
-    """ 公式出走表から本物の選手名を直接取得 """
+    """ 出走表から確実に本物の選手名と級別を取得 """
     url = f"https://www.boatrace.jp/owpc/pc/race/racelist?rno={rno}&jcd={jcd}&hd={date_str}"
     html = fetch_url(url)
     racers = []
     
     if html:
         soup = BeautifulSoup(html, "html.parser")
-        # 選手名アンカータグの解析
-        tbodies = soup.select("table.is-w780 tbody")
+        # 1〜6枠のテーブル行を順次抽出
+        tbodies = soup.select("div.table1 table tbody")
+        if not tbodies:
+            tbodies = soup.select("table.is-w780 tbody")
+
         for tbody in tbodies:
             a_tag = tbody.find("a", href=re.compile(r"toban=\d+"))
             if a_tag:
-                raw_name = a_tag.text.strip().replace("\u3000", " ").replace(" ", "")
-                if raw_name:
+                raw_name = a_tag.text.strip().replace("\u3000", "").replace(" ", "")
+                # 級別（A1, A2, B1, B2）の抽出
+                rank_match = re.search(r"([AB][12])", tbody.text)
+                rank = rank_match.group(1) if rank_match else "B1"
+                
+                if raw_name and not any(r["name"] == raw_name for r in racers):
                     racers.append({
                         "name": raw_name,
-                        "rank": "A1" if len(racers) < 2 else "B1"
+                        "rank": rank
                     })
             if len(racers) >= 6: break
 
-    # 万が一失敗した場合のみの保険
+    # フォールバック時も未取得を明示（ハイフン化）
     while len(racers) < 6:
-        idx = len(racers) + 1
-        racers.append({"name": f"選手{idx}", "rank": "B1"})
+        racers.append({"name": "-", "rank": "-"})
 
     return racers
 
