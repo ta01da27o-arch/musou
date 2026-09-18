@@ -42,7 +42,7 @@ def get_active_stadiums_today(date_str):
     return sorted(active_codes)
 
 def fetch_race_beforeinfo(jcd, rno, date_str):
-    """ 直前情報（展示タイム・展示ST・チルト・気象）のスクレイピング """
+    """ 公式直前情報ページから展示ST・チルト・展示タイム・気象を強力抽出 """
     url = f"https://www.boatrace.jp/owpc/pc/race/beforeinfo?rno={rno}&jcd={jcd}&hd={date_str}"
     html = fetch_url(url)
     
@@ -56,34 +56,74 @@ def fetch_race_beforeinfo(jcd, rno, date_str):
 
     soup = BeautifulSoup(html, "html.parser")
     
-    # 気象情報
-    weather_box = soup.select_one(".weather1")
-    if weather_box:
-        w_text = weather_box.text
+    # 1. 気象情報の取得
+    weather_unit = soup.select_one(".weather1")
+    if weather_unit:
+        w_text = weather_unit.text
         m_w = re.search(r"天候\s*([^\s]+)", w_text)
         m_wind = re.search(r"風速\s*(\d+m)", w_text)
         m_wave = re.search(r"波高\s*(\d+cm)", w_text)
+        
+        # 風向の取得
+        m_dir = re.search(r"風向\s*([^\s]+)", w_text)
+        dir_text = m_dir.group(1) if m_dir else "追い風"
+        
         before_data["weather"] = {
             "weather": m_w.group(1) if m_w else "-",
             "wind_speed": m_wind.group(1) if m_wind else "-",
-            "wind_direction": "追い風",
+            "wind_direction": dir_text,
             "wave": m_wave.group(1) if m_wave else "-"
         }
 
-    # 艇ごとの直前データ (1〜6号艇)
-    tbodies = soup.select("table.is-w780 tbody")
-    for idx, tbody in enumerate(tbodies, start=1):
-        tds = tbody.select("td")
-        if len(tds) >= 5:
-            st_text = tds[2].text.strip()
-            tilt_text = tds[3].text.strip()
-            time_text = tds[4].text.strip()
+    # 2. 直前展示データ（1〜6号艇）の取得
+    # 展示タイム・チルトテーブル解析
+    rows = soup.select("table tbody tr")
+    for row in rows:
+        tds = row.select("td")
+        if len(tds) >= 4:
+            # 艇番のチェック
+            boat_num = None
+            for td in tds:
+                text = td.text.strip()
+                if text in ["1", "2", "3", "4", "5", "6"] and boat_num is None:
+                    boat_num = text
+                    break
             
-            before_data["racers_extra"][str(idx)] = {
-                "st": st_text if st_text else "-",
-                "tilt": tilt_text if tilt_text else "-",
-                "time": time_text if time_text else "-"
-            }
+            if boat_num:
+                # 数値らしき文字列（.15, -0.5, 6.68等）をセルから全抽出
+                numbers = []
+                for td in tds:
+                    t = td.text.strip()
+                    if re.match(r"^[-+]?\d*\.?\d+$", t):
+                        numbers.append(t)
+                
+                # パターンに応じて割り当て
+                if len(numbers) >= 2:
+                    before_data["racers_extra"][boat_num] = {
+                        "st": numbers[0] if len(numbers) >= 3 else "-",
+                        "tilt": numbers[-2] if len(numbers) >= 2 else "-",
+                        "time": numbers[-1] if len(numbers) >= 1 else "-"
+                    }
+
+    # 別パターン構造（is-w780 テーブル）の二重バックアップ解析
+    if not before_data["racers_extra"]:
+        for idx in range(1, 7):
+            b_str = str(idx)
+            # 艇ごとのクラス指定などで検索
+            r_box = soup.find("tbody", class_=re.compile(f"is-boatColor{idx}"))
+            if r_box:
+                tds = r_box.find_all("td")
+                txts = [td.text.strip() for td in tds if td.text.strip()]
+                # 展示タイム（例: 6.65）が含まれているか判定
+                times = [t for t in txts if re.match(r"^\d\.\d{2}$", t)]
+                tilts = [t for t in txts if re.match(r"^[-+]?\d\.\d$", t)]
+                sts = [t for t in txts if re.match(r"^\.\d{2}$", t) or re.match(r"^F\.\d{2}$", t) or re.match(r"^L\.\d{2}$", t)]
+                
+                before_data["racers_extra"][b_str] = {
+                    "st": sts[0] if sts else "-",
+                    "tilt": tilts[0] if tilts else "-",
+                    "time": times[0] if times else "-"
+                }
 
     return before_data
 
