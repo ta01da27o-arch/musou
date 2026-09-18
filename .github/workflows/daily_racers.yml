@@ -1,0 +1,24 @@
+name: 1. 出走表マスター取得 (朝1回)
+
+on:
+  schedule:
+    - cron: '0 22 * * *' # 日本時間 朝7:00
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - run: pip install beautifulsoup4
+      - run: python fetch_racers.py
+      - name: Commit & Push
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add racers_master.json
+          git commit -m "Update racers master" || exit 0
+          git push
