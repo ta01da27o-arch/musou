@@ -2,7 +2,7 @@ import os
 import json
 import time
 import re
-import urllib.request
+import requests
 from bs4 import BeautifulSoup
 from datetime import datetime, timezone, timedelta
 from concurrent.futures import ThreadPoolExecutor
@@ -16,17 +16,23 @@ STADIUM_NAMES = {
     "21": "芦屋", "22": "福岡", "23": "唐津", "24": "大村"
 }
 
-HEADERS = {
+SESSION = requests.Session()
+SESSION.headers.update({
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
-    "Accept-Language": "ja,en-US;q=0.7,en;q=0.3"
-}
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+    "Accept-Language": "ja,en-US;q=0.9,en;q=0.8",
+    "Cache-Control": "max-age=0",
+    "Connection": "keep-alive"
+})
 
 def fetch_url(url, timeout=15):
     try:
-        req = urllib.request.Request(url, headers=HEADERS)
-        with urllib.request.urlopen(req, timeout=timeout) as resp:
-            return resp.read().decode("utf-8", errors="ignore")
+        resp = SESSION.get(url, timeout=timeout)
+        if resp.status_code == 200:
+            return resp.text
+        else:
+            print(f"HTTP Status {resp.status_code}: {url}")
+            return None
     except Exception as e:
         print(f"Fetch Error ({url}): {e}")
         return None
@@ -44,7 +50,7 @@ def get_active_stadiums_today(date_str):
     return sorted(active_codes)
 
 def fetch_race_beforeinfo(jcd, rno, date_str):
-    """ 公式直前情報ページ解析 """
+    """ 直前展示データ取得 """
     url = f"https://www.boatrace.jp/owpc/pc/race/beforeinfo?rno={rno}&jcd={jcd}&hd={date_str}"
     html = fetch_url(url)
     
@@ -56,7 +62,7 @@ def fetch_race_beforeinfo(jcd, rno, date_str):
 
     soup = BeautifulSoup(html, "html.parser")
     
-    # 1. 気象情報
+    # 気象情報
     w_unit = soup.select_one(".weather1")
     if w_unit:
         txt = w_unit.text
@@ -72,7 +78,7 @@ def fetch_race_beforeinfo(jcd, rno, date_str):
             "wave": m_wave.group(1) if m_wave else "-"
         }
 
-    # 2. 各艇展示情報
+    # 各艇展示情報
     for idx in range(1, 7):
         b_str = str(idx)
         tbody = soup.find("tbody", class_=re.compile(f"is-boatColor{idx}"))
@@ -90,14 +96,13 @@ def fetch_race_beforeinfo(jcd, rno, date_str):
     return before_data
 
 def fetch_race_racers(jcd, rno, date_str):
-    """ 出走表から確実に本物の選手名と級別を取得 """
+    """ 出走表から選手名と級別を取得 """
     url = f"https://www.boatrace.jp/owpc/pc/race/racelist?rno={rno}&jcd={jcd}&hd={date_str}"
     html = fetch_url(url)
     racers = []
     
     if html:
         soup = BeautifulSoup(html, "html.parser")
-        # 1〜6枠のテーブル行を順次抽出
         tbodies = soup.select("div.table1 table tbody")
         if not tbodies:
             tbodies = soup.select("table.is-w780 tbody")
@@ -106,7 +111,6 @@ def fetch_race_racers(jcd, rno, date_str):
             a_tag = tbody.find("a", href=re.compile(r"toban=\d+"))
             if a_tag:
                 raw_name = a_tag.text.strip().replace("\u3000", "").replace(" ", "")
-                # 級別（A1, A2, B1, B2）の抽出
                 rank_match = re.search(r"([AB][12])", tbody.text)
                 rank = rank_match.group(1) if rank_match else "B1"
                 
@@ -117,7 +121,6 @@ def fetch_race_racers(jcd, rno, date_str):
                     })
             if len(racers) >= 6: break
 
-    # フォールバック時も未取得を明示（ハイフン化）
     while len(racers) < 6:
         racers.append({"name": "-", "rank": "-"})
 
