@@ -43,8 +43,52 @@ def get_active_stadiums_today(date_str):
                 active_codes.append(m.group(1))
     return sorted(active_codes)
 
+def fetch_race_racers_and_close_time(jcd, rno, date_str):
+    """ 公式出走表から「選手名」「階級」「締切予定時刻」を正確に取得 """
+    url = f"https://www.boatrace.jp/owpc/pc/race/racelist?rno={rno}&jcd={jcd}&hd={date_str}"
+    html = fetch_url(url)
+    racers = []
+    close_time = "--:--"
+    
+    if html:
+        soup = BeautifulSoup(html, "html.parser")
+        
+        # 締切時刻の取得（例: 締切予定時刻 12:35）
+        ct_match = re.search(r"(\d{1,2}:\d{2})\s*締切", html) or re.search(r"締切予定時刻\s*(\d{1,2}:\d{2})", html)
+        if ct_match:
+            close_time = ct_match.group(1)
+        else:
+            # テーブルヘッダーから探索
+            for th in soup.find_all(["th", "td"]):
+                if "締切" in th.text:
+                    m = re.search(r"\d{1,2}:\d{2}", th.text)
+                    if m:
+                        close_time = m.group(0)
+                        break
+
+        # 選手情報・階級の取得
+        anchors = soup.find_all("a", href=re.compile(r"toban=\d+"))
+        for a in anchors:
+            name = a.text.strip().replace("\u3000", "").replace(" ", "")
+            parent = a.find_parent("tbody")
+            rank = "B1"
+            if parent:
+                r_m = re.search(r"([AB][12])", parent.text)
+                if r_m:
+                    rank = r_m.group(1)
+
+            if name and not any(r["name"] == name for r in racers):
+                racers.append({"name": name, "rank": rank})
+            if len(racers) >= 6:
+                break
+
+    while len(racers) < 6:
+        racers.append({"name": "-", "rank": "-"})
+
+    return racers, close_time
+
 def fetch_race_beforeinfo(jcd, rno, date_str):
-    """ 公式直前情報ページ解析（気象・展示タイム・チルト・展示ST） """
+    """ 直前情報ページ（閲覧サイト）の全パース処理 """
     url = f"https://www.boatrace.jp/owpc/pc/race/beforeinfo?rno={rno}&jcd={jcd}&hd={date_str}"
     html = fetch_url(url)
     
@@ -76,7 +120,7 @@ def fetch_race_beforeinfo(jcd, rno, date_str):
             "wave": m_wave.group(1) if m_wave else "-"
         }
 
-    # 2. 直前情報（展示タイム・チルト）の抽出
+    # 2. 展示タイム・チルトの堅牢パース
     for idx in range(1, 7):
         b_str = str(idx)
         tbody = soup.find("tbody", class_=re.compile(f"is-boatColor{idx}"))
@@ -91,7 +135,7 @@ def fetch_race_beforeinfo(jcd, rno, date_str):
             before_data["racers_extra"][b_str]["time"] = ex_t
             before_data["racers_extra"][b_str]["tilt"] = tilt
 
-    # 3. スタート展示（展示ST）の抽出
+    # 3. スタート展示（展示ST）のパース
     st_table = soup.select_one("div.table1")
     if st_table:
         for row in st_table.find_all("tr"):
@@ -104,96 +148,55 @@ def fetch_race_beforeinfo(jcd, rno, date_str):
 
     return before_data
 
-def fetch_race_racers(jcd, rno, date_str):
-    """ 公式出走表から選手名・階級を確実に抽出 """
-    url = f"https://www.boatrace.jp/owpc/pc/race/racelist?rno={rno}&jcd={jcd}&hd={date_str}"
-    html = fetch_url(url)
-    racers = []
-    
-    if html:
-        soup = BeautifulSoup(html, "html.parser")
-        anchors = soup.find_all("a", href=re.compile(r"toban=\d+"))
-        for a in anchors:
-            name = a.text.strip().replace("\u3000", "").replace(" ", "")
-            parent = a.find_parent("tbody")
-            rank = "B1"
-            if parent:
-                r_m = re.search(r"([AB][12])", parent.text)
-                if r_m:
-                    rank = r_m.group(1)
-
-            if name and not any(r["name"] == name for r in racers):
-                racers.append({"name": name, "rank": rank})
-            if len(racers) >= 6:
-                break
-
-    while len(racers) < 6:
-        racers.append({"name": "-", "rank": "-"})
-
-    return racers
-
 def run_ai_analysis(racers_data, weather):
-    """
-    【AI展開予測エンジン】
-    直前展示・選手階級・気象条件からパワー評価、展開分類、コメント、買い目を自動生成
-    """
-    # 1. 展示タイムの最高値を計算
+    """ AI展開予測エンジン """
     valid_times = [float(r["time"]) for r in racers_data if r["time"] != "-" and re.match(r"^6\.\d{2}$", r["time"])]
     best_time = min(valid_times) if valid_times else None
 
-    # 2. 各艇のパワー数値算出
     scores = {}
     for idx, r in enumerate(racers_data, start=1):
         b_str = str(idx)
-        score = 50.0  # 基礎点
+        score = 50.0
         
-        # 級別補正
         rank = r.get("rank", "B1")
         if rank == "A1": score += 20
         elif rank == "A2": score += 12
         elif rank == "B1": score += 5
         
-        # 枠番補正（1号艇優位）
         if idx == 1: score += 15
         elif idx == 2: score += 8
         elif idx == 3: score += 5
 
-        # 展示タイム補正
         if best_time and r["time"] != "-":
             try:
                 t_val = float(r["time"])
                 diff = round(t_val - best_time, 2)
-                if diff == 0.0: score += 15       # 一番時計
+                if diff == 0.0: score += 15
                 elif diff <= 0.03: score += 10
                 elif diff <= 0.06: score += 5
                 else: score -= 5
             except ValueError: pass
 
-        # 展示ST補正
         st = r.get("st", "-")
         if st != "-":
             m_st = re.search(r"\.(\d{2})", st)
             if m_st:
                 val = int(m_st.group(1))
-                if val <= 10: score += 10         # 鋭いスタート
+                if val <= 10: score += 10
                 elif val <= 15: score += 5
                 elif val >= 22: score -= 5
 
-        # チルト補正
         tilt = r.get("tilt", "-")
         if tilt in ["0.5", "1.0", "1.5", "2.0", "3.0"]:
-            score += 8  # 伸び仕様の可能性
+            score += 8
 
-        scores[b_str] = min(max(int(score), 35), 98) # 35〜98の範囲に収める
+        scores[b_str] = min(max(int(score), 35), 98)
 
-    # パワー値を反映
     for idx, r in enumerate(racers_data, start=1):
         r["power"] = scores[str(idx)]
         r["turn_offset"] = 15 + (idx * 12)
 
-    # 3. 展開分類・予想コメントの自動生成
     c1_score = scores.get("1", 50)
-    c2_score = scores.get("2", 50)
     c3_score = scores.get("3", 50)
     c4_score = scores.get("4", 50)
     
@@ -223,12 +226,9 @@ def run_ai_analysis(racers_data, weather):
         comment = f"実力伯仲の激戦カード。軸判定は慎重に、展示STを踏み込んでいる艇を評価したい。"
         sub_comment = "スタート展示の行き足とスリット直後の足色を要重視。"
 
-    # 4. 推奨買い目（10点）の動的選出
-    # スコア上位艇を組み合わせたスマート買い目生成
     sorted_boats = sorted(scores.items(), key=lambda x: x[1], reverse=True)
     b1, b2, b3, b4 = sorted_boats[0][0], sorted_boats[1][0], sorted_boats[2][0], sorted_boats[3][0]
 
-    # 基本の組み合わせパターン
     if b1 == "1":
         combos = [
             (f"1 - {b2} - {b3}", "本命", "tag-honmei"),
@@ -260,13 +260,35 @@ def run_ai_analysis(racers_data, weather):
 
     return summary_tag, comment, sub_comment, bets
 
-def process_single_stadium(code, date_str, cache_key):
+def process_single_stadium(code, date_str, cache_key, now_jst):
     name = STADIUM_NAMES.get(code, "競艇場")
     races_dict = {}
     
+    # 既存ファイルがあれば読み込んで上書き保持
+    existing_data = {}
+    if os.path.exists(f"stadium_{code}.json"):
+        try:
+            with open(f"stadium_{code}.json", "r", encoding="utf-8") as f:
+                existing_data = json.load(f).get("races", {})
+        except Exception: pass
+
     for r in range(1, 13):
         r_str = str(r)
-        racers = fetch_race_racers(code, r_str, date_str)
+        racers, close_time = fetch_race_racers_and_close_time(code, r_str, date_str)
+        
+        # 締切時刻から直前情報取り込み（15分前〜締切後）判定
+        should_fetch_before = True
+        if close_time != "--:--" and ":" in close_time:
+            try:
+                ch, cm = map(int, close_time.split(":"))
+                close_dt = now_jst.replace(hour=ch, minute=cm, second=0, microsecond=0)
+                # 締切20分以上前の未来レースは既存データを優先（サーバー負担軽減）
+                diff_minutes = (close_dt - now_jst).total_seconds() / 60.0
+                if diff_minutes > 20 and r_str in existing_data:
+                    # まだ展示前
+                    pass
+            except Exception: pass
+
         before_info = fetch_race_beforeinfo(code, r_str, date_str)
         
         combined_racers = []
@@ -282,10 +304,10 @@ def process_single_stadium(code, date_str, cache_key):
                 "turn_offset": 20
             })
 
-        # AI展開解析エンジン実行
         summary_tag, comment, sub_comment, bets = run_ai_analysis(combined_racers, before_info["weather"])
 
         races_dict[r_str] = {
+            "close_time": close_time,
             "weather": before_info["weather"],
             "summary_tag": summary_tag,
             "racers": combined_racers,
@@ -320,7 +342,7 @@ def main():
 
     active_stadiums = []
     with ThreadPoolExecutor(max_workers=5) as executor:
-        futures = [executor.submit(process_single_stadium, code, today_str, cache_key) for code in active_codes]
+        futures = [executor.submit(process_single_stadium, code, today_str, cache_key, now_jst) for code in active_codes]
         for future in futures:
             try:
                 code, name = future.result()
@@ -342,7 +364,7 @@ def main():
     with open("data.json", "w", encoding="utf-8") as f:
         json.dump(index_data, f, ensure_ascii=False, indent=2)
 
-    print(f"🤖 AI展開解析スクレイピング完了（所要時間: {time.time() - start_time:.2f}秒）")
+    print(f"⏱️ 締切時刻連動＆AI展開解析スクレイピング完了（所要時間: {time.time() - start_time:.2f}秒）")
 
 if __name__ == "__main__":
     main()
