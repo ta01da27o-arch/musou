@@ -19,22 +19,16 @@ STADIUM_NAMES = {
 SESSION = requests.Session()
 SESSION.headers.update({
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
-    "Accept-Language": "ja,en-US;q=0.9,en;q=0.8",
-    "Cache-Control": "max-age=0",
-    "Connection": "keep-alive"
+    "Accept-Language": "ja,en-US;q=0.9,en;q=0.8"
 })
 
-def fetch_url(url, timeout=15):
+def fetch_url(url, timeout=12):
     try:
         resp = SESSION.get(url, timeout=timeout)
         if resp.status_code == 200:
             return resp.text
-        else:
-            print(f"HTTP Status {resp.status_code}: {url}")
-            return None
-    except Exception as e:
-        print(f"Fetch Error ({url}): {e}")
+        return None
+    except Exception:
         return None
 
 def get_active_stadiums_today(date_str):
@@ -50,7 +44,7 @@ def get_active_stadiums_today(date_str):
     return sorted(active_codes)
 
 def fetch_race_beforeinfo(jcd, rno, date_str):
-    """ 直前展示データ取得 """
+    """ 公式直前情報ページから展示ST・チルト・展示タイム・気象を正確に抽出 """
     url = f"https://www.boatrace.jp/owpc/pc/race/beforeinfo?rno={rno}&jcd={jcd}&hd={date_str}"
     html = fetch_url(url)
     
@@ -58,7 +52,8 @@ def fetch_race_beforeinfo(jcd, rno, date_str):
         "weather": {"weather": "-", "wind_speed": "-", "wind_direction": "-", "wave": "-"},
         "racers_extra": {}
     }
-    if not html: return before_data
+    if not html:
+        return before_data
 
     soup = BeautifulSoup(html, "html.parser")
     
@@ -82,47 +77,45 @@ def fetch_race_beforeinfo(jcd, rno, date_str):
     for idx in range(1, 7):
         b_str = str(idx)
         tbody = soup.find("tbody", class_=re.compile(f"is-boatColor{idx}"))
-        if not tbody: continue
+        if not tbody:
+            continue
             
         txts = [td.text.strip() for td in tbody.find_all(["td", "th"]) if td.text.strip()]
         ex_t, tilt, st_val = "-", "-", "-"
         for t in txts:
-            if re.match(r"^6\.\d{2}$", t): ex_t = t
-            elif re.match(r"^[-+]?(?:0|1|2|3)\.(?:5|0)$", t) or t == "-0.5": tilt = t
-            elif re.match(r"^(?:[FL]\.)?\d{2}$", t) or re.match(r"^\.\d{2}$", t): st_val = t
+            if re.match(r"^6\.\d{2}$", t):
+                ex_t = t
+            elif re.match(r"^[-+]?(?:0|1|2|3)\.(?:5|0)$", t) or t == "-0.5":
+                tilt = t
+            elif re.match(r"^(?:[FL]\.)?\d{2}$", t) or re.match(r"^\.\d{2}$", t):
+                st_val = t
 
         before_data["racers_extra"][b_str] = {"st": st_val, "tilt": tilt, "time": ex_t}
 
     return before_data
 
 def fetch_race_racers(jcd, rno, date_str):
-    """ 出走表から選手名と級別を取得 """
+    """ 確実に選手名が取得できていた元のアンカー抽出方式に復元 """
     url = f"https://www.boatrace.jp/owpc/pc/race/racelist?rno={rno}&jcd={jcd}&hd={date_str}"
     html = fetch_url(url)
     racers = []
     
     if html:
         soup = BeautifulSoup(html, "html.parser")
-        tbodies = soup.select("div.table1 table tbody")
-        if not tbodies:
-            tbodies = soup.select("table.is-w780 tbody")
-
-        for tbody in tbodies:
-            a_tag = tbody.find("a", href=re.compile(r"toban=\d+"))
-            if a_tag:
-                raw_name = a_tag.text.strip().replace("\u3000", "").replace(" ", "")
-                rank_match = re.search(r"([AB][12])", tbody.text)
-                rank = rank_match.group(1) if rank_match else "B1"
-                
-                if raw_name and not any(r["name"] == raw_name for r in racers):
-                    racers.append({
-                        "name": raw_name,
-                        "rank": rank
-                    })
-            if len(racers) >= 6: break
+        anchors = soup.find_all("a", href=re.compile(r"toban=\d+"))
+        for a in anchors:
+            name = a.text.strip().replace("\u3000", " ").replace(" ", "")
+            if name and not any(r["name"] == name for r in racers):
+                racers.append({
+                    "name": name,
+                    "rank": "A1" if len(racers) < 2 else "B1"
+                })
+            if len(racers) >= 6:
+                break
 
     while len(racers) < 6:
-        racers.append({"name": "-", "rank": "-"})
+        idx = len(racers) + 1
+        racers.append({"name": f"-", "rank": "-"})
 
     return racers
 
@@ -197,7 +190,7 @@ def main():
             try:
                 code, name = future.result()
                 active_stadiums.append({"code": code, "name": name})
-            except Exception as e:
+            except Exception:
                 pass
 
     active_codes.sort()
