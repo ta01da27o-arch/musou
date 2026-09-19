@@ -2,7 +2,7 @@
   "date": "20260919",
   "stadium_code": "03",
   "stadium_name": "江戸川",
-  "cache_buster": "1789787107397",
+  "cache_buster": "1789788498171",
   "races": {
     "1": {
       "weather": {
@@ -14,61 +14,61 @@
       "summary_tag": "【本命濃厚】",
       "racers": [
         {
-          "name": "高橋直哉",
-          "rank": "A1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
-          "time": "6.56",
+          "tilt": "-",
+          "time": "-",
           "power": 85,
           "turn_offset": 30
         },
         {
-          "name": "豊田祥生",
-          "rank": "A1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "1.5",
-          "time": "6.59",
+          "tilt": "-",
+          "time": "-",
           "power": 85,
           "turn_offset": 40
         },
         {
-          "name": "有山望",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "1.5",
-          "time": "6.55",
+          "tilt": "-",
+          "time": "-",
           "power": 70,
           "turn_offset": 50
         },
         {
-          "name": "竹内来",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
-          "time": "6.67",
+          "tilt": "-",
+          "time": "-",
           "power": 70,
           "turn_offset": 60
         },
         {
-          "name": "眞崎武蔵",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
-          "time": "6.66",
+          "tilt": "-",
+          "time": "-",
           "power": 70,
           "turn_offset": 70
         },
         {
-          "name": "東口晃",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
-          "time": "6.68",
+          "tilt": "-",
+          "time": "-",
           "power": 70,
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【高橋直哉】中心の組み立て。",
+      "comment": "1号艇【-】中心の組み立て。",
       "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
@@ -143,61 +143,61 @@
       "summary_tag": "【捲り一閃】",
       "racers": [
         {
-          "name": "森雄利",
-          "rank": "A1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
-          "time": "6.48",
+          "tilt": "-",
+          "time": "-",
           "power": 85,
           "turn_offset": 30
         },
         {
-          "name": "増田進",
-          "rank": "A1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
-          "time": "6.51",
+          "tilt": "-",
+          "time": "-",
           "power": 85,
           "turn_offset": 40
         },
         {
-          "name": "角山雄哉",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
-          "time": "6.67",
+          "tilt": "-",
+          "time": "-",
           "power": 70,
           "turn_offset": 50
         },
         {
-          "name": "塚越陸斗",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
-          "time": "6.69",
+          "tilt": "-",
+          "time": "-",
           "power": 70,
           "turn_offset": 60
         },
         {
-          "name": "鶴本崇文",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
-          "time": "6.72",
+          "tilt": "-",
+          "time": "-",
           "power": 70,
           "turn_offset": 70
         },
         {
-          "name": "戸塚邦好",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
-          "time": "6.69",
+          "tilt": "-",
+          "time": "-",
           "power": 70,
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【森雄利】中心の組み立て。",
+      "comment": "1号艇【-】中心の組み立て。",
       "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
@@ -272,61 +272,61 @@
       "summary_tag": "【本命濃厚】",
       "racers": [
         {
-          "name": "宮崎奏磨",
-          "rank": "A1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
-          "time": "6.58",
+          "tilt": "-",
+          "time": "-",
           "power": 85,
           "turn_offset": 30
         },
         {
-          "name": "佐々木大河",
-          "rank": "A1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
-          "time": "6.61",
+          "tilt": "-",
+          "time": "-",
           "power": 85,
           "turn_offset": 40
         },
         {
-          "name": "中村泰平",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.5",
-          "time": "6.60",
+          "tilt": "-",
+          "time": "-",
           "power": 70,
           "turn_offset": 50
         },
         {
-          "name": "佐竹太一",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
-          "time": "6.57",
+          "tilt": "-",
+          "time": "-",
           "power": 70,
           "turn_offset": 60
         },
         {
-          "name": "坪内実",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
-          "time": "6.59",
+          "tilt": "-",
+          "time": "-",
           "power": 70,
           "turn_offset": 70
         },
         {
-          "name": "松本庸平",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.5",
-          "time": "6.58",
+          "tilt": "-",
+          "time": "-",
           "power": 70,
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【宮崎奏磨】中心の組み立て。",
+      "comment": "1号艇【-】中心の組み立て。",
       "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
@@ -401,61 +401,61 @@
       "summary_tag": "【捲り一閃】",
       "racers": [
         {
-          "name": "山口隆史",
-          "rank": "A1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
+          "tilt": "-",
           "time": "-",
           "power": 85,
           "turn_offset": 30
         },
         {
-          "name": "田中堅",
-          "rank": "A1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
+          "tilt": "-",
           "time": "-",
           "power": 85,
           "turn_offset": 40
         },
         {
-          "name": "中野夢斗",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 50
         },
         {
-          "name": "北野輝季",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 60
         },
         {
-          "name": "鐘ヶ江真司",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 70
         },
         {
-          "name": "平田健之佑",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【山口隆史】中心の組み立て。",
+      "comment": "1号艇【-】中心の組み立て。",
       "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
@@ -530,61 +530,61 @@
       "summary_tag": "【本命濃厚】",
       "racers": [
         {
-          "name": "齊藤廉",
-          "rank": "A1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
+          "tilt": "-",
           "time": "-",
           "power": 85,
           "turn_offset": 30
         },
         {
-          "name": "山本英志",
-          "rank": "A1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "1.0",
+          "tilt": "-",
           "time": "-",
           "power": 85,
           "turn_offset": 40
         },
         {
-          "name": "中野孝二",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 50
         },
         {
-          "name": "長尾京志郎",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 60
         },
         {
-          "name": "山口達也",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 70
         },
         {
-          "name": "吉田宗弘",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "1.0",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【齊藤廉】中心の組み立て。",
+      "comment": "1号艇【-】中心の組み立て。",
       "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
@@ -659,61 +659,61 @@
       "summary_tag": "【捲り一閃】",
       "racers": [
         {
-          "name": "豊田祥生",
-          "rank": "A1",
-          "st": ".09",
-          "tilt": "1.5",
+          "name": "-",
+          "rank": "-",
+          "st": "-",
+          "tilt": "-",
           "time": "-",
           "power": 85,
           "turn_offset": 30
         },
         {
-          "name": "重木輝彦",
-          "rank": "A1",
-          "st": ".09",
-          "tilt": "1.5",
+          "name": "-",
+          "rank": "-",
+          "st": "-",
+          "tilt": "-",
           "time": "-",
           "power": 85,
           "turn_offset": 40
         },
         {
-          "name": "鳥居塚孝博",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "1.5",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 50
         },
         {
-          "name": "中村楓",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 60
         },
         {
-          "name": "森雄利",
-          "rank": "B1",
-          "st": ".38",
-          "tilt": "0.0",
+          "name": "-",
+          "rank": "-",
+          "st": "-",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 70
         },
         {
-          "name": "南佑典",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "1.0",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【豊田祥生】中心の組み立て。",
+      "comment": "1号艇【-】中心の組み立て。",
       "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
@@ -788,61 +788,61 @@
       "summary_tag": "【本命濃厚】",
       "racers": [
         {
-          "name": "枝尾賢",
-          "rank": "A1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
+          "tilt": "-",
           "time": "-",
           "power": 85,
           "turn_offset": 30
         },
         {
-          "name": "宮崎奏磨",
-          "rank": "A1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
+          "tilt": "-",
           "time": "-",
           "power": 85,
           "turn_offset": 40
         },
         {
-          "name": "赤坂俊輔",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 50
         },
         {
-          "name": "池田雷太",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 60
         },
         {
-          "name": "竹内来",
-          "rank": "B1",
-          "st": ".26",
-          "tilt": "0.0",
+          "name": "-",
+          "rank": "-",
+          "st": "-",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 70
         },
         {
-          "name": "丸岡正典",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【枝尾賢】中心の組み立て。",
+      "comment": "1号艇【-】中心の組み立て。",
       "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
@@ -917,61 +917,61 @@
       "summary_tag": "【捲り一閃】",
       "racers": [
         {
-          "name": "森定晃史",
-          "rank": "A1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
+          "tilt": "-",
           "time": "-",
           "power": 85,
           "turn_offset": 30
         },
         {
-          "name": "中村泰平",
-          "rank": "A1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.5",
+          "tilt": "-",
           "time": "-",
           "power": 85,
           "turn_offset": 40
         },
         {
-          "name": "堀本裕也",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "3.5",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 50
         },
         {
-          "name": "鐘ヶ江真司",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 60
         },
         {
-          "name": "高橋直哉",
-          "rank": "B1",
-          "st": ".05",
-          "tilt": "0.0",
+          "name": "-",
+          "rank": "-",
+          "st": "-",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 70
         },
         {
-          "name": "室田泰史",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【森定晃史】中心の組み立て。",
+      "comment": "1号艇【-】中心の組み立て。",
       "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
@@ -1046,61 +1046,61 @@
       "summary_tag": "【本命濃厚】",
       "racers": [
         {
-          "name": "三嶌誠司",
-          "rank": "A1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
+          "tilt": "-",
           "time": "-",
           "power": 85,
           "turn_offset": 30
         },
         {
-          "name": "鶴本崇文",
-          "rank": "A1",
-          "st": ".25",
-          "tilt": "0.0",
+          "name": "-",
+          "rank": "-",
+          "st": "-",
+          "tilt": "-",
           "time": "-",
           "power": 85,
           "turn_offset": 40
         },
         {
-          "name": "佐竹太一",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 50
         },
         {
-          "name": "田中堅",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 60
         },
         {
-          "name": "平見真彦",
-          "rank": "B1",
-          "st": ".25",
-          "tilt": "0.0",
+          "name": "-",
+          "rank": "-",
+          "st": "-",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 70
         },
         {
-          "name": "眞崎武蔵",
-          "rank": "B1",
-          "st": ".41",
-          "tilt": "0.0",
+          "name": "-",
+          "rank": "-",
+          "st": "-",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【三嶌誠司】中心の組み立て。",
+      "comment": "1号艇【-】中心の組み立て。",
       "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
@@ -1175,61 +1175,61 @@
       "summary_tag": "【捲り一閃】",
       "racers": [
         {
-          "name": "野中一平",
-          "rank": "A1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
+          "tilt": "-",
           "time": "-",
           "power": 85,
           "turn_offset": 30
         },
         {
-          "name": "坪内実",
-          "rank": "A1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
+          "tilt": "-",
           "time": "-",
           "power": 85,
           "turn_offset": 40
         },
         {
-          "name": "平田健之佑",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 50
         },
         {
-          "name": "鳥居塚孝博",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "1.5",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 60
         },
         {
-          "name": "角山雄哉",
-          "rank": "B1",
-          "st": ".12",
-          "tilt": "0.0",
+          "name": "-",
+          "rank": "-",
+          "st": "-",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 70
         },
         {
-          "name": "山口達也",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【野中一平】中心の組み立て。",
+      "comment": "1号艇【-】中心の組み立て。",
       "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
@@ -1304,61 +1304,61 @@
       "summary_tag": "【本命濃厚】",
       "racers": [
         {
-          "name": "重木輝彦",
-          "rank": "A1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
+          "tilt": "-",
           "time": "-",
           "power": 85,
           "turn_offset": 30
         },
         {
-          "name": "田頭虎親",
-          "rank": "A1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.5",
+          "tilt": "-",
           "time": "-",
           "power": 85,
           "turn_offset": 40
         },
         {
-          "name": "東口晃",
-          "rank": "B1",
-          "st": ".24",
-          "tilt": "0.0",
+          "name": "-",
+          "rank": "-",
+          "st": "-",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 50
         },
         {
-          "name": "渡邉俊介",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "1.0",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 60
         },
         {
-          "name": "丸岡正典",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 70
         },
         {
-          "name": "山本英志",
-          "rank": "B1",
-          "st": ".24",
-          "tilt": "0.0",
+          "name": "-",
+          "rank": "-",
+          "st": "-",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【重木輝彦】中心の組み立て。",
+      "comment": "1号艇【-】中心の組み立て。",
       "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
@@ -1433,61 +1433,61 @@
       "summary_tag": "【捲り一閃】",
       "racers": [
         {
-          "name": "赤坂俊輔",
-          "rank": "A1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
+          "tilt": "-",
           "time": "-",
           "power": 85,
           "turn_offset": 30
         },
         {
-          "name": "齊藤廉",
-          "rank": "A1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
+          "tilt": "-",
           "time": "-",
           "power": 85,
           "turn_offset": 40
         },
         {
-          "name": "佐々木大河",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "0.0",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 50
         },
         {
-          "name": "戸塚邦好",
-          "rank": "B1",
-          "st": ".19",
-          "tilt": "0.0",
+          "name": "-",
+          "rank": "-",
+          "st": "-",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 60
         },
         {
-          "name": "南佑典",
-          "rank": "B1",
+          "name": "-",
+          "rank": "-",
           "st": "-",
-          "tilt": "1.0",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 70
         },
         {
-          "name": "中野夢斗",
-          "rank": "B1",
-          "st": ".19",
-          "tilt": "0.0",
+          "name": "-",
+          "rank": "-",
+          "st": "-",
+          "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 80
         }
       ],
-      "comment": "1号艇【赤坂俊輔】中心の組み立て。",
+      "comment": "1号艇【-】中心の組み立て。",
       "sub_comment": "展示STとチルト変化に注意。",
       "bets": [
         {
