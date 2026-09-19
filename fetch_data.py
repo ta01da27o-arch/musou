@@ -44,7 +44,7 @@ def get_active_stadiums_today(date_str):
     return sorted(active_codes)
 
 def fetch_race_beforeinfo(jcd, rno, date_str):
-    """ 公式直前情報ページから展示ST・チルト・展示タイム・気象を正確に抽出 """
+    """ 公式直前情報ページ解析 """
     url = f"https://www.boatrace.jp/owpc/pc/race/beforeinfo?rno={rno}&jcd={jcd}&hd={date_str}"
     html = fetch_url(url)
     
@@ -73,73 +73,59 @@ def fetch_race_beforeinfo(jcd, rno, date_str):
             "wave": m_wave.group(1) if m_wave else "-"
         }
 
-    # 2. 直前情報のテーブル抽出 (調整重量とチルトの混同を解消)
+    # 初期化
+    for idx in range(1, 7):
+        before_data["racers_extra"][str(idx)] = {"st": "-", "tilt": "-", "time": "-"}
+
+    # 2. 直前情報（展示タイム・チルト）の抽出
     for idx in range(1, 7):
         b_str = str(idx)
-        ex_t, tilt, st_val = "-", "-", "-"
-        
         tbody = soup.find("tbody", class_=re.compile(f"is-boatColor{idx}"))
         if tbody:
-            tds = tbody.find_all("td")
-            td_texts = [td.text.strip() for td in tds if td.text.strip()]
-            
-            # 展示タイム（6.XX）
-            for t in td_texts:
+            tds = [td.text.strip() for td in tbody.find_all("td") if td.text.strip()]
+            ex_t, tilt = "-", "-"
+            for t in tds:
                 if re.match(r"^6\.\d{2}$", t):
                     ex_t = t
-                    break
-            
-            # チルト（末尾またはチルト列から特定: -0.5, 0.0, 0.5 等）
-            # 調整重量との誤認を防ぐため、特定の数値フォーマットを厳密化
-            for t in reversed(td_texts):
-                if re.match(r"^[-+]?(?:0|1|2|3)\.(?:5|0)$", t) or t == "-0.5":
-                    # 調整重量の可能性がある1つ上のセルを除外
+                elif re.match(r"^[-+]?(?:0|1|2|3)\.(?:5|0)$", t) or t == "-0.5":
                     tilt = t
-                    break
+            before_data["racers_extra"][b_str]["time"] = ex_t
+            before_data["racers_extra"][b_str]["tilt"] = tilt
 
-        before_data["racers_extra"][b_str] = {"st": st_val, "tilt": tilt, "time": ex_t}
-
-    # 3. スタート展示テーブルから展示STを個別抽出
-    st_table = soup.select_one("div.table1 table")
+    # 3. スタート展示（展示ST）の抽出
+    st_table = soup.select_one("div.table1")
     if st_table:
-        st_rows = st_table.select("tbody tr")
-        for row in st_rows:
-            txt = row.text.strip()
-            # 艇番とST値の組み合わせをパース
-            m = re.search(r"(\d)\s+([FL]?\.\d{2})", txt)
+        for row in st_table.find_all("tr"):
+            row_txt = row.text.strip()
+            m = re.search(r"(\d)\s+([FL]?\.\d{2})", row_txt)
             if m:
-                boat_num = m.group(1)
-                st_time = m.group(2)
-                if boat_num in before_data["racers_extra"]:
-                    before_data["racers_extra"][boat_num]["st"] = st_time
+                b_num, st_val = m.group(1), m.group(2)
+                if b_num in before_data["racers_extra"]:
+                    before_data["racers_extra"][b_num]["st"] = st_val
 
     return before_data
 
 def fetch_race_racers(jcd, rno, date_str):
-    """ 公式出走表から本物の選手名と「正確な階級（A1/A2/B1/B2）」を取得 """
+    """ 公式出走表から選手名・階級を確実に抽出 """
     url = f"https://www.boatrace.jp/owpc/pc/race/racelist?rno={rno}&jcd={jcd}&hd={date_str}"
     html = fetch_url(url)
     racers = []
     
     if html:
         soup = BeautifulSoup(html, "html.parser")
-        tbodies = soup.select("div.table1 table tbody")
-        if not tbodies:
-            tbodies = soup.select("table.is-w780 tbody")
+        anchors = soup.find_all("a", href=re.compile(r"toban=\d+"))
+        for a in anchors:
+            name = a.text.strip().replace("\u3000", "").replace(" ", "")
+            # 該当選手が含まれる親要素（tbody/tr）から階級を取得
+            parent = a.find_parent("tbody")
+            rank = "B1"
+            if parent:
+                r_m = re.search(r"([AB][12])", parent.text)
+                if r_m:
+                    rank = r_m.group(1)
 
-        for tbody in tbodies:
-            a_tag = tbody.find("a", href=re.compile(r"toban=\d+"))
-            if a_tag:
-                raw_name = a_tag.text.strip().replace("\u3000", "").replace(" ", "")
-                # 階級（A1, A2, B1, B2）を正規表現で厳密パース
-                rank_match = re.search(r"([AB][12])", tbody.text)
-                rank = rank_match.group(1) if rank_match else "B1"
-                
-                if raw_name and not any(r["name"] == raw_name for r in racers):
-                    racers.append({
-                        "name": raw_name,
-                        "rank": rank
-                    })
+            if name and not any(r["name"] == name for r in racers):
+                racers.append({"name": name, "rank": rank})
             if len(racers) >= 6:
                 break
 
@@ -236,7 +222,7 @@ def main():
     with open("data.json", "w", encoding="utf-8") as f:
         json.dump(index_data, f, ensure_ascii=False, indent=2)
 
-    print(f"✅ 直前データ・級別完全修正スクレイピング完了（所要時間: {time.time() - start_time:.2f}秒）")
+    print(f"✅ スクレイピング完了（所要時間: {time.time() - start_time:.2f}秒）")
 
 if __name__ == "__main__":
     main()
