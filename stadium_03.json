@@ -1,20 +1,21 @@
 {
-  "date": "20260919",
+  "date": "20260920",
   "stadium_code": "03",
   "stadium_name": "江戸川",
-  "cache_buster": "1789822878359",
+  "cache_buster": "1789854284374",
   "races": {
     "1": {
+      "close_time": "--:--",
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "-",
         "wind_direction": "追い風",
-        "wave": "5cm"
+        "wave": "-"
       },
       "summary_tag": "【混戦模様】",
       "racers": [
         {
-          "name": "高橋直哉",
+          "name": "増田進",
           "rank": "B1",
           "st": "-",
           "tilt": "-",
@@ -23,7 +24,7 @@
           "turn_offset": 27
         },
         {
-          "name": "豊田祥生",
+          "name": "有山望",
           "rank": "B1",
           "st": "-",
           "tilt": "-",
@@ -32,16 +33,16 @@
           "turn_offset": 39
         },
         {
-          "name": "有山望",
-          "rank": "B1",
+          "name": "宮崎奏磨",
+          "rank": "B2",
           "st": "-",
           "tilt": "-",
           "time": "-",
-          "power": 60,
+          "power": 55,
           "turn_offset": 51
         },
         {
-          "name": "竹内来",
+          "name": "山口隆史",
           "rank": "B1",
           "st": "-",
           "tilt": "-",
@@ -50,7 +51,7 @@
           "turn_offset": 63
         },
         {
-          "name": "眞崎武蔵",
+          "name": "吉田宗弘",
           "rank": "B1",
           "st": "-",
           "tilt": "-",
@@ -59,7 +60,7 @@
           "turn_offset": 75
         },
         {
-          "name": "東口晃",
+          "name": "中野孝二",
           "rank": "B1",
           "st": "-",
           "tilt": "-",
@@ -134,436 +135,23 @@
       ]
     },
     "2": {
+      "close_time": "--:--",
       "weather": {
         "weather": "-",
-        "wind_speed": "4m",
+        "wind_speed": "-",
         "wind_direction": "追い風",
-        "wave": "5cm"
+        "wave": "-"
       },
       "summary_tag": "【混戦模様】",
       "racers": [
         {
-          "name": "森雄利",
+          "name": "眞崎武蔵",
           "rank": "B1",
           "st": "-",
           "tilt": "-",
           "time": "-",
           "power": 70,
           "turn_offset": 27
-        },
-        {
-          "name": "増田進",
-          "rank": "B1",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 63,
-          "turn_offset": 39
-        },
-        {
-          "name": "角山雄哉",
-          "rank": "B1",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 60,
-          "turn_offset": 51
-        },
-        {
-          "name": "塚越陸斗",
-          "rank": "B2",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 50,
-          "turn_offset": 63
-        },
-        {
-          "name": "鶴本崇文",
-          "rank": "A1",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 70,
-          "turn_offset": 75
-        },
-        {
-          "name": "戸塚邦好",
-          "rank": "A2",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 62,
-          "turn_offset": 87
-        }
-      ],
-      "comment": "実力伯仲の激戦カード。軸判定は慎重に、展示STを踏み込んでいる艇を評価したい。",
-      "sub_comment": "スタート展示の行き足とスリット直後の足色を要重視。",
-      "bets": [
-        {
-          "num": "1 - 5 - 2",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
-        },
-        {
-          "num": "1 - 2 - 5",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
-        },
-        {
-          "num": "1 - 5 - 6",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
-        },
-        {
-          "num": "1 - 6 - 5",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
-        },
-        {
-          "num": "1 - 2 - 6",
-          "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
-        },
-        {
-          "num": "5 - 1 - 2",
-          "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
-        },
-        {
-          "num": "5 - 2 - 1",
-          "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
-        },
-        {
-          "num": "2 - 1 - 5",
-          "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
-        },
-        {
-          "num": "2 - 5 - 1",
-          "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
-        },
-        {
-          "num": "6 - 1 - 5",
-          "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
-        }
-      ]
-    },
-    "3": {
-      "weather": {
-        "weather": "-",
-        "wind_speed": "4m",
-        "wind_direction": "追い風",
-        "wave": "5cm"
-      },
-      "summary_tag": "【捲り一閃】",
-      "racers": [
-        {
-          "name": "宮崎奏磨",
-          "rank": "B2",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 65,
-          "turn_offset": 27
-        },
-        {
-          "name": "佐々木大河",
-          "rank": "A1",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 78,
-          "turn_offset": 39
-        },
-        {
-          "name": "中村泰平",
-          "rank": "A1",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 75,
-          "turn_offset": 51
-        },
-        {
-          "name": "佐竹太一",
-          "rank": "B1",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 55,
-          "turn_offset": 63
-        },
-        {
-          "name": "坪内実",
-          "rank": "B1",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 55,
-          "turn_offset": 75
-        },
-        {
-          "name": "松本庸平",
-          "rank": "B1",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 55,
-          "turn_offset": 87
-        }
-      ],
-      "comment": "センター枠の展開が鍵。2号艇が展示タイム良好で鋭いダッシュ戦から強襲を狙う。",
-      "sub_comment": "1号艇の残しと、展開突く展開差し艇の浮上に期待。",
-      "bets": [
-        {
-          "num": "2 - 1 - 3",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
-        },
-        {
-          "num": "2 - 3 - 1",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
-        },
-        {
-          "num": "1 - 2 - 3",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
-        },
-        {
-          "num": "2 - 3 - 1",
-          "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
-        },
-        {
-          "num": "3 - 2 - 1",
-          "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
-        },
-        {
-          "num": "1 - 3 - 2",
-          "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
-        },
-        {
-          "num": "3 - 1 - 1",
-          "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
-        },
-        {
-          "num": "1 - 2 - 1",
-          "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
-        },
-        {
-          "num": "1 - 3 - 1",
-          "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
-        },
-        {
-          "num": "1 - 1 - 4",
-          "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
-        }
-      ]
-    },
-    "4": {
-      "weather": {
-        "weather": "-",
-        "wind_speed": "4m",
-        "wind_direction": "追い風",
-        "wave": "5cm"
-      },
-      "summary_tag": "【捲り一閃】",
-      "racers": [
-        {
-          "name": "山口隆史",
-          "rank": "B1",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 70,
-          "turn_offset": 27
-        },
-        {
-          "name": "田中堅",
-          "rank": "B1",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 63,
-          "turn_offset": 39
-        },
-        {
-          "name": "中野夢斗",
-          "rank": "B1",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 60,
-          "turn_offset": 51
-        },
-        {
-          "name": "北野輝季",
-          "rank": "A1",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 70,
-          "turn_offset": 63
-        },
-        {
-          "name": "鐘ヶ江真司",
-          "rank": "B1",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 55,
-          "turn_offset": 75
-        },
-        {
-          "name": "平田健之佑",
-          "rank": "A2",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 62,
-          "turn_offset": 87
-        }
-      ],
-      "comment": "センター枠の展開が鍵。1号艇が展示タイム良好で鋭いダッシュ戦から強襲を狙う。",
-      "sub_comment": "1号艇の残しと、展開突く展開差し艇の浮上に期待。",
-      "bets": [
-        {
-          "num": "1 - 4 - 2",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
-        },
-        {
-          "num": "1 - 2 - 4",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
-        },
-        {
-          "num": "1 - 4 - 6",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
-        },
-        {
-          "num": "1 - 6 - 4",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
-        },
-        {
-          "num": "1 - 2 - 6",
-          "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
-        },
-        {
-          "num": "4 - 1 - 2",
-          "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
-        },
-        {
-          "num": "4 - 2 - 1",
-          "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
-        },
-        {
-          "num": "2 - 1 - 4",
-          "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
-        },
-        {
-          "num": "2 - 4 - 1",
-          "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
-        },
-        {
-          "num": "6 - 1 - 4",
-          "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
-        }
-      ]
-    },
-    "5": {
-      "weather": {
-        "weather": "-",
-        "wind_speed": "4m",
-        "wind_direction": "追い風",
-        "wave": "5cm"
-      },
-      "summary_tag": "【混戦模様】",
-      "racers": [
-        {
-          "name": "齊藤廉",
-          "rank": "B1",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 70,
-          "turn_offset": 27
-        },
-        {
-          "name": "山本英志",
-          "rank": "A2",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 70,
-          "turn_offset": 39
-        },
-        {
-          "name": "中野孝二",
-          "rank": "B1",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 60,
-          "turn_offset": 51
-        },
-        {
-          "name": "長尾京志郎",
-          "rank": "B1",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 55,
-          "turn_offset": 63
         },
         {
           "name": "山口達也",
@@ -571,113 +159,11 @@
           "st": "-",
           "tilt": "-",
           "time": "-",
-          "power": 70,
-          "turn_offset": 75
-        },
-        {
-          "name": "吉田宗弘",
-          "rank": "B1",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 55,
-          "turn_offset": 87
-        }
-      ],
-      "comment": "実力伯仲の激戦カード。軸判定は慎重に、展示STを踏み込んでいる艇を評価したい。",
-      "sub_comment": "スタート展示の行き足とスリット直後の足色を要重視。",
-      "bets": [
-        {
-          "num": "1 - 2 - 5",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
-        },
-        {
-          "num": "1 - 5 - 2",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
-        },
-        {
-          "num": "1 - 2 - 3",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
-        },
-        {
-          "num": "1 - 3 - 2",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
-        },
-        {
-          "num": "1 - 5 - 3",
-          "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
-        },
-        {
-          "num": "2 - 1 - 5",
-          "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
-        },
-        {
-          "num": "2 - 5 - 1",
-          "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
-        },
-        {
-          "num": "5 - 1 - 2",
-          "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
-        },
-        {
-          "num": "5 - 2 - 1",
-          "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
-        },
-        {
-          "num": "3 - 1 - 2",
-          "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
-        }
-      ]
-    },
-    "6": {
-      "weather": {
-        "weather": "-",
-        "wind_speed": "4m",
-        "wind_direction": "追い風",
-        "wave": "5cm"
-      },
-      "summary_tag": "【混戦模様】",
-      "racers": [
-        {
-          "name": "豊田祥生",
-          "rank": "B1",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 70,
-          "turn_offset": 27
-        },
-        {
-          "name": "重木輝彦",
-          "rank": "A1",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
           "power": 78,
           "turn_offset": 39
         },
         {
-          "name": "鳥居塚孝博",
+          "name": "森定晃史",
           "rank": "A2",
           "st": "-",
           "tilt": "-",
@@ -686,7 +172,7 @@
           "turn_offset": 51
         },
         {
-          "name": "中村楓",
+          "name": "中野夢斗",
           "rank": "B1",
           "st": "-",
           "tilt": "-",
@@ -695,7 +181,7 @@
           "turn_offset": 63
         },
         {
-          "name": "森雄利",
+          "name": "池田雷太",
           "rank": "B1",
           "st": "-",
           "tilt": "-",
@@ -704,12 +190,12 @@
           "turn_offset": 75
         },
         {
-          "name": "南佑典",
-          "rank": "A2",
+          "name": "塚越陸斗",
+          "rank": "B2",
           "st": "-",
           "tilt": "-",
           "time": "-",
-          "power": 62,
+          "power": 50,
           "turn_offset": 87
         }
       ],
@@ -771,56 +257,187 @@
           "odds": "--"
         },
         {
-          "num": "1 - 3 - 6",
+          "num": "1 - 3 - 4",
           "tag": "穴",
           "style": "tag-ana",
           "odds": "--"
         }
       ]
     },
-    "7": {
+    "3": {
+      "close_time": "--:--",
       "weather": {
         "weather": "-",
-        "wind_speed": "3m",
+        "wind_speed": "-",
         "wind_direction": "追い風",
-        "wave": "5cm"
+        "wave": "-"
       },
-      "summary_tag": "【本命濃厚】",
+      "summary_tag": "【混戦模様】",
       "racers": [
+        {
+          "name": "角山雄哉",
+          "rank": "B1",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 70,
+          "turn_offset": 27
+        },
+        {
+          "name": "三嶌誠司",
+          "rank": "A2",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 70,
+          "turn_offset": 39
+        },
+        {
+          "name": "高橋直哉",
+          "rank": "B1",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 60,
+          "turn_offset": 51
+        },
+        {
+          "name": "堀本裕也",
+          "rank": "B2",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 50,
+          "turn_offset": 63
+        },
+        {
+          "name": "北野輝季",
+          "rank": "A1",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 70,
+          "turn_offset": 75
+        },
+        {
+          "name": "長尾京志郎",
+          "rank": "B1",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 55,
+          "turn_offset": 87
+        }
+      ],
+      "comment": "実力伯仲の激戦カード。軸判定は慎重に、展示STを踏み込んでいる艇を評価したい。",
+      "sub_comment": "スタート展示の行き足とスリット直後の足色を要重視。",
+      "bets": [
+        {
+          "num": "1 - 2 - 5",
+          "tag": "本命",
+          "style": "tag-honmei",
+          "odds": "--"
+        },
+        {
+          "num": "1 - 5 - 2",
+          "tag": "本命",
+          "style": "tag-honmei",
+          "odds": "--"
+        },
+        {
+          "num": "1 - 2 - 3",
+          "tag": "本命",
+          "style": "tag-honmei",
+          "odds": "--"
+        },
+        {
+          "num": "1 - 3 - 2",
+          "tag": "本命",
+          "style": "tag-honmei",
+          "odds": "--"
+        },
+        {
+          "num": "1 - 5 - 3",
+          "tag": "狙い",
+          "style": "tag-nerai",
+          "odds": "--"
+        },
+        {
+          "num": "2 - 1 - 5",
+          "tag": "狙い",
+          "style": "tag-nerai",
+          "odds": "--"
+        },
+        {
+          "num": "2 - 5 - 1",
+          "tag": "狙い",
+          "style": "tag-nerai",
+          "odds": "--"
+        },
+        {
+          "num": "5 - 1 - 2",
+          "tag": "穴",
+          "style": "tag-ana",
+          "odds": "--"
+        },
+        {
+          "num": "5 - 2 - 1",
+          "tag": "穴",
+          "style": "tag-ana",
+          "odds": "--"
+        },
+        {
+          "num": "3 - 1 - 2",
+          "tag": "穴",
+          "style": "tag-ana",
+          "odds": "--"
+        }
+      ]
+    },
+    "4": {
+      "close_time": "--:--",
+      "weather": {
+        "weather": "-",
+        "wind_speed": "-",
+        "wind_direction": "追い風",
+        "wave": "-"
+      },
+      "summary_tag": "【混戦模様】",
+      "racers": [
+        {
+          "name": "中村楓",
+          "rank": "B1",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 70,
+          "turn_offset": 27
+        },
+        {
+          "name": "室田泰史",
+          "rank": "A2",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 70,
+          "turn_offset": 39
+        },
+        {
+          "name": "坪内実",
+          "rank": "B1",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 60,
+          "turn_offset": 51
+        },
         {
           "name": "枝尾賢",
           "rank": "A2",
           "st": "-",
           "tilt": "-",
           "time": "-",
-          "power": 77,
-          "turn_offset": 27
-        },
-        {
-          "name": "宮崎奏磨",
-          "rank": "B2",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 58,
-          "turn_offset": 39
-        },
-        {
-          "name": "赤坂俊輔",
-          "rank": "A1",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 75,
-          "turn_offset": 51
-        },
-        {
-          "name": "池田雷太",
-          "rank": "B1",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 55,
+          "power": 62,
           "turn_offset": 63
         },
         {
@@ -833,32 +450,26 @@
           "turn_offset": 75
         },
         {
-          "name": "丸岡正典",
-          "rank": "A2",
+          "name": "齊藤廉",
+          "rank": "B1",
           "st": "-",
           "tilt": "-",
           "time": "-",
-          "power": 62,
+          "power": 55,
           "turn_offset": 87
         }
       ],
-      "comment": "1号艇【枝尾賢】が展示気配・イン信頼度ともに優勢。スタート決めて一気に逃げ切る。",
-      "sub_comment": "対抗軸は2・3号艇の差し・握りマイ。紐荒れ注意。",
+      "comment": "実力伯仲の激戦カード。軸判定は慎重に、展示STを踏み込んでいる艇を評価したい。",
+      "sub_comment": "スタート展示の行き足とスリット直後の足色を要重視。",
       "bets": [
         {
-          "num": "1 - 3 - 6",
+          "num": "1 - 2 - 4",
           "tag": "本命",
           "style": "tag-honmei",
           "odds": "--"
         },
         {
-          "num": "1 - 6 - 3",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
-        },
-        {
-          "num": "1 - 3 - 2",
+          "num": "1 - 4 - 2",
           "tag": "本命",
           "style": "tag-honmei",
           "odds": "--"
@@ -870,81 +481,88 @@
           "odds": "--"
         },
         {
-          "num": "1 - 6 - 2",
+          "num": "1 - 3 - 2",
+          "tag": "本命",
+          "style": "tag-honmei",
+          "odds": "--"
+        },
+        {
+          "num": "1 - 4 - 3",
           "tag": "狙い",
           "style": "tag-nerai",
           "odds": "--"
         },
         {
-          "num": "3 - 1 - 6",
+          "num": "2 - 1 - 4",
           "tag": "狙い",
           "style": "tag-nerai",
           "odds": "--"
         },
         {
-          "num": "3 - 6 - 1",
+          "num": "2 - 4 - 1",
           "tag": "狙い",
           "style": "tag-nerai",
           "odds": "--"
         },
         {
-          "num": "6 - 1 - 3",
+          "num": "4 - 1 - 2",
           "tag": "穴",
           "style": "tag-ana",
           "odds": "--"
         },
         {
-          "num": "6 - 3 - 1",
+          "num": "4 - 2 - 1",
           "tag": "穴",
           "style": "tag-ana",
           "odds": "--"
         },
         {
-          "num": "2 - 1 - 3",
+          "num": "3 - 1 - 2",
           "tag": "穴",
           "style": "tag-ana",
           "odds": "--"
         }
       ]
     },
-    "8": {
+    "5": {
+      "close_time": "--:--",
       "weather": {
         "weather": "-",
-        "wind_speed": "3m",
+        "wind_speed": "-",
         "wind_direction": "追い風",
-        "wave": "5cm"
+        "wave": "-"
       },
-      "summary_tag": "【本命濃厚】",
+      "summary_tag": "【混戦模様】",
       "racers": [
         {
-          "name": "森定晃史",
+          "name": "松本庸平",
+          "rank": "B1",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 70,
+          "turn_offset": 27
+        },
+        {
+          "name": "平見真彦",
           "rank": "A2",
           "st": "-",
           "tilt": "-",
           "time": "-",
-          "power": 77,
-          "turn_offset": 27
-        },
-        {
-          "name": "中村泰平",
-          "rank": "A1",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 78,
+          "power": 70,
           "turn_offset": 39
         },
         {
-          "name": "堀本裕也",
-          "rank": "B2",
+          "name": "田中堅",
+          "rank": "B1",
           "st": "-",
           "tilt": "-",
           "time": "-",
-          "power": 55,
+          "power": 60,
           "turn_offset": 51
         },
         {
-          "name": "鐘ヶ江真司",
+          "name": "豊田祥生",
           "rank": "B1",
           "st": "-",
           "tilt": "-",
@@ -953,7 +571,7 @@
           "turn_offset": 63
         },
         {
-          "name": "高橋直哉",
+          "name": "田頭虎親",
           "rank": "B1",
           "st": "-",
           "tilt": "-",
@@ -962,34 +580,46 @@
           "turn_offset": 75
         },
         {
-          "name": "室田泰史",
-          "rank": "A2",
+          "name": "渡邉俊介",
+          "rank": "A1",
           "st": "-",
           "tilt": "-",
           "time": "-",
-          "power": 62,
+          "power": 70,
           "turn_offset": 87
         }
       ],
-      "comment": "1号艇【森定晃史】が展示気配・イン信頼度ともに優勢。スタート決めて一気に逃げ切る。",
-      "sub_comment": "対抗軸は2・3号艇の差し・握りマイ。紐荒れ注意。",
+      "comment": "実力伯仲の激戦カード。軸判定は慎重に、展示STを踏み込んでいる艇を評価したい。",
+      "sub_comment": "スタート展示の行き足とスリット直後の足色を要重視。",
       "bets": [
         {
-          "num": "2 - 1 - 1",
+          "num": "1 - 2 - 6",
           "tag": "本命",
           "style": "tag-honmei",
           "odds": "--"
         },
         {
-          "num": "2 - 1 - 1",
+          "num": "1 - 6 - 2",
           "tag": "本命",
           "style": "tag-honmei",
           "odds": "--"
         },
         {
-          "num": "1 - 2 - 1",
+          "num": "1 - 2 - 3",
           "tag": "本命",
           "style": "tag-honmei",
+          "odds": "--"
+        },
+        {
+          "num": "1 - 3 - 2",
+          "tag": "本命",
+          "style": "tag-honmei",
+          "odds": "--"
+        },
+        {
+          "num": "1 - 6 - 3",
+          "tag": "狙い",
+          "style": "tag-nerai",
           "odds": "--"
         },
         {
@@ -999,21 +629,15 @@
           "odds": "--"
         },
         {
-          "num": "1 - 2 - 1",
+          "num": "2 - 6 - 1",
           "tag": "狙い",
           "style": "tag-nerai",
           "odds": "--"
         },
         {
-          "num": "1 - 1 - 2",
-          "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
-        },
-        {
-          "num": "1 - 1 - 6",
-          "tag": "狙い",
-          "style": "tag-nerai",
+          "num": "6 - 1 - 2",
+          "tag": "穴",
+          "style": "tag-ana",
           "odds": "--"
         },
         {
@@ -1023,36 +647,49 @@
           "odds": "--"
         },
         {
-          "num": "6 - 1 - 1",
-          "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
-        },
-        {
-          "num": "1 - 6 - 3",
+          "num": "3 - 1 - 2",
           "tag": "穴",
           "style": "tag-ana",
           "odds": "--"
         }
       ]
     },
-    "9": {
+    "6": {
+      "close_time": "--:--",
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "-",
         "wind_direction": "追い風",
-        "wave": "5cm"
+        "wave": "-"
       },
       "summary_tag": "【本命濃厚】",
       "racers": [
         {
-          "name": "三嶌誠司",
+          "name": "戸塚邦好",
           "rank": "A2",
           "st": "-",
           "tilt": "-",
           "time": "-",
           "power": 77,
           "turn_offset": 27
+        },
+        {
+          "name": "中野夢斗",
+          "rank": "B1",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 63,
+          "turn_offset": 39
+        },
+        {
+          "name": "吉田宗弘",
+          "rank": "B1",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 60,
+          "turn_offset": 51
         },
         {
           "name": "鶴本崇文",
@@ -1060,8 +697,8 @@
           "st": "-",
           "tilt": "-",
           "time": "-",
-          "power": 78,
-          "turn_offset": 39
+          "power": 70,
+          "turn_offset": 63
         },
         {
           "name": "佐竹太一",
@@ -1069,29 +706,11 @@
           "st": "-",
           "tilt": "-",
           "time": "-",
-          "power": 60,
-          "turn_offset": 51
-        },
-        {
-          "name": "田中堅",
-          "rank": "B1",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
           "power": 55,
-          "turn_offset": 63
-        },
-        {
-          "name": "平見真彦",
-          "rank": "A2",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 62,
           "turn_offset": 75
         },
         {
-          "name": "眞崎武蔵",
+          "name": "鐘ヶ江真司",
           "rank": "B1",
           "st": "-",
           "tilt": "-",
@@ -1100,265 +719,7 @@
           "turn_offset": 87
         }
       ],
-      "comment": "1号艇【三嶌誠司】が展示気配・イン信頼度ともに優勢。スタート決めて一気に逃げ切る。",
-      "sub_comment": "対抗軸は2・3号艇の差し・握りマイ。紐荒れ注意。",
-      "bets": [
-        {
-          "num": "2 - 1 - 1",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
-        },
-        {
-          "num": "2 - 1 - 1",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
-        },
-        {
-          "num": "1 - 2 - 1",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
-        },
-        {
-          "num": "2 - 1 - 5",
-          "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
-        },
-        {
-          "num": "1 - 2 - 1",
-          "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
-        },
-        {
-          "num": "1 - 1 - 2",
-          "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
-        },
-        {
-          "num": "1 - 1 - 5",
-          "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
-        },
-        {
-          "num": "5 - 2 - 1",
-          "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
-        },
-        {
-          "num": "5 - 1 - 1",
-          "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
-        },
-        {
-          "num": "1 - 5 - 3",
-          "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
-        }
-      ]
-    },
-    "10": {
-      "weather": {
-        "weather": "-",
-        "wind_speed": "2m",
-        "wind_direction": "追い風",
-        "wave": "5cm"
-      },
-      "summary_tag": "【本命濃厚】",
-      "racers": [
-        {
-          "name": "野中一平",
-          "rank": "A2",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 77,
-          "turn_offset": 27
-        },
-        {
-          "name": "坪内実",
-          "rank": "B1",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 63,
-          "turn_offset": 39
-        },
-        {
-          "name": "平田健之佑",
-          "rank": "A2",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 67,
-          "turn_offset": 51
-        },
-        {
-          "name": "鳥居塚孝博",
-          "rank": "A2",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 62,
-          "turn_offset": 63
-        },
-        {
-          "name": "角山雄哉",
-          "rank": "B1",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 55,
-          "turn_offset": 75
-        },
-        {
-          "name": "山口達也",
-          "rank": "A1",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 70,
-          "turn_offset": 87
-        }
-      ],
-      "comment": "1号艇【野中一平】が展示気配・イン信頼度ともに優勢。スタート決めて一気に逃げ切る。",
-      "sub_comment": "対抗軸は2・3号艇の差し・握りマイ。紐荒れ注意。",
-      "bets": [
-        {
-          "num": "1 - 6 - 3",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
-        },
-        {
-          "num": "1 - 3 - 6",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
-        },
-        {
-          "num": "1 - 6 - 2",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
-        },
-        {
-          "num": "1 - 2 - 6",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
-        },
-        {
-          "num": "1 - 3 - 2",
-          "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
-        },
-        {
-          "num": "6 - 1 - 3",
-          "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
-        },
-        {
-          "num": "6 - 3 - 1",
-          "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
-        },
-        {
-          "num": "3 - 1 - 6",
-          "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
-        },
-        {
-          "num": "3 - 6 - 1",
-          "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
-        },
-        {
-          "num": "2 - 1 - 6",
-          "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
-        }
-      ]
-    },
-    "11": {
-      "weather": {
-        "weather": "-",
-        "wind_speed": "2m",
-        "wind_direction": "追い風",
-        "wave": "5cm"
-      },
-      "summary_tag": "【本命濃厚】",
-      "racers": [
-        {
-          "name": "重木輝彦",
-          "rank": "A1",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 85,
-          "turn_offset": 27
-        },
-        {
-          "name": "田頭虎親",
-          "rank": "B1",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 63,
-          "turn_offset": 39
-        },
-        {
-          "name": "東口晃",
-          "rank": "B1",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 60,
-          "turn_offset": 51
-        },
-        {
-          "name": "渡邉俊介",
-          "rank": "A1",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 70,
-          "turn_offset": 63
-        },
-        {
-          "name": "丸岡正典",
-          "rank": "A2",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 62,
-          "turn_offset": 75
-        },
-        {
-          "name": "山本英志",
-          "rank": "A2",
-          "st": "-",
-          "tilt": "-",
-          "time": "-",
-          "power": 62,
-          "turn_offset": 87
-        }
-      ],
-      "comment": "1号艇【重木輝彦】が展示気配・イン信頼度ともに優勢。スタート決めて一気に逃げ切る。",
+      "comment": "1号艇【戸塚邦好】が展示気配・イン信頼度ともに優勢。スタート決めて一気に逃げ切る。",
       "sub_comment": "対抗軸は2・3号艇の差し・握りマイ。紐荒れ注意。",
       "bets": [
         {
@@ -1374,19 +735,19 @@
           "odds": "--"
         },
         {
-          "num": "1 - 4 - 5",
+          "num": "1 - 4 - 3",
           "tag": "本命",
           "style": "tag-honmei",
           "odds": "--"
         },
         {
-          "num": "1 - 5 - 4",
+          "num": "1 - 3 - 4",
           "tag": "本命",
           "style": "tag-honmei",
           "odds": "--"
         },
         {
-          "num": "1 - 2 - 5",
+          "num": "1 - 2 - 3",
           "tag": "狙い",
           "style": "tag-nerai",
           "odds": "--"
@@ -1416,33 +777,34 @@
           "odds": "--"
         },
         {
-          "num": "5 - 1 - 4",
+          "num": "3 - 1 - 4",
           "tag": "穴",
           "style": "tag-ana",
           "odds": "--"
         }
       ]
     },
-    "12": {
+    "7": {
+      "close_time": "--:--",
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "-",
         "wind_direction": "追い風",
-        "wave": "5cm"
+        "wave": "-"
       },
-      "summary_tag": "【本命濃厚】",
+      "summary_tag": "【混戦模様】",
       "racers": [
         {
-          "name": "赤坂俊輔",
-          "rank": "A1",
+          "name": "堀本裕也",
+          "rank": "B2",
           "st": "-",
           "tilt": "-",
           "time": "-",
-          "power": 85,
+          "power": 65,
           "turn_offset": 27
         },
         {
-          "name": "齊藤廉",
+          "name": "東口晃",
           "rank": "B1",
           "st": "-",
           "tilt": "-",
@@ -1451,16 +813,276 @@
           "turn_offset": 39
         },
         {
+          "name": "野中一平",
+          "rank": "A2",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 67,
+          "turn_offset": 51
+        },
+        {
+          "name": "中野孝二",
+          "rank": "B1",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 55,
+          "turn_offset": 63
+        },
+        {
+          "name": "塚越陸斗",
+          "rank": "B2",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 50,
+          "turn_offset": 75
+        },
+        {
+          "name": "赤坂俊輔",
+          "rank": "A1",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 70,
+          "turn_offset": 87
+        }
+      ],
+      "comment": "実力伯仲の激戦カード。軸判定は慎重に、展示STを踏み込んでいる艇を評価したい。",
+      "sub_comment": "スタート展示の行き足とスリット直後の足色を要重視。",
+      "bets": [
+        {
+          "num": "6 - 1 - 3",
+          "tag": "本命",
+          "style": "tag-honmei",
+          "odds": "--"
+        },
+        {
+          "num": "6 - 3 - 1",
+          "tag": "本命",
+          "style": "tag-honmei",
+          "odds": "--"
+        },
+        {
+          "num": "1 - 6 - 3",
+          "tag": "本命",
+          "style": "tag-honmei",
+          "odds": "--"
+        },
+        {
+          "num": "6 - 3 - 1",
+          "tag": "狙い",
+          "style": "tag-nerai",
+          "odds": "--"
+        },
+        {
+          "num": "3 - 6 - 1",
+          "tag": "狙い",
+          "style": "tag-nerai",
+          "odds": "--"
+        },
+        {
+          "num": "1 - 3 - 6",
+          "tag": "狙い",
+          "style": "tag-nerai",
+          "odds": "--"
+        },
+        {
+          "num": "3 - 1 - 1",
+          "tag": "狙い",
+          "style": "tag-nerai",
+          "odds": "--"
+        },
+        {
+          "num": "1 - 6 - 1",
+          "tag": "穴",
+          "style": "tag-ana",
+          "odds": "--"
+        },
+        {
+          "num": "1 - 3 - 1",
+          "tag": "穴",
+          "style": "tag-ana",
+          "odds": "--"
+        },
+        {
+          "num": "1 - 1 - 2",
+          "tag": "穴",
+          "style": "tag-ana",
+          "odds": "--"
+        }
+      ]
+    },
+    "8": {
+      "close_time": "--:--",
+      "weather": {
+        "weather": "-",
+        "wind_speed": "-",
+        "wind_direction": "追い風",
+        "wave": "-"
+      },
+      "summary_tag": "【本命濃厚】",
+      "racers": [
+        {
+          "name": "南佑典",
+          "rank": "A2",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 77,
+          "turn_offset": 27
+        },
+        {
+          "name": "池田雷太",
+          "rank": "B1",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 63,
+          "turn_offset": 39
+        },
+        {
+          "name": "山口隆史",
+          "rank": "B1",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 60,
+          "turn_offset": 51
+        },
+        {
+          "name": "高橋直哉",
+          "rank": "B1",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 55,
+          "turn_offset": 63
+        },
+        {
+          "name": "中村楓",
+          "rank": "B1",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 55,
+          "turn_offset": 75
+        },
+        {
           "name": "佐々木大河",
           "rank": "A1",
           "st": "-",
           "tilt": "-",
           "time": "-",
-          "power": 75,
+          "power": 70,
+          "turn_offset": 87
+        }
+      ],
+      "comment": "1号艇【南佑典】が展示気配・イン信頼度ともに優勢。スタート決めて一気に逃げ切る。",
+      "sub_comment": "対抗軸は2・3号艇の差し・握りマイ。紐荒れ注意。",
+      "bets": [
+        {
+          "num": "1 - 6 - 2",
+          "tag": "本命",
+          "style": "tag-honmei",
+          "odds": "--"
+        },
+        {
+          "num": "1 - 2 - 6",
+          "tag": "本命",
+          "style": "tag-honmei",
+          "odds": "--"
+        },
+        {
+          "num": "1 - 6 - 3",
+          "tag": "本命",
+          "style": "tag-honmei",
+          "odds": "--"
+        },
+        {
+          "num": "1 - 3 - 6",
+          "tag": "本命",
+          "style": "tag-honmei",
+          "odds": "--"
+        },
+        {
+          "num": "1 - 2 - 3",
+          "tag": "狙い",
+          "style": "tag-nerai",
+          "odds": "--"
+        },
+        {
+          "num": "6 - 1 - 2",
+          "tag": "狙い",
+          "style": "tag-nerai",
+          "odds": "--"
+        },
+        {
+          "num": "6 - 2 - 1",
+          "tag": "狙い",
+          "style": "tag-nerai",
+          "odds": "--"
+        },
+        {
+          "num": "2 - 1 - 6",
+          "tag": "穴",
+          "style": "tag-ana",
+          "odds": "--"
+        },
+        {
+          "num": "2 - 6 - 1",
+          "tag": "穴",
+          "style": "tag-ana",
+          "odds": "--"
+        },
+        {
+          "num": "3 - 1 - 6",
+          "tag": "穴",
+          "style": "tag-ana",
+          "odds": "--"
+        }
+      ]
+    },
+    "9": {
+      "close_time": "--:--",
+      "weather": {
+        "weather": "-",
+        "wind_speed": "-",
+        "wind_direction": "追い風",
+        "wave": "-"
+      },
+      "summary_tag": "【本命濃厚】",
+      "racers": [
+        {
+          "name": "山本英志",
+          "rank": "A2",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 77,
+          "turn_offset": 27
+        },
+        {
+          "name": "平田健之佑",
+          "rank": "A2",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 70,
+          "turn_offset": 39
+        },
+        {
+          "name": "三嶌誠司",
+          "rank": "A2",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 67,
           "turn_offset": 51
         },
         {
-          "name": "戸塚邦好",
+          "name": "室田泰史",
           "rank": "A2",
           "st": "-",
           "tilt": "-",
@@ -1469,16 +1091,16 @@
           "turn_offset": 63
         },
         {
-          "name": "南佑典",
-          "rank": "A2",
+          "name": "増田進",
+          "rank": "B1",
           "st": "-",
           "tilt": "-",
           "time": "-",
-          "power": 62,
+          "power": 55,
           "turn_offset": 75
         },
         {
-          "name": "中野夢斗",
+          "name": "田頭虎親",
           "rank": "B1",
           "st": "-",
           "tilt": "-",
@@ -1487,7 +1109,137 @@
           "turn_offset": 87
         }
       ],
-      "comment": "1号艇【赤坂俊輔】が展示気配・イン信頼度ともに優勢。スタート決めて一気に逃げ切る。",
+      "comment": "1号艇【山本英志】が展示気配・イン信頼度ともに優勢。スタート決めて一気に逃げ切る。",
+      "sub_comment": "対抗軸は2・3号艇の差し・握りマイ。紐荒れ注意。",
+      "bets": [
+        {
+          "num": "1 - 2 - 3",
+          "tag": "本命",
+          "style": "tag-honmei",
+          "odds": "--"
+        },
+        {
+          "num": "1 - 3 - 2",
+          "tag": "本命",
+          "style": "tag-honmei",
+          "odds": "--"
+        },
+        {
+          "num": "1 - 2 - 4",
+          "tag": "本命",
+          "style": "tag-honmei",
+          "odds": "--"
+        },
+        {
+          "num": "1 - 4 - 2",
+          "tag": "本命",
+          "style": "tag-honmei",
+          "odds": "--"
+        },
+        {
+          "num": "1 - 3 - 4",
+          "tag": "狙い",
+          "style": "tag-nerai",
+          "odds": "--"
+        },
+        {
+          "num": "2 - 1 - 3",
+          "tag": "狙い",
+          "style": "tag-nerai",
+          "odds": "--"
+        },
+        {
+          "num": "2 - 3 - 1",
+          "tag": "狙い",
+          "style": "tag-nerai",
+          "odds": "--"
+        },
+        {
+          "num": "3 - 1 - 2",
+          "tag": "穴",
+          "style": "tag-ana",
+          "odds": "--"
+        },
+        {
+          "num": "3 - 2 - 1",
+          "tag": "穴",
+          "style": "tag-ana",
+          "odds": "--"
+        },
+        {
+          "num": "4 - 1 - 2",
+          "tag": "穴",
+          "style": "tag-ana",
+          "odds": "--"
+        }
+      ]
+    },
+    "10": {
+      "close_time": "--:--",
+      "weather": {
+        "weather": "-",
+        "wind_speed": "-",
+        "wind_direction": "追い風",
+        "wave": "-"
+      },
+      "summary_tag": "【本命濃厚】",
+      "racers": [
+        {
+          "name": "平見真彦",
+          "rank": "A2",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 77,
+          "turn_offset": 27
+        },
+        {
+          "name": "佐竹太一",
+          "rank": "B1",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 63,
+          "turn_offset": 39
+        },
+        {
+          "name": "山口達也",
+          "rank": "A1",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 75,
+          "turn_offset": 51
+        },
+        {
+          "name": "森雄利",
+          "rank": "B1",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 55,
+          "turn_offset": 63
+        },
+        {
+          "name": "枝尾賢",
+          "rank": "A2",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 62,
+          "turn_offset": 75
+        },
+        {
+          "name": "有山望",
+          "rank": "B1",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 55,
+          "turn_offset": 87
+        }
+      ],
+      "comment": "1号艇【平見真彦】が展示気配・イン信頼度ともに優勢。スタート決めて一気に逃げ切る。",
       "sub_comment": "対抗軸は2・3号艇の差し・握りマイ。紐荒れ注意。",
       "bets": [
         {
@@ -1503,19 +1255,19 @@
           "odds": "--"
         },
         {
-          "num": "1 - 3 - 4",
+          "num": "1 - 3 - 5",
           "tag": "本命",
           "style": "tag-honmei",
           "odds": "--"
         },
         {
-          "num": "1 - 4 - 3",
+          "num": "1 - 5 - 3",
           "tag": "本命",
           "style": "tag-honmei",
           "odds": "--"
         },
         {
-          "num": "1 - 2 - 4",
+          "num": "1 - 2 - 5",
           "tag": "狙い",
           "style": "tag-nerai",
           "odds": "--"
@@ -1545,7 +1297,267 @@
           "odds": "--"
         },
         {
-          "num": "4 - 1 - 3",
+          "num": "5 - 1 - 3",
+          "tag": "穴",
+          "style": "tag-ana",
+          "odds": "--"
+        }
+      ]
+    },
+    "11": {
+      "close_time": "--:--",
+      "weather": {
+        "weather": "-",
+        "wind_speed": "-",
+        "wind_direction": "追い風",
+        "wave": "-"
+      },
+      "summary_tag": "【本命濃厚】",
+      "racers": [
+        {
+          "name": "鶴本崇文",
+          "rank": "A1",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 85,
+          "turn_offset": 27
+        },
+        {
+          "name": "長尾京志郎",
+          "rank": "B1",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 63,
+          "turn_offset": 39
+        },
+        {
+          "name": "齊藤廉",
+          "rank": "B1",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 60,
+          "turn_offset": 51
+        },
+        {
+          "name": "森定晃史",
+          "rank": "A2",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 62,
+          "turn_offset": 63
+        },
+        {
+          "name": "渡邉俊介",
+          "rank": "A1",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 70,
+          "turn_offset": 75
+        },
+        {
+          "name": "鳥居塚孝博",
+          "rank": "A2",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 62,
+          "turn_offset": 87
+        }
+      ],
+      "comment": "1号艇【鶴本崇文】が展示気配・イン信頼度ともに優勢。スタート決めて一気に逃げ切る。",
+      "sub_comment": "対抗軸は2・3号艇の差し・握りマイ。紐荒れ注意。",
+      "bets": [
+        {
+          "num": "1 - 5 - 2",
+          "tag": "本命",
+          "style": "tag-honmei",
+          "odds": "--"
+        },
+        {
+          "num": "1 - 2 - 5",
+          "tag": "本命",
+          "style": "tag-honmei",
+          "odds": "--"
+        },
+        {
+          "num": "1 - 5 - 4",
+          "tag": "本命",
+          "style": "tag-honmei",
+          "odds": "--"
+        },
+        {
+          "num": "1 - 4 - 5",
+          "tag": "本命",
+          "style": "tag-honmei",
+          "odds": "--"
+        },
+        {
+          "num": "1 - 2 - 4",
+          "tag": "狙い",
+          "style": "tag-nerai",
+          "odds": "--"
+        },
+        {
+          "num": "5 - 1 - 2",
+          "tag": "狙い",
+          "style": "tag-nerai",
+          "odds": "--"
+        },
+        {
+          "num": "5 - 2 - 1",
+          "tag": "狙い",
+          "style": "tag-nerai",
+          "odds": "--"
+        },
+        {
+          "num": "2 - 1 - 5",
+          "tag": "穴",
+          "style": "tag-ana",
+          "odds": "--"
+        },
+        {
+          "num": "2 - 5 - 1",
+          "tag": "穴",
+          "style": "tag-ana",
+          "odds": "--"
+        },
+        {
+          "num": "4 - 1 - 5",
+          "tag": "穴",
+          "style": "tag-ana",
+          "odds": "--"
+        }
+      ]
+    },
+    "12": {
+      "close_time": "--:--",
+      "weather": {
+        "weather": "-",
+        "wind_speed": "-",
+        "wind_direction": "追い風",
+        "wave": "-"
+      },
+      "summary_tag": "【本命濃厚】",
+      "racers": [
+        {
+          "name": "北野輝季",
+          "rank": "A1",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 85,
+          "turn_offset": 27
+        },
+        {
+          "name": "戸塚邦好",
+          "rank": "A2",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 70,
+          "turn_offset": 39
+        },
+        {
+          "name": "丸岡正典",
+          "rank": "A2",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 67,
+          "turn_offset": 51
+        },
+        {
+          "name": "眞崎武蔵",
+          "rank": "B1",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 55,
+          "turn_offset": 63
+        },
+        {
+          "name": "松本庸平",
+          "rank": "B1",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 55,
+          "turn_offset": 75
+        },
+        {
+          "name": "野中一平",
+          "rank": "A2",
+          "st": "-",
+          "tilt": "-",
+          "time": "-",
+          "power": 62,
+          "turn_offset": 87
+        }
+      ],
+      "comment": "1号艇【北野輝季】が展示気配・イン信頼度ともに優勢。スタート決めて一気に逃げ切る。",
+      "sub_comment": "対抗軸は2・3号艇の差し・握りマイ。紐荒れ注意。",
+      "bets": [
+        {
+          "num": "1 - 2 - 3",
+          "tag": "本命",
+          "style": "tag-honmei",
+          "odds": "--"
+        },
+        {
+          "num": "1 - 3 - 2",
+          "tag": "本命",
+          "style": "tag-honmei",
+          "odds": "--"
+        },
+        {
+          "num": "1 - 2 - 6",
+          "tag": "本命",
+          "style": "tag-honmei",
+          "odds": "--"
+        },
+        {
+          "num": "1 - 6 - 2",
+          "tag": "本命",
+          "style": "tag-honmei",
+          "odds": "--"
+        },
+        {
+          "num": "1 - 3 - 6",
+          "tag": "狙い",
+          "style": "tag-nerai",
+          "odds": "--"
+        },
+        {
+          "num": "2 - 1 - 3",
+          "tag": "狙い",
+          "style": "tag-nerai",
+          "odds": "--"
+        },
+        {
+          "num": "2 - 3 - 1",
+          "tag": "狙い",
+          "style": "tag-nerai",
+          "odds": "--"
+        },
+        {
+          "num": "3 - 1 - 2",
+          "tag": "穴",
+          "style": "tag-ana",
+          "odds": "--"
+        },
+        {
+          "num": "3 - 2 - 1",
+          "tag": "穴",
+          "style": "tag-ana",
+          "odds": "--"
+        },
+        {
+          "num": "6 - 1 - 2",
           "tag": "穴",
           "style": "tag-ana",
           "odds": "--"
