@@ -2,12 +2,12 @@
   "date": "20260919",
   "stadium_code": "04",
   "stadium_name": "平和島",
-  "cache_buster": "1789788498171",
+  "cache_buster": "1789791283304",
   "races": {
     "1": {
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "4m",
         "wind_direction": "追い風",
         "wave": "3cm"
       },
@@ -523,7 +523,7 @@
     "5": {
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
         "wave": "3cm"
       },
@@ -652,7 +652,7 @@
     "6": {
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "4m",
         "wind_direction": "追い風",
         "wave": "3cm"
       },
@@ -781,7 +781,7 @@
     "7": {
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "4m",
         "wind_direction": "追い風",
         "wave": "3cm"
       },
@@ -910,7 +910,7 @@
     "8": {
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "4m",
         "wind_direction": "追い風",
         "wave": "3cm"
       },
@@ -1039,7 +1039,7 @@
     "9": {
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "4m",
         "wind_direction": "追い風",
         "wave": "3cm"
       },
@@ -1168,7 +1168,7 @@
     "10": {
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "4m",
         "wind_direction": "追い風",
         "wave": "3cm"
       },
@@ -1297,7 +1297,7 @@
     "11": {
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "4m",
         "wind_direction": "追い風",
         "wave": "3cm"
       },
@@ -1426,7 +1426,7 @@
     "12": {
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "4m",
         "wind_direction": "追い風",
         "wave": "3cm"
       },

@@ -2,7 +2,7 @@
   "date": "20260919",
   "stadium_code": "23",
   "stadium_name": "唐津",
-  "cache_buster": "1789788498171",
+  "cache_buster": "1789791283304",
   "races": {
     "1": {
       "weather": {
@@ -1297,9 +1297,9 @@
     "11": {
       "weather": {
         "weather": "-",
-        "wind_speed": "5m",
+        "wind_speed": "4m",
         "wind_direction": "追い風",
-        "wave": "5cm"
+        "wave": "4cm"
       },
       "summary_tag": "【本命濃厚】",
       "racers": [
@@ -1426,9 +1426,9 @@
     "12": {
       "weather": {
         "weather": "-",
-        "wind_speed": "5m",
+        "wind_speed": "4m",
         "wind_direction": "追い風",
-        "wave": "5cm"
+        "wave": "4cm"
       },
       "summary_tag": "【捲り一閃】",
       "racers": [

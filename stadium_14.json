@@ -2,14 +2,14 @@
   "date": "20260919",
   "stadium_code": "14",
   "stadium_name": "鳴門",
-  "cache_buster": "1789788498171",
+  "cache_buster": "1789791283304",
   "races": {
     "1": {
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "4m",
         "wind_direction": "追い風",
-        "wave": "2cm"
+        "wave": "4cm"
       },
       "summary_tag": "【本命濃厚】",
       "racers": [
@@ -1168,9 +1168,9 @@
     "10": {
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "4m",
         "wind_direction": "追い風",
-        "wave": "2cm"
+        "wave": "4cm"
       },
       "summary_tag": "【捲り一閃】",
       "racers": [
@@ -1297,9 +1297,9 @@
     "11": {
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
-        "wave": "2cm"
+        "wave": "3cm"
       },
       "summary_tag": "【本命濃厚】",
       "racers": [
@@ -1426,9 +1426,9 @@
     "12": {
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
-        "wave": "2cm"
+        "wave": "3cm"
       },
       "summary_tag": "【捲り一閃】",
       "racers": [
