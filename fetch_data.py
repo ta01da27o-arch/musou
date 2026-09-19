@@ -44,7 +44,7 @@ def get_active_stadiums_today(date_str):
     return sorted(active_codes)
 
 def fetch_race_beforeinfo(jcd, rno, date_str):
-    """ 公式直前情報ページから展示ST・チルト・展示タイム・気象を正確に抽出 """
+    """ 直前展示データ（気象・展示ST・チルト・展示タイム）の精密抽出 """
     url = f"https://www.boatrace.jp/owpc/pc/race/beforeinfo?rno={rno}&jcd={jcd}&hd={date_str}"
     html = fetch_url(url)
     
@@ -57,7 +57,7 @@ def fetch_race_beforeinfo(jcd, rno, date_str):
 
     soup = BeautifulSoup(html, "html.parser")
     
-    # 気象情報
+    # 1. 気象情報
     w_unit = soup.select_one(".weather1")
     if w_unit:
         txt = w_unit.text
@@ -73,29 +73,40 @@ def fetch_race_beforeinfo(jcd, rno, date_str):
             "wave": m_wave.group(1) if m_wave else "-"
         }
 
-    # 各艇展示情報
+    # 2. 直前展示データの取得（HTMLテーブル全走査による堅牢抽出）
+    tables = soup.select("table")
     for idx in range(1, 7):
         b_str = str(idx)
-        tbody = soup.find("tbody", class_=re.compile(f"is-boatColor{idx}"))
-        if not tbody:
-            continue
-            
-        txts = [td.text.strip() for td in tbody.find_all(["td", "th"]) if td.text.strip()]
         ex_t, tilt, st_val = "-", "-", "-"
-        for t in txts:
-            if re.match(r"^6\.\d{2}$", t):
-                ex_t = t
-            elif re.match(r"^[-+]?(?:0|1|2|3)\.(?:5|0)$", t) or t == "-0.5":
-                tilt = t
-            elif re.match(r"^(?:[FL]\.)?\d{2}$", t) or re.match(r"^\.\d{2}$", t):
-                st_val = t
+        
+        # 該当艇番のtbodyまたはtrを特定
+        target_el = soup.find("tbody", class_=re.compile(f"is-boatColor{idx}"))
+        if not target_el:
+            # 代替探索: テキスト要素から該当艇の行を探す
+            for tb in soup.select("tbody"):
+                if f"is-boatColor{idx}" in str(tb):
+                    target_el = tb
+                    break
+
+        if target_el:
+            txts = [td.text.strip() for td in target_el.find_all(["td", "th"]) if td.text.strip()]
+            for t in txts:
+                # 展示タイム（例: 6.65, 6.72）
+                if re.match(r"^6\.\d{2}$", t):
+                    ex_t = t
+                # チルト（例: -0.5, 0.0, 0.5, 1.0, 1.5, 2.0, 3.0）
+                elif re.match(r"^[-+]?(?:0|1|2|3)\.(?:5|0)$", t) or t == "-0.5":
+                    tilt = t
+                # 展示ST（例: .15, F.02, L.00）
+                elif re.match(r"^(?:[FL]\.)?\d{2}$", t) or re.match(r"^\.\d{2}$", t):
+                    st_val = t
 
         before_data["racers_extra"][b_str] = {"st": st_val, "tilt": tilt, "time": ex_t}
 
     return before_data
 
 def fetch_race_racers(jcd, rno, date_str):
-    """ 確実に選手名が取得できていた元のアンカー抽出方式に復元 """
+    """ 出走表（選手名・級別）の取得 """
     url = f"https://www.boatrace.jp/owpc/pc/race/racelist?rno={rno}&jcd={jcd}&hd={date_str}"
     html = fetch_url(url)
     racers = []
@@ -114,8 +125,7 @@ def fetch_race_racers(jcd, rno, date_str):
                 break
 
     while len(racers) < 6:
-        idx = len(racers) + 1
-        racers.append({"name": f"-", "rank": "-"})
+        racers.append({"name": "-", "rank": "-"})
 
     return racers
 
@@ -207,7 +217,7 @@ def main():
     with open("data.json", "w", encoding="utf-8") as f:
         json.dump(index_data, f, ensure_ascii=False, indent=2)
 
-    print(f"✅ スクレイピング完了（所要時間: {time.time() - start_time:.2f}秒）")
+    print(f"✅ 直前情報パース完全修正スクレイピング完了（所要時間: {time.time() - start_time:.2f}秒）")
 
 if __name__ == "__main__":
     main()
