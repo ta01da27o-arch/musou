@@ -2,12 +2,12 @@
   "date": "20260919",
   "stadium_code": "12",
   "stadium_name": "住之江",
-  "cache_buster": "1789807901444",
+  "cache_buster": "1789821094499",
   "races": {
     "1": {
       "weather": {
         "weather": "-",
-        "wind_speed": "0m",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
         "wave": "1cm"
       },
@@ -910,7 +910,7 @@
     "8": {
       "weather": {
         "weather": "-",
-        "wind_speed": "0m",
+        "wind_speed": "1m",
         "wind_direction": "追い風",
         "wave": "1cm"
       },
@@ -1039,7 +1039,7 @@
     "9": {
       "weather": {
         "weather": "-",
-        "wind_speed": "0m",
+        "wind_speed": "1m",
         "wind_direction": "追い風",
         "wave": "1cm"
       },
@@ -1168,9 +1168,9 @@
     "10": {
       "weather": {
         "weather": "-",
-        "wind_speed": "0m",
+        "wind_speed": "4m",
         "wind_direction": "追い風",
-        "wave": "1cm"
+        "wave": "2cm"
       },
       "summary_tag": "【本命濃厚】",
       "racers": [
@@ -1297,7 +1297,7 @@
     "11": {
       "weather": {
         "weather": "-",
-        "wind_speed": "0m",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
         "wave": "1cm"
       },
@@ -1426,7 +1426,7 @@
     "12": {
       "weather": {
         "weather": "-",
-        "wind_speed": "0m",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
         "wave": "1cm"
       },
