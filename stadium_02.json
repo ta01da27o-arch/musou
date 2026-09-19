@@ -2,12 +2,12 @@
   "date": "20260919",
   "stadium_code": "02",
   "stadium_name": "戸田",
-  "cache_buster": "1789781350709",
+  "cache_buster": "1789787107397",
   "races": {
     "1": {
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "1m",
         "wind_direction": "追い風",
         "wave": "1cm"
       },
@@ -17,8 +17,8 @@
           "name": "中里昌志",
           "rank": "A1",
           "st": "-",
-          "tilt": "-",
-          "time": "-",
+          "tilt": "0.0",
+          "time": "6.71",
           "power": 85,
           "turn_offset": 30
         },
@@ -26,8 +26,8 @@
           "name": "根岸真優",
           "rank": "A1",
           "st": "-",
-          "tilt": "-",
-          "time": "-",
+          "tilt": "2.0",
+          "time": "6.71",
           "power": 85,
           "turn_offset": 40
         },
@@ -35,8 +35,8 @@
           "name": "豊田訓靖",
           "rank": "B1",
           "st": "-",
-          "tilt": "-",
-          "time": "-",
+          "tilt": "0.0",
+          "time": "6.86",
           "power": 70,
           "turn_offset": 50
         },
@@ -44,8 +44,8 @@
           "name": "石川哲秀",
           "rank": "B1",
           "st": "-",
-          "tilt": "-",
-          "time": "-",
+          "tilt": "0.0",
+          "time": "6.81",
           "power": 70,
           "turn_offset": 60
         },
@@ -53,8 +53,8 @@
           "name": "須藤隆雄",
           "rank": "B1",
           "st": "-",
-          "tilt": "-",
-          "time": "-",
+          "tilt": "0.0",
+          "time": "6.77",
           "power": 70,
           "turn_offset": 70
         },
@@ -62,8 +62,8 @@
           "name": "林風音",
           "rank": "B1",
           "st": "-",
-          "tilt": "-",
-          "time": "-",
+          "tilt": "0.0",
+          "time": "6.81",
           "power": 70,
           "turn_offset": 80
         }
@@ -136,7 +136,7 @@
     "2": {
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "1m",
         "wind_direction": "追い風",
         "wave": "1cm"
       },
@@ -146,8 +146,8 @@
           "name": "長谷川親王",
           "rank": "A1",
           "st": "-",
-          "tilt": "-",
-          "time": "-",
+          "tilt": "0.0",
+          "time": "6.61",
           "power": 85,
           "turn_offset": 30
         },
@@ -155,8 +155,8 @@
           "name": "福田雅一",
           "rank": "A1",
           "st": "-",
-          "tilt": "-",
-          "time": "-",
+          "tilt": "0.0",
+          "time": "6.65",
           "power": 85,
           "turn_offset": 40
         },
@@ -164,8 +164,8 @@
           "name": "柘植政浩",
           "rank": "B1",
           "st": "-",
-          "tilt": "-",
-          "time": "-",
+          "tilt": "0.5",
+          "time": "6.68",
           "power": 70,
           "turn_offset": 50
         },
@@ -173,8 +173,8 @@
           "name": "平田さやか",
           "rank": "B1",
           "st": "-",
-          "tilt": "-",
-          "time": "-",
+          "tilt": "0.0",
+          "time": "6.62",
           "power": 70,
           "turn_offset": 60
         },
@@ -182,8 +182,8 @@
           "name": "田中信一郎",
           "rank": "B1",
           "st": "-",
-          "tilt": "-",
-          "time": "-",
+          "tilt": "0.0",
+          "time": "6.69",
           "power": 70,
           "turn_offset": 70
         },
@@ -191,8 +191,8 @@
           "name": "板頭里緒",
           "rank": "B1",
           "st": "-",
-          "tilt": "-",
-          "time": "-",
+          "tilt": "0.0",
+          "time": "6.77",
           "power": 70,
           "turn_offset": 80
         }
@@ -275,8 +275,8 @@
           "name": "岩橋裕馬",
           "rank": "A1",
           "st": "-",
-          "tilt": "-",
-          "time": "-",
+          "tilt": "0.0",
+          "time": "6.60",
           "power": 85,
           "turn_offset": 30
         },
@@ -284,8 +284,8 @@
           "name": "盛本真輔",
           "rank": "A1",
           "st": "-",
-          "tilt": "-",
-          "time": "-",
+          "tilt": "0.0",
+          "time": "6.60",
           "power": 85,
           "turn_offset": 40
         },
@@ -293,8 +293,8 @@
           "name": "伊藤雄二",
           "rank": "B1",
           "st": "-",
-          "tilt": "-",
-          "time": "-",
+          "tilt": "2.0",
+          "time": "6.83",
           "power": 70,
           "turn_offset": 50
         },
@@ -302,8 +302,8 @@
           "name": "西野雄貴",
           "rank": "B1",
           "st": "-",
-          "tilt": "-",
-          "time": "-",
+          "tilt": "0.5",
+          "time": "6.76",
           "power": 70,
           "turn_offset": 60
         },
@@ -311,8 +311,8 @@
           "name": "松尾拓",
           "rank": "B1",
           "st": "-",
-          "tilt": "-",
-          "time": "-",
+          "tilt": "1.0",
+          "time": "6.72",
           "power": 70,
           "turn_offset": 70
         },
@@ -320,8 +320,8 @@
           "name": "黒崎竜也",
           "rank": "B1",
           "st": "-",
-          "tilt": "-",
-          "time": "-",
+          "tilt": "1.0",
+          "time": "6.69",
           "power": 70,
           "turn_offset": 80
         }
@@ -394,7 +394,7 @@
     "4": {
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "1m",
         "wind_direction": "追い風",
         "wave": "1cm"
       },
@@ -404,8 +404,8 @@
           "name": "杉村賢也",
           "rank": "A1",
           "st": "-",
-          "tilt": "-",
-          "time": "-",
+          "tilt": "0.0",
+          "time": "6.62",
           "power": 85,
           "turn_offset": 30
         },
@@ -413,8 +413,8 @@
           "name": "武富智亮",
           "rank": "A1",
           "st": "-",
-          "tilt": "-",
-          "time": "-",
+          "tilt": "0.0",
+          "time": "6.61",
           "power": 85,
           "turn_offset": 40
         },
@@ -422,8 +422,8 @@
           "name": "中嶋世奈",
           "rank": "B1",
           "st": "-",
-          "tilt": "-",
-          "time": "-",
+          "tilt": "0.0",
+          "time": "6.64",
           "power": 70,
           "turn_offset": 50
         },
@@ -431,8 +431,8 @@
           "name": "坂本雄紀",
           "rank": "B1",
           "st": "-",
-          "tilt": "-",
-          "time": "-",
+          "tilt": "0.0",
+          "time": "6.63",
           "power": 70,
           "turn_offset": 60
         },
@@ -440,8 +440,8 @@
           "name": "笠置博之",
           "rank": "B1",
           "st": "-",
-          "tilt": "-",
-          "time": "-",
+          "tilt": "0.0",
+          "time": "6.59",
           "power": 70,
           "turn_offset": 70
         },
@@ -449,8 +449,8 @@
           "name": "大場敏",
           "rank": "B1",
           "st": "-",
-          "tilt": "-",
-          "time": "-",
+          "tilt": "0.0",
+          "time": "6.76",
           "power": 70,
           "turn_offset": 80
         }
@@ -523,7 +523,7 @@
     "5": {
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "1m",
         "wind_direction": "追い風",
         "wave": "1cm"
       },
@@ -533,7 +533,7 @@
           "name": "青木幸太郎",
           "rank": "A1",
           "st": "-",
-          "tilt": "-",
+          "tilt": "0.5",
           "time": "-",
           "power": 85,
           "turn_offset": 30
@@ -542,7 +542,7 @@
           "name": "山本光雄",
           "rank": "A1",
           "st": "-",
-          "tilt": "-",
+          "tilt": "0.0",
           "time": "-",
           "power": 85,
           "turn_offset": 40
@@ -551,7 +551,7 @@
           "name": "森弘行",
           "rank": "B1",
           "st": "-",
-          "tilt": "-",
+          "tilt": "0.0",
           "time": "-",
           "power": 70,
           "turn_offset": 50
@@ -560,7 +560,7 @@
           "name": "上野真之介",
           "rank": "B1",
           "st": "-",
-          "tilt": "-",
+          "tilt": "0.0",
           "time": "-",
           "power": 70,
           "turn_offset": 60
@@ -568,8 +568,8 @@
         {
           "name": "根岸真優",
           "rank": "B1",
-          "st": "-",
-          "tilt": "-",
+          "st": ".17",
+          "tilt": "2.0",
           "time": "-",
           "power": 70,
           "turn_offset": 70
@@ -578,7 +578,7 @@
           "name": "林恵祐",
           "rank": "B1",
           "st": "-",
-          "tilt": "-",
+          "tilt": "0.0",
           "time": "-",
           "power": 70,
           "turn_offset": 80
@@ -652,7 +652,7 @@
     "6": {
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "1m",
         "wind_direction": "追い風",
         "wave": "1cm"
       },
@@ -661,8 +661,8 @@
         {
           "name": "石川哲秀",
           "rank": "A1",
-          "st": "-",
-          "tilt": "-",
+          "st": ".06",
+          "tilt": "0.0",
           "time": "-",
           "power": 85,
           "turn_offset": 30
@@ -671,7 +671,7 @@
           "name": "下寺秀和",
           "rank": "A1",
           "st": "-",
-          "tilt": "-",
+          "tilt": "0.0",
           "time": "-",
           "power": 85,
           "turn_offset": 40
@@ -680,7 +680,7 @@
           "name": "片岡雅裕",
           "rank": "B1",
           "st": "-",
-          "tilt": "-",
+          "tilt": "0.0",
           "time": "-",
           "power": 70,
           "turn_offset": 50
@@ -688,8 +688,8 @@
         {
           "name": "小松卓司",
           "rank": "B1",
-          "st": "-",
-          "tilt": "-",
+          "st": ".06",
+          "tilt": "0.0",
           "time": "-",
           "power": 70,
           "turn_offset": 60
@@ -697,8 +697,8 @@
         {
           "name": "長谷川親王",
           "rank": "B1",
-          "st": "-",
-          "tilt": "-",
+          "st": ".07",
+          "tilt": "0.0",
           "time": "-",
           "power": 70,
           "turn_offset": 70
@@ -707,7 +707,7 @@
           "name": "横川聖志",
           "rank": "B1",
           "st": "-",
-          "tilt": "-",
+          "tilt": "0.0",
           "time": "-",
           "power": 70,
           "turn_offset": 80
@@ -781,7 +781,7 @@
     "7": {
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "1m",
         "wind_direction": "追い風",
         "wave": "1cm"
       },
@@ -790,8 +790,8 @@
         {
           "name": "西野雄貴",
           "rank": "A1",
-          "st": "-",
-          "tilt": "-",
+          "st": ".15",
+          "tilt": "0.5",
           "time": "-",
           "power": 85,
           "turn_offset": 30
@@ -799,8 +799,8 @@
         {
           "name": "須藤隆雄",
           "rank": "A1",
-          "st": "-",
-          "tilt": "-",
+          "st": ".19",
+          "tilt": "0.0",
           "time": "-",
           "power": 85,
           "turn_offset": 40
@@ -809,7 +809,7 @@
           "name": "清水紀克",
           "rank": "B1",
           "st": "-",
-          "tilt": "-",
+          "tilt": "0.0",
           "time": "-",
           "power": 70,
           "turn_offset": 50
@@ -817,8 +817,8 @@
         {
           "name": "松田隆司",
           "rank": "B1",
-          "st": "-",
-          "tilt": "-",
+          "st": ".15",
+          "tilt": "0.5",
           "time": "-",
           "power": 70,
           "turn_offset": 60
@@ -826,8 +826,8 @@
         {
           "name": "佐藤謙史朗",
           "rank": "B1",
-          "st": "-",
-          "tilt": "-",
+          "st": ".19",
+          "tilt": "0.0",
           "time": "-",
           "power": 70,
           "turn_offset": 70
@@ -836,7 +836,7 @@
           "name": "龍田真白",
           "rank": "B1",
           "st": "-",
-          "tilt": "-",
+          "tilt": "2.0",
           "time": "-",
           "power": 70,
           "turn_offset": 80
@@ -910,7 +910,7 @@
     "8": {
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "1m",
         "wind_direction": "追い風",
         "wave": "1cm"
       },
@@ -920,7 +920,7 @@
           "name": "中嶋世奈",
           "rank": "A1",
           "st": "-",
-          "tilt": "-",
+          "tilt": "0.0",
           "time": "-",
           "power": 85,
           "turn_offset": 30
@@ -928,8 +928,8 @@
         {
           "name": "田中信一郎",
           "rank": "A1",
-          "st": "-",
-          "tilt": "-",
+          "st": ".07",
+          "tilt": "0.0",
           "time": "-",
           "power": 85,
           "turn_offset": 40
@@ -938,7 +938,7 @@
           "name": "飯田庄吾",
           "rank": "B1",
           "st": "-",
-          "tilt": "-",
+          "tilt": "0.0",
           "time": "-",
           "power": 70,
           "turn_offset": 50
@@ -946,8 +946,8 @@
         {
           "name": "黒崎竜也",
           "rank": "B1",
-          "st": "-",
-          "tilt": "-",
+          "st": ".24",
+          "tilt": "1.0",
           "time": "-",
           "power": 70,
           "turn_offset": 60
@@ -955,8 +955,8 @@
         {
           "name": "林風音",
           "rank": "B1",
-          "st": "-",
-          "tilt": "-",
+          "st": ".07",
+          "tilt": "0.0",
           "time": "-",
           "power": 70,
           "turn_offset": 70
@@ -964,8 +964,8 @@
         {
           "name": "荒井翔伍",
           "rank": "B1",
-          "st": "-",
-          "tilt": "-",
+          "st": ".24",
+          "tilt": "1.0",
           "time": "-",
           "power": 70,
           "turn_offset": 80
@@ -1039,7 +1039,7 @@
     "9": {
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "1m",
         "wind_direction": "追い風",
         "wave": "1cm"
       },
@@ -1048,7 +1048,7 @@
         {
           "name": "盛本真輔",
           "rank": "A1",
-          "st": "-",
+          "st": ".18",
           "tilt": "-",
           "time": "-",
           "power": 85,
@@ -1057,7 +1057,7 @@
         {
           "name": "土屋実沙希",
           "rank": "A1",
-          "st": "-",
+          "st": ".18",
           "tilt": "-",
           "time": "-",
           "power": 85,
@@ -1084,7 +1084,7 @@
         {
           "name": "板頭里緒",
           "rank": "B1",
-          "st": "-",
+          "st": ".08",
           "tilt": "-",
           "time": "-",
           "power": 70,
@@ -1093,7 +1093,7 @@
         {
           "name": "小山勉",
           "rank": "B1",
-          "st": "-",
+          "st": ".08",
           "tilt": "-",
           "time": "-",
           "power": 70,
@@ -1168,7 +1168,7 @@
     "10": {
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "1m",
         "wind_direction": "追い風",
         "wave": "1cm"
       },
@@ -1177,7 +1177,7 @@
         {
           "name": "松尾拓",
           "rank": "A1",
-          "st": "-",
+          "st": ".19",
           "tilt": "-",
           "time": "-",
           "power": 85,
@@ -1186,7 +1186,7 @@
         {
           "name": "平田さやか",
           "rank": "A1",
-          "st": "-",
+          "st": ".06",
           "tilt": "-",
           "time": "-",
           "power": 85,
@@ -1204,7 +1204,7 @@
         {
           "name": "武富智亮",
           "rank": "B1",
-          "st": "-",
+          "st": ".06",
           "tilt": "-",
           "time": "-",
           "power": 70,
@@ -1213,7 +1213,7 @@
         {
           "name": "下寺秀和",
           "rank": "B1",
-          "st": "-",
+          "st": ".19",
           "tilt": "-",
           "time": "-",
           "power": 70,
@@ -1222,7 +1222,7 @@
         {
           "name": "豊田訓靖",
           "rank": "B1",
-          "st": "-",
+          "st": ".21",
           "tilt": "-",
           "time": "-",
           "power": 70,
@@ -1297,7 +1297,7 @@
     "11": {
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "1m",
         "wind_direction": "追い風",
         "wave": "1cm"
       },
@@ -1342,7 +1342,7 @@
         {
           "name": "柘植政浩",
           "rank": "B1",
-          "st": "-",
+          "st": ".05",
           "tilt": "-",
           "time": "-",
           "power": 70,
@@ -1426,7 +1426,7 @@
     "12": {
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "1m",
         "wind_direction": "追い風",
         "wave": "1cm"
       },
@@ -1444,7 +1444,7 @@
         {
           "name": "伊藤雄二",
           "rank": "A1",
-          "st": "-",
+          "st": ".19",
           "tilt": "-",
           "time": "-",
           "power": 85,
@@ -1453,7 +1453,7 @@
         {
           "name": "荒井翔伍",
           "rank": "B1",
-          "st": "-",
+          "st": ".19",
           "tilt": "-",
           "time": "-",
           "power": 70,
