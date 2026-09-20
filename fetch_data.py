@@ -1,11 +1,12 @@
 import os
 import re
 import json
+import time
+import random
 import requests
 from bs4 import BeautifulSoup
 from concurrent.futures import ThreadPoolExecutor
 
-# 全24競艇場（ID・名称・地区グループ定義）
 STADIUMS = {
     "01": {"name": "桐生", "region": "kantou"},
     "02": {"name": "戸田", "region": "kantou"},
@@ -34,23 +35,41 @@ STADIUMS = {
 }
 
 HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0 Safari/537.36"
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+    "Accept-Language": "ja,en-US;q=0.9,en;q=0.8"
 }
+
+def fetch_url_retry(url, max_retries=3):
+    """リトライ付きリクエスト関数（サーバー負荷軽減・エラー回避用）"""
+    for attempt in range(max_retries):
+        try:
+            time.sleep(random.uniform(0.5, 1.2)) # アクセス制御対策（微小ディレイ）
+            res = requests.get(url, headers=HEADERS, timeout=20)
+            res.encoding = "utf-8"
+            if res.status_code == 200:
+                return res.text
+        except Exception as e:
+            if attempt == max_retries - 1:
+                print(f"[通信失敗] {url} : {e}")
+            time.sleep(2) # エラー時2秒待機して再試行
+    return None
 
 def check_holding_and_get_racelist(jcd, race_num):
     """公式サイトから出走表を取得し、本日開催中か判定する"""
     url = f"https://www.boatrace.jp/owpc/pc/race/racelist?rno={race_num}&jcd={jcd}"
+    html = fetch_url_retry(url)
+    
     racers = []
     close_time = "--:--"
     is_holding = False
     
-    try:
-        res = requests.get(url, headers=HEADERS, timeout=10)
-        res.encoding = "utf-8"
-        soup = BeautifulSoup(res.text, "html.parser")
+    if not html:
+        return False, racers, close_time
 
-        # 出走表テーブル行が存在すれば本日開催と判定
+    try:
+        soup = BeautifulSoup(html, "html.parser")
         rows = soup.select("table tbody.is-fs12 tr")
+        
         if rows:
             is_holding = True
             time_ele = soup.select_one(".tab2_time")
@@ -86,7 +105,6 @@ def check_holding_and_get_racelist(jcd, race_num):
                         m_st = re.search(r"F\d|L\d|\.\d{2}", st_text)
                         if m_st: st_avg = m_st.group(0)
 
-                    # 的中率指標の計算
                     try:
                         hit_rate = f"{min(99.9, float(nat_rate) * 8.5):.1f}%"
                     except:
@@ -108,7 +126,7 @@ def check_holding_and_get_racelist(jcd, race_num):
                     })
                     current_boat += 1
     except Exception as e:
-        print(f"取得エラー ({jcd} {race_num}R): {e}")
+        print(f"解析エラー ({jcd} {race_num}R): {e}")
 
     return is_holding, racers, close_time
 
@@ -120,12 +138,13 @@ def fetch_beforeinfo_data(jcd, race_num):
         "start_display": []
     }
     url = f"https://www.boatrace.jp/owpc/pc/race/beforeinfo?rno={race_num}&jcd={jcd}"
-    try:
-        res = requests.get(url, headers=HEADERS, timeout=10)
-        res.encoding = "utf-8"
-        soup = BeautifulSoup(res.text, "html.parser")
+    html = fetch_url_retry(url)
+    if not html:
+        return data
 
-        # 気象情報
+    try:
+        soup = BeautifulSoup(html, "html.parser")
+
         w_ele = soup.select_one(".weather1")
         if w_ele:
             txt = w_ele.text.replace("\n", " ")
@@ -138,7 +157,6 @@ def fetch_beforeinfo_data(jcd, race_num):
             if wd: data["weather"]["wind_direction"] = wd.group(1)
             if wv: data["weather"]["wave"] = wv.group(1)
 
-        # 展示タイム・チルト
         tbls = soup.select("table.tblHeader")
         if len(tbls) >= 2:
             rows = tbls[1].select("tbody tr")
@@ -154,7 +172,6 @@ def fetch_beforeinfo_data(jcd, race_num):
                     }
                     b_idx += 1
 
-        # スリット展示
         s_box = soup.select_one(".stExhibitionBox")
         if s_box:
             s_rows = s_box.select(".stTrack tr")
@@ -167,12 +184,11 @@ def fetch_beforeinfo_data(jcd, race_num):
                     if b_num:
                         data["start_display"].append({"boat": int(b_num), "st": st_val})
     except Exception as e:
-        print(f"直前情報取得エラー: {e}")
+        pass
 
     return data
 
 def generate_ai_predictions(racers):
-    """AI展開予想と10点買い目の生成"""
     scores = {}
     summary_data = []
 
@@ -224,11 +240,11 @@ def process_stadium(jcd):
     s_info = STADIUMS[jcd]
     races_data = {}
     
-    # 1Rの開催チェック
+    # 1R目で開催確認
     is_holding, racers_1r, close_time_1r = check_holding_and_get_racelist(jcd, 1)
 
     if is_holding:
-        print(f"[{s_info['name']}] 本日開催中 - データ解析を開始します")
+        print(f"[{s_info['name']}] 本日開催中 - データを取得中...")
         for r in range(1, 13):
             r_str = str(r)
             if r == 1:
@@ -273,7 +289,8 @@ def process_stadium(jcd):
         json.dump(out_data, f, ensure_ascii=False, indent=2)
 
 def main():
-    with ThreadPoolExecutor(max_workers=6) as executor:
+    # サーバーブロックを防ぐため、並列数を 2 に落として順次処理
+    with ThreadPoolExecutor(max_workers=2) as executor:
         executor.map(process_stadium, STADIUMS.keys())
 
 if __name__ == "__main__":
