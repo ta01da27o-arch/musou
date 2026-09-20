@@ -16,61 +16,10 @@
       "start_display": [],
       "racers": [],
       "summary_data": [],
-      "summary_tag": "【イン信頼】",
-      "comment": "1号艇の機配が主力。追撃する2号艇との旋回争い。",
-      "sub_comment": "3号艇の展開突入に警戒。高配当展開は4の強襲。",
-      "bets": [
-        {
-          "num": "1-2-3",
-          "tag": "本命",
-          "style": "tag-honmei"
-        },
-        {
-          "num": "1-2-4",
-          "tag": "本命",
-          "style": "tag-honmei"
-        },
-        {
-          "num": "1-3-2",
-          "tag": "対抗",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "1-3-4",
-          "tag": "対抗",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "1-4-2",
-          "tag": "押さえ",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-1-3",
-          "tag": "狙い",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-1-4",
-          "tag": "狙い",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-3-1",
-          "tag": "穴",
-          "style": "tag-ana"
-        },
-        {
-          "num": "3-1-2",
-          "tag": "大穴",
-          "style": "tag-ana"
-        },
-        {
-          "num": "3-2-1",
-          "tag": "特穴",
-          "style": "tag-ana"
-        }
-      ]
+      "summary_tag": "【データ準備中】",
+      "comment": "データ取得中",
+      "sub_comment": "",
+      "bets": []
     },
     "2": {
       "race_num": 2,
@@ -84,61 +33,10 @@
       "start_display": [],
       "racers": [],
       "summary_data": [],
-      "summary_tag": "【イン信頼】",
-      "comment": "1号艇の機配が主力。追撃する2号艇との旋回争い。",
-      "sub_comment": "3号艇の展開突入に警戒。高配当展開は4の強襲。",
-      "bets": [
-        {
-          "num": "1-2-3",
-          "tag": "本命",
-          "style": "tag-honmei"
-        },
-        {
-          "num": "1-2-4",
-          "tag": "本命",
-          "style": "tag-honmei"
-        },
-        {
-          "num": "1-3-2",
-          "tag": "対抗",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "1-3-4",
-          "tag": "対抗",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "1-4-2",
-          "tag": "押さえ",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-1-3",
-          "tag": "狙い",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-1-4",
-          "tag": "狙い",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-3-1",
-          "tag": "穴",
-          "style": "tag-ana"
-        },
-        {
-          "num": "3-1-2",
-          "tag": "大穴",
-          "style": "tag-ana"
-        },
-        {
-          "num": "3-2-1",
-          "tag": "特穴",
-          "style": "tag-ana"
-        }
-      ]
+      "summary_tag": "【データ準備中】",
+      "comment": "データ取得中",
+      "sub_comment": "",
+      "bets": []
     },
     "3": {
       "race_num": 3,
@@ -152,61 +50,10 @@
       "start_display": [],
       "racers": [],
       "summary_data": [],
-      "summary_tag": "【イン信頼】",
-      "comment": "1号艇の機配が主力。追撃する2号艇との旋回争い。",
-      "sub_comment": "3号艇の展開突入に警戒。高配当展開は4の強襲。",
-      "bets": [
-        {
-          "num": "1-2-3",
-          "tag": "本命",
-          "style": "tag-honmei"
-        },
-        {
-          "num": "1-2-4",
-          "tag": "本命",
-          "style": "tag-honmei"
-        },
-        {
-          "num": "1-3-2",
-          "tag": "対抗",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "1-3-4",
-          "tag": "対抗",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "1-4-2",
-          "tag": "押さえ",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-1-3",
-          "tag": "狙い",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-1-4",
-          "tag": "狙い",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-3-1",
-          "tag": "穴",
-          "style": "tag-ana"
-        },
-        {
-          "num": "3-1-2",
-          "tag": "大穴",
-          "style": "tag-ana"
-        },
-        {
-          "num": "3-2-1",
-          "tag": "特穴",
-          "style": "tag-ana"
-        }
-      ]
+      "summary_tag": "【データ準備中】",
+      "comment": "データ取得中",
+      "sub_comment": "",
+      "bets": []
     },
     "4": {
       "race_num": 4,
@@ -220,61 +67,10 @@
       "start_display": [],
       "racers": [],
       "summary_data": [],
-      "summary_tag": "【イン信頼】",
-      "comment": "1号艇の機配が主力。追撃する2号艇との旋回争い。",
-      "sub_comment": "3号艇の展開突入に警戒。高配当展開は4の強襲。",
-      "bets": [
-        {
-          "num": "1-2-3",
-          "tag": "本命",
-          "style": "tag-honmei"
-        },
-        {
-          "num": "1-2-4",
-          "tag": "本命",
-          "style": "tag-honmei"
-        },
-        {
-          "num": "1-3-2",
-          "tag": "対抗",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "1-3-4",
-          "tag": "対抗",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "1-4-2",
-          "tag": "押さえ",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-1-3",
-          "tag": "狙い",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-1-4",
-          "tag": "狙い",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-3-1",
-          "tag": "穴",
-          "style": "tag-ana"
-        },
-        {
-          "num": "3-1-2",
-          "tag": "大穴",
-          "style": "tag-ana"
-        },
-        {
-          "num": "3-2-1",
-          "tag": "特穴",
-          "style": "tag-ana"
-        }
-      ]
+      "summary_tag": "【データ準備中】",
+      "comment": "データ取得中",
+      "sub_comment": "",
+      "bets": []
     },
     "5": {
       "race_num": 5,
@@ -288,61 +84,10 @@
       "start_display": [],
       "racers": [],
       "summary_data": [],
-      "summary_tag": "【イン信頼】",
-      "comment": "1号艇の機配が主力。追撃する2号艇との旋回争い。",
-      "sub_comment": "3号艇の展開突入に警戒。高配当展開は4の強襲。",
-      "bets": [
-        {
-          "num": "1-2-3",
-          "tag": "本命",
-          "style": "tag-honmei"
-        },
-        {
-          "num": "1-2-4",
-          "tag": "本命",
-          "style": "tag-honmei"
-        },
-        {
-          "num": "1-3-2",
-          "tag": "対抗",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "1-3-4",
-          "tag": "対抗",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "1-4-2",
-          "tag": "押さえ",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-1-3",
-          "tag": "狙い",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-1-4",
-          "tag": "狙い",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-3-1",
-          "tag": "穴",
-          "style": "tag-ana"
-        },
-        {
-          "num": "3-1-2",
-          "tag": "大穴",
-          "style": "tag-ana"
-        },
-        {
-          "num": "3-2-1",
-          "tag": "特穴",
-          "style": "tag-ana"
-        }
-      ]
+      "summary_tag": "【データ準備中】",
+      "comment": "データ取得中",
+      "sub_comment": "",
+      "bets": []
     },
     "6": {
       "race_num": 6,
@@ -356,61 +101,10 @@
       "start_display": [],
       "racers": [],
       "summary_data": [],
-      "summary_tag": "【イン信頼】",
-      "comment": "1号艇の機配が主力。追撃する2号艇との旋回争い。",
-      "sub_comment": "3号艇の展開突入に警戒。高配当展開は4の強襲。",
-      "bets": [
-        {
-          "num": "1-2-3",
-          "tag": "本命",
-          "style": "tag-honmei"
-        },
-        {
-          "num": "1-2-4",
-          "tag": "本命",
-          "style": "tag-honmei"
-        },
-        {
-          "num": "1-3-2",
-          "tag": "対抗",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "1-3-4",
-          "tag": "対抗",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "1-4-2",
-          "tag": "押さえ",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-1-3",
-          "tag": "狙い",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-1-4",
-          "tag": "狙い",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-3-1",
-          "tag": "穴",
-          "style": "tag-ana"
-        },
-        {
-          "num": "3-1-2",
-          "tag": "大穴",
-          "style": "tag-ana"
-        },
-        {
-          "num": "3-2-1",
-          "tag": "特穴",
-          "style": "tag-ana"
-        }
-      ]
+      "summary_tag": "【データ準備中】",
+      "comment": "データ取得中",
+      "sub_comment": "",
+      "bets": []
     },
     "7": {
       "race_num": 7,
@@ -424,61 +118,10 @@
       "start_display": [],
       "racers": [],
       "summary_data": [],
-      "summary_tag": "【イン信頼】",
-      "comment": "1号艇の機配が主力。追撃する2号艇との旋回争い。",
-      "sub_comment": "3号艇の展開突入に警戒。高配当展開は4の強襲。",
-      "bets": [
-        {
-          "num": "1-2-3",
-          "tag": "本命",
-          "style": "tag-honmei"
-        },
-        {
-          "num": "1-2-4",
-          "tag": "本命",
-          "style": "tag-honmei"
-        },
-        {
-          "num": "1-3-2",
-          "tag": "対抗",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "1-3-4",
-          "tag": "対抗",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "1-4-2",
-          "tag": "押さえ",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-1-3",
-          "tag": "狙い",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-1-4",
-          "tag": "狙い",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-3-1",
-          "tag": "穴",
-          "style": "tag-ana"
-        },
-        {
-          "num": "3-1-2",
-          "tag": "大穴",
-          "style": "tag-ana"
-        },
-        {
-          "num": "3-2-1",
-          "tag": "特穴",
-          "style": "tag-ana"
-        }
-      ]
+      "summary_tag": "【データ準備中】",
+      "comment": "データ取得中",
+      "sub_comment": "",
+      "bets": []
     },
     "8": {
       "race_num": 8,
@@ -492,61 +135,10 @@
       "start_display": [],
       "racers": [],
       "summary_data": [],
-      "summary_tag": "【イン信頼】",
-      "comment": "1号艇の機配が主力。追撃する2号艇との旋回争い。",
-      "sub_comment": "3号艇の展開突入に警戒。高配当展開は4の強襲。",
-      "bets": [
-        {
-          "num": "1-2-3",
-          "tag": "本命",
-          "style": "tag-honmei"
-        },
-        {
-          "num": "1-2-4",
-          "tag": "本命",
-          "style": "tag-honmei"
-        },
-        {
-          "num": "1-3-2",
-          "tag": "対抗",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "1-3-4",
-          "tag": "対抗",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "1-4-2",
-          "tag": "押さえ",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-1-3",
-          "tag": "狙い",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-1-4",
-          "tag": "狙い",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-3-1",
-          "tag": "穴",
-          "style": "tag-ana"
-        },
-        {
-          "num": "3-1-2",
-          "tag": "大穴",
-          "style": "tag-ana"
-        },
-        {
-          "num": "3-2-1",
-          "tag": "特穴",
-          "style": "tag-ana"
-        }
-      ]
+      "summary_tag": "【データ準備中】",
+      "comment": "データ取得中",
+      "sub_comment": "",
+      "bets": []
     },
     "9": {
       "race_num": 9,
@@ -560,61 +152,10 @@
       "start_display": [],
       "racers": [],
       "summary_data": [],
-      "summary_tag": "【イン信頼】",
-      "comment": "1号艇の機配が主力。追撃する2号艇との旋回争い。",
-      "sub_comment": "3号艇の展開突入に警戒。高配当展開は4の強襲。",
-      "bets": [
-        {
-          "num": "1-2-3",
-          "tag": "本命",
-          "style": "tag-honmei"
-        },
-        {
-          "num": "1-2-4",
-          "tag": "本命",
-          "style": "tag-honmei"
-        },
-        {
-          "num": "1-3-2",
-          "tag": "対抗",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "1-3-4",
-          "tag": "対抗",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "1-4-2",
-          "tag": "押さえ",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-1-3",
-          "tag": "狙い",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-1-4",
-          "tag": "狙い",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-3-1",
-          "tag": "穴",
-          "style": "tag-ana"
-        },
-        {
-          "num": "3-1-2",
-          "tag": "大穴",
-          "style": "tag-ana"
-        },
-        {
-          "num": "3-2-1",
-          "tag": "特穴",
-          "style": "tag-ana"
-        }
-      ]
+      "summary_tag": "【データ準備中】",
+      "comment": "データ取得中",
+      "sub_comment": "",
+      "bets": []
     },
     "10": {
       "race_num": 10,
@@ -628,61 +169,10 @@
       "start_display": [],
       "racers": [],
       "summary_data": [],
-      "summary_tag": "【イン信頼】",
-      "comment": "1号艇の機配が主力。追撃する2号艇との旋回争い。",
-      "sub_comment": "3号艇の展開突入に警戒。高配当展開は4の強襲。",
-      "bets": [
-        {
-          "num": "1-2-3",
-          "tag": "本命",
-          "style": "tag-honmei"
-        },
-        {
-          "num": "1-2-4",
-          "tag": "本命",
-          "style": "tag-honmei"
-        },
-        {
-          "num": "1-3-2",
-          "tag": "対抗",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "1-3-4",
-          "tag": "対抗",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "1-4-2",
-          "tag": "押さえ",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-1-3",
-          "tag": "狙い",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-1-4",
-          "tag": "狙い",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-3-1",
-          "tag": "穴",
-          "style": "tag-ana"
-        },
-        {
-          "num": "3-1-2",
-          "tag": "大穴",
-          "style": "tag-ana"
-        },
-        {
-          "num": "3-2-1",
-          "tag": "特穴",
-          "style": "tag-ana"
-        }
-      ]
+      "summary_tag": "【データ準備中】",
+      "comment": "データ取得中",
+      "sub_comment": "",
+      "bets": []
     },
     "11": {
       "race_num": 11,
@@ -696,61 +186,10 @@
       "start_display": [],
       "racers": [],
       "summary_data": [],
-      "summary_tag": "【イン信頼】",
-      "comment": "1号艇の機配が主力。追撃する2号艇との旋回争い。",
-      "sub_comment": "3号艇の展開突入に警戒。高配当展開は4の強襲。",
-      "bets": [
-        {
-          "num": "1-2-3",
-          "tag": "本命",
-          "style": "tag-honmei"
-        },
-        {
-          "num": "1-2-4",
-          "tag": "本命",
-          "style": "tag-honmei"
-        },
-        {
-          "num": "1-3-2",
-          "tag": "対抗",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "1-3-4",
-          "tag": "対抗",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "1-4-2",
-          "tag": "押さえ",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-1-3",
-          "tag": "狙い",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-1-4",
-          "tag": "狙い",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-3-1",
-          "tag": "穴",
-          "style": "tag-ana"
-        },
-        {
-          "num": "3-1-2",
-          "tag": "大穴",
-          "style": "tag-ana"
-        },
-        {
-          "num": "3-2-1",
-          "tag": "特穴",
-          "style": "tag-ana"
-        }
-      ]
+      "summary_tag": "【データ準備中】",
+      "comment": "データ取得中",
+      "sub_comment": "",
+      "bets": []
     },
     "12": {
       "race_num": 12,
@@ -764,61 +203,10 @@
       "start_display": [],
       "racers": [],
       "summary_data": [],
-      "summary_tag": "【イン信頼】",
-      "comment": "1号艇の機配が主力。追撃する2号艇との旋回争い。",
-      "sub_comment": "3号艇の展開突入に警戒。高配当展開は4の強襲。",
-      "bets": [
-        {
-          "num": "1-2-3",
-          "tag": "本命",
-          "style": "tag-honmei"
-        },
-        {
-          "num": "1-2-4",
-          "tag": "本命",
-          "style": "tag-honmei"
-        },
-        {
-          "num": "1-3-2",
-          "tag": "対抗",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "1-3-4",
-          "tag": "対抗",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "1-4-2",
-          "tag": "押さえ",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-1-3",
-          "tag": "狙い",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-1-4",
-          "tag": "狙い",
-          "style": "tag-nerai"
-        },
-        {
-          "num": "2-3-1",
-          "tag": "穴",
-          "style": "tag-ana"
-        },
-        {
-          "num": "3-1-2",
-          "tag": "大穴",
-          "style": "tag-ana"
-        },
-        {
-          "num": "3-2-1",
-          "tag": "特穴",
-          "style": "tag-ana"
-        }
-      ]
+      "summary_tag": "【データ準備中】",
+      "comment": "データ取得中",
+      "sub_comment": "",
+      "bets": []
     }
   }
 }
