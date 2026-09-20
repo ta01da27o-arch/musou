@@ -1,11 +1,12 @@
 import os
 import re
 import json
+import time
 import requests
 from bs4 import BeautifulSoup
 from concurrent.futures import ThreadPoolExecutor
 
-# 全24競艇場コード・名称マッピング
+# 全24競艇場コード・名称マッピング（完全保持）
 STADIUMS = {
     "01": "桐生", "02": "戸田", "03": "江戸川", "04": "平和島", "05": "多摩川", "06": "浜名湖",
     "07": "蒲郡", "08": "常滑", "09": "津", "10": "三国", "11": "びわこ", "12": "住之江",
@@ -26,7 +27,6 @@ def get_active_stadiums():
         res.encoding = "utf-8"
         soup = BeautifulSoup(res.text, "html.parser")
         
-        # 開催場リンクを取得
         for a in soup.select("a[href*='jcd=']"):
             href = a.get("href", "")
             match = re.search(r"jcd=(\d{2})", href)
@@ -47,7 +47,6 @@ def get_race_close_times(jcd):
         res.encoding = "utf-8"
         soup = BeautifulSoup(res.text, "html.parser")
         
-        # レース一覧テーブルから締切時刻を取得
         rows = soup.select("table tbody tr")
         for row in rows:
             r_text = row.text
@@ -140,7 +139,6 @@ def fetch_racelist(jcd, race_num):
                 rank_ele = row.select_one(".is-fs11")
                 rank = rank_ele.text.strip() if rank_ele else "B1"
                 
-                # ST平均等の抽出
                 tds = row.select("td")
                 st_avg = "-"
                 if len(tds) >= 6:
@@ -160,7 +158,6 @@ def fetch_racelist(jcd, race_num):
                 current_boat += 1
     except Exception as e:
         print(f"出走表取得エラー ({jcd} {race_num}R): {e}")
-        # フォールバック用ダミー生成
         for i in range(1, 7):
             racers.append({"boat": i, "name": f"選手{i}", "rank": "B1", "st": ".15", "tilt": "0.0", "time": "6.80"})
     return racers
@@ -170,12 +167,11 @@ def generate_ai_prediction(racers, start_display, weather):
     scores = {}
     for r in racers:
         b = r["boat"]
-        base_score = 10 - b  # 枠番有利（1号艇優位）
+        base_score = 10 - b
         if "A1" in r["rank"]: base_score += 4
         elif "A2" in r["rank"]: base_score += 2
         scores[b] = base_score
 
-    # 展示ST補正
     for sd in start_display:
         b = sd["boat"]
         st = sd["st"]
@@ -187,14 +183,12 @@ def generate_ai_prediction(racers, start_display, weather):
             except:
                 pass
 
-    # スコア順にソート
     sorted_boats = sorted(scores.keys(), key=lambda x: scores[x], reverse=True)
-    top1 = sorted_boats[0]
-    top2 = sorted_boats[1]
-    top3 = sorted_boats[2]
-    top4 = sorted_boats[3]
+    top1 = sorted_boats[0] if len(sorted_boats) > 0 else 1
+    top2 = sorted_boats[1] if len(sorted_boats) > 1 else 2
+    top3 = sorted_boats[2] if len(sorted_boats) > 2 else 3
+    top4 = sorted_boats[3] if len(sorted_boats) > 3 else 4
 
-    # AI見解生成
     if top1 == 1:
         summary_tag = "【イン絶対】"
         comment = f"1号艇が絶好の枠位置を活かしてイン速攻を決める。対抗は攻め立てる{top2}号艇。"
@@ -204,7 +198,6 @@ def generate_ai_prediction(racers, start_display, weather):
         comment = f"{top1}号艇の気配が優勢。センター枠からの鋭い仕掛けで1号艇の逃げを脅かす。"
         sub_comment = f"1号艇が逃げ残る目も押さえつつ、{top2}号艇の連入を考慮。"
 
-    # 3連単10点買い目生成
     bets = [
         {"num": f"{top1}-{top2}-{top3}", "tag": "本命", "style": "tag-honmei"},
         {"num": f"{top1}-{top2}-{top4}", "tag": "本命", "style": "tag-honmei"},
@@ -233,14 +226,12 @@ def process_stadium(jcd):
         racers = fetch_racelist(jcd, r)
         before_data = fetch_beforeinfo(jcd, r)
 
-        # 直前情報（チルト・展示タイム）を出走表とマージ
         for racer in racers:
             b_str = str(racer["boat"])
             if b_str in before_data["racers_before"]:
                 racer["tilt"] = before_data["racers_before"][b_str]["tilt"]
                 racer["time"] = before_data["racers_before"][b_str]["time"]
 
-        # AI解析ロジック実行
         summary_tag, comment, sub_comment, bets = generate_ai_prediction(
             racers, before_data["start_display"], before_data["weather"]
         )
@@ -263,7 +254,6 @@ def process_stadium(jcd):
         "races": races_data
     }
 
-    # JSONファイル保存
     file_path = f"stadium_{jcd}.json"
     with open(file_path, "w", encoding="utf-8") as f:
         json.dump(out_data, f, ensure_ascii=False, indent=2)
@@ -277,7 +267,6 @@ def main():
 
     print(f"処理対象競艇場: {active_stadiums}")
     
-    # 並列実行で全場高速取得
     with ThreadPoolExecutor(max_workers=6) as executor:
         executor.map(process_stadium, active_stadiums)
 

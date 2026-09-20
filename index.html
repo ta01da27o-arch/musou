@@ -2,44 +2,64 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>無双 - 高精度AI競艇展開解析PWA</title>
+    <meta name="theme-color" content="#0264a3">
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-        body { background-color: #f0f4f8; color: #333; padding-bottom: 30px; }
-        header { background: #0264a3; color: white; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between; }
-        .back-btn { background: rgba(255,255,255,0.2); border: none; color: white; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 0.8rem; }
-        h1 { font-size: 1.1rem; flex-grow: 1; text-align: center; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; -webkit-tap-highlight-color: transparent; }
+        body { background-color: #f0f4f8; color: #333; padding-bottom: 30px; font-size: 14px; }
         
-        .race-nav { display: flex; overflow-x: auto; background: #0088cc; padding: 6px; gap: 4px; }
-        .race-tab { flex: 0 0 60px; background: #28a3e4; color: white; text-align: center; padding: 6px 0; border-radius: 6px; cursor: pointer; }
-        .race-tab.active { background: #ffaa00; font-weight: bold; color: #000; }
+        /* ヘッダー */
+        header { background: linear-gradient(135deg, #0264a3, #0088cc); color: white; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 2px 4px rgba(0,0,0,0.1); sticky: top; top: 0; z-index: 100; }
+        .back-btn { background: rgba(255,255,255,0.2); border: none; color: white; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 0.8rem; font-weight: bold; display: none; }
+        .back-btn:active { background: rgba(255,255,255,0.4); }
+        h1 { font-size: 1.1rem; flex-grow: 1; text-align: center; font-weight: bold; letter-spacing: 0.5px; }
+
+        /* コンテナ */
+        .container { padding: 12px; max-width: 600px; margin: 0 auto; }
+
+        /* 24競艇場グリッド（トップ画面） */
+        .stadium-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 10px; }
+        .stadium-card { background: white; border-radius: 8px; padding: 14px 8px; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.08); cursor: pointer; border: 1px solid #e2e8f0; transition: transform 0.1s, border-color 0.1s; }
+        .stadium-card:active { transform: scale(0.98); background: #f8fafc; }
+        .stadium-card.active { border: 2px solid #0088cc; background: #e0f2fe; }
+        .stadium-id { font-size: 0.75rem; color: #64748b; margin-bottom: 2px; }
+        .stadium-name { font-size: 1.05rem; font-weight: bold; color: #1e293b; }
+        .stadium-status { font-size: 0.7rem; color: #0284c7; margin-top: 4px; font-weight: bold; }
+
+        /* レースナビゲーション（詳細画面） */
+        .race-nav { display: flex; overflow-x: auto; background: #0088cc; padding: 6px; gap: 4px; scrollbar-width: none; }
+        .race-nav::-webkit-scrollbar { display: none; }
+        .race-tab { flex: 0 0 60px; background: #28a3e4; color: white; text-align: center; padding: 6px 0; border-radius: 6px; cursor: pointer; transition: background 0.2s; }
+        .race-tab.active { background: #ffaa00; font-weight: bold; color: #000; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
         .tab-r { font-size: 0.85rem; }
         .tab-time { font-size: 0.65rem; opacity: 0.9; }
 
-        .container { padding: 12px; max-width: 600px; margin: 0 auto; }
-        .card { background: white; border-radius: 8px; padding: 14px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-        .card-title { font-size: 0.95rem; font-weight: bold; border-left: 4px solid #0088cc; padding-left: 8px; margin-bottom: 10px; color: #004477; }
+        /* カード汎用 */
+        .card { background: white; border-radius: 8px; padding: 14px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; }
+        .card-title { font-size: 0.95rem; font-weight: bold; border-left: 4px solid #0088cc; padding-left: 8px; margin-bottom: 10px; color: #004477; display: flex; justify-content: space-between; align-items: center; }
 
-        /* スリット展示描写スタイリング */
-        .slit-container { background: #111827; border-radius: 8px; padding: 12px; color: #fff; margin: 10px 0; }
+        /* スリット展示描写 */
+        .slit-container { background: #111827; border-radius: 8px; padding: 12px; color: #fff; margin: 6px 0; }
         .slit-header { display: flex; justify-content: space-between; font-size: 0.75rem; color: #9ca3af; margin-bottom: 8px; border-bottom: 1px solid #374151; padding-bottom: 4px; }
-        .slit-board { position: relative; background: #1f2937; border-left: 3px solid #ef4444; padding: 6px 0; display: flex; flex-direction: column; gap: 6px; }
+        .slit-board { position: relative; background: #1f2937; border-left: 3px solid #ef4444; padding: 6px 0; display: flex; flex-direction: column; gap: 6px; overflow: hidden; }
         .slit-track { display: flex; align-items: center; height: 26px; position: relative; }
-        .boat-icon { width: 22px; height: 22px; border-radius: 3px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.75rem; position: absolute; }
+        .boat-icon { width: 22px; height: 22px; border-radius: 3px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.75rem; position: absolute; z-index: 2; box-shadow: 0 1px 2px rgba(0,0,0,0.3); }
         .boat-1 { background: #ffffff; color: #000000; }
         .boat-2 { background: #111111; color: #ffffff; border: 1px solid #555; }
         .boat-3 { background: #dc2626; color: #ffffff; }
         .boat-4 { background: #2563eb; color: #ffffff; }
         .boat-5 { background: #eab308; color: #000000; }
         .boat-6 { background: #16a34a; color: #ffffff; }
-        .st-badge { position: absolute; font-size: 0.7rem; font-family: monospace; font-weight: bold; color: #38bdf8; }
+        .st-badge { position: absolute; font-size: 0.7rem; font-family: monospace; font-weight: bold; color: #38bdf8; z-index: 1; }
         .st-badge.flying { color: #f87171; }
 
+        /* テーブル */
         table { width: 100%; border-collapse: collapse; font-size: 0.8rem; text-align: center; }
-        th { background: #f1f5f9; padding: 6px; color: #475569; }
-        td { padding: 8px 4px; border-bottom: 1px solid #e2e8f0; }
+        th { background: #f1f5f9; padding: 6px 4px; color: #475569; font-weight: bold; }
+        td { padding: 8px 4px; border-bottom: 1px solid #e2e8f0; vertical-align: middle; }
 
+        /* 予想・コメント */
         .tag { display: inline-block; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; color: white; background: #ef4444; }
         .comment-box { background: #fffbeeb0; border: 1px solid #fde68a; border-radius: 6px; padding: 10px; font-size: 0.85rem; line-height: 1.4; }
 
@@ -51,21 +71,34 @@
         .tag-honmei { background: #fee2e2; color: #dc2626; border: 1px solid #fca5a5; }
         .tag-nerai { background: #e0f2fe; color: #0284c7; border: 1px solid #7dd3fc; }
         .tag-ana { background: #fef3c7; color: #d97706; border: 1px solid #fde68a; }
+
+        /* 非表示クラス */
+        .hidden { display: none !important; }
     </style>
 </head>
 <body>
 
     <header>
-        <button class="back-btn" onclick="history.back()">← 24場一覧</button>
-        <h1 id="stadiumTitle">競艇場 - レース解析</h1>
+        <button id="backBtn" class="back-btn" onclick="showStadiumList()">← 24場一覧</button>
+        <h1 id="headerTitle">無双 - 全24競艇場AI解析</h1>
     </header>
 
-    <div class="race-nav" id="raceNav"></div>
+    <!-- レースタブナビ（詳細画面時のみ表示） -->
+    <div class="race-nav hidden" id="raceNav"></div>
 
-    <div class="container">
+    <!-- 1. トップ画面: 競艇場選択グリッド -->
+    <div class="container" id="stadiumView">
+        <div class="card">
+            <div class="card-title">本日開催・全24競艇場一覧</div>
+            <div class="stadium-grid" id="stadiumGrid"></div>
+        </div>
+    </div>
+
+    <!-- 2. 詳細画面: レース解析コンテナ -->
+    <div class="container hidden" id="detailView">
         <!-- 水面気象情報 -->
         <div class="card">
-            <div class="card-title" id="weatherTitle">水面気象情報</div>
+            <div class="card-title">水面気象情報</div>
             <div id="weatherContent"></div>
         </div>
 
@@ -104,23 +137,77 @@
     </div>
 
     <script>
-        let currentStadium = "16"; // 初期値: 児島
+        const STADIUMS = {
+            "01": "桐生", "02": "戸田", "03": "江戸川", "04": "平和島", "05": "多摩川", "06": "浜名湖",
+            "07": "蒲郡", "08": "常滑", "09": "津", "10": "三国", "11": "びわこ", "12": "住之江",
+            "13": "尼崎", "14": "鳴門", "15": "丸亀", "16": "児島", "17": "宮島", "18": "徳山",
+            "19": "下関", "20": "若松", "21": "芦屋", "22": "福岡", "23": "唐津", "24": "大村"
+        };
+
+        let currentStadium = null;
         let currentRace = "1";
         let stadiumData = null;
 
-        async function loadData() {
+        // 初期化: 競艇場グリッド描写
+        function initStadiumGrid() {
+            let html = "";
+            Object.keys(STADIUMS).forEach(id => {
+                html += `
+                    <div class="stadium-card" onclick="selectStadium('${id}')">
+                        <div class="stadium-id">${id}#</div>
+                        <div class="stadium-name">${STADIUMS[id]}</div>
+                        <div class="stadium-status">解析データ有</div>
+                    </div>
+                `;
+            });
+            document.getElementById("stadiumGrid").innerHTML = html;
+        }
+
+        // トップ画面を表示
+        function showStadiumList() {
+            document.getElementById("stadiumView").classList.remove("hidden");
+            document.getElementById("detailView").classList.add("hidden");
+            document.getElementById("raceNav").classList.add("hidden");
+            document.getElementById("backBtn").style.display = "none";
+            document.getElementById("headerTitle").innerText = "無双 - 全24競艇場AI解析";
+            currentStadium = null;
+        }
+
+        // 競艇場選択 -> データ読み込み
+        async function selectStadium(id) {
+            currentStadium = id;
+            currentRace = "1";
+            
+            document.getElementById("stadiumView").classList.add("hidden");
+            document.getElementById("detailView").classList.remove("hidden");
+            document.getElementById("raceNav").classList.remove("hidden");
+            document.getElementById("backBtn").style.display = "block";
+            document.getElementById("headerTitle").innerText = `${STADIUMS[id]} - レース解析`;
+
+            await loadStadiumData(id);
+        }
+
+        // JSONデータ取得
+        async function loadStadiumData(id) {
             try {
-                const res = await fetch(`stadium_${currentStadium}.json?v=${Date.now()}`);
+                const res = await fetch(`stadium_${id}.json?v=${Date.now()}`);
+                if (!res.ok) throw new Error("データが存在しません");
                 stadiumData = await res.json();
-                document.getElementById("stadiumTitle").innerText = `${stadiumData.stadium_name} - レース解析`;
                 renderRaceTabs();
                 renderRaceDetail(currentRace);
             } catch (e) {
                 console.error("データロードエラー", e);
+                document.getElementById("detailView").innerHTML = `
+                    <div class="card" style="text-align:center; padding:30px; color:#666;">
+                        現在 ${STADIUMS[id]} の解析データを取得中または本日は開催がありません。
+                    </div>
+                `;
             }
         }
 
+        // レースタブ描画
         function renderRaceTabs() {
+            if (!stadiumData || !stadiumData.races) return;
             let html = "";
             for (let r = 1; r <= 12; r++) {
                 const rStr = String(r);
@@ -137,13 +224,16 @@
             document.getElementById("raceNav").innerHTML = html;
         }
 
+        // レース切り替え
         function switchRace(rStr) {
             currentRace = rStr;
             renderRaceTabs();
             renderRaceDetail(rStr);
         }
 
+        // レース詳細データ描画
         function renderRaceDetail(rStr) {
+            if (!stadiumData || !stadiumData.races) return;
             const race = stadiumData.races[rStr];
             if (!race) return;
 
@@ -220,7 +310,7 @@
             document.getElementById("betsContainer").innerHTML = betsHtml || `<div style="grid-column: span 2; text-align:center; color:#999;">買い目算出中</div>`;
         }
 
-        window.onload = loadData;
+        window.onload = initStadiumGrid;
     </script>
 </body>
 </html>
