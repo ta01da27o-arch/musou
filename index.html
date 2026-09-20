@@ -69,7 +69,7 @@
 
     .race-nav { display: flex; overflow-x: auto; background: var(--primary); padding: 6px 8px; gap: 6px; border-radius: 8px; margin-bottom: 12px; scrollbar-width: none; }
     .race-nav::-webkit-scrollbar { display: none; }
-    .r-btn { background: rgba(255,255,255,0.25); color: white; border: none; padding: 6px 13px; border-radius: 4px; font-size: 12px; font-weight: bold; flex-shrink: 0; cursor: pointer; }
+    .r-btn { background: rgba(255,255,255,0.25); color: white; border: none; padding: 5px 10px; border-radius: 6px; font-size: 12px; font-weight: bold; flex-shrink: 0; cursor: pointer; text-align: center; min-width: 52px; }
     .r-btn.active { background: #ffb703; color: #000; }
 
     .weather-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; text-align: center; background: #eef6fc; padding: 10px; border-radius: 8px; font-size: 12px; }
@@ -329,7 +329,6 @@
       document.getElementById('headerTitle').innerText = `${STADIUMS[code].name} - レース解析`;
       document.getElementById('stadiumTitleName').innerText = STADIUMS[code].name;
 
-      renderRaceNav();
       loadStadiumData(currentCode, currentRace);
     }
 
@@ -360,11 +359,16 @@
       const nav = document.getElementById('raceNav');
       nav.innerHTML = '';
       for (let i = 1; i <= 12; i++) {
+        const raceKey = String(i);
+        const rData = cachedStadiumData[raceKey];
+        const timeStr = (rData && rData.close_time) ? rData.close_time : '--:--';
+
         const btn = document.createElement('button');
-        btn.className = `r-btn ${String(i) === currentRace ? 'active' : ''}`;
-        btn.innerText = `${i}R`;
+        btn.className = `r-btn ${raceKey === currentRace ? 'active' : ''}`;
+        btn.innerHTML = `<div>${i}R</div><div style="font-size: 9px; opacity: 0.85; font-weight: normal;">${timeStr}</div>`;
+        
         btn.onclick = () => {
-          currentRace = String(i);
+          currentRace = raceKey;
           renderRaceNav();
           renderRaceDataFromCache(currentRace);
         };
@@ -379,6 +383,9 @@
         if (!res.ok) throw new Error("場別データ取得エラー");
         const data = await res.json();
         cachedStadiumData = data.races || {};
+        
+        // ナビバー構築とデータ反映
+        renderRaceNav();
         renderRaceDataFromCache(race);
       } catch (err) {
         console.error("データ読み込み失敗:", err);
@@ -394,17 +401,20 @@
         return;
       }
 
-      // 締切予定時刻のセット
-      document.getElementById('raceCloseTime').innerText = data.close_time || "--:--";
+      // 1. 締切予定時刻の動的更新
+      const closeTimeElem = document.getElementById('raceCloseTime');
+      if (closeTimeElem) {
+        closeTimeElem.innerText = data.close_time || "--:--";
+      }
 
-      // 水面気象
+      // 2. 水面気象情報
       const weather = data.weather || {};
       document.getElementById('wWeather').innerText = weather.weather || "-";
       document.getElementById('wWind').innerText = weather.wind_speed || "-";
       document.getElementById('wDir').innerText = weather.wind_direction || "-";
       document.getElementById('wWave').innerText = weather.wave || "-";
 
-      // 出走表（直前データ未発表時はハイフン表示）
+      // 3. 出走表データ
       const tbody = document.getElementById('racerTableBody');
       tbody.innerHTML = '';
       (data.racers || []).forEach((r, idx) => {
@@ -420,12 +430,12 @@
         tbody.appendChild(tr);
       });
 
-      // 展開コメント
+      // 4. AI展開コメント
       document.getElementById('aiSummaryTag').innerText = data.summary_tag || "【本命濃厚】";
       document.getElementById('aiComment').innerHTML = data.comment || "";
       document.getElementById('aiSubComment').innerHTML = data.sub_comment || "";
 
-      // スリット隊形（ST未確定の場は初期位置に自動補正）
+      // 5. スリット隊形
       const trackStart = document.getElementById('slitTrackStart');
       const trackTurn = document.getElementById('slitTrackTurn');
       trackStart.innerHTML = '<div class="slit-line-label">STライン</div><div class="slit-line"></div>';
@@ -451,7 +461,7 @@
         trackTurn.appendChild(bTurn);
       });
 
-      // パワーゲージ
+      // 6. パワーゲージ
       const gaugeContainer = document.getElementById('powerGaugeContainer');
       gaugeContainer.innerHTML = '';
       (data.racers || []).forEach((r, idx) => {
@@ -466,7 +476,7 @@
         gaugeContainer.appendChild(item);
       });
 
-      // 買い目（10点表示）
+      // 7. 買い目（10点表示）
       const betContainer = document.getElementById('betContainer');
       betContainer.innerHTML = '';
       (data.bets || []).slice(0, 10).forEach(b => {
