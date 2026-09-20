@@ -53,18 +53,24 @@ def fetch_race_racers_and_close_time(jcd, rno, date_str):
     if html:
         soup = BeautifulSoup(html, "html.parser")
         
-        # 締切時刻の取得（例: 締切予定時刻 12:35）
-        ct_match = re.search(r"(\d{1,2}:\d{2})\s*締切", html) or re.search(r"締切予定時刻\s*(\d{1,2}:\d{2})", html)
-        if ct_match:
-            close_time = ct_match.group(1)
+        # --- 締切時刻取得の強化ロジック ---
+        # 1. 締切予定時刻テーブル/要素からの高精度検索
+        time_m = re.search(r"(?:締切予定|締切予定時刻|締切)\s*[\r\n\s]*(\d{1,2}:\d{2})", html)
+        if time_m:
+            close_time = time_m.group(1)
         else:
-            # テーブルヘッダーから探索
-            for th in soup.find_all(["th", "td"]):
-                if "締切" in th.text:
-                    m = re.search(r"\d{1,2}:\d{2}", th.text)
+            # 2. HTML要素の走査によるバックアップ検索
+            for cell in soup.find_all(["th", "td", "p", "div", "span"]):
+                txt = cell.text.strip()
+                if "締切" in txt:
+                    m = re.search(r"(\d{1,2}:\d{2})", txt)
                     if m:
-                        close_time = m.group(0)
+                        close_time = m.group(1)
                         break
+
+        # 時刻桁数の整形（例: "9:50" -> "09:50"）
+        if close_time != "--:--" and len(close_time.split(":")[0]) == 1:
+            close_time = "0" + close_time
 
         # 選手情報・階級の取得
         anchors = soup.find_all("a", href=re.compile(r"toban=\d+"))
@@ -264,7 +270,6 @@ def process_single_stadium(code, date_str, cache_key, now_jst):
     name = STADIUM_NAMES.get(code, "競艇場")
     races_dict = {}
     
-    # 既存ファイルがあれば読み込んで上書き保持
     existing_data = {}
     if os.path.exists(f"stadium_{code}.json"):
         try:
@@ -276,19 +281,6 @@ def process_single_stadium(code, date_str, cache_key, now_jst):
         r_str = str(r)
         racers, close_time = fetch_race_racers_and_close_time(code, r_str, date_str)
         
-        # 締切時刻から直前情報取り込み（15分前〜締切後）判定
-        should_fetch_before = True
-        if close_time != "--:--" and ":" in close_time:
-            try:
-                ch, cm = map(int, close_time.split(":"))
-                close_dt = now_jst.replace(hour=ch, minute=cm, second=0, microsecond=0)
-                # 締切20分以上前の未来レースは既存データを優先（サーバー負担軽減）
-                diff_minutes = (close_dt - now_jst).total_seconds() / 60.0
-                if diff_minutes > 20 and r_str in existing_data:
-                    # まだ展示前
-                    pass
-            except Exception: pass
-
         before_info = fetch_race_beforeinfo(code, r_str, date_str)
         
         combined_racers = []
