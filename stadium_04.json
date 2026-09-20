@@ -3,5 +3,6 @@
   "stadium_name": "平和島",
   "region": "kantou",
   "is_holding": false,
+  "ai_hit_rate": "-",
   "races": {}
 }

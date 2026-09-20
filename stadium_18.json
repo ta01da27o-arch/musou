@@ -3,5 +3,6 @@
   "stadium_name": "徳山",
   "region": "chugoku",
   "is_holding": false,
+  "ai_hit_rate": "-",
   "races": {}
 }

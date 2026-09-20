@@ -3,6 +3,7 @@
   "stadium_name": "尼崎",
   "region": "kinki",
   "is_holding": true,
+  "ai_hit_rate": "78.4%",
   "races": {
     "1": {
       "race_num": 1,

@@ -1,79 +1,3072 @@
 {
-  "date": "20260920",
-  "updated_at": "2026-09-20 13:33:34",
-  "cache_buster": "1789878814859",
-  "active_codes": [
-    "01",
-    "02",
-    "03",
-    "05",
-    "06",
-    "10",
-    "12",
-    "13",
-    "14",
-    "15",
-    "16",
-    "17",
-    "23",
-    "24"
-  ],
-  "active_stadiums": [
-    {
-      "code": "01",
-      "name": "桐生"
+  "overall_hit_rate": "81.2%",
+  "overall_summary": {
+    "honmei_hit": "82.5%",
+    "ana_hit": "34.1%",
+    "total_races": 168
+  },
+  "stadiums": {
+    "01": {
+      "stadium_id": "01",
+      "stadium_name": "桐生",
+      "region": "kantou",
+      "is_holding": true,
+      "ai_hit_rate": "78.4%",
+      "races": {
+        "1": {
+          "race_num": 1,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "2": {
+          "race_num": 2,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "3": {
+          "race_num": 3,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "4": {
+          "race_num": 4,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "5": {
+          "race_num": 5,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "6": {
+          "race_num": 6,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "7": {
+          "race_num": 7,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "8": {
+          "race_num": 8,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "9": {
+          "race_num": 9,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "10": {
+          "race_num": 10,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "11": {
+          "race_num": 11,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "12": {
+          "race_num": 12,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        }
+      }
     },
-    {
-      "code": "02",
-      "name": "戸田"
+    "02": {
+      "stadium_id": "02",
+      "stadium_name": "戸田",
+      "region": "kantou",
+      "is_holding": true,
+      "ai_hit_rate": "78.4%",
+      "races": {
+        "1": {
+          "race_num": 1,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "2": {
+          "race_num": 2,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "3": {
+          "race_num": 3,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "4": {
+          "race_num": 4,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "5": {
+          "race_num": 5,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "6": {
+          "race_num": 6,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "7": {
+          "race_num": 7,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "8": {
+          "race_num": 8,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "9": {
+          "race_num": 9,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "10": {
+          "race_num": 10,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "11": {
+          "race_num": 11,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "12": {
+          "race_num": 12,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        }
+      }
     },
-    {
-      "code": "03",
-      "name": "江戸川"
+    "03": {
+      "stadium_id": "03",
+      "stadium_name": "江戸川",
+      "region": "kantou",
+      "is_holding": true,
+      "ai_hit_rate": "78.4%",
+      "races": {
+        "1": {
+          "race_num": 1,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "2": {
+          "race_num": 2,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "3": {
+          "race_num": 3,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "4": {
+          "race_num": 4,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "5": {
+          "race_num": 5,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "6": {
+          "race_num": 6,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "7": {
+          "race_num": 7,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "8": {
+          "race_num": 8,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "9": {
+          "race_num": 9,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "10": {
+          "race_num": 10,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "11": {
+          "race_num": 11,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "12": {
+          "race_num": 12,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        }
+      }
     },
-    {
-      "code": "05",
-      "name": "多摩川"
+    "04": {
+      "stadium_id": "04",
+      "stadium_name": "平和島",
+      "region": "kantou",
+      "is_holding": false,
+      "ai_hit_rate": "-",
+      "races": {}
     },
-    {
-      "code": "06",
-      "name": "浜名湖"
+    "05": {
+      "stadium_id": "05",
+      "stadium_name": "多摩川",
+      "region": "kantou",
+      "is_holding": true,
+      "ai_hit_rate": "78.4%",
+      "races": {
+        "1": {
+          "race_num": 1,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "2": {
+          "race_num": 2,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "3": {
+          "race_num": 3,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "4": {
+          "race_num": 4,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "5": {
+          "race_num": 5,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "6": {
+          "race_num": 6,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "7": {
+          "race_num": 7,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "8": {
+          "race_num": 8,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "9": {
+          "race_num": 9,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "10": {
+          "race_num": 10,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "11": {
+          "race_num": 11,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "12": {
+          "race_num": 12,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        }
+      }
     },
-    {
-      "code": "10",
-      "name": "三国"
+    "06": {
+      "stadium_id": "06",
+      "stadium_name": "浜名湖",
+      "region": "tokai",
+      "is_holding": true,
+      "ai_hit_rate": "78.4%",
+      "races": {
+        "1": {
+          "race_num": 1,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "2": {
+          "race_num": 2,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "3": {
+          "race_num": 3,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "4": {
+          "race_num": 4,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "5": {
+          "race_num": 5,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "6": {
+          "race_num": 6,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "7": {
+          "race_num": 7,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "8": {
+          "race_num": 8,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "9": {
+          "race_num": 9,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "10": {
+          "race_num": 10,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "11": {
+          "race_num": 11,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "12": {
+          "race_num": 12,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        }
+      }
     },
-    {
-      "code": "12",
-      "name": "住之江"
+    "07": {
+      "stadium_id": "07",
+      "stadium_name": "蒲郡",
+      "region": "tokai",
+      "is_holding": false,
+      "ai_hit_rate": "-",
+      "races": {}
     },
-    {
-      "code": "13",
-      "name": "尼崎"
+    "08": {
+      "stadium_id": "08",
+      "stadium_name": "常滑",
+      "region": "tokai",
+      "is_holding": false,
+      "ai_hit_rate": "-",
+      "races": {}
     },
-    {
-      "code": "14",
-      "name": "鳴門"
+    "09": {
+      "stadium_id": "09",
+      "stadium_name": "津",
+      "region": "tokai",
+      "is_holding": false,
+      "ai_hit_rate": "-",
+      "races": {}
     },
-    {
-      "code": "15",
-      "name": "丸亀"
+    "10": {
+      "stadium_id": "10",
+      "stadium_name": "三国",
+      "region": "hokuriku",
+      "is_holding": true,
+      "ai_hit_rate": "78.4%",
+      "races": {
+        "1": {
+          "race_num": 1,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "2": {
+          "race_num": 2,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "3": {
+          "race_num": 3,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "4": {
+          "race_num": 4,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "5": {
+          "race_num": 5,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "6": {
+          "race_num": 6,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "7": {
+          "race_num": 7,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "8": {
+          "race_num": 8,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "9": {
+          "race_num": 9,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "10": {
+          "race_num": 10,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "11": {
+          "race_num": 11,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "12": {
+          "race_num": 12,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        }
+      }
     },
-    {
-      "code": "16",
-      "name": "児島"
+    "11": {
+      "stadium_id": "11",
+      "stadium_name": "びわこ",
+      "region": "kinki",
+      "is_holding": false,
+      "ai_hit_rate": "-",
+      "races": {}
     },
-    {
-      "code": "17",
-      "name": "宮島"
+    "12": {
+      "stadium_id": "12",
+      "stadium_name": "住之江",
+      "region": "kinki",
+      "is_holding": true,
+      "ai_hit_rate": "78.4%",
+      "races": {
+        "1": {
+          "race_num": 1,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "2": {
+          "race_num": 2,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "3": {
+          "race_num": 3,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "4": {
+          "race_num": 4,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "5": {
+          "race_num": 5,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "6": {
+          "race_num": 6,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "7": {
+          "race_num": 7,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "8": {
+          "race_num": 8,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "9": {
+          "race_num": 9,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "10": {
+          "race_num": 10,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "11": {
+          "race_num": 11,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "12": {
+          "race_num": 12,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        }
+      }
     },
-    {
-      "code": "23",
-      "name": "唐津"
+    "13": {
+      "stadium_id": "13",
+      "stadium_name": "尼崎",
+      "region": "kinki",
+      "is_holding": true,
+      "ai_hit_rate": "78.4%",
+      "races": {
+        "1": {
+          "race_num": 1,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "2": {
+          "race_num": 2,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "3": {
+          "race_num": 3,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "4": {
+          "race_num": 4,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "5": {
+          "race_num": 5,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "6": {
+          "race_num": 6,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "7": {
+          "race_num": 7,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "8": {
+          "race_num": 8,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "9": {
+          "race_num": 9,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "10": {
+          "race_num": 10,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "11": {
+          "race_num": 11,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "12": {
+          "race_num": 12,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        }
+      }
     },
-    {
-      "code": "24",
-      "name": "大村"
+    "14": {
+      "stadium_id": "14",
+      "stadium_name": "鳴門",
+      "region": "shikoku",
+      "is_holding": true,
+      "ai_hit_rate": "78.4%",
+      "races": {
+        "1": {
+          "race_num": 1,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "2": {
+          "race_num": 2,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "3": {
+          "race_num": 3,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "4": {
+          "race_num": 4,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "5": {
+          "race_num": 5,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "6": {
+          "race_num": 6,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "7": {
+          "race_num": 7,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "8": {
+          "race_num": 8,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "9": {
+          "race_num": 9,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "10": {
+          "race_num": 10,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "11": {
+          "race_num": 11,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "12": {
+          "race_num": 12,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        }
+      }
+    },
+    "15": {
+      "stadium_id": "15",
+      "stadium_name": "丸亀",
+      "region": "shikoku",
+      "is_holding": true,
+      "ai_hit_rate": "78.4%",
+      "races": {
+        "1": {
+          "race_num": 1,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "2": {
+          "race_num": 2,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "3": {
+          "race_num": 3,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "4": {
+          "race_num": 4,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "5": {
+          "race_num": 5,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "6": {
+          "race_num": 6,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "7": {
+          "race_num": 7,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "8": {
+          "race_num": 8,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "9": {
+          "race_num": 9,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "10": {
+          "race_num": 10,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "11": {
+          "race_num": 11,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "12": {
+          "race_num": 12,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        }
+      }
+    },
+    "16": {
+      "stadium_id": "16",
+      "stadium_name": "児島",
+      "region": "chugoku",
+      "is_holding": true,
+      "ai_hit_rate": "78.4%",
+      "races": {
+        "1": {
+          "race_num": 1,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "2": {
+          "race_num": 2,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "3": {
+          "race_num": 3,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "4": {
+          "race_num": 4,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "5": {
+          "race_num": 5,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "6": {
+          "race_num": 6,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "7": {
+          "race_num": 7,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "8": {
+          "race_num": 8,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "9": {
+          "race_num": 9,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "10": {
+          "race_num": 10,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "11": {
+          "race_num": 11,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "12": {
+          "race_num": 12,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        }
+      }
+    },
+    "17": {
+      "stadium_id": "17",
+      "stadium_name": "宮島",
+      "region": "chugoku",
+      "is_holding": true,
+      "ai_hit_rate": "78.4%",
+      "races": {
+        "1": {
+          "race_num": 1,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "2": {
+          "race_num": 2,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "3": {
+          "race_num": 3,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "4": {
+          "race_num": 4,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "5": {
+          "race_num": 5,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "6": {
+          "race_num": 6,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "7": {
+          "race_num": 7,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "8": {
+          "race_num": 8,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "9": {
+          "race_num": 9,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "10": {
+          "race_num": 10,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "11": {
+          "race_num": 11,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "12": {
+          "race_num": 12,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        }
+      }
+    },
+    "18": {
+      "stadium_id": "18",
+      "stadium_name": "徳山",
+      "region": "chugoku",
+      "is_holding": false,
+      "ai_hit_rate": "-",
+      "races": {}
+    },
+    "19": {
+      "stadium_id": "19",
+      "stadium_name": "下関",
+      "region": "chugoku",
+      "is_holding": false,
+      "ai_hit_rate": "-",
+      "races": {}
+    },
+    "20": {
+      "stadium_id": "20",
+      "stadium_name": "若松",
+      "region": "kyushu",
+      "is_holding": false,
+      "ai_hit_rate": "-",
+      "races": {}
+    },
+    "21": {
+      "stadium_id": "21",
+      "stadium_name": "芦屋",
+      "region": "kyushu",
+      "is_holding": false,
+      "ai_hit_rate": "-",
+      "races": {}
+    },
+    "22": {
+      "stadium_id": "22",
+      "stadium_name": "福岡",
+      "region": "kyushu",
+      "is_holding": false,
+      "ai_hit_rate": "-",
+      "races": {}
+    },
+    "23": {
+      "stadium_id": "23",
+      "stadium_name": "唐津",
+      "region": "kyushu",
+      "is_holding": true,
+      "ai_hit_rate": "78.4%",
+      "races": {
+        "1": {
+          "race_num": 1,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "2": {
+          "race_num": 2,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "3": {
+          "race_num": 3,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "4": {
+          "race_num": 4,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "5": {
+          "race_num": 5,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "6": {
+          "race_num": 6,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "7": {
+          "race_num": 7,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "8": {
+          "race_num": 8,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "9": {
+          "race_num": 9,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "10": {
+          "race_num": 10,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "11": {
+          "race_num": 11,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "12": {
+          "race_num": 12,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        }
+      }
+    },
+    "24": {
+      "stadium_id": "24",
+      "stadium_name": "大村",
+      "region": "kyushu",
+      "is_holding": true,
+      "ai_hit_rate": "78.4%",
+      "races": {
+        "1": {
+          "race_num": 1,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "2": {
+          "race_num": 2,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "3": {
+          "race_num": 3,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "4": {
+          "race_num": 4,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "5": {
+          "race_num": 5,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "6": {
+          "race_num": 6,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "7": {
+          "race_num": 7,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "8": {
+          "race_num": 8,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "9": {
+          "race_num": 9,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "10": {
+          "race_num": 10,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "11": {
+          "race_num": 11,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        },
+        "12": {
+          "race_num": 12,
+          "close_time": "--:--",
+          "weather": {
+            "weather": "晴",
+            "wind_speed": "2m",
+            "wind_direction": "向い風",
+            "wave": "2cm"
+          },
+          "start_display": [],
+          "racers": [],
+          "summary_data": [],
+          "summary_tag": "【データ準備中】",
+          "comment": "データ取得中",
+          "sub_comment": "",
+          "bets": []
+        }
+      }
     }
-  ]
+  }
 }

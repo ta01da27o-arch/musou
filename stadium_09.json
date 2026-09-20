@@ -3,5 +3,6 @@
   "stadium_name": "津",
   "region": "tokai",
   "is_holding": false,
+  "ai_hit_rate": "-",
   "races": {}
 }

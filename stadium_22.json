@@ -3,5 +3,6 @@
   "stadium_name": "福岡",
   "region": "kyushu",
   "is_holding": false,
+  "ai_hit_rate": "-",
   "races": {}
 }

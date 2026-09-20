@@ -3,6 +3,7 @@
   "stadium_name": "桐生",
   "region": "kantou",
   "is_holding": true,
+  "ai_hit_rate": "78.4%",
   "races": {
     "1": {
       "race_num": 1,
