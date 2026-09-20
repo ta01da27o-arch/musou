@@ -2,7 +2,7 @@
   "date": "20260920",
   "stadium_code": "02",
   "stadium_name": "戸田",
-  "cache_buster": "1789868527430",
+  "cache_buster": "1789871717204",
   "races": {
     "1": {
       "close_time": "10:47",
@@ -138,9 +138,9 @@
       "close_time": "10:47",
       "weather": {
         "weather": "-",
-        "wind_speed": "1m",
+        "wind_speed": "0m",
         "wind_direction": "追い風",
-        "wave": "1cm"
+        "wave": "0cm"
       },
       "summary_tag": "【捲り一閃】",
       "racers": [
