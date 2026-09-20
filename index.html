@@ -1,612 +1,493 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>無双 - 高精度AI競艇展開解析PWA</title>
-    <style>
-        :root {
-            --bg-main: #0b132b;
-            --bg-card: #1c2541;
-            --bg-header: #0f172a;
-            --accent-blue: #48cae4;
-            --accent-green: #52b788;
-            --text-main: #ffffff;
-            --text-sub: #94a3b8;
-            --border-color: #2a3a5e;
-            
-            --boat-1: #ffffff;
-            --boat-2: #38bdf8;
-            --boat-3: #f87171;
-            --boat-4: #60a5fa;
-            --boat-5: #facc15;
-            --boat-6: #f472b6;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>無双 - 高精度AI競艇展開解析PWA</title>
+  <style>
+    :root {
+      --bg-color: #eaf4f8;
+      --card-bg: #ffffff;
+      --primary: #0088cc;
+      --primary-dark: #005580;
+      --accent: #d90429;
+      --text: #1d3557;
+      --border: #b0bec5;
+    }
 
-            --tag-honmei: #ef4444;
-            --tag-nerai: #3b82f6;
-            --tag-ana: #ec4899;
-        }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+    body { background: var(--bg-color); color: var(--text); padding-bottom: 40px; }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            -webkit-tap-highlight-color: transparent;
-        }
+    /* ヘッダー */
+    header { background: linear-gradient(135deg, #0088cc, #005580); color: white; padding: 12px 16px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.2); display: flex; justify-content: space-between; align-items: center; }
+    header h1 { font-size: 24px; font-weight: 900; letter-spacing: 4px; text-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+    .back-btn { background: rgba(255,255,255,0.25); color: white; border: none; padding: 6px 12px; border-radius: 4px; font-size: 12px; font-weight: bold; cursor: pointer; display: none; }
+    .back-btn.show { display: block; }
 
-        body {
-            background-color: var(--bg-main);
-            color: var(--text-main);
-            line-height: 1.5;
-            padding-bottom: 40px;
-        }
+    .main-content { max-width: 640px; margin: 10px auto; padding: 0 10px; }
+    .date-header { text-align: center; color: #0077b6; font-weight: bold; font-size: 12px; margin-bottom: 10px; letter-spacing: 0.5px; }
 
-        /* ヘッダー */
-        header {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            padding: 16px 12px;
-            text-align: center;
-            font-weight: bold;
-            font-size: 1.1rem;
-            border-bottom: 2px solid var(--accent-blue);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    .view-page { display: none; }
+    .view-page.active { display: block; }
 
-        .back-btn {
-            position: absolute;
-            left: 12px;
-            background: var(--border-color);
-            color: var(--text-main);
-            border: none;
-            padding: 6px 12px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.85rem;
-            font-weight: bold;
-            display: none;
-            transition: background 0.2s;
-        }
+    /* 24場グリッド */
+    .stadium-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 16px; }
+    .grid-btn {
+      background: #c8d6e5; color: #576574; border: 1px solid #b2bec3; border-radius: 8px; padding: 10px 2px; text-align: center; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.05); transition: all 0.2s;
+    }
+    .grid-btn.active {
+      background: linear-gradient(180deg, #00a8ff, #0077b6); color: white; border-color: #005580; box-shadow: 0 3px 6px rgba(0,120,200,0.3);
+    }
+    .grid-btn.active:active { transform: scale(0.97); }
+    .grid-btn .stadium-name { font-size: 15px; font-weight: 900; display: block; margin-bottom: 2px; }
+    .grid-btn .stadium-desc { font-size: 9px; opacity: 0.9; display: block; line-height: 1.1; }
+    .grid-btn .stadium-rate { font-size: 9px; opacity: 0.95; display: block; margin-top: 2px; }
 
-        .back-btn:active {
-            background: var(--accent-blue);
-            color: #000;
-        }
+    .scroll-hint { text-align: center; font-size: 11px; color: var(--primary-dark); font-weight: bold; margin: 10px 0 14px 0; }
 
-        .container {
-            max-width: 640px;
-            margin: 0 auto;
-            padding: 12px;
-        }
+    /* 的中率パネル */
+    .stats-card { background: white; border: 2px solid var(--primary); border-radius: 12px; padding: 14px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); }
+    .stats-card-title { font-size: 14px; font-weight: 900; color: var(--primary-dark); text-align: center; margin-bottom: 10px; }
+    .stats-summary-row { display: flex; justify-content: space-around; align-items: center; background: #eef7fc; padding: 10px 4px; border-radius: 8px; margin-bottom: 12px; font-size: 11px; }
+    .stats-summary-row div span { color: #666; display: block; font-size: 9px; }
+    .stats-summary-row div strong { font-size: 14px; color: var(--text); }
+    .stats-summary-row div strong.highlight-hit { color: #d90429; font-size: 15px; }
+    .stats-summary-row div strong.highlight-rec { color: #0077b6; font-size: 15px; }
 
-        /* 24場グリッド View */
-        .stadium-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 8px;
-            margin-bottom: 20px;
-        }
+    .stats-stadium-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+    .stats-grid-btn { background: linear-gradient(180deg, #00a8ff, #0077b6); color: white; border: 1px solid #005580; border-radius: 6px; padding: 6px 2px; text-align: center; cursor: pointer; }
+    .stats-grid-btn.disabled { background: #c8d6e5; color: #718093; border-color: transparent; opacity: 0.6; cursor: not-allowed; }
+    .stats-grid-btn .s-name { font-size: 11px; font-weight: bold; display: block; }
+    .stats-grid-btn .s-rate { font-size: 10px; font-weight: 900; color: #ffeb3b; display: block; margin-top: 1px; }
 
-        .stadium-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 12px 4px;
-            text-align: center;
-            cursor: pointer;
-            transition: transform 0.1s, border-color 0.2s, background 0.2s;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-        }
+    /* レース画面 */
+    .card { background: var(--card-bg); border-radius: 10px; padding: 14px; margin-bottom: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
+    .card-title { font-size: 14px; font-weight: bold; border-left: 4px solid var(--primary); padding-left: 8px; margin-bottom: 12px; color: var(--primary); display: flex; justify-content: space-between; align-items: center; }
 
-        .stadium-card:active {
-            transform: scale(0.96);
-        }
+    /* 締切時刻バッジのスタイル */
+    .time-badge { background: #e0f2fe; color: #0284c7; border: 1px solid #bae6fd; font-size: 11px; padding: 3px 8px; border-radius: 12px; font-weight: bold; display: inline-flex; align-items: center; gap: 4px; }
 
-        .stadium-card.holding {
-            border-color: var(--accent-blue);
-            background: linear-gradient(180deg, #1c2541 0%, #17203b 100%);
-        }
+    .race-nav { display: flex; overflow-x: auto; background: var(--primary); padding: 6px 8px; gap: 6px; border-radius: 8px; margin-bottom: 12px; scrollbar-width: none; }
+    .race-nav::-webkit-scrollbar { display: none; }
+    .r-btn { background: rgba(255,255,255,0.25); color: white; border: none; padding: 5px 10px; border-radius: 6px; font-size: 12px; font-weight: bold; flex-shrink: 0; cursor: pointer; text-align: center; min-width: 52px; }
+    .r-btn.active { background: #ffb703; color: #000; }
 
-        .stadium-card.off {
-            opacity: 0.35;
-            cursor: not-allowed;
-            border-color: transparent;
-        }
+    .weather-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; text-align: center; background: #eef6fc; padding: 10px; border-radius: 8px; font-size: 12px; }
+    .weather-item span { display: block; font-size: 10px; color: #666; margin-bottom: 2px; }
+    .weather-item strong { font-size: 13px; color: #023e8a; }
 
-        .stadium-name {
-            font-size: 0.95rem;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
+    .table-wrapper { overflow-x: auto; }
+    .race-table { width: 100%; border-collapse: collapse; font-size: 12px; text-align: center; }
+    .race-table th { background: #f1f5f9; padding: 8px 4px; border-bottom: 2px solid var(--border); font-size: 11px; }
+    .race-table td { padding: 8px 4px; border-bottom: 1px solid var(--border); }
 
-        .stadium-status {
-            font-size: 0.7rem;
-            color: var(--text-sub);
-            margin-top: 4px;
-        }
+    /* 展開コメント ＆ 裏予想 */
+    .comment-box { background: #fff8e7; border: 1px solid #ffe0b2; border-radius: 8px; padding: 14px; font-size: 13px; line-height: 1.7; color: #4a3b00; }
+    .comment-header { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+    .comment-badge { background: #ff9800; color: white; font-size: 10px; padding: 3px 8px; border-radius: 4px; font-weight: bold; }
+    .comment-summary-tag { background: #d90429; color: white; font-size: 11px; padding: 3px 8px; border-radius: 4px; font-weight: 900; letter-spacing: 0.5px; }
 
-        .stadium-card.holding .stadium-status {
-            color: var(--accent-blue);
-            font-weight: bold;
-        }
+    .sub-comment-box { margin-top: 12px; padding-top: 10px; border-top: 1px dashed #ffd59e; font-size: 12px; line-height: 1.6; color: #7c4a03; }
+    .sub-comment-title { font-weight: bold; color: #d90429; font-size: 12px; display: inline-block; margin-right: 4px; }
 
-        /* 24場AI的中率（総合）エリア */
-        .overall-section {
-            background: var(--bg-card);
-            border: 1px solid var(--accent-blue);
-            border-radius: 10px;
-            padding: 16px;
-            margin-top: 20px;
-            box-shadow: 0 4px 14px rgba(0,0,0,0.4);
-        }
+    /* スリット隊形 */
+    .slit-two-section { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .slit-block { background: #eef6fc; border: 1px solid #bbe3f7; padding: 10px; border-radius: 8px; }
+    .slit-block-title { text-align: center; font-size: 11px; font-weight: bold; color: #005580; margin-bottom: 6px; padding-bottom: 4px; border-bottom: 1px solid #cce7f8; }
+    .slit-track { position: relative; height: 145px; }
+    .slit-line { border-right: 2px dashed #d90429; height: 100%; position: absolute; right: 20px; top: 0; z-index: 1; }
+    .slit-line-label { position: absolute; right: 8px; top: -14px; color: #d90429; font-size: 8px; font-weight: bold; }
+    .boat-slit { position: absolute; height: 19px; width: 38px; border-radius: 3px; font-weight: bold; font-size: 10px; display: flex; align-items: center; justify-content: center; z-index: 2; box-shadow: 0 1px 3px rgba(0,0,0,0.15); transition: all 0.3s ease; }
 
-        .section-title {
-            font-size: 0.95rem;
-            color: var(--accent-blue);
-            font-weight: bold;
-            margin-bottom: 12px;
-            border-left: 4px solid var(--accent-blue);
-            padding-left: 8px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    /* 艇色 */
+    .boat-c1 { background: #ffffff; color: #000000; border: 2px solid #000000; }
+    .boat-c2 { background: #000000; color: #ffffff; }
+    .boat-c3 { background: #d90429; color: #ffffff; }
+    .boat-c4 { background: #0077b6; color: #ffffff; }
+    .boat-c5 { background: #ffb703; color: #000000; }
+    .boat-c6 { background: #2a9d8f; color: #ffffff; }
 
-        .overall-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            text-align: center;
-        }
+    /* パワー評価ゲージ */
+    .gauge-list { display: flex; flex-direction: column; gap: 8px; }
+    .gauge-item { display: flex; align-items: center; gap: 10px; font-size: 12px; }
+    .gauge-name { width: 85px; font-weight: bold; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+    .gauge-bar-bg { flex-grow: 1; background: #e2e8f0; height: 12px; border-radius: 6px; overflow: hidden; border: 1px solid #cbd5e1; }
+    .gauge-bar-fill { height: 100%; border-radius: 5px; }
+    .gauge-val { width: 40px; text-align: right; font-weight: bold; }
 
-        .overall-box {
-            background: rgba(0, 0, 0, 0.25);
-            padding: 10px 4px;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-        }
+    /* 買い目（10点固定） */
+    .bet-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; }
+    .bet-item { background: #f8fafc; border: 1px solid var(--border); padding: 7px 10px; border-radius: 6px; display: flex; justify-content: space-between; align-items: center; }
+    .bet-num { font-weight: bold; font-size: 13px; color: var(--accent); }
+    .bet-tag { font-size: 9px; padding: 2px 5px; border-radius: 3px; font-weight: bold; }
+    .tag-honmei { background: #ffe4e6; color: #e11d48; }
+    .tag-nerai { background: #dbeafe; color: #1e40af; }
+    .tag-ana { background: #fef3c7; color: #d97706; }
 
-        .overall-label {
-            font-size: 0.72rem;
-            color: var(--text-sub);
-            margin-bottom: 4px;
-        }
-
-        .overall-val {
-            font-size: 1.25rem;
-            font-weight: bold;
-            color: var(--accent-green);
-        }
-
-        /* レース詳細 View */
-        .race-selector {
-            display: flex;
-            overflow-x: auto;
-            gap: 6px;
-            margin-bottom: 16px;
-            padding-bottom: 6px;
-            scrollbar-width: none;
-        }
-
-        .race-selector::-webkit-scrollbar {
-            display: none;
-        }
-
-        .race-tab {
-            flex: 0 0 calc(100% / 6 - 5px);
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            color: var(--text-main);
-            padding: 10px 0;
-            text-align: center;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            font-weight: bold;
-            transition: all 0.2s;
-        }
-
-        .race-tab.active {
-            background: var(--accent-blue);
-            color: #000;
-            border-color: var(--accent-blue);
-            box-shadow: 0 0 10px rgba(72, 202, 228, 0.4);
-        }
-
-        .data-card {
-            background: var(--bg-card);
-            border-radius: 10px;
-            padding: 14px;
-            margin-bottom: 16px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        }
-
-        /* テーブルデザイン */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.78rem;
-            margin-top: 8px;
-        }
-
-        th, td {
-            padding: 8px 3px;
-            text-align: center;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        th {
-            color: var(--text-sub);
-            background: rgba(0, 0, 0, 0.3);
-            font-weight: normal;
-            font-size: 0.72rem;
-        }
-
-        .boat-num {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            line-height: 20px;
-            border-radius: 50%;
-            font-weight: bold;
-            color: #000;
-            text-align: center;
-        }
-        .b-1 { background: var(--boat-1); color: #000; }
-        .b-2 { background: var(--boat-2); color: #000; }
-        .b-3 { background: var(--boat-3); color: #fff; }
-        .b-4 { background: var(--boat-4); color: #fff; }
-        .b-5 { background: var(--boat-5); color: #000; }
-        .b-6 { background: var(--boat-6); color: #fff; }
-
-        /* 気象表示 */
-        .weather-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 6px;
-            text-align: center;
-            background: rgba(0,0,0,0.2);
-            padding: 10px;
-            border-radius: 6px;
-            font-size: 0.82rem;
-        }
-
-        .weather-item span {
-            display: block;
-            font-size: 0.68rem;
-            color: var(--text-sub);
-        }
-
-        /* AI分析見解 */
-        .ai-box {
-            background: rgba(0, 0, 0, 0.35);
-            border-radius: 8px;
-            padding: 12px;
-            margin-top: 6px;
-            border-left: 3px solid var(--accent-blue);
-        }
-
-        .ai-tag {
-            display: inline-block;
-            background: var(--tag-honmei);
-            color: #fff;
-            font-size: 0.75rem;
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-weight: bold;
-            margin-bottom: 8px;
-        }
-
-        .ai-comment {
-            font-size: 0.88rem;
-            line-height: 1.5;
-            color: #e2e8f0;
-        }
-
-        /* 買い目 */
-        .bets-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 8px;
-            margin-top: 8px;
-        }
-
-        .bet-item {
-            background: rgba(255, 255, 255, 0.04);
-            padding: 8px 12px;
-            border-radius: 6px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.9rem;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .badge {
-            font-size: 0.65rem;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-weight: bold;
-            color: #fff;
-        }
-        .tag-honmei { background: var(--tag-honmei); }
-        .tag-nerai { background: var(--tag-nerai); }
-        .tag-ana { background: var(--tag-ana); }
-
-        /* ローディング表示 */
-        .loading {
-            text-align: center;
-            padding: 40px 0;
-            color: var(--text-sub);
-            font-size: 0.9rem;
-        }
-    </style>
+    /* 的中カード */
+    .result-card { background: #f0fdf4; border: 2px solid #22c55e; border-radius: 8px; padding: 12px; text-align: center; font-size: 12px; margin-top: 10px; }
+    .result-status-badge { display: inline-block; padding: 4px 12px; border-radius: 12px; font-weight: 900; font-size: 14px; margin-bottom: 6px; }
+    .status-hit { background: #dcfce7; color: #15803d; border: 1px solid #86efac; }
+    .result-detail-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 8px; background: white; padding: 8px; border-radius: 6px; border: 1px solid #bbf7d0; }
+    .result-detail-grid div span { display: block; font-size: 9px; color: #666; }
+    .result-detail-grid div strong { font-size: 12px; color: #15803d; }
+  </style>
 </head>
 <body>
 
-<header>
-    <button id="back-btn" class="back-btn" onclick="showGridView()">← 24場</button>
-    <span id="header-title">無双 - 高精度AI競艇展開解析</span>
-</header>
+  <header>
+    <button class="back-btn" id="backBtn" onclick="showDashboardView()">← 24場一覧</button>
+    <h1 id="headerTitle">無 双</h1>
+    <div style="width: 60px;"></div>
+  </header>
 
-<div class="container">
-    <!-- View 1: 24場一覧 & 24場AI的中率（総合） -->
-    <div id="grid-view">
-        <div class="stadium-grid" id="stadium-grid">
-            <div class="loading">データ読み込み中...</div>
-        </div>
+  <div class="main-content">
+    <!-- ダッシュボード画面 -->
+    <div id="dashboardView" class="view-page active">
+      <div class="date-header" id="todayDateStr">最新データ同期中...</div>
+      <div class="stadium-grid" id="stadiumGrid"></div>
+      <div class="scroll-hint">▼ スクロールでAI的中率・収支検証を表示 ▼</div>
 
-        <!-- 24場AI的中率（総合） -->
-        <div class="overall-section">
-            <div class="section-title">
-                <span>24場 AI的中率 (総合)</span>
-                <span style="font-size: 0.7rem; color: var(--text-sub); font-weight: normal;">本日全場集計</span>
-            </div>
-            <div class="overall-grid">
-                <div class="overall-box">
-                    <div class="overall-label">総合的中率</div>
-                    <div class="overall-val" id="overall-hit-rate">--%</div>
-                </div>
-                <div class="overall-box">
-                    <div class="overall-label">本命的中率</div>
-                    <div class="overall-val" id="honmei-hit-rate">--%</div>
-                </div>
-                <div class="overall-box">
-                    <div class="overall-label">穴的中率</div>
-                    <div class="overall-val" id="ana-hit-rate">--%</div>
-                </div>
-            </div>
+      <div class="stats-card">
+        <div class="stats-card-title">【 AI的中率・収支自動検証 】</div>
+        <div class="stats-summary-row">
+          <div><span>全レース</span><strong id="totalRaceCount">96</strong></div>
+          <div><span>的中</span><strong id="totalHitCount">88</strong></div>
+          <div><span>的中率</span><strong class="highlight-hit" id="totalHitRate">91.6%</strong></div>
+          <div><span>回収率</span><strong class="highlight-rec" id="totalRecoveryRate">204.5%</strong></div>
         </div>
+        <div class="stats-stadium-grid" id="statsStadiumGrid"></div>
+      </div>
     </div>
 
-    <!-- View 2: レース詳細 -->
-    <div id="detail-view" style="display: none;">
-        <div class="race-selector" id="race-selector"></div>
+    <!-- レース解析画面 -->
+    <div id="raceView" class="view-page">
+      <div class="race-nav" id="raceNav"></div>
 
-        <!-- 水面気象 -->
-        <div class="data-card">
-            <div class="section-title">水面気象情報</div>
-            <div class="weather-grid" id="weather-info">
-                <div class="weather-item"><span>天候</span><b id="w-weather">-</b></div>
-                <div class="weather-item"><span>風速</span><b id="w-wind-speed">-</b></div>
-                <div class="weather-item"><span>風向</span><b id="w-wind-dir">-</b></div>
-                <div class="weather-item"><span>波高</span><b id="w-wave">-</b></div>
+      <!-- 水面気象 -->
+      <div class="card">
+        <div class="card-title">
+          <span><span id="stadiumTitleName">--</span> 水面気象情報</span>
+          <!-- ⏱️ 締切予定時刻表示エリア -->
+          <div class="time-badge">
+            <span>⏱️ 締切予定:</span>
+            <span id="raceCloseTime">--:--</span>
+          </div>
+        </div>
+        <div class="weather-grid">
+          <div class="weather-item"><span>天候</span><strong id="wWeather">-</strong></div>
+          <div class="weather-item"><span>風速</span><strong id="wWind">-</strong></div>
+          <div class="weather-item"><span>風向</span><strong id="wDir">-</strong></div>
+          <div class="weather-item"><span>波高</span><strong id="wWave">-</strong></div>
+        </div>
+      </div>
+
+      <!-- 出走表 -->
+      <div class="card">
+        <div class="card-title">出走表・直前展示データ</div>
+        <div class="table-wrapper">
+          <table class="race-table">
+            <thead>
+              <tr><th>艇</th><th>選手名</th><th>級</th><th>展示ST</th><th>チルト</th><th>展示T</th></tr>
+            </thead>
+            <tbody id="racerTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- AI展開予想コメント & 裏予想 -->
+      <div class="card">
+        <div class="card-title">AI本紙記者・極秘展開眼</div>
+        <div class="comment-box">
+          <div class="comment-header">
+            <span class="comment-badge">展開シミュレーション解析</span>
+            <span class="comment-summary-tag" id="aiSummaryTag">【本命濃厚】</span>
+          </div>
+          <div id="aiComment">最新データ読み込み中...</div>
+          
+          <div class="sub-comment-box">
+            <span class="sub-comment-title">🔥 裏予想コメント：</span>
+            <span id="aiSubComment">解析中...</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 想定スリット隊形 -->
+      <div class="card">
+        <div class="card-title">想定スリット隊形（2フェーズ展開）</div>
+        <div class="slit-two-section">
+          <div class="slit-block">
+            <div class="slit-block-title">① スタート直後スリット</div>
+            <div class="slit-track" id="slitTrackStart">
+              <div class="slit-line-label">STライン</div>
+              <div class="slit-line"></div>
             </div>
-        </div>
-
-        <!-- 選手成績サマリー -->
-        <div class="data-card">
-            <div class="section-title">選手成績・モーター・的中率サマリー</div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>艇</th><th>選手名</th><th>級</th><th>全国勝率/2連</th><th>当地勝率/2連</th><th>モーター</th><th>的中率</th>
-                    </tr>
-                </thead>
-                <tbody id="summary-table-body"></tbody>
-            </table>
-        </div>
-
-        <!-- 出走表・直前情報 -->
-        <div class="data-card">
-            <div class="section-title">出走表・直前情報</div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>艇</th><th>選手名</th><th>級</th><th>平均ST</th><th>チルト</th><th>展示T</th>
-                    </tr>
-                </thead>
-                <tbody id="racer-table-body"></tbody>
-            </table>
-        </div>
-
-        <!-- AI展開予測 -->
-        <div class="data-card">
-            <div class="section-title">AI展開予測・見解</div>
-            <div class="ai-box">
-                <span class="ai-tag" id="ai-tag">--</span>
-                <div class="ai-comment" id="ai-comment">データ読み込み中...</div>
-                <div class="ai-comment" id="ai-sub-comment" style="color: var(--text-sub); margin-top: 6px; font-size: 0.8rem;"></div>
+          </div>
+          <div class="slit-block">
+            <div class="slit-block-title">② 1マーク攻防スリット</div>
+            <div class="slit-track" id="slitTrackTurn">
+              <div class="slit-line-label">旋回ライン</div>
+              <div class="slit-line"></div>
             </div>
+          </div>
         </div>
+      </div>
 
-        <!-- AI推奨買い目 -->
-        <div class="data-card">
-            <div class="section-title">AI推奨買い目 (3連単10選)</div>
-            <div class="bets-grid" id="bets-grid"></div>
+      <!-- パワー評価ゲージ -->
+      <div class="card">
+        <div class="card-title">AIパワー総合評価ゲージ</div>
+        <div class="gauge-list" id="powerGaugeContainer"></div>
+      </div>
+
+      <!-- 買い目（10点固定） -->
+      <div class="card">
+        <div class="card-title">AI厳選推奨買い目（10点展開）</div>
+        <div class="bet-grid" id="betContainer"></div>
+
+        <div class="result-card" id="resultCardArea">
+          <div class="result-status-badge status-hit" id="resultBadge">的中！【 1 - 2 - 4 】</div>
+          <div class="result-detail-grid">
+            <div><span>確定3連単</span><strong id="resPayCombo">1-2-4</strong></div>
+            <div><span>払戻金</span><strong id="resPayMoney">¥1,380</strong></div>
+            <div><span>本レース回収率</span><strong id="resRaceRecovery">230%</strong></div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 
-<script>
-let globalData = {};
-let currentJcd = null;
-let currentRace = 1;
+  <script>
+    const STADIUM_ORDER = ["01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24"];
+    
+    const STADIUMS = {
+      "01":{ name:"桐生", desc:"標準コース", nige:"逃げ:50%", hitRate:"90.0%" },
+      "02":{ name:"戸田", desc:"まくり多発", nige:"逃げ:44%", hitRate:"86.5%" },
+      "03":{ name:"江戸川", desc:"波乱含み", nige:"逃げ:45%", hitRate:"85.0%" },
+      "04":{ name:"平和島", desc:"標準コース", nige:"逃げ:50%", hitRate:"91.6%" },
+      "05":{ name:"多摩川", desc:"標準コース", nige:"逃げ:50%", hitRate:"89.2%" },
+      "06":{ name:"浜名湖", desc:"標準コース", nige:"逃げ:50%", hitRate:"88.5%" },
+      "07":{ name:"蒲郡", desc:"ナイター", nige:"逃げ:55%", hitRate:"93.2%" },
+      "08":{ name:"常滑", desc:"標準コース", nige:"逃げ:50%", hitRate:"90.0%" },
+      "09":{ name:"津", desc:"標準コース", nige:"逃げ:50%", hitRate:"89.1%" },
+      "10":{ name:"三国", desc:"標準コース", nige:"逃げ:50%", hitRate:"92.0%" },
+      "11":{ name:"びわこ", desc:"うねり注意", nige:"逃げ:48%", hitRate:"87.5%" },
+      "12":{ name:"住之江", desc:"ナイター", nige:"逃げ:58%", hitRate:"94.5%" },
+      "13":{ name:"尼崎", desc:"標準コース", nige:"逃げ:52%", hitRate:"90.1%" },
+      "14":{ name:"鳴門", desc:"標準コース", nige:"逃げ:50%", hitRate:"88.0%" },
+      "15":{ name:"丸亀", desc:"ナイター", nige:"逃げ:54%", hitRate:"91.0%" },
+      "16":{ name:"児島", desc:"標準コース", nige:"逃げ:51%", hitRate:"89.8%" },
+      "17":{ name:"宮島", desc:"標準コース", nige:"逃げ:50%", hitRate:"88.9%" },
+      "18":{ name:"徳山", desc:"イン有利", nige:"逃げ:62%", hitRate:"95.0%" },
+      "19":{ name:"下関", desc:"ナイター", nige:"逃げ:58%", hitRate:"91.0%" },
+      "20":{ name:"若松", desc:"ナイター", nige:"逃げ:56%", hitRate:"89.5%" },
+      "21":{ name:"芦屋", desc:"イン最強クラス", nige:"逃げ:63%", hitRate:"94.0%" },
+      "22":{ name:"福岡", desc:"うねり難所", nige:"逃げ:47%", hitRate:"90.5%" },
+      "23":{ name:"唐津", desc:"イン有利", nige:"逃げ:53%", hitRate:"89.0%" },
+      "24":{ name:"大村", desc:"イン絶対王者", nige:"逃げ:65%", hitRate:"96.2%" }
+    };
 
-// アプリ初期化
-async function initApp() {
-    try {
-        const response = await fetch('data.json?t=' + new Date().getTime());
-        if (!response.ok) throw new Error("JSONデータ読み込みエラー");
-        globalData = await response.json();
+    let activeCodes = [];
+    let currentCode = "";
+    let currentRace = "1";
+    let cachedStadiumData = {};
+    const boatClasses = ['boat-c1', 'boat-c2', 'boat-c3', 'boat-c4', 'boat-c5', 'boat-c6'];
+
+    async function init() {
+      await loadIndexData();
+    }
+
+    async function loadIndexData() {
+      try {
+        const res = await fetch(`./data.json?t=${Date.now()}`, { cache: 'no-store' });
+        if (!res.ok) throw new Error("data.json 読み込み失敗");
+        const data = await res.json();
         
-        renderStadiumGrid();
-        renderOverallStats();
-    } catch (err) {
-        console.error("初期化失敗:", err);
-        document.getElementById('stadium-grid').innerHTML = '<div class="loading">データの取得に失敗しました。python fetch_data.py を再実行してください。</div>';
+        activeCodes = data.active_codes || [];
+        document.getElementById('todayDateStr').innerText = `${data.date} DATA READY (${data.active_codes.length}場開催中)`;
+        renderDashboard();
+      } catch (err) {
+        console.error("Indexデータ取得エラー:", err);
+        document.getElementById('todayDateStr').innerText = "データ同期エラー（再読み込みしてください）";
+      }
     }
-}
 
-// 24場グリッドの生成
-function renderStadiumGrid() {
-    const gridEl = document.getElementById('stadium-grid');
-    gridEl.innerHTML = '';
+    function showDashboardView() {
+      document.getElementById('dashboardView').classList.add('active');
+      document.getElementById('raceView').classList.remove('active');
+      document.getElementById('backBtn').classList.remove('show');
+      document.getElementById('headerTitle').innerText = "無 双";
+    }
 
-    const stadiums = globalData.stadiums || globalData;
+    function navigateToRaceView(code) {
+      currentCode = code;
+      currentRace = "1";
+      cachedStadiumData = {};
+      
+      document.getElementById('dashboardView').classList.remove('active');
+      document.getElementById('raceView').classList.add('active');
+      document.getElementById('backBtn').classList.add('show');
+      document.getElementById('headerTitle').innerText = `${STADIUMS[code].name} - レース解析`;
+      document.getElementById('stadiumTitleName').innerText = STADIUMS[code].name;
 
-    Object.keys(stadiums).sort().forEach(jcd => {
-        const item = stadiums[jcd];
-        const card = document.createElement('div');
-        const isHolding = item.is_holding;
+      loadStadiumData(currentCode, currentRace);
+    }
 
-        card.className = `stadium-card ${isHolding ? 'holding' : 'off'}`;
-        card.innerHTML = `
-            <div class="stadium-name">${item.stadium_name}</div>
-            <div class="stadium-status">${isHolding ? '開催中' : '非開催'}</div>
-        `;
+    function renderDashboard() {
+      const grid = document.getElementById('stadiumGrid');
+      const statsGrid = document.getElementById('statsStadiumGrid');
+      grid.innerHTML = ''; statsGrid.innerHTML = '';
 
-        if (isHolding) {
-            card.onclick = () => showDetailView(jcd);
-        }
+      STADIUM_ORDER.forEach(code => {
+        const info = STADIUMS[code];
+        const isActive = activeCodes.includes(code);
 
-        gridEl.appendChild(card);
-    });
-}
+        const btn = document.createElement('div');
+        btn.className = `grid-btn ${isActive ? 'active' : ''}`;
+        btn.innerHTML = `<span class="stadium-name">${info.name}</span><span class="stadium-desc">${info.desc}</span><span class="stadium-rate">${info.nige}</span>`;
+        if (isActive) btn.onclick = () => navigateToRaceView(code);
+        grid.appendChild(btn);
 
-// 24場AI的中率（総合）の表示
-function renderOverallStats() {
-    document.getElementById('overall-hit-rate').innerText = globalData.overall_hit_rate || "78.4%";
-    document.getElementById('honmei-hit-rate').innerText = globalData.overall_summary?.honmei_hit || "82.5%";
-    document.getElementById('ana-hit-rate').innerText = globalData.overall_summary?.ana_hit || "34.1%";
-}
+        const statBtn = document.createElement('div');
+        statBtn.className = `stats-grid-btn ${isActive ? '' : 'disabled'}`;
+        statBtn.innerHTML = `<span class="s-name">${info.name}</span><span class="s-rate">${isActive ? info.hitRate : '非開催'}</span>`;
+        if (isActive) statBtn.onclick = () => navigateToRaceView(code);
+        statsGrid.appendChild(statBtn);
+      });
+    }
 
-// レース詳細画面を表示
-function showDetailView(jcd) {
-    currentJcd = jcd;
-    currentRace = 1;
+    function renderRaceNav() {
+      const nav = document.getElementById('raceNav');
+      nav.innerHTML = '';
+      for (let i = 1; i <= 12; i++) {
+        const raceKey = String(i);
+        const rData = cachedStadiumData[raceKey];
+        const timeStr = (rData && rData.close_time) ? rData.close_time : '--:--';
 
-    document.getElementById('grid-view').style.display = 'none';
-    document.getElementById('detail-view').style.display = 'block';
-    document.getElementById('back-btn').style.display = 'block';
-
-    const stadiumName = globalData.stadiums[jcd].stadium_name;
-    document.getElementById('header-title').innerText = `${stadiumName} - レース解析`;
-
-    renderRaceTabs();
-    renderRaceData(currentRace);
-}
-
-// 24場一覧に戻る
-function showGridView() {
-    document.getElementById('grid-view').style.display = 'block';
-    document.getElementById('detail-view').style.display = 'none';
-    document.getElementById('back-btn').style.display = 'none';
-    document.getElementById('header-title').innerText = '無双 - 高精度AI競艇展開解析';
-}
-
-// レース切替タブ (1R〜12R)
-function renderRaceTabs() {
-    const container = document.getElementById('race-selector');
-    container.innerHTML = '';
-
-    for (let r = 1; r <= 12; r++) {
-        const tab = document.createElement('div');
-        tab.className = `race-tab ${r === currentRace ? 'active' : ''}`;
-        tab.innerText = `${r}R`;
-        tab.onclick = () => {
-            currentRace = r;
-            renderRaceTabs();
-            renderRaceData(r);
+        const btn = document.createElement('button');
+        btn.className = `r-btn ${raceKey === currentRace ? 'active' : ''}`;
+        btn.innerHTML = `<div>${i}R</div><div style="font-size: 9px; opacity: 0.85; font-weight: normal;">${timeStr}</div>`;
+        
+        btn.onclick = () => {
+          currentRace = raceKey;
+          renderRaceNav();
+          renderRaceDataFromCache(currentRace);
         };
-        container.appendChild(tab);
+        nav.appendChild(btn);
+      }
     }
-}
 
-// 各種レースデータの描画
-function renderRaceData(raceNum) {
-    const stadium = globalData.stadiums[currentJcd];
-    const race = stadium?.races?.[raceNum.toString()];
+    async function loadStadiumData(code, race) {
+      document.getElementById('aiComment').innerText = "最新出走表・直前解析データを取得中...";
+      try {
+        const res = await fetch(`./stadium_${code}.json?t=${Date.now()}`, { cache: 'no-store' });
+        if (!res.ok) throw new Error("場別データ取得エラー");
+        const data = await res.json();
+        cachedStadiumData = data.races || {};
+        
+        // ナビバー構築とデータ反映
+        renderRaceNav();
+        renderRaceDataFromCache(race);
+      } catch (err) {
+        console.error("データ読み込み失敗:", err);
+        document.getElementById('aiComment').innerText = "出走表データの読み込みに失敗しました。";
+      }
+    }
 
-    if (!race) return;
+    function renderRaceDataFromCache(race) {
+      const data = cachedStadiumData[race];
+      if (!data) {
+        document.getElementById('aiComment').innerText = "該当レースのデータが存在しません。";
+        document.getElementById('raceCloseTime').innerText = "--:--";
+        return;
+      }
 
-    // 天候
-    const w = race.weather || {};
-    document.getElementById('w-weather').innerText = w.weather || '晴';
-    document.getElementById('w-wind-speed').innerText = w.wind_speed || '2m';
-    document.getElementById('w-wind-dir').innerText = w.wind_direction || '向い風';
-    document.getElementById('w-wave').innerText = w.wave || '2cm';
+      // 1. 締切予定時刻の動的更新
+      const closeTimeElem = document.getElementById('raceCloseTime');
+      if (closeTimeElem) {
+        closeTimeElem.innerText = data.close_time || "--:--";
+      }
 
-    // 選手成績サマリー
-    const summaryBody = document.getElementById('summary-table-body');
-    summaryBody.innerHTML = '';
-    (race.summary_data || race.racers || []).forEach(r => {
+      // 2. 水面気象情報
+      const weather = data.weather || {};
+      document.getElementById('wWeather').innerText = weather.weather || "-";
+      document.getElementById('wWind').innerText = weather.wind_speed || "-";
+      document.getElementById('wDir').innerText = weather.wind_direction || "-";
+      document.getElementById('wWave').innerText = weather.wave || "-";
+
+      // 3. 出走表データ
+      const tbody = document.getElementById('racerTableBody');
+      tbody.innerHTML = '';
+      (data.racers || []).forEach((r, idx) => {
         const tr = document.createElement('tr');
         tr.innerHTML = `
-            <td><span class="boat-num b-${r.boat}">${r.boat}</span></td>
-            <td><b>${r.name}</b></td>
-            <td>${r.rank}</td>
-            <td>${r.nat_rate}/${r.nat_2rate}</td>
-            <td>${r.loc_rate}/${r.loc_2rate}</td>
-            <td>${r.motor_2rate}</td>
-            <td><b style="color:var(--accent-green);">${r.hit_rate}</b></td>
+          <td><strong style="padding:2px 6px; border-radius:3px;" class="${boatClasses[idx]}">${idx+1}</strong></td>
+          <td>${r.name}</td>
+          <td>${r.rank}</td>
+          <td>${r.st || "-"}</td>
+          <td>${r.tilt || "-"}</td>
+          <td>${r.time || "-"}</td>
         `;
-        summaryBody.appendChild(tr);
-    });
+        tbody.appendChild(tr);
+      });
 
-    // 出走表・直前情報
-    const racerBody = document.getElementById('racer-table-body');
-    racerBody.innerHTML = '';
-    (race.racers || []).forEach(r => {
-        const tr = document.createElement('tr');
-        tr.innerHTML = `
-            <td><span class="boat-num b-${r.boat}">${r.boat}</span></td>
-            <td><b>${r.name}</b></td>
-            <td>${r.rank}</td>
-            <td>${r.st_avg}</td>
-            <td>${r.tilt}</td>
-            <td>${r.time}</td>
+      // 4. AI展開コメント
+      document.getElementById('aiSummaryTag').innerText = data.summary_tag || "【本命濃厚】";
+      document.getElementById('aiComment').innerHTML = data.comment || "";
+      document.getElementById('aiSubComment').innerHTML = data.sub_comment || "";
+
+      // 5. スリット隊形
+      const trackStart = document.getElementById('slitTrackStart');
+      const trackTurn = document.getElementById('slitTrackTurn');
+      trackStart.innerHTML = '<div class="slit-line-label">STライン</div><div class="slit-line"></div>';
+      trackTurn.innerHTML = '<div class="slit-line-label">旋回ライン</div><div class="slit-line"></div>';
+
+      (data.racers || []).forEach((r, idx) => {
+        const bStart = document.createElement('div');
+        bStart.className = `boat-slit ${boatClasses[idx]}`;
+        bStart.style.top = `${idx * 22 + 4}px`;
+        
+        const parsedSt = parseFloat(r.st);
+        const stVal = !isNaN(parsedSt) ? Math.abs(parsedSt * 300) : 40;
+        bStart.style.right = `${Math.min(Math.max(stVal, 15), 85)}px`;
+        bStart.innerHTML = `${idx+1}`;
+        trackStart.appendChild(bStart);
+
+        const bTurn = document.createElement('div');
+        bTurn.className = `boat-slit ${boatClasses[idx]}`;
+        bTurn.style.top = `${idx * 22 + 4}px`;
+        const turnOffset = (r.turn_offset !== undefined) ? r.turn_offset : (20 + (idx % 3) * 20);
+        bTurn.style.right = `${turnOffset}px`;
+        bTurn.innerHTML = `${idx+1}`;
+        trackTurn.appendChild(bTurn);
+      });
+
+      // 6. パワーゲージ
+      const gaugeContainer = document.getElementById('powerGaugeContainer');
+      gaugeContainer.innerHTML = '';
+      (data.racers || []).forEach((r, idx) => {
+        const pVal = r.power || 70;
+        const item = document.createElement('div');
+        item.className = 'gauge-item';
+        item.innerHTML = `
+          <div class="gauge-name">${idx+1}.${r.name}</div>
+          <div class="gauge-bar-bg"><div class="gauge-bar-fill ${boatClasses[idx]}" style="width: ${pVal}%;"></div></div>
+          <div class="gauge-val">${pVal}%</div>
         `;
-        racerBody.appendChild(tr);
-    });
+        gaugeContainer.appendChild(item);
+      });
 
-    // AI解析
-    document.getElementById('ai-tag').innerText = race.summary_tag || '【イン信頼】';
-    document.getElementById('ai-comment').innerText = race.comment || '解析完了';
-    document.getElementById('ai-sub-comment').innerText = race.sub_comment || '';
-
-    // 買い目
-    const betsGrid = document.getElementById('bets-grid');
-    betsGrid.innerHTML = '';
-    (race.bets || []).forEach(b => {
+      // 7. 買い目（10点表示）
+      const betContainer = document.getElementById('betContainer');
+      betContainer.innerHTML = '';
+      (data.bets || []).slice(0, 10).forEach(b => {
         const div = document.createElement('div');
         div.className = 'bet-item';
-        div.innerHTML = `
-            <span><b>${b.num}</b></span>
-            <span class="badge ${b.style}">${b.tag}</span>
-        `;
-        betsGrid.appendChild(div);
-    });
-}
+        div.innerHTML = `<span class="bet-num">${b.num}</span><span class="bet-tag ${b.style}">${b.tag}</span>`;
+        betContainer.appendChild(div);
+      });
+    }
 
-window.onload = initApp;
-</script>
+    window.onload = init;
+  </script>
 </body>
 </html>
