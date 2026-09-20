@@ -2,13 +2,13 @@
   "date": "20260920",
   "stadium_code": "16",
   "stadium_name": "児島",
-  "cache_buster": "1789875915464",
+  "cache_buster": "1789878814859",
   "races": {
     "1": {
       "close_time": "10:50",
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
         "wave": "3cm"
       },
@@ -788,7 +788,7 @@
       "close_time": "14:00",
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
         "wave": "3cm"
       },
@@ -918,7 +918,7 @@
       "close_time": "14:36",
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
         "wave": "3cm"
       },
@@ -1048,7 +1048,7 @@
       "close_time": "15:10",
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
         "wave": "3cm"
       },
@@ -1178,7 +1178,7 @@
       "close_time": "15:39",
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
         "wave": "3cm"
       },
@@ -1308,7 +1308,7 @@
       "close_time": "16:13",
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
         "wave": "3cm"
       },
@@ -1438,7 +1438,7 @@
       "close_time": "16:50",
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
         "wave": "3cm"
       },

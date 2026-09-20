@@ -2,13 +2,13 @@
   "date": "20260920",
   "stadium_code": "06",
   "stadium_name": "浜名湖",
-  "cache_buster": "1789875915464",
+  "cache_buster": "1789878814859",
   "races": {
     "1": {
       "close_time": "11:32",
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "1m",
         "wind_direction": "追い風",
         "wave": "1cm"
       },
@@ -398,9 +398,9 @@
       "close_time": "13:05",
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
-        "wave": "1cm"
+        "wave": "2cm"
       },
       "summary_tag": "【本命濃厚】",
       "racers": [
@@ -528,7 +528,7 @@
       "close_time": "13:36",
       "weather": {
         "weather": "-",
-        "wind_speed": "2m",
+        "wind_speed": "1m",
         "wind_direction": "追い風",
         "wave": "1cm"
       },
@@ -658,9 +658,9 @@
       "close_time": "14:07",
       "weather": {
         "weather": "-",
-        "wind_speed": "3m",
+        "wind_speed": "1m",
         "wind_direction": "追い風",
-        "wave": "2cm"
+        "wave": "1cm"
       },
       "summary_tag": "【本命濃厚】",
       "racers": [
@@ -788,9 +788,9 @@
       "close_time": "14:34",
       "weather": {
         "weather": "-",
-        "wind_speed": "3m",
+        "wind_speed": "1m",
         "wind_direction": "追い風",
-        "wave": "2cm"
+        "wave": "1cm"
       },
       "summary_tag": "【捲り一閃】",
       "racers": [
@@ -918,9 +918,9 @@
       "close_time": "15:03",
       "weather": {
         "weather": "-",
-        "wind_speed": "3m",
+        "wind_speed": "1m",
         "wind_direction": "追い風",
-        "wave": "2cm"
+        "wave": "1cm"
       },
       "summary_tag": "【本命濃厚】",
       "racers": [
@@ -1048,9 +1048,9 @@
       "close_time": "15:31",
       "weather": {
         "weather": "-",
-        "wind_speed": "3m",
+        "wind_speed": "1m",
         "wind_direction": "追い風",
-        "wave": "2cm"
+        "wave": "1cm"
       },
       "summary_tag": "【本命濃厚】",
       "racers": [
@@ -1178,9 +1178,9 @@
       "close_time": "15:59",
       "weather": {
         "weather": "-",
-        "wind_speed": "3m",
+        "wind_speed": "1m",
         "wind_direction": "追い風",
-        "wave": "2cm"
+        "wave": "1cm"
       },
       "summary_tag": "【本命濃厚】",
       "racers": [
@@ -1308,9 +1308,9 @@
       "close_time": "16:27",
       "weather": {
         "weather": "-",
-        "wind_speed": "3m",
+        "wind_speed": "1m",
         "wind_direction": "追い風",
-        "wave": "2cm"
+        "wave": "1cm"
       },
       "summary_tag": "【本命濃厚】",
       "racers": [
@@ -1438,9 +1438,9 @@
       "close_time": "17:04",
       "weather": {
         "weather": "-",
-        "wind_speed": "3m",
+        "wind_speed": "1m",
         "wind_direction": "追い風",
-        "wave": "2cm"
+        "wave": "1cm"
       },
       "summary_tag": "【本命濃厚】",
       "racers": [
