@@ -44,7 +44,7 @@ def get_active_stadiums_today(date_str):
     return sorted(active_codes)
 
 def fetch_race_racers_and_close_time(jcd, rno, date_str):
-    """ 公式出走表から「選手名」「階級」「締切予定時刻」を正確に取得 """
+    """ 指定されたレース番号(rno)の出走表ページから「選手名」「階級」「各R固有の締切時刻」を正確に抽出 """
     url = f"https://www.boatrace.jp/owpc/pc/race/racelist?rno={rno}&jcd={jcd}&hd={date_str}"
     html = fetch_url(url)
     racers = []
@@ -53,14 +53,17 @@ def fetch_race_racers_and_close_time(jcd, rno, date_str):
     if html:
         soup = BeautifulSoup(html, "html.parser")
         
-        # --- 締切時刻取得の強化ロジック ---
-        # 1. 締切予定時刻テーブル/要素からの高精度検索
-        time_m = re.search(r"(?:締切予定|締切予定時刻|締切)\s*[\r\n\s]*(\d{1,2}:\d{2})", html)
+        # --- レースごとの締切予定時刻の取得（各Rテーブルの構造に直接マッチング） ---
+        # 1. 該当レースのテーブル・ヘッダー要素から時刻を検索
+        time_m = re.search(r"締切予定[\r\n\s]*(\d{1,2}:\d{2})", html)
+        if not time_m:
+            time_m = re.search(r"(\d{1,2}:\d{2})[\r\n\s]*締切", html)
+
         if time_m:
             close_time = time_m.group(1)
         else:
-            # 2. HTML要素の走査によるバックアップ検索
-            for cell in soup.find_all(["th", "td", "p", "div", "span"]):
+            # 2. テーブルセル内を精査
+            for cell in soup.find_all(["th", "td"]):
                 txt = cell.text.strip()
                 if "締切" in txt:
                     m = re.search(r"(\d{1,2}:\d{2})", txt)
@@ -68,7 +71,7 @@ def fetch_race_racers_and_close_time(jcd, rno, date_str):
                         close_time = m.group(1)
                         break
 
-        # 時刻桁数の整形（例: "9:50" -> "09:50"）
+        # 時刻桁数の整形（"9:50" -> "09:50"）
         if close_time != "--:--" and len(close_time.split(":")[0]) == 1:
             close_time = "0" + close_time
 
@@ -94,7 +97,7 @@ def fetch_race_racers_and_close_time(jcd, rno, date_str):
     return racers, close_time
 
 def fetch_race_beforeinfo(jcd, rno, date_str):
-    """ 直前情報ページ（閲覧サイト）の全パース処理 """
+    """ 直前情報ページのパース """
     url = f"https://www.boatrace.jp/owpc/pc/race/beforeinfo?rno={rno}&jcd={jcd}&hd={date_str}"
     html = fetch_url(url)
     
@@ -126,7 +129,7 @@ def fetch_race_beforeinfo(jcd, rno, date_str):
             "wave": m_wave.group(1) if m_wave else "-"
         }
 
-    # 2. 展示タイム・チルトの堅牢パース
+    # 2. 展示タイム・チルト
     for idx in range(1, 7):
         b_str = str(idx)
         tbody = soup.find("tbody", class_=re.compile(f"is-boatColor{idx}"))
@@ -141,7 +144,7 @@ def fetch_race_beforeinfo(jcd, rno, date_str):
             before_data["racers_extra"][b_str]["time"] = ex_t
             before_data["racers_extra"][b_str]["tilt"] = tilt
 
-    # 3. スタート展示（展示ST）のパース
+    # 3. スタート展示（展示ST）
     st_table = soup.select_one("div.table1")
     if st_table:
         for row in st_table.find_all("tr"):
@@ -269,18 +272,11 @@ def run_ai_analysis(racers_data, weather):
 def process_single_stadium(code, date_str, cache_key, now_jst):
     name = STADIUM_NAMES.get(code, "競艇場")
     races_dict = {}
-    
-    existing_data = {}
-    if os.path.exists(f"stadium_{code}.json"):
-        try:
-            with open(f"stadium_{code}.json", "r", encoding="utf-8") as f:
-                existing_data = json.load(f).get("races", {})
-        except Exception: pass
 
     for r in range(1, 13):
         r_str = str(r)
+        # 1R〜12Rそれぞれの出走表と締切時刻を個別取得
         racers, close_time = fetch_race_racers_and_close_time(code, r_str, date_str)
-        
         before_info = fetch_race_beforeinfo(code, r_str, date_str)
         
         combined_racers = []
@@ -356,7 +352,7 @@ def main():
     with open("data.json", "w", encoding="utf-8") as f:
         json.dump(index_data, f, ensure_ascii=False, indent=2)
 
-    print(f"⏱️ 締切時刻連動＆AI展開解析スクレイピング完了（所要時間: {time.time() - start_time:.2f}秒）")
+    print(f"⏱️ 各R締切時刻スクレイピング完了（所要時間: {time.time() - start_time:.2f}秒）")
 
 if __name__ == "__main__":
     main()
