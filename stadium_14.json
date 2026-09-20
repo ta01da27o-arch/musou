@@ -2,15 +2,15 @@
   "date": "20260920",
   "stadium_code": "14",
   "stadium_name": "鳴門",
-  "cache_buster": "1789854284374",
+  "cache_buster": "1789864140058",
   "races": {
     "1": {
       "close_time": "--:--",
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "2m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "2cm"
       },
       "summary_tag": "【本命濃厚】",
       "racers": [
@@ -138,9 +138,9 @@
       "close_time": "--:--",
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "3cm"
       },
       "summary_tag": "【混戦模様】",
       "racers": [
@@ -268,9 +268,9 @@
       "close_time": "--:--",
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "2m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "2cm"
       },
       "summary_tag": "【本命濃厚】",
       "racers": [
@@ -398,9 +398,9 @@
       "close_time": "--:--",
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "2m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "2cm"
       },
       "summary_tag": "【本命濃厚】",
       "racers": [
@@ -528,9 +528,9 @@
       "close_time": "--:--",
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "2m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "2cm"
       },
       "summary_tag": "【本命濃厚】",
       "racers": [
@@ -658,9 +658,9 @@
       "close_time": "--:--",
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "2m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "2cm"
       },
       "summary_tag": "【混戦模様】",
       "racers": [
@@ -788,9 +788,9 @@
       "close_time": "--:--",
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "2m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "2cm"
       },
       "summary_tag": "【混戦模様】",
       "racers": [
@@ -918,9 +918,9 @@
       "close_time": "--:--",
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "2m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "2cm"
       },
       "summary_tag": "【本命濃厚】",
       "racers": [
@@ -1048,9 +1048,9 @@
       "close_time": "--:--",
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "2m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "2cm"
       },
       "summary_tag": "【混戦模様】",
       "racers": [
@@ -1178,9 +1178,9 @@
       "close_time": "--:--",
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "2m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "2cm"
       },
       "summary_tag": "【本命濃厚】",
       "racers": [
@@ -1308,9 +1308,9 @@
       "close_time": "--:--",
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "2m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "2cm"
       },
       "summary_tag": "【本命濃厚】",
       "racers": [
@@ -1438,9 +1438,9 @@
       "close_time": "--:--",
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "2m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "2cm"
       },
       "summary_tag": "【本命濃厚】",
       "racers": [

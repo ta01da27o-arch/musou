@@ -2,17 +2,17 @@
   "date": "20260920",
   "stadium_code": "10",
   "stadium_name": "三国",
-  "cache_buster": "1789854284374",
+  "cache_buster": "1789864140058",
   "races": {
     "1": {
       "close_time": "--:--",
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "5m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "5cm"
       },
-      "summary_tag": "【本命濃厚】",
+      "summary_tag": "【荒れ模様】",
       "racers": [
         {
           "name": "小坂尚哉",
@@ -69,8 +69,8 @@
           "turn_offset": 87
         }
       ],
-      "comment": "1号艇【小坂尚哉】が展示気配・イン信頼度ともに優勢。スタート決めて一気に逃げ切る。",
-      "sub_comment": "対抗軸は2・3号艇の差し・握りマイ。紐荒れ注意。",
+      "comment": "風速5mの水面悪化により波乱含み。ターンのズレから高配当の決着も十分。",
+      "sub_comment": "展示STが安定している艇の紐穴・逆転に注意。",
       "bets": [
         {
           "num": "1 - 2 - 3",
@@ -138,11 +138,11 @@
       "close_time": "--:--",
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "5m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "5cm"
       },
-      "summary_tag": "【本命濃厚】",
+      "summary_tag": "【荒れ模様】",
       "racers": [
         {
           "name": "秋山広一",
@@ -199,8 +199,8 @@
           "turn_offset": 87
         }
       ],
-      "comment": "1号艇【秋山広一】が展示気配・イン信頼度ともに優勢。スタート決めて一気に逃げ切る。",
-      "sub_comment": "対抗軸は2・3号艇の差し・握りマイ。紐荒れ注意。",
+      "comment": "風速5mの水面悪化により波乱含み。ターンのズレから高配当の決着も十分。",
+      "sub_comment": "展示STが安定している艇の紐穴・逆転に注意。",
       "bets": [
         {
           "num": "1 - 2 - 3",
@@ -268,11 +268,11 @@
       "close_time": "--:--",
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "5m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "5cm"
       },
-      "summary_tag": "【本命濃厚】",
+      "summary_tag": "【捲り一閃】",
       "racers": [
         {
           "name": "大野芳顕",
@@ -329,8 +329,8 @@
           "turn_offset": 87
         }
       ],
-      "comment": "1号艇【大野芳顕】が展示気配・イン信頼度ともに優勢。スタート決めて一気に逃げ切る。",
-      "sub_comment": "対抗軸は2・3号艇の差し・握りマイ。紐荒れ注意。",
+      "comment": "センター枠の展開が鍵。1号艇が展示タイム良好で鋭いダッシュ戦から強襲を狙う。",
+      "sub_comment": "1号艇の残しと、展開突く展開差し艇の浮上に期待。",
       "bets": [
         {
           "num": "1 - 3 - 2",
@@ -398,11 +398,11 @@
       "close_time": "--:--",
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "5m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "5cm"
       },
-      "summary_tag": "【本命濃厚】",
+      "summary_tag": "【荒れ模様】",
       "racers": [
         {
           "name": "北中元樹",
@@ -459,8 +459,8 @@
           "turn_offset": 87
         }
       ],
-      "comment": "1号艇【北中元樹】が展示気配・イン信頼度ともに優勢。スタート決めて一気に逃げ切る。",
-      "sub_comment": "対抗軸は2・3号艇の差し・握りマイ。紐荒れ注意。",
+      "comment": "風速5mの水面悪化により波乱含み。ターンのズレから高配当の決着も十分。",
+      "sub_comment": "展示STが安定している艇の紐穴・逆転に注意。",
       "bets": [
         {
           "num": "1 - 2 - 4",
@@ -528,11 +528,11 @@
       "close_time": "--:--",
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "5m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "5cm"
       },
-      "summary_tag": "【本命濃厚】",
+      "summary_tag": "【捲り一閃】",
       "racers": [
         {
           "name": "松村康太",
@@ -589,8 +589,8 @@
           "turn_offset": 87
         }
       ],
-      "comment": "1号艇【松村康太】が展示気配・イン信頼度ともに優勢。スタート決めて一気に逃げ切る。",
-      "sub_comment": "対抗軸は2・3号艇の差し・握りマイ。紐荒れ注意。",
+      "comment": "センター枠の展開が鍵。1号艇が展示タイム良好で鋭いダッシュ戦から強襲を狙う。",
+      "sub_comment": "1号艇の残しと、展開突く展開差し艇の浮上に期待。",
       "bets": [
         {
           "num": "1 - 4 - 2",
@@ -658,9 +658,9 @@
       "close_time": "--:--",
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "5m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "5cm"
       },
       "summary_tag": "【捲り一閃】",
       "racers": [
@@ -788,11 +788,11 @@
       "close_time": "--:--",
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "5m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "5cm"
       },
-      "summary_tag": "【混戦模様】",
+      "summary_tag": "【荒れ模様】",
       "racers": [
         {
           "name": "森下勇",
@@ -849,8 +849,8 @@
           "turn_offset": 87
         }
       ],
-      "comment": "実力伯仲の激戦カード。軸判定は慎重に、展示STを踏み込んでいる艇を評価したい。",
-      "sub_comment": "スタート展示の行き足とスリット直後の足色を要重視。",
+      "comment": "風速5mの水面悪化により波乱含み。ターンのズレから高配当の決着も十分。",
+      "sub_comment": "展示STが安定している艇の紐穴・逆転に注意。",
       "bets": [
         {
           "num": "1 - 2 - 6",
@@ -918,11 +918,11 @@
       "close_time": "--:--",
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "5m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "5cm"
       },
-      "summary_tag": "【混戦模様】",
+      "summary_tag": "【荒れ模様】",
       "racers": [
         {
           "name": "西川新太郎",
@@ -979,8 +979,8 @@
           "turn_offset": 87
         }
       ],
-      "comment": "実力伯仲の激戦カード。軸判定は慎重に、展示STを踏み込んでいる艇を評価したい。",
-      "sub_comment": "スタート展示の行き足とスリット直後の足色を要重視。",
+      "comment": "風速5mの水面悪化により波乱含み。ターンのズレから高配当の決着も十分。",
+      "sub_comment": "展示STが安定している艇の紐穴・逆転に注意。",
       "bets": [
         {
           "num": "1 - 2 - 5",
@@ -1048,11 +1048,11 @@
       "close_time": "--:--",
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "5m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "5cm"
       },
-      "summary_tag": "【混戦模様】",
+      "summary_tag": "【荒れ模様】",
       "racers": [
         {
           "name": "生方靖亜",
@@ -1109,8 +1109,8 @@
           "turn_offset": 87
         }
       ],
-      "comment": "実力伯仲の激戦カード。軸判定は慎重に、展示STを踏み込んでいる艇を評価したい。",
-      "sub_comment": "スタート展示の行き足とスリット直後の足色を要重視。",
+      "comment": "風速5mの水面悪化により波乱含み。ターンのズレから高配当の決着も十分。",
+      "sub_comment": "展示STが安定している艇の紐穴・逆転に注意。",
       "bets": [
         {
           "num": "1 - 3 - 2",
@@ -1178,11 +1178,11 @@
       "close_time": "--:--",
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "5m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "5cm"
       },
-      "summary_tag": "【混戦模様】",
+      "summary_tag": "【荒れ模様】",
       "racers": [
         {
           "name": "金子龍斗",
@@ -1239,8 +1239,8 @@
           "turn_offset": 87
         }
       ],
-      "comment": "実力伯仲の激戦カード。軸判定は慎重に、展示STを踏み込んでいる艇を評価したい。",
-      "sub_comment": "スタート展示の行き足とスリット直後の足色を要重視。",
+      "comment": "風速5mの水面悪化により波乱含み。ターンのズレから高配当の決着も十分。",
+      "sub_comment": "展示STが安定している艇の紐穴・逆転に注意。",
       "bets": [
         {
           "num": "1 - 2 - 4",
@@ -1308,11 +1308,11 @@
       "close_time": "--:--",
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "5m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "5cm"
       },
-      "summary_tag": "【本命濃厚】",
+      "summary_tag": "【荒れ模様】",
       "racers": [
         {
           "name": "丸尾義孝",
@@ -1369,8 +1369,8 @@
           "turn_offset": 87
         }
       ],
-      "comment": "1号艇【丸尾義孝】が展示気配・イン信頼度ともに優勢。スタート決めて一気に逃げ切る。",
-      "sub_comment": "対抗軸は2・3号艇の差し・握りマイ。紐荒れ注意。",
+      "comment": "風速5mの水面悪化により波乱含み。ターンのズレから高配当の決着も十分。",
+      "sub_comment": "展示STが安定している艇の紐穴・逆転に注意。",
       "bets": [
         {
           "num": "1 - 3 - 2",
@@ -1438,11 +1438,11 @@
       "close_time": "--:--",
       "weather": {
         "weather": "-",
-        "wind_speed": "-",
+        "wind_speed": "5m",
         "wind_direction": "追い風",
-        "wave": "-"
+        "wave": "5cm"
       },
-      "summary_tag": "【本命濃厚】",
+      "summary_tag": "【捲り一閃】",
       "racers": [
         {
           "name": "茅原悠紀",
@@ -1499,8 +1499,8 @@
           "turn_offset": 87
         }
       ],
-      "comment": "1号艇【茅原悠紀】が展示気配・イン信頼度ともに優勢。スタート決めて一気に逃げ切る。",
-      "sub_comment": "対抗軸は2・3号艇の差し・握りマイ。紐荒れ注意。",
+      "comment": "センター枠の展開が鍵。1号艇が展示タイム良好で鋭いダッシュ戦から強襲を狙う。",
+      "sub_comment": "1号艇の残しと、展開突く展開差し艇の浮上に期待。",
       "bets": [
         {
           "num": "1 - 2 - 3",
