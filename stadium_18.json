@@ -1,1553 +1,1004 @@
 {
-  "date": "20260917",
-  "stadium_code": "18",
+  "stadium_id": "18",
   "stadium_name": "徳山",
   "races": {
     "1": {
+      "race_num": 1,
+      "close_time": "--:--",
       "weather": {
-        "weather": "晴",
-        "wind_speed": "2m",
-        "wind_direction": "追い風",
-        "wave": "2cm"
+        "weather": "-",
+        "wind_speed": "-",
+        "wind_direction": "-",
+        "wave": "-"
       },
-      "summary_tag": "【本命濃厚】",
-      "racers": [
-        {
-          "name": "選手1",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 30
-        },
-        {
-          "name": "選手2",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 40
-        },
-        {
-          "name": "選手3",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 50
-        },
-        {
-          "name": "選手4",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 60
-        },
-        {
-          "name": "選手5",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 70
-        },
-        {
-          "name": "選手6",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 80
-        }
-      ],
-      "comment": "1号艇【選手1】中心の組み立て。",
-      "sub_comment": "インコース安定感重視。",
+      "start_display": [],
+      "racers": [],
+      "summary_tag": "【イン絶対】",
+      "comment": "1号艇が絶好の枠位置を活かしてイン速攻を決める。対抗は攻め立てる2号艇。",
+      "sub_comment": "3号艇の展開突いたまくり差しで高配当を狙う。",
       "bets": [
         {
-          "num": "1 - 2 - 3",
+          "num": "1-2-3",
           "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "style": "tag-honmei"
         },
         {
-          "num": "1 - 3 - 2",
+          "num": "1-2-4",
           "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "style": "tag-honmei"
         },
         {
-          "num": "1 - 2 - 4",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-3-2",
+          "tag": "対抗",
+          "style": "tag-nerai"
         },
         {
-          "num": "1 - 4 - 2",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-3-4",
+          "tag": "対抗",
+          "style": "tag-nerai"
         },
         {
-          "num": "1 - 3 - 4",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-4-2",
+          "tag": "抑え",
+          "style": "tag-nerai"
         },
         {
-          "num": "2 - 1 - 3",
+          "num": "2-1-3",
           "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
+          "style": "tag-nerai"
         },
         {
-          "num": "2 - 3 - 1",
+          "num": "2-1-4",
           "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
+          "style": "tag-nerai"
         },
         {
-          "num": "3 - 1 - 2",
-          "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
-        },
-        {
-          "num": "3 - 2 - 1",
+          "num": "2-3-1",
           "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
+          "style": "tag-ana"
         },
         {
-          "num": "4 - 1 - 2",
-          "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
+          "num": "3-1-2",
+          "tag": "大穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-2-1",
+          "tag": "特穴",
+          "style": "tag-ana"
         }
       ]
     },
     "2": {
+      "race_num": 2,
+      "close_time": "--:--",
       "weather": {
-        "weather": "晴",
-        "wind_speed": "2m",
-        "wind_direction": "追い風",
-        "wave": "2cm"
+        "weather": "-",
+        "wind_speed": "-",
+        "wind_direction": "-",
+        "wave": "-"
       },
-      "summary_tag": "【捲り一閃】",
+      "start_display": [],
       "racers": [
         {
+          "boat": 1,
           "name": "選手1",
           "rank": "B1",
           "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 30
+          "tilt": "0.0",
+          "time": "6.80"
         },
         {
+          "boat": 2,
           "name": "選手2",
           "rank": "B1",
           "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 40
+          "tilt": "0.0",
+          "time": "6.80"
         },
         {
+          "boat": 3,
           "name": "選手3",
           "rank": "B1",
           "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 50
+          "tilt": "0.0",
+          "time": "6.80"
         },
         {
+          "boat": 4,
           "name": "選手4",
           "rank": "B1",
           "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 60
+          "tilt": "0.0",
+          "time": "6.80"
         },
         {
+          "boat": 5,
           "name": "選手5",
           "rank": "B1",
           "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 70
+          "tilt": "0.0",
+          "time": "6.80"
         },
         {
+          "boat": 6,
           "name": "選手6",
           "rank": "B1",
           "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 80
+          "tilt": "0.0",
+          "time": "6.80"
         }
       ],
-      "comment": "1号艇【選手1】中心の組み立て。",
-      "sub_comment": "インコース安定感重視。",
+      "summary_tag": "【イン絶対】",
+      "comment": "1号艇が絶好の枠位置を活かしてイン速攻を決める。対抗は攻め立てる2号艇。",
+      "sub_comment": "3号艇の展開突いたまくり差しで高配当を狙う。",
       "bets": [
         {
-          "num": "1 - 2 - 3",
+          "num": "1-2-3",
           "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "style": "tag-honmei"
         },
         {
-          "num": "1 - 3 - 2",
+          "num": "1-2-4",
           "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "style": "tag-honmei"
         },
         {
-          "num": "1 - 2 - 4",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-3-2",
+          "tag": "対抗",
+          "style": "tag-nerai"
         },
         {
-          "num": "1 - 4 - 2",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-3-4",
+          "tag": "対抗",
+          "style": "tag-nerai"
         },
         {
-          "num": "1 - 3 - 4",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-4-2",
+          "tag": "抑え",
+          "style": "tag-nerai"
         },
         {
-          "num": "2 - 1 - 3",
+          "num": "2-1-3",
           "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
+          "style": "tag-nerai"
         },
         {
-          "num": "2 - 3 - 1",
+          "num": "2-1-4",
           "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
+          "style": "tag-nerai"
         },
         {
-          "num": "3 - 1 - 2",
-          "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
-        },
-        {
-          "num": "3 - 2 - 1",
+          "num": "2-3-1",
           "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
+          "style": "tag-ana"
         },
         {
-          "num": "4 - 1 - 2",
-          "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
+          "num": "3-1-2",
+          "tag": "大穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-2-1",
+          "tag": "特穴",
+          "style": "tag-ana"
         }
       ]
     },
     "3": {
+      "race_num": 3,
+      "close_time": "--:--",
       "weather": {
-        "weather": "晴",
-        "wind_speed": "2m",
-        "wind_direction": "追い風",
-        "wave": "2cm"
+        "weather": "-",
+        "wind_speed": "-",
+        "wind_direction": "-",
+        "wave": "-"
       },
-      "summary_tag": "【本命濃厚】",
-      "racers": [
-        {
-          "name": "選手1",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 30
-        },
-        {
-          "name": "選手2",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 40
-        },
-        {
-          "name": "選手3",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 50
-        },
-        {
-          "name": "選手4",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 60
-        },
-        {
-          "name": "選手5",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 70
-        },
-        {
-          "name": "選手6",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 80
-        }
-      ],
-      "comment": "1号艇【選手1】中心の組み立て。",
-      "sub_comment": "インコース安定感重視。",
+      "start_display": [],
+      "racers": [],
+      "summary_tag": "【イン絶対】",
+      "comment": "1号艇が絶好の枠位置を活かしてイン速攻を決める。対抗は攻め立てる2号艇。",
+      "sub_comment": "3号艇の展開突いたまくり差しで高配当を狙う。",
       "bets": [
         {
-          "num": "1 - 2 - 3",
+          "num": "1-2-3",
           "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "style": "tag-honmei"
         },
         {
-          "num": "1 - 3 - 2",
+          "num": "1-2-4",
           "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "style": "tag-honmei"
         },
         {
-          "num": "1 - 2 - 4",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-3-2",
+          "tag": "対抗",
+          "style": "tag-nerai"
         },
         {
-          "num": "1 - 4 - 2",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-3-4",
+          "tag": "対抗",
+          "style": "tag-nerai"
         },
         {
-          "num": "1 - 3 - 4",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-4-2",
+          "tag": "抑え",
+          "style": "tag-nerai"
         },
         {
-          "num": "2 - 1 - 3",
+          "num": "2-1-3",
           "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
+          "style": "tag-nerai"
         },
         {
-          "num": "2 - 3 - 1",
+          "num": "2-1-4",
           "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
+          "style": "tag-nerai"
         },
         {
-          "num": "3 - 1 - 2",
-          "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
-        },
-        {
-          "num": "3 - 2 - 1",
+          "num": "2-3-1",
           "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
+          "style": "tag-ana"
         },
         {
-          "num": "4 - 1 - 2",
-          "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
+          "num": "3-1-2",
+          "tag": "大穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-2-1",
+          "tag": "特穴",
+          "style": "tag-ana"
         }
       ]
     },
     "4": {
+      "race_num": 4,
+      "close_time": "--:--",
       "weather": {
-        "weather": "晴",
-        "wind_speed": "2m",
-        "wind_direction": "追い風",
-        "wave": "2cm"
+        "weather": "-",
+        "wind_speed": "-",
+        "wind_direction": "-",
+        "wave": "-"
       },
-      "summary_tag": "【捲り一閃】",
+      "start_display": [],
       "racers": [
         {
+          "boat": 1,
           "name": "選手1",
           "rank": "B1",
           "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 30
+          "tilt": "0.0",
+          "time": "6.80"
         },
         {
+          "boat": 2,
           "name": "選手2",
           "rank": "B1",
           "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 40
+          "tilt": "0.0",
+          "time": "6.80"
         },
         {
+          "boat": 3,
           "name": "選手3",
           "rank": "B1",
           "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 50
+          "tilt": "0.0",
+          "time": "6.80"
         },
         {
+          "boat": 4,
           "name": "選手4",
           "rank": "B1",
           "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 60
+          "tilt": "0.0",
+          "time": "6.80"
         },
         {
+          "boat": 5,
           "name": "選手5",
           "rank": "B1",
           "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 70
+          "tilt": "0.0",
+          "time": "6.80"
         },
         {
+          "boat": 6,
           "name": "選手6",
           "rank": "B1",
           "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 80
+          "tilt": "0.0",
+          "time": "6.80"
         }
       ],
-      "comment": "1号艇【選手1】中心の組み立て。",
-      "sub_comment": "インコース安定感重視。",
+      "summary_tag": "【イン絶対】",
+      "comment": "1号艇が絶好の枠位置を活かしてイン速攻を決める。対抗は攻め立てる2号艇。",
+      "sub_comment": "3号艇の展開突いたまくり差しで高配当を狙う。",
       "bets": [
         {
-          "num": "1 - 2 - 3",
+          "num": "1-2-3",
           "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "style": "tag-honmei"
         },
         {
-          "num": "1 - 3 - 2",
+          "num": "1-2-4",
           "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "style": "tag-honmei"
         },
         {
-          "num": "1 - 2 - 4",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-3-2",
+          "tag": "対抗",
+          "style": "tag-nerai"
         },
         {
-          "num": "1 - 4 - 2",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-3-4",
+          "tag": "対抗",
+          "style": "tag-nerai"
         },
         {
-          "num": "1 - 3 - 4",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-4-2",
+          "tag": "抑え",
+          "style": "tag-nerai"
         },
         {
-          "num": "2 - 1 - 3",
+          "num": "2-1-3",
           "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
+          "style": "tag-nerai"
         },
         {
-          "num": "2 - 3 - 1",
+          "num": "2-1-4",
           "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
+          "style": "tag-nerai"
         },
         {
-          "num": "3 - 1 - 2",
-          "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
-        },
-        {
-          "num": "3 - 2 - 1",
+          "num": "2-3-1",
           "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
+          "style": "tag-ana"
         },
         {
-          "num": "4 - 1 - 2",
-          "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
+          "num": "3-1-2",
+          "tag": "大穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-2-1",
+          "tag": "特穴",
+          "style": "tag-ana"
         }
       ]
     },
     "5": {
+      "race_num": 5,
+      "close_time": "--:--",
       "weather": {
-        "weather": "晴",
-        "wind_speed": "2m",
-        "wind_direction": "追い風",
-        "wave": "2cm"
+        "weather": "-",
+        "wind_speed": "-",
+        "wind_direction": "-",
+        "wave": "-"
       },
-      "summary_tag": "【本命濃厚】",
-      "racers": [
-        {
-          "name": "選手1",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 30
-        },
-        {
-          "name": "選手2",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 40
-        },
-        {
-          "name": "選手3",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 50
-        },
-        {
-          "name": "選手4",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 60
-        },
-        {
-          "name": "選手5",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 70
-        },
-        {
-          "name": "選手6",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 80
-        }
-      ],
-      "comment": "1号艇【選手1】中心の組み立て。",
-      "sub_comment": "インコース安定感重視。",
+      "start_display": [],
+      "racers": [],
+      "summary_tag": "【イン絶対】",
+      "comment": "1号艇が絶好の枠位置を活かしてイン速攻を決める。対抗は攻め立てる2号艇。",
+      "sub_comment": "3号艇の展開突いたまくり差しで高配当を狙う。",
       "bets": [
         {
-          "num": "1 - 2 - 3",
+          "num": "1-2-3",
           "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "style": "tag-honmei"
         },
         {
-          "num": "1 - 3 - 2",
+          "num": "1-2-4",
           "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "style": "tag-honmei"
         },
         {
-          "num": "1 - 2 - 4",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-3-2",
+          "tag": "対抗",
+          "style": "tag-nerai"
         },
         {
-          "num": "1 - 4 - 2",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-3-4",
+          "tag": "対抗",
+          "style": "tag-nerai"
         },
         {
-          "num": "1 - 3 - 4",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-4-2",
+          "tag": "抑え",
+          "style": "tag-nerai"
         },
         {
-          "num": "2 - 1 - 3",
+          "num": "2-1-3",
           "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
+          "style": "tag-nerai"
         },
         {
-          "num": "2 - 3 - 1",
+          "num": "2-1-4",
           "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
+          "style": "tag-nerai"
         },
         {
-          "num": "3 - 1 - 2",
-          "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
-        },
-        {
-          "num": "3 - 2 - 1",
+          "num": "2-3-1",
           "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
+          "style": "tag-ana"
         },
         {
-          "num": "4 - 1 - 2",
-          "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
+          "num": "3-1-2",
+          "tag": "大穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-2-1",
+          "tag": "特穴",
+          "style": "tag-ana"
         }
       ]
     },
     "6": {
+      "race_num": 6,
+      "close_time": "--:--",
       "weather": {
-        "weather": "晴",
-        "wind_speed": "2m",
-        "wind_direction": "追い風",
-        "wave": "2cm"
+        "weather": "-",
+        "wind_speed": "-",
+        "wind_direction": "-",
+        "wave": "-"
       },
-      "summary_tag": "【捲り一閃】",
-      "racers": [
-        {
-          "name": "選手1",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 30
-        },
-        {
-          "name": "選手2",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 40
-        },
-        {
-          "name": "選手3",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 50
-        },
-        {
-          "name": "選手4",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 60
-        },
-        {
-          "name": "選手5",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 70
-        },
-        {
-          "name": "選手6",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 80
-        }
-      ],
-      "comment": "1号艇【選手1】中心の組み立て。",
-      "sub_comment": "インコース安定感重視。",
+      "start_display": [],
+      "racers": [],
+      "summary_tag": "【イン絶対】",
+      "comment": "1号艇が絶好の枠位置を活かしてイン速攻を決める。対抗は攻め立てる2号艇。",
+      "sub_comment": "3号艇の展開突いたまくり差しで高配当を狙う。",
       "bets": [
         {
-          "num": "1 - 2 - 3",
+          "num": "1-2-3",
           "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "style": "tag-honmei"
         },
         {
-          "num": "1 - 3 - 2",
+          "num": "1-2-4",
           "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "style": "tag-honmei"
         },
         {
-          "num": "1 - 2 - 4",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-3-2",
+          "tag": "対抗",
+          "style": "tag-nerai"
         },
         {
-          "num": "1 - 4 - 2",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-3-4",
+          "tag": "対抗",
+          "style": "tag-nerai"
         },
         {
-          "num": "1 - 3 - 4",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-4-2",
+          "tag": "抑え",
+          "style": "tag-nerai"
         },
         {
-          "num": "2 - 1 - 3",
+          "num": "2-1-3",
           "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
+          "style": "tag-nerai"
         },
         {
-          "num": "2 - 3 - 1",
+          "num": "2-1-4",
           "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
+          "style": "tag-nerai"
         },
         {
-          "num": "3 - 1 - 2",
-          "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
-        },
-        {
-          "num": "3 - 2 - 1",
+          "num": "2-3-1",
           "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
+          "style": "tag-ana"
         },
         {
-          "num": "4 - 1 - 2",
-          "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
+          "num": "3-1-2",
+          "tag": "大穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-2-1",
+          "tag": "特穴",
+          "style": "tag-ana"
         }
       ]
     },
     "7": {
+      "race_num": 7,
+      "close_time": "--:--",
       "weather": {
-        "weather": "晴",
-        "wind_speed": "2m",
-        "wind_direction": "追い風",
-        "wave": "2cm"
+        "weather": "-",
+        "wind_speed": "-",
+        "wind_direction": "-",
+        "wave": "-"
       },
-      "summary_tag": "【本命濃厚】",
-      "racers": [
-        {
-          "name": "選手1",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 30
-        },
-        {
-          "name": "選手2",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 40
-        },
-        {
-          "name": "選手3",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 50
-        },
-        {
-          "name": "選手4",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 60
-        },
-        {
-          "name": "選手5",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 70
-        },
-        {
-          "name": "選手6",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 80
-        }
-      ],
-      "comment": "1号艇【選手1】中心の組み立て。",
-      "sub_comment": "インコース安定感重視。",
+      "start_display": [],
+      "racers": [],
+      "summary_tag": "【イン絶対】",
+      "comment": "1号艇が絶好の枠位置を活かしてイン速攻を決める。対抗は攻め立てる2号艇。",
+      "sub_comment": "3号艇の展開突いたまくり差しで高配当を狙う。",
       "bets": [
         {
-          "num": "1 - 2 - 3",
+          "num": "1-2-3",
           "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "style": "tag-honmei"
         },
         {
-          "num": "1 - 3 - 2",
+          "num": "1-2-4",
           "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "style": "tag-honmei"
         },
         {
-          "num": "1 - 2 - 4",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-3-2",
+          "tag": "対抗",
+          "style": "tag-nerai"
         },
         {
-          "num": "1 - 4 - 2",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-3-4",
+          "tag": "対抗",
+          "style": "tag-nerai"
         },
         {
-          "num": "1 - 3 - 4",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-4-2",
+          "tag": "抑え",
+          "style": "tag-nerai"
         },
         {
-          "num": "2 - 1 - 3",
+          "num": "2-1-3",
           "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
+          "style": "tag-nerai"
         },
         {
-          "num": "2 - 3 - 1",
+          "num": "2-1-4",
           "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
+          "style": "tag-nerai"
         },
         {
-          "num": "3 - 1 - 2",
-          "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
-        },
-        {
-          "num": "3 - 2 - 1",
+          "num": "2-3-1",
           "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
+          "style": "tag-ana"
         },
         {
-          "num": "4 - 1 - 2",
-          "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
+          "num": "3-1-2",
+          "tag": "大穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-2-1",
+          "tag": "特穴",
+          "style": "tag-ana"
         }
       ]
     },
     "8": {
+      "race_num": 8,
+      "close_time": "--:--",
       "weather": {
-        "weather": "晴",
-        "wind_speed": "2m",
-        "wind_direction": "追い風",
-        "wave": "2cm"
+        "weather": "-",
+        "wind_speed": "-",
+        "wind_direction": "-",
+        "wave": "-"
       },
-      "summary_tag": "【捲り一閃】",
-      "racers": [
-        {
-          "name": "選手1",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 30
-        },
-        {
-          "name": "選手2",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 40
-        },
-        {
-          "name": "選手3",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 50
-        },
-        {
-          "name": "選手4",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 60
-        },
-        {
-          "name": "選手5",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 70
-        },
-        {
-          "name": "選手6",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 80
-        }
-      ],
-      "comment": "1号艇【選手1】中心の組み立て。",
-      "sub_comment": "インコース安定感重視。",
+      "start_display": [],
+      "racers": [],
+      "summary_tag": "【イン絶対】",
+      "comment": "1号艇が絶好の枠位置を活かしてイン速攻を決める。対抗は攻め立てる2号艇。",
+      "sub_comment": "3号艇の展開突いたまくり差しで高配当を狙う。",
       "bets": [
         {
-          "num": "1 - 2 - 3",
+          "num": "1-2-3",
           "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "style": "tag-honmei"
         },
         {
-          "num": "1 - 3 - 2",
+          "num": "1-2-4",
           "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "style": "tag-honmei"
         },
         {
-          "num": "1 - 2 - 4",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-3-2",
+          "tag": "対抗",
+          "style": "tag-nerai"
         },
         {
-          "num": "1 - 4 - 2",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-3-4",
+          "tag": "対抗",
+          "style": "tag-nerai"
         },
         {
-          "num": "1 - 3 - 4",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-4-2",
+          "tag": "抑え",
+          "style": "tag-nerai"
         },
         {
-          "num": "2 - 1 - 3",
+          "num": "2-1-3",
           "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
+          "style": "tag-nerai"
         },
         {
-          "num": "2 - 3 - 1",
+          "num": "2-1-4",
           "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
+          "style": "tag-nerai"
         },
         {
-          "num": "3 - 1 - 2",
-          "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
-        },
-        {
-          "num": "3 - 2 - 1",
+          "num": "2-3-1",
           "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
+          "style": "tag-ana"
         },
         {
-          "num": "4 - 1 - 2",
-          "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
+          "num": "3-1-2",
+          "tag": "大穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-2-1",
+          "tag": "特穴",
+          "style": "tag-ana"
         }
       ]
     },
     "9": {
+      "race_num": 9,
+      "close_time": "--:--",
       "weather": {
-        "weather": "晴",
-        "wind_speed": "2m",
-        "wind_direction": "追い風",
-        "wave": "2cm"
+        "weather": "-",
+        "wind_speed": "-",
+        "wind_direction": "-",
+        "wave": "-"
       },
-      "summary_tag": "【本命濃厚】",
+      "start_display": [],
       "racers": [
         {
+          "boat": 1,
           "name": "選手1",
           "rank": "B1",
           "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 30
+          "tilt": "0.0",
+          "time": "6.80"
         },
         {
+          "boat": 2,
           "name": "選手2",
           "rank": "B1",
           "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 40
+          "tilt": "0.0",
+          "time": "6.80"
         },
         {
+          "boat": 3,
           "name": "選手3",
           "rank": "B1",
           "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 50
+          "tilt": "0.0",
+          "time": "6.80"
         },
         {
+          "boat": 4,
           "name": "選手4",
           "rank": "B1",
           "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 60
+          "tilt": "0.0",
+          "time": "6.80"
         },
         {
+          "boat": 5,
           "name": "選手5",
           "rank": "B1",
           "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 70
+          "tilt": "0.0",
+          "time": "6.80"
         },
         {
+          "boat": 6,
           "name": "選手6",
           "rank": "B1",
           "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 80
+          "tilt": "0.0",
+          "time": "6.80"
         }
       ],
-      "comment": "1号艇【選手1】中心の組み立て。",
-      "sub_comment": "インコース安定感重視。",
+      "summary_tag": "【イン絶対】",
+      "comment": "1号艇が絶好の枠位置を活かしてイン速攻を決める。対抗は攻め立てる2号艇。",
+      "sub_comment": "3号艇の展開突いたまくり差しで高配当を狙う。",
       "bets": [
         {
-          "num": "1 - 2 - 3",
+          "num": "1-2-3",
           "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "style": "tag-honmei"
         },
         {
-          "num": "1 - 3 - 2",
+          "num": "1-2-4",
           "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "style": "tag-honmei"
         },
         {
-          "num": "1 - 2 - 4",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-3-2",
+          "tag": "対抗",
+          "style": "tag-nerai"
         },
         {
-          "num": "1 - 4 - 2",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-3-4",
+          "tag": "対抗",
+          "style": "tag-nerai"
         },
         {
-          "num": "1 - 3 - 4",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-4-2",
+          "tag": "抑え",
+          "style": "tag-nerai"
         },
         {
-          "num": "2 - 1 - 3",
+          "num": "2-1-3",
           "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
+          "style": "tag-nerai"
         },
         {
-          "num": "2 - 3 - 1",
+          "num": "2-1-4",
           "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
+          "style": "tag-nerai"
         },
         {
-          "num": "3 - 1 - 2",
-          "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
-        },
-        {
-          "num": "3 - 2 - 1",
+          "num": "2-3-1",
           "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
+          "style": "tag-ana"
         },
         {
-          "num": "4 - 1 - 2",
-          "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
+          "num": "3-1-2",
+          "tag": "大穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-2-1",
+          "tag": "特穴",
+          "style": "tag-ana"
         }
       ]
     },
     "10": {
+      "race_num": 10,
+      "close_time": "--:--",
       "weather": {
-        "weather": "晴",
-        "wind_speed": "2m",
-        "wind_direction": "追い風",
-        "wave": "2cm"
+        "weather": "-",
+        "wind_speed": "-",
+        "wind_direction": "-",
+        "wave": "-"
       },
-      "summary_tag": "【捲り一閃】",
+      "start_display": [],
       "racers": [
         {
+          "boat": 1,
           "name": "選手1",
           "rank": "B1",
           "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 30
+          "tilt": "0.0",
+          "time": "6.80"
         },
         {
+          "boat": 2,
           "name": "選手2",
           "rank": "B1",
           "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 40
+          "tilt": "0.0",
+          "time": "6.80"
         },
         {
+          "boat": 3,
           "name": "選手3",
           "rank": "B1",
           "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 50
+          "tilt": "0.0",
+          "time": "6.80"
         },
         {
+          "boat": 4,
           "name": "選手4",
           "rank": "B1",
           "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 60
+          "tilt": "0.0",
+          "time": "6.80"
         },
         {
+          "boat": 5,
           "name": "選手5",
           "rank": "B1",
           "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 70
+          "tilt": "0.0",
+          "time": "6.80"
         },
         {
+          "boat": 6,
           "name": "選手6",
           "rank": "B1",
           "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 80
+          "tilt": "0.0",
+          "time": "6.80"
         }
       ],
-      "comment": "1号艇【選手1】中心の組み立て。",
-      "sub_comment": "インコース安定感重視。",
+      "summary_tag": "【イン絶対】",
+      "comment": "1号艇が絶好の枠位置を活かしてイン速攻を決める。対抗は攻め立てる2号艇。",
+      "sub_comment": "3号艇の展開突いたまくり差しで高配当を狙う。",
       "bets": [
         {
-          "num": "1 - 2 - 3",
+          "num": "1-2-3",
           "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "style": "tag-honmei"
         },
         {
-          "num": "1 - 3 - 2",
+          "num": "1-2-4",
           "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "style": "tag-honmei"
         },
         {
-          "num": "1 - 2 - 4",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-3-2",
+          "tag": "対抗",
+          "style": "tag-nerai"
         },
         {
-          "num": "1 - 4 - 2",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-3-4",
+          "tag": "対抗",
+          "style": "tag-nerai"
         },
         {
-          "num": "1 - 3 - 4",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-4-2",
+          "tag": "抑え",
+          "style": "tag-nerai"
         },
         {
-          "num": "2 - 1 - 3",
+          "num": "2-1-3",
           "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
+          "style": "tag-nerai"
         },
         {
-          "num": "2 - 3 - 1",
+          "num": "2-1-4",
           "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
+          "style": "tag-nerai"
         },
         {
-          "num": "3 - 1 - 2",
-          "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
-        },
-        {
-          "num": "3 - 2 - 1",
+          "num": "2-3-1",
           "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
+          "style": "tag-ana"
         },
         {
-          "num": "4 - 1 - 2",
-          "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
+          "num": "3-1-2",
+          "tag": "大穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-2-1",
+          "tag": "特穴",
+          "style": "tag-ana"
         }
       ]
     },
     "11": {
+      "race_num": 11,
+      "close_time": "--:--",
       "weather": {
-        "weather": "晴",
-        "wind_speed": "2m",
-        "wind_direction": "追い風",
-        "wave": "2cm"
+        "weather": "-",
+        "wind_speed": "-",
+        "wind_direction": "-",
+        "wave": "-"
       },
-      "summary_tag": "【本命濃厚】",
-      "racers": [
-        {
-          "name": "選手1",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 30
-        },
-        {
-          "name": "選手2",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 40
-        },
-        {
-          "name": "選手3",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 50
-        },
-        {
-          "name": "選手4",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 60
-        },
-        {
-          "name": "選手5",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 70
-        },
-        {
-          "name": "選手6",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 80
-        }
-      ],
-      "comment": "1号艇【選手1】中心の組み立て。",
-      "sub_comment": "インコース安定感重視。",
+      "start_display": [],
+      "racers": [],
+      "summary_tag": "【イン絶対】",
+      "comment": "1号艇が絶好の枠位置を活かしてイン速攻を決める。対抗は攻め立てる2号艇。",
+      "sub_comment": "3号艇の展開突いたまくり差しで高配当を狙う。",
       "bets": [
         {
-          "num": "1 - 2 - 3",
+          "num": "1-2-3",
           "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "style": "tag-honmei"
         },
         {
-          "num": "1 - 3 - 2",
+          "num": "1-2-4",
           "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "style": "tag-honmei"
         },
         {
-          "num": "1 - 2 - 4",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-3-2",
+          "tag": "対抗",
+          "style": "tag-nerai"
         },
         {
-          "num": "1 - 4 - 2",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-3-4",
+          "tag": "対抗",
+          "style": "tag-nerai"
         },
         {
-          "num": "1 - 3 - 4",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-4-2",
+          "tag": "抑え",
+          "style": "tag-nerai"
         },
         {
-          "num": "2 - 1 - 3",
+          "num": "2-1-3",
           "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
+          "style": "tag-nerai"
         },
         {
-          "num": "2 - 3 - 1",
+          "num": "2-1-4",
           "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
+          "style": "tag-nerai"
         },
         {
-          "num": "3 - 1 - 2",
-          "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
-        },
-        {
-          "num": "3 - 2 - 1",
+          "num": "2-3-1",
           "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
+          "style": "tag-ana"
         },
         {
-          "num": "4 - 1 - 2",
-          "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
+          "num": "3-1-2",
+          "tag": "大穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-2-1",
+          "tag": "特穴",
+          "style": "tag-ana"
         }
       ]
     },
     "12": {
+      "race_num": 12,
+      "close_time": "--:--",
       "weather": {
-        "weather": "晴",
-        "wind_speed": "2m",
-        "wind_direction": "追い風",
-        "wave": "2cm"
+        "weather": "-",
+        "wind_speed": "-",
+        "wind_direction": "-",
+        "wave": "-"
       },
-      "summary_tag": "【捲り一閃】",
-      "racers": [
-        {
-          "name": "選手1",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 30
-        },
-        {
-          "name": "選手2",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 40
-        },
-        {
-          "name": "選手3",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 50
-        },
-        {
-          "name": "選手4",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 60
-        },
-        {
-          "name": "選手5",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 70
-        },
-        {
-          "name": "選手6",
-          "rank": "B1",
-          "st": ".15",
-          "tilt": "-0.5",
-          "time": "6.70",
-          "power": 70,
-          "turn_offset": 80
-        }
-      ],
-      "comment": "1号艇【選手1】中心の組み立て。",
-      "sub_comment": "インコース安定感重視。",
+      "start_display": [],
+      "racers": [],
+      "summary_tag": "【イン絶対】",
+      "comment": "1号艇が絶好の枠位置を活かしてイン速攻を決める。対抗は攻め立てる2号艇。",
+      "sub_comment": "3号艇の展開突いたまくり差しで高配当を狙う。",
       "bets": [
         {
-          "num": "1 - 2 - 3",
+          "num": "1-2-3",
           "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "style": "tag-honmei"
         },
         {
-          "num": "1 - 3 - 2",
+          "num": "1-2-4",
           "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "style": "tag-honmei"
         },
         {
-          "num": "1 - 2 - 4",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-3-2",
+          "tag": "対抗",
+          "style": "tag-nerai"
         },
         {
-          "num": "1 - 4 - 2",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-3-4",
+          "tag": "対抗",
+          "style": "tag-nerai"
         },
         {
-          "num": "1 - 3 - 4",
-          "tag": "本命",
-          "style": "tag-honmei",
-          "odds": "--"
+          "num": "1-4-2",
+          "tag": "抑え",
+          "style": "tag-nerai"
         },
         {
-          "num": "2 - 1 - 3",
+          "num": "2-1-3",
           "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
+          "style": "tag-nerai"
         },
         {
-          "num": "2 - 3 - 1",
+          "num": "2-1-4",
           "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
+          "style": "tag-nerai"
         },
         {
-          "num": "3 - 1 - 2",
-          "tag": "狙い",
-          "style": "tag-nerai",
-          "odds": "--"
-        },
-        {
-          "num": "3 - 2 - 1",
+          "num": "2-3-1",
           "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
+          "style": "tag-ana"
         },
         {
-          "num": "4 - 1 - 2",
-          "tag": "穴",
-          "style": "tag-ana",
-          "odds": "--"
+          "num": "3-1-2",
+          "tag": "大穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-2-1",
+          "tag": "特穴",
+          "style": "tag-ana"
         }
       ]
     }
