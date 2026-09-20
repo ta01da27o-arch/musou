@@ -39,152 +39,170 @@ HEADERS = {
     "Accept-Language": "ja,en-US;q=0.9,en;q=0.8"
 }
 
-def fetch_url_retry(url, max_retries=3):
-    """リトライ付きリクエスト関数（サーバー負荷軽減・エラー回避用）"""
-    for attempt in range(max_retries):
-        try:
-            time.sleep(random.uniform(0.5, 1.2)) # アクセス制御対策（微小ディレイ）
-            res = requests.get(url, headers=HEADERS, timeout=20)
-            res.encoding = "utf-8"
-            if res.status_code == 200:
-                return res.text
-        except Exception as e:
-            if attempt == max_retries - 1:
-                print(f"[通信失敗] {url} : {e}")
-            time.sleep(2) # エラー時2秒待機して再試行
+def fetch_url(url):
+    """通信関数"""
+    try:
+        time.sleep(random.uniform(0.3, 0.8))
+        res = requests.get(url, headers=HEADERS, timeout=15)
+        res.encoding = "utf-8"
+        if res.status_code == 200:
+            return res.text
+    except Exception as e:
+        print(f"[通信エラー] {url}: {e}")
     return None
 
-def check_holding_and_get_racelist(jcd, race_num):
-    """公式サイトから出走表を取得し、本日開催中か判定する"""
-    url = f"https://www.boatrace.jp/owpc/pc/race/racelist?rno={race_num}&jcd={jcd}"
-    html = fetch_url_retry(url)
+def get_today_holding_jcds():
+    """本日のレース一覧ページから開催中の場コード(jcd)リストを取得"""
+    url = "https://www.boatrace.jp/owpc/pc/race/index"
+    html = fetch_url(url)
+    holding_jcds = set()
     
+    if html:
+        soup = BeautifulSoup(html, "html.parser")
+        # 開催場のリンクから jcd パラメータを抽出
+        links = soup.select("a[href*='jcd=']")
+        for a in links:
+            href = a.get("href", "")
+            m = re.search(r"jcd=(\d{2})", href)
+            if m:
+                holding_jcds.add(m.group(1))
+    
+    return holding_jcds
+
+def get_racelist(jcd, race_num):
+    """出走表データの取得"""
+    url = f"https://www.boatrace.jp/owpc/pc/race/racelist?rno={race_num}&jcd={jcd}"
+    html = fetch_url(url)
     racers = []
     close_time = "--:--"
-    is_holding = False
     
     if not html:
-        return False, racers, close_time
+        return racers, close_time
 
-    try:
-        soup = BeautifulSoup(html, "html.parser")
-        rows = soup.select("table tbody.is-fs12 tr")
-        
-        if rows:
-            is_holding = True
-            time_ele = soup.select_one(".tab2_time")
-            if time_ele:
-                m = re.search(r"\d{1,2}:\d{2}", time_ele.text)
-                if m: close_time = m.group(0)
+    soup = BeautifulSoup(html, "html.parser")
 
-            current_boat = 1
-            for row in rows:
-                name_ele = row.select_one(".is-fs18")
-                if name_ele:
-                    name = name_ele.text.strip().replace(" ", "").replace("　", "")
-                    rank_ele = row.select_one(".is-fs11")
-                    rank = rank_ele.text.strip() if rank_ele else "B1"
+    # 締切時刻
+    time_ele = soup.select_one(".tab2_time")
+    if time_ele:
+        m = re.search(r"\d{1,2}:\d{2}", time_ele.text)
+        if m:
+            close_time = m.group(0)
+
+    # 選手データの解析（テーブル構造に非依存な柔軟判定）
+    tables = soup.select("table")
+    for tbl in tables:
+        rows = tbl.select("tr")
+        current_boat = 1
+        for row in rows:
+            name_ele = row.select_one(".is-fs18")
+            if name_ele:
+                name = name_ele.text.strip().replace(" ", "").replace("　", "")
+                rank_ele = row.select_one(".is-fs11")
+                rank = rank_ele.text.strip() if rank_ele else "B1"
+                
+                tds = row.select("td")
+                nat_rate, nat_2rate = "0.00", "0.0%"
+                loc_rate, loc_2rate = "0.00", "0.0%"
+                motor_2rate = "0.0%"
+                st_avg = "-"
+
+                # 各種数値の取得
+                if len(tds) >= 7:
+                    nat_text = tds[4].text.strip().split()
+                    if len(nat_text) >= 2: nat_rate, nat_2rate = nat_text[0], nat_text[1]
                     
-                    tds = row.select("td")
-                    nat_rate, nat_2rate = "0.00", "0.0%"
-                    loc_rate, loc_2rate = "0.00", "0.0%"
-                    motor_2rate = "0.0%"
-                    st_avg = "-"
+                    loc_text = tds[5].text.strip().split() if len(tds) > 5 else []
+                    if len(loc_text) >= 2: loc_rate, loc_2rate = loc_text[0], loc_text[1]
 
-                    if len(tds) >= 7:
-                        nat_text = tds[4].text.strip().split()
-                        if len(nat_text) >= 2: nat_rate, nat_2rate = nat_text[0], nat_text[1]
-                        
-                        loc_text = tds[5].text.strip().split() if len(tds) > 5 else []
-                        if len(loc_text) >= 2: loc_rate, loc_2rate = loc_text[0], loc_text[1]
+                    m_text = tds[6].text.strip().split() if len(tds) > 6 else []
+                    if len(m_text) >= 2: motor_2rate = m_text[1]
 
-                        m_text = tds[6].text.strip().split() if len(tds) > 6 else []
-                        if len(m_text) >= 2: motor_2rate = m_text[1]
+                    st_text = tds[3].text
+                    m_st = re.search(r"F\d|L\d|\.\d{2}", st_text)
+                    if m_st: st_avg = m_st.group(0)
 
-                        st_text = tds[3].text
-                        m_st = re.search(r"F\d|L\d|\.\d{2}", st_text)
-                        if m_st: st_avg = m_st.group(0)
+                try:
+                    hit_rate = f"{min(99.9, float(nat_rate) * 8.5):.1f}%"
+                except:
+                    hit_rate = "45.0%"
 
-                    try:
-                        hit_rate = f"{min(99.9, float(nat_rate) * 8.5):.1f}%"
-                    except:
-                        hit_rate = "45.0%"
+                racers.append({
+                    "boat": current_boat,
+                    "name": name,
+                    "rank": rank,
+                    "st_avg": st_avg,
+                    "nat_rate": nat_rate,
+                    "nat_2rate": nat_2rate,
+                    "loc_rate": loc_rate,
+                    "loc_2rate": loc_2rate,
+                    "motor_2rate": motor_2rate,
+                    "hit_rate": hit_rate,
+                    "tilt": "-",
+                    "time": "-"
+                })
+                current_boat += 1
+                if current_boat > 6:
+                    break
+        if racers:
+            break
 
-                    racers.append({
-                        "boat": current_boat,
-                        "name": name,
-                        "rank": rank,
-                        "st_avg": st_avg,
-                        "nat_rate": nat_rate,
-                        "nat_2rate": nat_2rate,
-                        "loc_rate": loc_rate,
-                        "loc_2rate": loc_2rate,
-                        "motor_2rate": motor_2rate,
-                        "hit_rate": hit_rate,
-                        "tilt": "-",
-                        "time": "-"
-                    })
-                    current_boat += 1
-    except Exception as e:
-        print(f"解析エラー ({jcd} {race_num}R): {e}")
-
-    return is_holding, racers, close_time
+    return racers, close_time
 
 def fetch_beforeinfo_data(jcd, race_num):
-    """直前情報（天候・展示タイム・チルト・スリット展示）の取得"""
+    """直前情報の取得"""
     data = {
         "weather": {"weather": "晴", "wind_speed": "2m", "wind_direction": "向い風", "wave": "2cm"},
         "exhibition": {},
         "start_display": []
     }
     url = f"https://www.boatrace.jp/owpc/pc/race/beforeinfo?rno={race_num}&jcd={jcd}"
-    html = fetch_url_retry(url)
+    html = fetch_url(url)
     if not html:
         return data
 
-    try:
-        soup = BeautifulSoup(html, "html.parser")
+    soup = BeautifulSoup(html, "html.parser")
 
-        w_ele = soup.select_one(".weather1")
-        if w_ele:
-            txt = w_ele.text.replace("\n", " ")
-            w = re.search(r"天候\s*([^\s]+)", txt)
-            ws = re.search(r"風速\s*(\d+m)", txt)
-            wd = re.search(r"風向\s*([^\s]+)", txt)
-            wv = re.search(r"波高\s*(\d+cm)", txt)
-            if w: data["weather"]["weather"] = w.group(1)
-            if ws: data["weather"]["wind_speed"] = ws.group(1)
-            if wd: data["weather"]["wind_direction"] = wd.group(1)
-            if wv: data["weather"]["wave"] = wv.group(1)
+    # 気象
+    w_ele = soup.select_one(".weather1")
+    if w_ele:
+        txt = w_ele.text.replace("\n", " ")
+        w = re.search(r"天候\s*([^\s]+)", txt)
+        ws = re.search(r"風速\s*(\d+m)", txt)
+        wd = re.search(r"風向\s*([^\s]+)", txt)
+        wv = re.search(r"波高\s*(\d+cm)", txt)
+        if w: data["weather"]["weather"] = w.group(1)
+        if ws: data["weather"]["wind_speed"] = ws.group(1)
+        if wd: data["weather"]["wind_direction"] = wd.group(1)
+        if wv: data["weather"]["wave"] = wv.group(1)
 
-        tbls = soup.select("table.tblHeader")
-        if len(tbls) >= 2:
-            rows = tbls[1].select("tbody tr")
-            b_idx = 1
-            for r in rows:
-                tds = r.select("td")
-                if len(tds) >= 4:
-                    tilt = tds[2].text.strip()
-                    t_time = tds[3].text.strip()
-                    data["exhibition"][str(b_idx)] = {
-                        "tilt": tilt if tilt else "-",
-                        "time": t_time if t_time else "-"
-                    }
-                    b_idx += 1
+    # チルト・展示タイム
+    tbls = soup.select("table.tblHeader")
+    if len(tbls) >= 2:
+        rows = tbls[1].select("tbody tr")
+        b_idx = 1
+        for r in rows:
+            tds = r.select("td")
+            if len(tds) >= 4:
+                tilt = tds[2].text.strip()
+                t_time = tds[3].text.strip()
+                data["exhibition"][str(b_idx)] = {
+                    "tilt": tilt if tilt else "-",
+                    "time": t_time if t_time else "-"
+                }
+                b_idx += 1
 
-        s_box = soup.select_one(".stExhibitionBox")
-        if s_box:
-            s_rows = s_box.select(".stTrack tr")
-            for r in s_rows:
-                b_e = r.select_one(".boatNumber")
-                st_e = r.select_one(".stTime")
-                if b_e and st_e:
-                    b_num = re.sub(r"\D", "", b_e.text)
-                    st_val = st_e.text.strip()
-                    if b_num:
-                        data["start_display"].append({"boat": int(b_num), "st": st_val})
-    except Exception as e:
-        pass
+    # スタート展示スリット
+    s_box = soup.select_one(".stExhibitionBox")
+    if s_box:
+        s_rows = s_box.select(".stTrack tr")
+        for r in s_rows:
+            b_e = r.select_one(".boatNumber")
+            st_e = r.select_one(".stTime")
+            if b_e and st_e:
+                b_num = re.sub(r"\D", "", b_e.text)
+                st_val = st_e.text.strip()
+                if b_num:
+                    data["start_display"].append({"boat": int(b_num), "st": st_val})
 
     return data
 
@@ -215,7 +233,7 @@ def generate_ai_predictions(racers):
     t1 = sorted_boats[0] if len(sorted_boats) > 0 else 1
     t2 = sorted_boats[1] if len(sorted_boats) > 1 else 2
     t3 = sorted_boats[2] if len(sorted_boats) > 2 else 3
-    t4 = sorted_boats[3] if len(sorted_boats) > 3 else 4
+    t4 = sorted_boats[3] if len(sorted_boats) > 4 else 4
 
     summary_tag = "【イン信頼】" if t1 == 1 else "【波乱気配】"
     comment = f"{t1}号艇の機配が主力。追撃する{t2}号艇との旋回争い。"
@@ -236,22 +254,16 @@ def generate_ai_predictions(racers):
 
     return summary_tag, comment, sub_comment, bets, summary_data
 
-def process_stadium(jcd):
+def process_stadium(jcd, holding_jcds):
     s_info = STADIUMS[jcd]
     races_data = {}
-    
-    # 1R目で開催確認
-    is_holding, racers_1r, close_time_1r = check_holding_and_get_racelist(jcd, 1)
+    is_holding = jcd in holding_jcds
 
     if is_holding:
-        print(f"[{s_info['name']}] 本日開催中 - データを取得中...")
+        print(f"[{s_info['name']}] 本日開催中 - 1R〜12Rの解析データを取得中...")
         for r in range(1, 13):
             r_str = str(r)
-            if r == 1:
-                racers, close_time = racers_1r, close_time_1r
-            else:
-                _, racers, close_time = check_holding_and_get_racelist(jcd, r)
-
+            racers, close_time = get_racelist(jcd, r)
             before_data = fetch_beforeinfo_data(jcd, r)
 
             for racer in racers:
@@ -289,9 +301,13 @@ def process_stadium(jcd):
         json.dump(out_data, f, ensure_ascii=False, indent=2)
 
 def main():
-    # サーバーブロックを防ぐため、並列数を 2 に落として順次処理
-    with ThreadPoolExecutor(max_workers=2) as executor:
-        executor.map(process_stadium, STADIUMS.keys())
+    print("本日の開催場一覧を取得中...")
+    holding_jcds = get_today_holding_jcds()
+    print(f"本日開催中の場コード: {sorted(list(holding_jcds))}")
+
+    with ThreadPoolExecutor(max_workers=3) as executor:
+        for jcd in STADIUMS.keys():
+            executor.submit(process_stadium, jcd, holding_jcds)
 
 if __name__ == "__main__":
     main()
