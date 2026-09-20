@@ -2,10 +2,10 @@
   "date": "20260920",
   "stadium_code": "17",
   "stadium_name": "宮島",
-  "cache_buster": "1789873764936",
+  "cache_buster": "1789875915464",
   "races": {
     "1": {
-      "close_time": "--:--",
+      "close_time": "10:40",
       "weather": {
         "weather": "-",
         "wind_speed": "6m",
@@ -135,7 +135,7 @@
       ]
     },
     "2": {
-      "close_time": "--:--",
+      "close_time": "11:07",
       "weather": {
         "weather": "-",
         "wind_speed": "6m",
@@ -265,7 +265,7 @@
       ]
     },
     "3": {
-      "close_time": "--:--",
+      "close_time": "11:37",
       "weather": {
         "weather": "-",
         "wind_speed": "7m",
@@ -395,7 +395,7 @@
       ]
     },
     "4": {
-      "close_time": "--:--",
+      "close_time": "12:07",
       "weather": {
         "weather": "-",
         "wind_speed": "6m",
@@ -525,7 +525,7 @@
       ]
     },
     "5": {
-      "close_time": "--:--",
+      "close_time": "12:40",
       "weather": {
         "weather": "-",
         "wind_speed": "6m",
@@ -655,7 +655,7 @@
       ]
     },
     "6": {
-      "close_time": "--:--",
+      "close_time": "13:10",
       "weather": {
         "weather": "-",
         "wind_speed": "6m",
@@ -785,7 +785,7 @@
       ]
     },
     "7": {
-      "close_time": "--:--",
+      "close_time": "13:41",
       "weather": {
         "weather": "-",
         "wind_speed": "6m",
@@ -915,7 +915,7 @@
       ]
     },
     "8": {
-      "close_time": "--:--",
+      "close_time": "14:13",
       "weather": {
         "weather": "-",
         "wind_speed": "6m",
@@ -1045,7 +1045,7 @@
       ]
     },
     "9": {
-      "close_time": "--:--",
+      "close_time": "14:47",
       "weather": {
         "weather": "-",
         "wind_speed": "6m",
@@ -1175,7 +1175,7 @@
       ]
     },
     "10": {
-      "close_time": "--:--",
+      "close_time": "15:24",
       "weather": {
         "weather": "-",
         "wind_speed": "6m",
@@ -1305,7 +1305,7 @@
       ]
     },
     "11": {
-      "close_time": "--:--",
+      "close_time": "16:03",
       "weather": {
         "weather": "-",
         "wind_speed": "6m",
@@ -1435,7 +1435,7 @@
       ]
     },
     "12": {
-      "close_time": "--:--",
+      "close_time": "16:45",
       "weather": {
         "weather": "-",
         "wind_speed": "6m",

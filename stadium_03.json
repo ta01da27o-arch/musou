@@ -2,13 +2,13 @@
   "date": "20260920",
   "stadium_code": "03",
   "stadium_name": "江戸川",
-  "cache_buster": "1789873764936",
+  "cache_buster": "1789875915464",
   "races": {
     "1": {
-      "close_time": "--:--",
+      "close_time": "11:14",
       "weather": {
         "weather": "-",
-        "wind_speed": "4m",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
         "wave": "5cm"
       },
@@ -135,7 +135,7 @@
       ]
     },
     "2": {
-      "close_time": "--:--",
+      "close_time": "11:41",
       "weather": {
         "weather": "-",
         "wind_speed": "3m",
@@ -265,7 +265,7 @@
       ]
     },
     "3": {
-      "close_time": "--:--",
+      "close_time": "12:08",
       "weather": {
         "weather": "-",
         "wind_speed": "4m",
@@ -395,10 +395,10 @@
       ]
     },
     "4": {
-      "close_time": "--:--",
+      "close_time": "12:35",
       "weather": {
         "weather": "-",
-        "wind_speed": "4m",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
         "wave": "5cm"
       },
@@ -525,10 +525,10 @@
       ]
     },
     "5": {
-      "close_time": "--:--",
+      "close_time": "13:02",
       "weather": {
         "weather": "-",
-        "wind_speed": "4m",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
         "wave": "5cm"
       },
@@ -655,10 +655,10 @@
       ]
     },
     "6": {
-      "close_time": "--:--",
+      "close_time": "13:29",
       "weather": {
         "weather": "-",
-        "wind_speed": "4m",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
         "wave": "5cm"
       },
@@ -785,10 +785,10 @@
       ]
     },
     "7": {
-      "close_time": "--:--",
+      "close_time": "13:56",
       "weather": {
         "weather": "-",
-        "wind_speed": "4m",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
         "wave": "5cm"
       },
@@ -915,10 +915,10 @@
       ]
     },
     "8": {
-      "close_time": "--:--",
+      "close_time": "14:24",
       "weather": {
         "weather": "-",
-        "wind_speed": "4m",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
         "wave": "5cm"
       },
@@ -1045,10 +1045,10 @@
       ]
     },
     "9": {
-      "close_time": "--:--",
+      "close_time": "14:52",
       "weather": {
         "weather": "-",
-        "wind_speed": "4m",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
         "wave": "5cm"
       },
@@ -1175,10 +1175,10 @@
       ]
     },
     "10": {
-      "close_time": "--:--",
+      "close_time": "15:22",
       "weather": {
         "weather": "-",
-        "wind_speed": "4m",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
         "wave": "5cm"
       },
@@ -1305,10 +1305,10 @@
       ]
     },
     "11": {
-      "close_time": "--:--",
+      "close_time": "15:53",
       "weather": {
         "weather": "-",
-        "wind_speed": "4m",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
         "wave": "5cm"
       },
@@ -1435,10 +1435,10 @@
       ]
     },
     "12": {
-      "close_time": "--:--",
+      "close_time": "16:25",
       "weather": {
         "weather": "-",
-        "wind_speed": "4m",
+        "wind_speed": "3m",
         "wind_direction": "追い風",
         "wave": "5cm"
       },
