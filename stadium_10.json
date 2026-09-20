@@ -2,15 +2,15 @@
   "date": "20260920",
   "stadium_code": "10",
   "stadium_name": "三国",
-  "cache_buster": "1789871717204",
+  "cache_buster": "1789873764936",
   "races": {
     "1": {
-      "close_time": "08:32",
+      "close_time": "--:--",
       "weather": {
         "weather": "-",
-        "wind_speed": "5m",
+        "wind_speed": "6m",
         "wind_direction": "追い風",
-        "wave": "5cm"
+        "wave": "6cm"
       },
       "summary_tag": "【荒れ模様】",
       "racers": [
@@ -69,7 +69,7 @@
           "turn_offset": 87
         }
       ],
-      "comment": "風速5mの水面悪化により波乱含み。ターンのズレから高配当の決着も十分。",
+      "comment": "風速6mの水面悪化により波乱含み。ターンのズレから高配当の決着も十分。",
       "sub_comment": "展示STが安定している艇の紐穴・逆転に注意。",
       "bets": [
         {
@@ -135,7 +135,7 @@
       ]
     },
     "2": {
-      "close_time": "08:32",
+      "close_time": "--:--",
       "weather": {
         "weather": "-",
         "wind_speed": "5m",
@@ -265,7 +265,7 @@
       ]
     },
     "3": {
-      "close_time": "08:32",
+      "close_time": "--:--",
       "weather": {
         "weather": "-",
         "wind_speed": "5m",
@@ -395,7 +395,7 @@
       ]
     },
     "4": {
-      "close_time": "08:32",
+      "close_time": "--:--",
       "weather": {
         "weather": "-",
         "wind_speed": "7m",
@@ -525,7 +525,7 @@
       ]
     },
     "5": {
-      "close_time": "08:32",
+      "close_time": "--:--",
       "weather": {
         "weather": "-",
         "wind_speed": "8m",
@@ -655,7 +655,7 @@
       ]
     },
     "6": {
-      "close_time": "08:32",
+      "close_time": "--:--",
       "weather": {
         "weather": "-",
         "wind_speed": "7m",
@@ -785,7 +785,7 @@
       ]
     },
     "7": {
-      "close_time": "08:32",
+      "close_time": "--:--",
       "weather": {
         "weather": "-",
         "wind_speed": "7m",
@@ -915,7 +915,7 @@
       ]
     },
     "8": {
-      "close_time": "08:32",
+      "close_time": "--:--",
       "weather": {
         "weather": "-",
         "wind_speed": "5m",
@@ -1045,12 +1045,12 @@
       ]
     },
     "9": {
-      "close_time": "08:32",
+      "close_time": "--:--",
       "weather": {
         "weather": "-",
-        "wind_speed": "5m",
+        "wind_speed": "6m",
         "wind_direction": "追い風",
-        "wave": "5cm"
+        "wave": "6cm"
       },
       "summary_tag": "【荒れ模様】",
       "racers": [
@@ -1109,7 +1109,7 @@
           "turn_offset": 87
         }
       ],
-      "comment": "風速5mの水面悪化により波乱含み。ターンのズレから高配当の決着も十分。",
+      "comment": "風速6mの水面悪化により波乱含み。ターンのズレから高配当の決着も十分。",
       "sub_comment": "展示STが安定している艇の紐穴・逆転に注意。",
       "bets": [
         {
@@ -1175,12 +1175,12 @@
       ]
     },
     "10": {
-      "close_time": "08:32",
+      "close_time": "--:--",
       "weather": {
         "weather": "-",
-        "wind_speed": "5m",
+        "wind_speed": "6m",
         "wind_direction": "追い風",
-        "wave": "5cm"
+        "wave": "6cm"
       },
       "summary_tag": "【荒れ模様】",
       "racers": [
@@ -1239,7 +1239,7 @@
           "turn_offset": 87
         }
       ],
-      "comment": "風速5mの水面悪化により波乱含み。ターンのズレから高配当の決着も十分。",
+      "comment": "風速6mの水面悪化により波乱含み。ターンのズレから高配当の決着も十分。",
       "sub_comment": "展示STが安定している艇の紐穴・逆転に注意。",
       "bets": [
         {
@@ -1305,12 +1305,12 @@
       ]
     },
     "11": {
-      "close_time": "08:32",
+      "close_time": "--:--",
       "weather": {
         "weather": "-",
-        "wind_speed": "5m",
+        "wind_speed": "6m",
         "wind_direction": "追い風",
-        "wave": "5cm"
+        "wave": "6cm"
       },
       "summary_tag": "【荒れ模様】",
       "racers": [
@@ -1369,7 +1369,7 @@
           "turn_offset": 87
         }
       ],
-      "comment": "風速5mの水面悪化により波乱含み。ターンのズレから高配当の決着も十分。",
+      "comment": "風速6mの水面悪化により波乱含み。ターンのズレから高配当の決着も十分。",
       "sub_comment": "展示STが安定している艇の紐穴・逆転に注意。",
       "bets": [
         {
@@ -1435,12 +1435,12 @@
       ]
     },
     "12": {
-      "close_time": "08:32",
+      "close_time": "--:--",
       "weather": {
         "weather": "-",
-        "wind_speed": "5m",
+        "wind_speed": "6m",
         "wind_direction": "追い風",
-        "wave": "5cm"
+        "wave": "6cm"
       },
       "summary_tag": "【捲り一閃】",
       "racers": [
