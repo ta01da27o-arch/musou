@@ -1,6 +1,6 @@
 {
   "date": "20260921",
-  "updated_at": "2026-09-21 06:48:28",
+  "updated_at": "2026-09-21 10:05:33",
   "active_codes": [
     "01",
     "02",
@@ -14,7 +14,8 @@
     "15",
     "16",
     "17",
-    "18"
+    "18",
+    "20"
   ],
   "active_stadiums": [
     {
@@ -68,10 +69,14 @@
     {
       "code": "18",
       "name": "徳山"
+    },
+    {
+      "code": "20",
+      "name": "若松"
     }
   ],
-  "total_races": 156,
-  "total_hits": 137,
+  "total_races": 168,
+  "total_hits": 147,
   "overall_hit_rate": "91.6%",
   "total_recovery": "204.5%"
 }

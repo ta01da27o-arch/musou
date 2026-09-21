@@ -1,8 +1,1976 @@
 {
-  "stadium_id": "20",
+  "date": "20260921",
+  "stadium_code": "20",
   "stadium_name": "若松",
-  "region": "kyushu",
-  "is_holding": false,
-  "ai_hit_rate": "-",
-  "races": {}
+  "is_holding": true,
+  "races": {
+    "1": {
+      "race_num": 1,
+      "close_time": "--:--",
+      "weather": {
+        "weather": "晴",
+        "wind_speed": "2m",
+        "wind_direction": "向い風",
+        "wave": "2cm"
+      },
+      "start_display": [],
+      "racers": [
+        {
+          "boat": 1,
+          "name": "松井繁",
+          "rank": "A1",
+          "st": ".12",
+          "st_avg": ".12",
+          "nat_rate": "7.42",
+          "nat_2rate": "51.0%",
+          "loc_rate": "7.80",
+          "loc_2rate": "46.0%",
+          "motor_2rate": "39.0%",
+          "hit_rate": "80.0%",
+          "tilt": "0.0",
+          "time": "6.71",
+          "power": 83
+        },
+        {
+          "boat": 2,
+          "name": "瓜生正義",
+          "rank": "A1",
+          "st": ".13",
+          "st_avg": ".13",
+          "nat_rate": "7.15",
+          "nat_2rate": "47.0%",
+          "loc_rate": "7.20",
+          "loc_2rate": "42.0%",
+          "motor_2rate": "36.0%",
+          "hit_rate": "75.0%",
+          "tilt": "0.0",
+          "time": "6.72",
+          "power": 78
+        },
+        {
+          "boat": 3,
+          "name": "白井英治",
+          "rank": "A1",
+          "st": ".14",
+          "st_avg": ".14",
+          "nat_rate": "7.60",
+          "nat_2rate": "43.0%",
+          "loc_rate": "7.10",
+          "loc_2rate": "38.0%",
+          "motor_2rate": "33.0%",
+          "hit_rate": "70.0%",
+          "tilt": "0.0",
+          "time": "6.73",
+          "power": 73
+        },
+        {
+          "boat": 4,
+          "name": "菊地孝平",
+          "rank": "A1",
+          "st": ".15",
+          "st_avg": ".15",
+          "nat_rate": "6.95",
+          "nat_2rate": "39.0%",
+          "loc_rate": "6.80",
+          "loc_2rate": "34.0%",
+          "motor_2rate": "30.0%",
+          "hit_rate": "65.0%",
+          "tilt": "0.0",
+          "time": "6.74",
+          "power": 68
+        },
+        {
+          "boat": 5,
+          "name": "井口佳典",
+          "rank": "A2",
+          "st": ".16",
+          "st_avg": ".16",
+          "nat_rate": "6.40",
+          "nat_2rate": "35.0%",
+          "loc_rate": "6.30",
+          "loc_2rate": "30.0%",
+          "motor_2rate": "27.0%",
+          "hit_rate": "60.0%",
+          "tilt": "0.0",
+          "time": "6.75",
+          "power": 63
+        },
+        {
+          "boat": 6,
+          "name": "篠崎元志",
+          "rank": "B1",
+          "st": ".17",
+          "st_avg": ".17",
+          "nat_rate": "5.80",
+          "nat_2rate": "31.0%",
+          "loc_rate": "5.50",
+          "loc_2rate": "26.0%",
+          "motor_2rate": "24.0%",
+          "hit_rate": "55.0%",
+          "tilt": "0.0",
+          "time": "6.76",
+          "power": 58
+        }
+      ],
+      "summary_tag": "【イン信頼】",
+      "comment": "1号艇の機力が良好で軸指名。追撃する2号艇との全速戦。",
+      "sub_comment": "3号艇の差し足警戒。高配当時は4号艇の攻め込み。",
+      "bets": [
+        {
+          "num": "1-2-3",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1-2-4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1-3-2",
+          "tag": "対抗",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "1-3-4",
+          "tag": "対抗",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "1-4-2",
+          "tag": "押さえ",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-1-3",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-1-4",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-3-1",
+          "tag": "穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-1-2",
+          "tag": "大穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-2-1",
+          "tag": "特穴",
+          "style": "tag-ana"
+        }
+      ]
+    },
+    "2": {
+      "race_num": 2,
+      "close_time": "--:--",
+      "weather": {
+        "weather": "晴",
+        "wind_speed": "2m",
+        "wind_direction": "向い風",
+        "wave": "2cm"
+      },
+      "start_display": [],
+      "racers": [
+        {
+          "boat": 1,
+          "name": "松井繁",
+          "rank": "A1",
+          "st": ".12",
+          "st_avg": ".12",
+          "nat_rate": "7.42",
+          "nat_2rate": "51.0%",
+          "loc_rate": "7.80",
+          "loc_2rate": "46.0%",
+          "motor_2rate": "39.0%",
+          "hit_rate": "80.0%",
+          "tilt": "0.0",
+          "time": "6.71",
+          "power": 83
+        },
+        {
+          "boat": 2,
+          "name": "瓜生正義",
+          "rank": "A1",
+          "st": ".13",
+          "st_avg": ".13",
+          "nat_rate": "7.15",
+          "nat_2rate": "47.0%",
+          "loc_rate": "7.20",
+          "loc_2rate": "42.0%",
+          "motor_2rate": "36.0%",
+          "hit_rate": "75.0%",
+          "tilt": "0.0",
+          "time": "6.72",
+          "power": 78
+        },
+        {
+          "boat": 3,
+          "name": "白井英治",
+          "rank": "A1",
+          "st": ".14",
+          "st_avg": ".14",
+          "nat_rate": "7.60",
+          "nat_2rate": "43.0%",
+          "loc_rate": "7.10",
+          "loc_2rate": "38.0%",
+          "motor_2rate": "33.0%",
+          "hit_rate": "70.0%",
+          "tilt": "0.0",
+          "time": "6.73",
+          "power": 73
+        },
+        {
+          "boat": 4,
+          "name": "菊地孝平",
+          "rank": "A1",
+          "st": ".15",
+          "st_avg": ".15",
+          "nat_rate": "6.95",
+          "nat_2rate": "39.0%",
+          "loc_rate": "6.80",
+          "loc_2rate": "34.0%",
+          "motor_2rate": "30.0%",
+          "hit_rate": "65.0%",
+          "tilt": "0.0",
+          "time": "6.74",
+          "power": 68
+        },
+        {
+          "boat": 5,
+          "name": "井口佳典",
+          "rank": "A2",
+          "st": ".16",
+          "st_avg": ".16",
+          "nat_rate": "6.40",
+          "nat_2rate": "35.0%",
+          "loc_rate": "6.30",
+          "loc_2rate": "30.0%",
+          "motor_2rate": "27.0%",
+          "hit_rate": "60.0%",
+          "tilt": "0.0",
+          "time": "6.75",
+          "power": 63
+        },
+        {
+          "boat": 6,
+          "name": "篠崎元志",
+          "rank": "B1",
+          "st": ".17",
+          "st_avg": ".17",
+          "nat_rate": "5.80",
+          "nat_2rate": "31.0%",
+          "loc_rate": "5.50",
+          "loc_2rate": "26.0%",
+          "motor_2rate": "24.0%",
+          "hit_rate": "55.0%",
+          "tilt": "0.0",
+          "time": "6.76",
+          "power": 58
+        }
+      ],
+      "summary_tag": "【イン信頼】",
+      "comment": "1号艇の機力が良好で軸指名。追撃する2号艇との全速戦。",
+      "sub_comment": "3号艇の差し足警戒。高配当時は4号艇の攻め込み。",
+      "bets": [
+        {
+          "num": "1-2-3",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1-2-4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1-3-2",
+          "tag": "対抗",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "1-3-4",
+          "tag": "対抗",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "1-4-2",
+          "tag": "押さえ",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-1-3",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-1-4",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-3-1",
+          "tag": "穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-1-2",
+          "tag": "大穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-2-1",
+          "tag": "特穴",
+          "style": "tag-ana"
+        }
+      ]
+    },
+    "3": {
+      "race_num": 3,
+      "close_time": "--:--",
+      "weather": {
+        "weather": "晴",
+        "wind_speed": "2m",
+        "wind_direction": "向い風",
+        "wave": "2cm"
+      },
+      "start_display": [],
+      "racers": [
+        {
+          "boat": 1,
+          "name": "松井繁",
+          "rank": "A1",
+          "st": ".12",
+          "st_avg": ".12",
+          "nat_rate": "7.42",
+          "nat_2rate": "51.0%",
+          "loc_rate": "7.80",
+          "loc_2rate": "46.0%",
+          "motor_2rate": "39.0%",
+          "hit_rate": "80.0%",
+          "tilt": "0.0",
+          "time": "6.71",
+          "power": 83
+        },
+        {
+          "boat": 2,
+          "name": "瓜生正義",
+          "rank": "A1",
+          "st": ".13",
+          "st_avg": ".13",
+          "nat_rate": "7.15",
+          "nat_2rate": "47.0%",
+          "loc_rate": "7.20",
+          "loc_2rate": "42.0%",
+          "motor_2rate": "36.0%",
+          "hit_rate": "75.0%",
+          "tilt": "0.0",
+          "time": "6.72",
+          "power": 78
+        },
+        {
+          "boat": 3,
+          "name": "白井英治",
+          "rank": "A1",
+          "st": ".14",
+          "st_avg": ".14",
+          "nat_rate": "7.60",
+          "nat_2rate": "43.0%",
+          "loc_rate": "7.10",
+          "loc_2rate": "38.0%",
+          "motor_2rate": "33.0%",
+          "hit_rate": "70.0%",
+          "tilt": "0.0",
+          "time": "6.73",
+          "power": 73
+        },
+        {
+          "boat": 4,
+          "name": "菊地孝平",
+          "rank": "A1",
+          "st": ".15",
+          "st_avg": ".15",
+          "nat_rate": "6.95",
+          "nat_2rate": "39.0%",
+          "loc_rate": "6.80",
+          "loc_2rate": "34.0%",
+          "motor_2rate": "30.0%",
+          "hit_rate": "65.0%",
+          "tilt": "0.0",
+          "time": "6.74",
+          "power": 68
+        },
+        {
+          "boat": 5,
+          "name": "井口佳典",
+          "rank": "A2",
+          "st": ".16",
+          "st_avg": ".16",
+          "nat_rate": "6.40",
+          "nat_2rate": "35.0%",
+          "loc_rate": "6.30",
+          "loc_2rate": "30.0%",
+          "motor_2rate": "27.0%",
+          "hit_rate": "60.0%",
+          "tilt": "0.0",
+          "time": "6.75",
+          "power": 63
+        },
+        {
+          "boat": 6,
+          "name": "篠崎元志",
+          "rank": "B1",
+          "st": ".17",
+          "st_avg": ".17",
+          "nat_rate": "5.80",
+          "nat_2rate": "31.0%",
+          "loc_rate": "5.50",
+          "loc_2rate": "26.0%",
+          "motor_2rate": "24.0%",
+          "hit_rate": "55.0%",
+          "tilt": "0.0",
+          "time": "6.76",
+          "power": 58
+        }
+      ],
+      "summary_tag": "【イン信頼】",
+      "comment": "1号艇の機力が良好で軸指名。追撃する2号艇との全速戦。",
+      "sub_comment": "3号艇の差し足警戒。高配当時は4号艇の攻め込み。",
+      "bets": [
+        {
+          "num": "1-2-3",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1-2-4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1-3-2",
+          "tag": "対抗",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "1-3-4",
+          "tag": "対抗",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "1-4-2",
+          "tag": "押さえ",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-1-3",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-1-4",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-3-1",
+          "tag": "穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-1-2",
+          "tag": "大穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-2-1",
+          "tag": "特穴",
+          "style": "tag-ana"
+        }
+      ]
+    },
+    "4": {
+      "race_num": 4,
+      "close_time": "--:--",
+      "weather": {
+        "weather": "晴",
+        "wind_speed": "2m",
+        "wind_direction": "向い風",
+        "wave": "2cm"
+      },
+      "start_display": [],
+      "racers": [
+        {
+          "boat": 1,
+          "name": "松井繁",
+          "rank": "A1",
+          "st": ".12",
+          "st_avg": ".12",
+          "nat_rate": "7.42",
+          "nat_2rate": "51.0%",
+          "loc_rate": "7.80",
+          "loc_2rate": "46.0%",
+          "motor_2rate": "39.0%",
+          "hit_rate": "80.0%",
+          "tilt": "0.0",
+          "time": "6.71",
+          "power": 83
+        },
+        {
+          "boat": 2,
+          "name": "瓜生正義",
+          "rank": "A1",
+          "st": ".13",
+          "st_avg": ".13",
+          "nat_rate": "7.15",
+          "nat_2rate": "47.0%",
+          "loc_rate": "7.20",
+          "loc_2rate": "42.0%",
+          "motor_2rate": "36.0%",
+          "hit_rate": "75.0%",
+          "tilt": "0.0",
+          "time": "6.72",
+          "power": 78
+        },
+        {
+          "boat": 3,
+          "name": "白井英治",
+          "rank": "A1",
+          "st": ".14",
+          "st_avg": ".14",
+          "nat_rate": "7.60",
+          "nat_2rate": "43.0%",
+          "loc_rate": "7.10",
+          "loc_2rate": "38.0%",
+          "motor_2rate": "33.0%",
+          "hit_rate": "70.0%",
+          "tilt": "0.0",
+          "time": "6.73",
+          "power": 73
+        },
+        {
+          "boat": 4,
+          "name": "菊地孝平",
+          "rank": "A1",
+          "st": ".15",
+          "st_avg": ".15",
+          "nat_rate": "6.95",
+          "nat_2rate": "39.0%",
+          "loc_rate": "6.80",
+          "loc_2rate": "34.0%",
+          "motor_2rate": "30.0%",
+          "hit_rate": "65.0%",
+          "tilt": "0.0",
+          "time": "6.74",
+          "power": 68
+        },
+        {
+          "boat": 5,
+          "name": "井口佳典",
+          "rank": "A2",
+          "st": ".16",
+          "st_avg": ".16",
+          "nat_rate": "6.40",
+          "nat_2rate": "35.0%",
+          "loc_rate": "6.30",
+          "loc_2rate": "30.0%",
+          "motor_2rate": "27.0%",
+          "hit_rate": "60.0%",
+          "tilt": "0.0",
+          "time": "6.75",
+          "power": 63
+        },
+        {
+          "boat": 6,
+          "name": "篠崎元志",
+          "rank": "B1",
+          "st": ".17",
+          "st_avg": ".17",
+          "nat_rate": "5.80",
+          "nat_2rate": "31.0%",
+          "loc_rate": "5.50",
+          "loc_2rate": "26.0%",
+          "motor_2rate": "24.0%",
+          "hit_rate": "55.0%",
+          "tilt": "0.0",
+          "time": "6.76",
+          "power": 58
+        }
+      ],
+      "summary_tag": "【イン信頼】",
+      "comment": "1号艇の機力が良好で軸指名。追撃する2号艇との全速戦。",
+      "sub_comment": "3号艇の差し足警戒。高配当時は4号艇の攻め込み。",
+      "bets": [
+        {
+          "num": "1-2-3",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1-2-4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1-3-2",
+          "tag": "対抗",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "1-3-4",
+          "tag": "対抗",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "1-4-2",
+          "tag": "押さえ",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-1-3",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-1-4",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-3-1",
+          "tag": "穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-1-2",
+          "tag": "大穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-2-1",
+          "tag": "特穴",
+          "style": "tag-ana"
+        }
+      ]
+    },
+    "5": {
+      "race_num": 5,
+      "close_time": "--:--",
+      "weather": {
+        "weather": "晴",
+        "wind_speed": "2m",
+        "wind_direction": "向い風",
+        "wave": "2cm"
+      },
+      "start_display": [],
+      "racers": [
+        {
+          "boat": 1,
+          "name": "松井繁",
+          "rank": "A1",
+          "st": ".12",
+          "st_avg": ".12",
+          "nat_rate": "7.42",
+          "nat_2rate": "51.0%",
+          "loc_rate": "7.80",
+          "loc_2rate": "46.0%",
+          "motor_2rate": "39.0%",
+          "hit_rate": "80.0%",
+          "tilt": "0.0",
+          "time": "6.71",
+          "power": 83
+        },
+        {
+          "boat": 2,
+          "name": "瓜生正義",
+          "rank": "A1",
+          "st": ".13",
+          "st_avg": ".13",
+          "nat_rate": "7.15",
+          "nat_2rate": "47.0%",
+          "loc_rate": "7.20",
+          "loc_2rate": "42.0%",
+          "motor_2rate": "36.0%",
+          "hit_rate": "75.0%",
+          "tilt": "0.0",
+          "time": "6.72",
+          "power": 78
+        },
+        {
+          "boat": 3,
+          "name": "白井英治",
+          "rank": "A1",
+          "st": ".14",
+          "st_avg": ".14",
+          "nat_rate": "7.60",
+          "nat_2rate": "43.0%",
+          "loc_rate": "7.10",
+          "loc_2rate": "38.0%",
+          "motor_2rate": "33.0%",
+          "hit_rate": "70.0%",
+          "tilt": "0.0",
+          "time": "6.73",
+          "power": 73
+        },
+        {
+          "boat": 4,
+          "name": "菊地孝平",
+          "rank": "A1",
+          "st": ".15",
+          "st_avg": ".15",
+          "nat_rate": "6.95",
+          "nat_2rate": "39.0%",
+          "loc_rate": "6.80",
+          "loc_2rate": "34.0%",
+          "motor_2rate": "30.0%",
+          "hit_rate": "65.0%",
+          "tilt": "0.0",
+          "time": "6.74",
+          "power": 68
+        },
+        {
+          "boat": 5,
+          "name": "井口佳典",
+          "rank": "A2",
+          "st": ".16",
+          "st_avg": ".16",
+          "nat_rate": "6.40",
+          "nat_2rate": "35.0%",
+          "loc_rate": "6.30",
+          "loc_2rate": "30.0%",
+          "motor_2rate": "27.0%",
+          "hit_rate": "60.0%",
+          "tilt": "0.0",
+          "time": "6.75",
+          "power": 63
+        },
+        {
+          "boat": 6,
+          "name": "篠崎元志",
+          "rank": "B1",
+          "st": ".17",
+          "st_avg": ".17",
+          "nat_rate": "5.80",
+          "nat_2rate": "31.0%",
+          "loc_rate": "5.50",
+          "loc_2rate": "26.0%",
+          "motor_2rate": "24.0%",
+          "hit_rate": "55.0%",
+          "tilt": "0.0",
+          "time": "6.76",
+          "power": 58
+        }
+      ],
+      "summary_tag": "【イン信頼】",
+      "comment": "1号艇の機力が良好で軸指名。追撃する2号艇との全速戦。",
+      "sub_comment": "3号艇の差し足警戒。高配当時は4号艇の攻め込み。",
+      "bets": [
+        {
+          "num": "1-2-3",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1-2-4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1-3-2",
+          "tag": "対抗",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "1-3-4",
+          "tag": "対抗",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "1-4-2",
+          "tag": "押さえ",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-1-3",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-1-4",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-3-1",
+          "tag": "穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-1-2",
+          "tag": "大穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-2-1",
+          "tag": "特穴",
+          "style": "tag-ana"
+        }
+      ]
+    },
+    "6": {
+      "race_num": 6,
+      "close_time": "--:--",
+      "weather": {
+        "weather": "晴",
+        "wind_speed": "2m",
+        "wind_direction": "向い風",
+        "wave": "2cm"
+      },
+      "start_display": [],
+      "racers": [
+        {
+          "boat": 1,
+          "name": "松井繁",
+          "rank": "A1",
+          "st": ".12",
+          "st_avg": ".12",
+          "nat_rate": "7.42",
+          "nat_2rate": "51.0%",
+          "loc_rate": "7.80",
+          "loc_2rate": "46.0%",
+          "motor_2rate": "39.0%",
+          "hit_rate": "80.0%",
+          "tilt": "0.0",
+          "time": "6.71",
+          "power": 83
+        },
+        {
+          "boat": 2,
+          "name": "瓜生正義",
+          "rank": "A1",
+          "st": ".13",
+          "st_avg": ".13",
+          "nat_rate": "7.15",
+          "nat_2rate": "47.0%",
+          "loc_rate": "7.20",
+          "loc_2rate": "42.0%",
+          "motor_2rate": "36.0%",
+          "hit_rate": "75.0%",
+          "tilt": "0.0",
+          "time": "6.72",
+          "power": 78
+        },
+        {
+          "boat": 3,
+          "name": "白井英治",
+          "rank": "A1",
+          "st": ".14",
+          "st_avg": ".14",
+          "nat_rate": "7.60",
+          "nat_2rate": "43.0%",
+          "loc_rate": "7.10",
+          "loc_2rate": "38.0%",
+          "motor_2rate": "33.0%",
+          "hit_rate": "70.0%",
+          "tilt": "0.0",
+          "time": "6.73",
+          "power": 73
+        },
+        {
+          "boat": 4,
+          "name": "菊地孝平",
+          "rank": "A1",
+          "st": ".15",
+          "st_avg": ".15",
+          "nat_rate": "6.95",
+          "nat_2rate": "39.0%",
+          "loc_rate": "6.80",
+          "loc_2rate": "34.0%",
+          "motor_2rate": "30.0%",
+          "hit_rate": "65.0%",
+          "tilt": "0.0",
+          "time": "6.74",
+          "power": 68
+        },
+        {
+          "boat": 5,
+          "name": "井口佳典",
+          "rank": "A2",
+          "st": ".16",
+          "st_avg": ".16",
+          "nat_rate": "6.40",
+          "nat_2rate": "35.0%",
+          "loc_rate": "6.30",
+          "loc_2rate": "30.0%",
+          "motor_2rate": "27.0%",
+          "hit_rate": "60.0%",
+          "tilt": "0.0",
+          "time": "6.75",
+          "power": 63
+        },
+        {
+          "boat": 6,
+          "name": "篠崎元志",
+          "rank": "B1",
+          "st": ".17",
+          "st_avg": ".17",
+          "nat_rate": "5.80",
+          "nat_2rate": "31.0%",
+          "loc_rate": "5.50",
+          "loc_2rate": "26.0%",
+          "motor_2rate": "24.0%",
+          "hit_rate": "55.0%",
+          "tilt": "0.0",
+          "time": "6.76",
+          "power": 58
+        }
+      ],
+      "summary_tag": "【イン信頼】",
+      "comment": "1号艇の機力が良好で軸指名。追撃する2号艇との全速戦。",
+      "sub_comment": "3号艇の差し足警戒。高配当時は4号艇の攻め込み。",
+      "bets": [
+        {
+          "num": "1-2-3",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1-2-4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1-3-2",
+          "tag": "対抗",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "1-3-4",
+          "tag": "対抗",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "1-4-2",
+          "tag": "押さえ",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-1-3",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-1-4",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-3-1",
+          "tag": "穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-1-2",
+          "tag": "大穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-2-1",
+          "tag": "特穴",
+          "style": "tag-ana"
+        }
+      ]
+    },
+    "7": {
+      "race_num": 7,
+      "close_time": "--:--",
+      "weather": {
+        "weather": "晴",
+        "wind_speed": "2m",
+        "wind_direction": "向い風",
+        "wave": "2cm"
+      },
+      "start_display": [],
+      "racers": [
+        {
+          "boat": 1,
+          "name": "松井繁",
+          "rank": "A1",
+          "st": ".12",
+          "st_avg": ".12",
+          "nat_rate": "7.42",
+          "nat_2rate": "51.0%",
+          "loc_rate": "7.80",
+          "loc_2rate": "46.0%",
+          "motor_2rate": "39.0%",
+          "hit_rate": "80.0%",
+          "tilt": "0.0",
+          "time": "6.71",
+          "power": 83
+        },
+        {
+          "boat": 2,
+          "name": "瓜生正義",
+          "rank": "A1",
+          "st": ".13",
+          "st_avg": ".13",
+          "nat_rate": "7.15",
+          "nat_2rate": "47.0%",
+          "loc_rate": "7.20",
+          "loc_2rate": "42.0%",
+          "motor_2rate": "36.0%",
+          "hit_rate": "75.0%",
+          "tilt": "0.0",
+          "time": "6.72",
+          "power": 78
+        },
+        {
+          "boat": 3,
+          "name": "白井英治",
+          "rank": "A1",
+          "st": ".14",
+          "st_avg": ".14",
+          "nat_rate": "7.60",
+          "nat_2rate": "43.0%",
+          "loc_rate": "7.10",
+          "loc_2rate": "38.0%",
+          "motor_2rate": "33.0%",
+          "hit_rate": "70.0%",
+          "tilt": "0.0",
+          "time": "6.73",
+          "power": 73
+        },
+        {
+          "boat": 4,
+          "name": "菊地孝平",
+          "rank": "A1",
+          "st": ".15",
+          "st_avg": ".15",
+          "nat_rate": "6.95",
+          "nat_2rate": "39.0%",
+          "loc_rate": "6.80",
+          "loc_2rate": "34.0%",
+          "motor_2rate": "30.0%",
+          "hit_rate": "65.0%",
+          "tilt": "0.0",
+          "time": "6.74",
+          "power": 68
+        },
+        {
+          "boat": 5,
+          "name": "井口佳典",
+          "rank": "A2",
+          "st": ".16",
+          "st_avg": ".16",
+          "nat_rate": "6.40",
+          "nat_2rate": "35.0%",
+          "loc_rate": "6.30",
+          "loc_2rate": "30.0%",
+          "motor_2rate": "27.0%",
+          "hit_rate": "60.0%",
+          "tilt": "0.0",
+          "time": "6.75",
+          "power": 63
+        },
+        {
+          "boat": 6,
+          "name": "篠崎元志",
+          "rank": "B1",
+          "st": ".17",
+          "st_avg": ".17",
+          "nat_rate": "5.80",
+          "nat_2rate": "31.0%",
+          "loc_rate": "5.50",
+          "loc_2rate": "26.0%",
+          "motor_2rate": "24.0%",
+          "hit_rate": "55.0%",
+          "tilt": "0.0",
+          "time": "6.76",
+          "power": 58
+        }
+      ],
+      "summary_tag": "【イン信頼】",
+      "comment": "1号艇の機力が良好で軸指名。追撃する2号艇との全速戦。",
+      "sub_comment": "3号艇の差し足警戒。高配当時は4号艇の攻め込み。",
+      "bets": [
+        {
+          "num": "1-2-3",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1-2-4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1-3-2",
+          "tag": "対抗",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "1-3-4",
+          "tag": "対抗",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "1-4-2",
+          "tag": "押さえ",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-1-3",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-1-4",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-3-1",
+          "tag": "穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-1-2",
+          "tag": "大穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-2-1",
+          "tag": "特穴",
+          "style": "tag-ana"
+        }
+      ]
+    },
+    "8": {
+      "race_num": 8,
+      "close_time": "--:--",
+      "weather": {
+        "weather": "晴",
+        "wind_speed": "2m",
+        "wind_direction": "向い風",
+        "wave": "2cm"
+      },
+      "start_display": [],
+      "racers": [
+        {
+          "boat": 1,
+          "name": "松井繁",
+          "rank": "A1",
+          "st": ".12",
+          "st_avg": ".12",
+          "nat_rate": "7.42",
+          "nat_2rate": "51.0%",
+          "loc_rate": "7.80",
+          "loc_2rate": "46.0%",
+          "motor_2rate": "39.0%",
+          "hit_rate": "80.0%",
+          "tilt": "0.0",
+          "time": "6.71",
+          "power": 83
+        },
+        {
+          "boat": 2,
+          "name": "瓜生正義",
+          "rank": "A1",
+          "st": ".13",
+          "st_avg": ".13",
+          "nat_rate": "7.15",
+          "nat_2rate": "47.0%",
+          "loc_rate": "7.20",
+          "loc_2rate": "42.0%",
+          "motor_2rate": "36.0%",
+          "hit_rate": "75.0%",
+          "tilt": "0.0",
+          "time": "6.72",
+          "power": 78
+        },
+        {
+          "boat": 3,
+          "name": "白井英治",
+          "rank": "A1",
+          "st": ".14",
+          "st_avg": ".14",
+          "nat_rate": "7.60",
+          "nat_2rate": "43.0%",
+          "loc_rate": "7.10",
+          "loc_2rate": "38.0%",
+          "motor_2rate": "33.0%",
+          "hit_rate": "70.0%",
+          "tilt": "0.0",
+          "time": "6.73",
+          "power": 73
+        },
+        {
+          "boat": 4,
+          "name": "菊地孝平",
+          "rank": "A1",
+          "st": ".15",
+          "st_avg": ".15",
+          "nat_rate": "6.95",
+          "nat_2rate": "39.0%",
+          "loc_rate": "6.80",
+          "loc_2rate": "34.0%",
+          "motor_2rate": "30.0%",
+          "hit_rate": "65.0%",
+          "tilt": "0.0",
+          "time": "6.74",
+          "power": 68
+        },
+        {
+          "boat": 5,
+          "name": "井口佳典",
+          "rank": "A2",
+          "st": ".16",
+          "st_avg": ".16",
+          "nat_rate": "6.40",
+          "nat_2rate": "35.0%",
+          "loc_rate": "6.30",
+          "loc_2rate": "30.0%",
+          "motor_2rate": "27.0%",
+          "hit_rate": "60.0%",
+          "tilt": "0.0",
+          "time": "6.75",
+          "power": 63
+        },
+        {
+          "boat": 6,
+          "name": "篠崎元志",
+          "rank": "B1",
+          "st": ".17",
+          "st_avg": ".17",
+          "nat_rate": "5.80",
+          "nat_2rate": "31.0%",
+          "loc_rate": "5.50",
+          "loc_2rate": "26.0%",
+          "motor_2rate": "24.0%",
+          "hit_rate": "55.0%",
+          "tilt": "0.0",
+          "time": "6.76",
+          "power": 58
+        }
+      ],
+      "summary_tag": "【イン信頼】",
+      "comment": "1号艇の機力が良好で軸指名。追撃する2号艇との全速戦。",
+      "sub_comment": "3号艇の差し足警戒。高配当時は4号艇の攻め込み。",
+      "bets": [
+        {
+          "num": "1-2-3",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1-2-4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1-3-2",
+          "tag": "対抗",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "1-3-4",
+          "tag": "対抗",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "1-4-2",
+          "tag": "押さえ",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-1-3",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-1-4",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-3-1",
+          "tag": "穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-1-2",
+          "tag": "大穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-2-1",
+          "tag": "特穴",
+          "style": "tag-ana"
+        }
+      ]
+    },
+    "9": {
+      "race_num": 9,
+      "close_time": "--:--",
+      "weather": {
+        "weather": "晴",
+        "wind_speed": "2m",
+        "wind_direction": "向い風",
+        "wave": "2cm"
+      },
+      "start_display": [],
+      "racers": [
+        {
+          "boat": 1,
+          "name": "松井繁",
+          "rank": "A1",
+          "st": ".12",
+          "st_avg": ".12",
+          "nat_rate": "7.42",
+          "nat_2rate": "51.0%",
+          "loc_rate": "7.80",
+          "loc_2rate": "46.0%",
+          "motor_2rate": "39.0%",
+          "hit_rate": "80.0%",
+          "tilt": "0.0",
+          "time": "6.71",
+          "power": 83
+        },
+        {
+          "boat": 2,
+          "name": "瓜生正義",
+          "rank": "A1",
+          "st": ".13",
+          "st_avg": ".13",
+          "nat_rate": "7.15",
+          "nat_2rate": "47.0%",
+          "loc_rate": "7.20",
+          "loc_2rate": "42.0%",
+          "motor_2rate": "36.0%",
+          "hit_rate": "75.0%",
+          "tilt": "0.0",
+          "time": "6.72",
+          "power": 78
+        },
+        {
+          "boat": 3,
+          "name": "白井英治",
+          "rank": "A1",
+          "st": ".14",
+          "st_avg": ".14",
+          "nat_rate": "7.60",
+          "nat_2rate": "43.0%",
+          "loc_rate": "7.10",
+          "loc_2rate": "38.0%",
+          "motor_2rate": "33.0%",
+          "hit_rate": "70.0%",
+          "tilt": "0.0",
+          "time": "6.73",
+          "power": 73
+        },
+        {
+          "boat": 4,
+          "name": "菊地孝平",
+          "rank": "A1",
+          "st": ".15",
+          "st_avg": ".15",
+          "nat_rate": "6.95",
+          "nat_2rate": "39.0%",
+          "loc_rate": "6.80",
+          "loc_2rate": "34.0%",
+          "motor_2rate": "30.0%",
+          "hit_rate": "65.0%",
+          "tilt": "0.0",
+          "time": "6.74",
+          "power": 68
+        },
+        {
+          "boat": 5,
+          "name": "井口佳典",
+          "rank": "A2",
+          "st": ".16",
+          "st_avg": ".16",
+          "nat_rate": "6.40",
+          "nat_2rate": "35.0%",
+          "loc_rate": "6.30",
+          "loc_2rate": "30.0%",
+          "motor_2rate": "27.0%",
+          "hit_rate": "60.0%",
+          "tilt": "0.0",
+          "time": "6.75",
+          "power": 63
+        },
+        {
+          "boat": 6,
+          "name": "篠崎元志",
+          "rank": "B1",
+          "st": ".17",
+          "st_avg": ".17",
+          "nat_rate": "5.80",
+          "nat_2rate": "31.0%",
+          "loc_rate": "5.50",
+          "loc_2rate": "26.0%",
+          "motor_2rate": "24.0%",
+          "hit_rate": "55.0%",
+          "tilt": "0.0",
+          "time": "6.76",
+          "power": 58
+        }
+      ],
+      "summary_tag": "【イン信頼】",
+      "comment": "1号艇の機力が良好で軸指名。追撃する2号艇との全速戦。",
+      "sub_comment": "3号艇の差し足警戒。高配当時は4号艇の攻め込み。",
+      "bets": [
+        {
+          "num": "1-2-3",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1-2-4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1-3-2",
+          "tag": "対抗",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "1-3-4",
+          "tag": "対抗",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "1-4-2",
+          "tag": "押さえ",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-1-3",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-1-4",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-3-1",
+          "tag": "穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-1-2",
+          "tag": "大穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-2-1",
+          "tag": "特穴",
+          "style": "tag-ana"
+        }
+      ]
+    },
+    "10": {
+      "race_num": 10,
+      "close_time": "--:--",
+      "weather": {
+        "weather": "晴",
+        "wind_speed": "2m",
+        "wind_direction": "向い風",
+        "wave": "2cm"
+      },
+      "start_display": [],
+      "racers": [
+        {
+          "boat": 1,
+          "name": "松井繁",
+          "rank": "A1",
+          "st": ".12",
+          "st_avg": ".12",
+          "nat_rate": "7.42",
+          "nat_2rate": "51.0%",
+          "loc_rate": "7.80",
+          "loc_2rate": "46.0%",
+          "motor_2rate": "39.0%",
+          "hit_rate": "80.0%",
+          "tilt": "0.0",
+          "time": "6.71",
+          "power": 83
+        },
+        {
+          "boat": 2,
+          "name": "瓜生正義",
+          "rank": "A1",
+          "st": ".13",
+          "st_avg": ".13",
+          "nat_rate": "7.15",
+          "nat_2rate": "47.0%",
+          "loc_rate": "7.20",
+          "loc_2rate": "42.0%",
+          "motor_2rate": "36.0%",
+          "hit_rate": "75.0%",
+          "tilt": "0.0",
+          "time": "6.72",
+          "power": 78
+        },
+        {
+          "boat": 3,
+          "name": "白井英治",
+          "rank": "A1",
+          "st": ".14",
+          "st_avg": ".14",
+          "nat_rate": "7.60",
+          "nat_2rate": "43.0%",
+          "loc_rate": "7.10",
+          "loc_2rate": "38.0%",
+          "motor_2rate": "33.0%",
+          "hit_rate": "70.0%",
+          "tilt": "0.0",
+          "time": "6.73",
+          "power": 73
+        },
+        {
+          "boat": 4,
+          "name": "菊地孝平",
+          "rank": "A1",
+          "st": ".15",
+          "st_avg": ".15",
+          "nat_rate": "6.95",
+          "nat_2rate": "39.0%",
+          "loc_rate": "6.80",
+          "loc_2rate": "34.0%",
+          "motor_2rate": "30.0%",
+          "hit_rate": "65.0%",
+          "tilt": "0.0",
+          "time": "6.74",
+          "power": 68
+        },
+        {
+          "boat": 5,
+          "name": "井口佳典",
+          "rank": "A2",
+          "st": ".16",
+          "st_avg": ".16",
+          "nat_rate": "6.40",
+          "nat_2rate": "35.0%",
+          "loc_rate": "6.30",
+          "loc_2rate": "30.0%",
+          "motor_2rate": "27.0%",
+          "hit_rate": "60.0%",
+          "tilt": "0.0",
+          "time": "6.75",
+          "power": 63
+        },
+        {
+          "boat": 6,
+          "name": "篠崎元志",
+          "rank": "B1",
+          "st": ".17",
+          "st_avg": ".17",
+          "nat_rate": "5.80",
+          "nat_2rate": "31.0%",
+          "loc_rate": "5.50",
+          "loc_2rate": "26.0%",
+          "motor_2rate": "24.0%",
+          "hit_rate": "55.0%",
+          "tilt": "0.0",
+          "time": "6.76",
+          "power": 58
+        }
+      ],
+      "summary_tag": "【イン信頼】",
+      "comment": "1号艇の機力が良好で軸指名。追撃する2号艇との全速戦。",
+      "sub_comment": "3号艇の差し足警戒。高配当時は4号艇の攻め込み。",
+      "bets": [
+        {
+          "num": "1-2-3",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1-2-4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1-3-2",
+          "tag": "対抗",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "1-3-4",
+          "tag": "対抗",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "1-4-2",
+          "tag": "押さえ",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-1-3",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-1-4",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-3-1",
+          "tag": "穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-1-2",
+          "tag": "大穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-2-1",
+          "tag": "特穴",
+          "style": "tag-ana"
+        }
+      ]
+    },
+    "11": {
+      "race_num": 11,
+      "close_time": "--:--",
+      "weather": {
+        "weather": "晴",
+        "wind_speed": "2m",
+        "wind_direction": "向い風",
+        "wave": "2cm"
+      },
+      "start_display": [],
+      "racers": [
+        {
+          "boat": 1,
+          "name": "松井繁",
+          "rank": "A1",
+          "st": ".12",
+          "st_avg": ".12",
+          "nat_rate": "7.42",
+          "nat_2rate": "51.0%",
+          "loc_rate": "7.80",
+          "loc_2rate": "46.0%",
+          "motor_2rate": "39.0%",
+          "hit_rate": "80.0%",
+          "tilt": "0.0",
+          "time": "6.71",
+          "power": 83
+        },
+        {
+          "boat": 2,
+          "name": "瓜生正義",
+          "rank": "A1",
+          "st": ".13",
+          "st_avg": ".13",
+          "nat_rate": "7.15",
+          "nat_2rate": "47.0%",
+          "loc_rate": "7.20",
+          "loc_2rate": "42.0%",
+          "motor_2rate": "36.0%",
+          "hit_rate": "75.0%",
+          "tilt": "0.0",
+          "time": "6.72",
+          "power": 78
+        },
+        {
+          "boat": 3,
+          "name": "白井英治",
+          "rank": "A1",
+          "st": ".14",
+          "st_avg": ".14",
+          "nat_rate": "7.60",
+          "nat_2rate": "43.0%",
+          "loc_rate": "7.10",
+          "loc_2rate": "38.0%",
+          "motor_2rate": "33.0%",
+          "hit_rate": "70.0%",
+          "tilt": "0.0",
+          "time": "6.73",
+          "power": 73
+        },
+        {
+          "boat": 4,
+          "name": "菊地孝平",
+          "rank": "A1",
+          "st": ".15",
+          "st_avg": ".15",
+          "nat_rate": "6.95",
+          "nat_2rate": "39.0%",
+          "loc_rate": "6.80",
+          "loc_2rate": "34.0%",
+          "motor_2rate": "30.0%",
+          "hit_rate": "65.0%",
+          "tilt": "0.0",
+          "time": "6.74",
+          "power": 68
+        },
+        {
+          "boat": 5,
+          "name": "井口佳典",
+          "rank": "A2",
+          "st": ".16",
+          "st_avg": ".16",
+          "nat_rate": "6.40",
+          "nat_2rate": "35.0%",
+          "loc_rate": "6.30",
+          "loc_2rate": "30.0%",
+          "motor_2rate": "27.0%",
+          "hit_rate": "60.0%",
+          "tilt": "0.0",
+          "time": "6.75",
+          "power": 63
+        },
+        {
+          "boat": 6,
+          "name": "篠崎元志",
+          "rank": "B1",
+          "st": ".17",
+          "st_avg": ".17",
+          "nat_rate": "5.80",
+          "nat_2rate": "31.0%",
+          "loc_rate": "5.50",
+          "loc_2rate": "26.0%",
+          "motor_2rate": "24.0%",
+          "hit_rate": "55.0%",
+          "tilt": "0.0",
+          "time": "6.76",
+          "power": 58
+        }
+      ],
+      "summary_tag": "【イン信頼】",
+      "comment": "1号艇の機力が良好で軸指名。追撃する2号艇との全速戦。",
+      "sub_comment": "3号艇の差し足警戒。高配当時は4号艇の攻め込み。",
+      "bets": [
+        {
+          "num": "1-2-3",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1-2-4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1-3-2",
+          "tag": "対抗",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "1-3-4",
+          "tag": "対抗",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "1-4-2",
+          "tag": "押さえ",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-1-3",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-1-4",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-3-1",
+          "tag": "穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-1-2",
+          "tag": "大穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-2-1",
+          "tag": "特穴",
+          "style": "tag-ana"
+        }
+      ]
+    },
+    "12": {
+      "race_num": 12,
+      "close_time": "--:--",
+      "weather": {
+        "weather": "晴",
+        "wind_speed": "2m",
+        "wind_direction": "向い風",
+        "wave": "2cm"
+      },
+      "start_display": [],
+      "racers": [
+        {
+          "boat": 1,
+          "name": "松井繁",
+          "rank": "A1",
+          "st": ".12",
+          "st_avg": ".12",
+          "nat_rate": "7.42",
+          "nat_2rate": "51.0%",
+          "loc_rate": "7.80",
+          "loc_2rate": "46.0%",
+          "motor_2rate": "39.0%",
+          "hit_rate": "80.0%",
+          "tilt": "0.0",
+          "time": "6.71",
+          "power": 83
+        },
+        {
+          "boat": 2,
+          "name": "瓜生正義",
+          "rank": "A1",
+          "st": ".13",
+          "st_avg": ".13",
+          "nat_rate": "7.15",
+          "nat_2rate": "47.0%",
+          "loc_rate": "7.20",
+          "loc_2rate": "42.0%",
+          "motor_2rate": "36.0%",
+          "hit_rate": "75.0%",
+          "tilt": "0.0",
+          "time": "6.72",
+          "power": 78
+        },
+        {
+          "boat": 3,
+          "name": "白井英治",
+          "rank": "A1",
+          "st": ".14",
+          "st_avg": ".14",
+          "nat_rate": "7.60",
+          "nat_2rate": "43.0%",
+          "loc_rate": "7.10",
+          "loc_2rate": "38.0%",
+          "motor_2rate": "33.0%",
+          "hit_rate": "70.0%",
+          "tilt": "0.0",
+          "time": "6.73",
+          "power": 73
+        },
+        {
+          "boat": 4,
+          "name": "菊地孝平",
+          "rank": "A1",
+          "st": ".15",
+          "st_avg": ".15",
+          "nat_rate": "6.95",
+          "nat_2rate": "39.0%",
+          "loc_rate": "6.80",
+          "loc_2rate": "34.0%",
+          "motor_2rate": "30.0%",
+          "hit_rate": "65.0%",
+          "tilt": "0.0",
+          "time": "6.74",
+          "power": 68
+        },
+        {
+          "boat": 5,
+          "name": "井口佳典",
+          "rank": "A2",
+          "st": ".16",
+          "st_avg": ".16",
+          "nat_rate": "6.40",
+          "nat_2rate": "35.0%",
+          "loc_rate": "6.30",
+          "loc_2rate": "30.0%",
+          "motor_2rate": "27.0%",
+          "hit_rate": "60.0%",
+          "tilt": "0.0",
+          "time": "6.75",
+          "power": 63
+        },
+        {
+          "boat": 6,
+          "name": "篠崎元志",
+          "rank": "B1",
+          "st": ".17",
+          "st_avg": ".17",
+          "nat_rate": "5.80",
+          "nat_2rate": "31.0%",
+          "loc_rate": "5.50",
+          "loc_2rate": "26.0%",
+          "motor_2rate": "24.0%",
+          "hit_rate": "55.0%",
+          "tilt": "0.0",
+          "time": "6.76",
+          "power": 58
+        }
+      ],
+      "summary_tag": "【イン信頼】",
+      "comment": "1号艇の機力が良好で軸指名。追撃する2号艇との全速戦。",
+      "sub_comment": "3号艇の差し足警戒。高配当時は4号艇の攻め込み。",
+      "bets": [
+        {
+          "num": "1-2-3",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1-2-4",
+          "tag": "本命",
+          "style": "tag-honmei"
+        },
+        {
+          "num": "1-3-2",
+          "tag": "対抗",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "1-3-4",
+          "tag": "対抗",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "1-4-2",
+          "tag": "押さえ",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-1-3",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-1-4",
+          "tag": "狙い",
+          "style": "tag-nerai"
+        },
+        {
+          "num": "2-3-1",
+          "tag": "穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-1-2",
+          "tag": "大穴",
+          "style": "tag-ana"
+        },
+        {
+          "num": "3-2-1",
+          "tag": "特穴",
+          "style": "tag-ana"
+        }
+      ]
+    }
+  }
 }
