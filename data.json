@@ -1,6 +1,6 @@
 {
-  "date": "20261013",
-  "updated_at": "2026-10-13 14:59:59",
+  "date": "20261014",
+  "updated_at": "2026-10-14 02:02:35",
   "active_codes": [
     "04",
     "06",
@@ -12,7 +12,9 @@
     "18",
     "19",
     "20",
-    "22"
+    "21",
+    "22",
+    "24"
   ],
   "active_stadiums": [
     {
@@ -56,12 +58,20 @@
       "name": "若松"
     },
     {
+      "code": "21",
+      "name": "芦屋"
+    },
+    {
       "code": "22",
       "name": "福岡"
+    },
+    {
+      "code": "24",
+      "name": "大村"
     }
   ],
-  "total_races": 132,
-  "total_hits": 116,
+  "total_races": 156,
+  "total_hits": 137,
   "overall_hit_rate": "91.6%",
   "total_recovery": "204.5%"
 }
