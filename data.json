@@ -1,6 +1,6 @@
 {
-  "date": "20261106",
-  "updated_at": "2026-11-06 14:48:00",
+  "date": "20261107",
+  "updated_at": "2026-11-07 02:55:39",
   "active_codes": [
     "01",
     "02",
@@ -11,9 +11,7 @@
     "11",
     "12",
     "14",
-    "15",
-    "17",
-    "22",
+    "19",
     "23"
   ],
   "active_stadiums": [
@@ -54,24 +52,16 @@
       "name": "鳴門"
     },
     {
-      "code": "15",
-      "name": "丸亀"
-    },
-    {
-      "code": "17",
-      "name": "宮島"
-    },
-    {
-      "code": "22",
-      "name": "福岡"
+      "code": "19",
+      "name": "下関"
     },
     {
       "code": "23",
       "name": "唐津"
     }
   ],
-  "total_races": 156,
-  "total_hits": 137,
+  "total_races": 132,
+  "total_hits": 116,
   "overall_hit_rate": "91.6%",
   "total_recovery": "204.5%"
 }
